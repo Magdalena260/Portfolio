@@ -35,4 +35,32 @@ h2 {
     }
 
   }
+
+
+.about-me {
+
+  .left {
+
+    .info-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;   
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .info-item img {
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+    }
+
+    .info-item span {
+      font-family: 'Overpass', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 100%;
+    }
+  }
+}
 }
