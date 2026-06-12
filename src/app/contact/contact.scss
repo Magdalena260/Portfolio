@@ -5,7 +5,7 @@
   margin: 180px auto 0;
 
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 
   box-sizing: border-box;
 }
@@ -31,7 +31,6 @@
   padding: 182px 100px 0;
 }
 
-/* LEFT */
 .left {
   width: 426px;
 }
@@ -45,7 +44,6 @@
   margin: 0;
 }
 
-/* RIGHT */
 .right {
   width: 617px;
 
@@ -54,7 +52,6 @@
   gap: 40px;
 }
 
-/* TEXT */
 .text .green-text {
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
@@ -73,14 +70,11 @@
   margin: 0;
 }
 
-/* FORM */
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
-/* INPUT + TEXTAREA (nur Linie unten) */
 .contact-form input,
 .message-box textarea {
   width: 100%;
@@ -99,12 +93,10 @@
   box-sizing: border-box;
 }
 
-/* INPUT HEIGHT */
 .contact-form input {
   height: 50px;
 }
 
-/* MESSAGE BOX */
 .message-box {
   position: relative;
   width: 100%;
@@ -117,7 +109,6 @@
   padding-right: 20px;
 }
 
-/* ICON */
 .message-icon {
   position: absolute;
   right: 0;
@@ -129,14 +120,12 @@
   pointer-events: none;
 }
 
-/* PRIVACY */
 .privacy {
   display: flex;
   align-items: flex-start;
   gap: 12px;
 
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin: 20px 0;
 
   font-size: 14px;
   color: #FFFCF3;
@@ -152,7 +141,6 @@
   text-decoration: none;
 }
 
-/* BUTTON */
 button {
   width: 269px;
   height: 68px;
@@ -166,13 +154,11 @@ button {
   cursor: pointer;
   opacity: 0.5;
 
-  display: block;
   margin: 0 auto;
 }
 
-/* ARROW */
 .top-right {
   position: absolute;
   right: 100px;
-  bottom: 100px;
+  bottom: 300px;
 }
