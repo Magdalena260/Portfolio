@@ -1,64 +1,99 @@
 .info {
+  width: 1240px;
+  height: 561px;
+
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding: 40px 80px;
+
+  /* LEFT */
+  .left {
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+
+    a {
+      font-family: 'Overpass', sans-serif;
+      font-weight: 400;
+      font-size: 18px;
+      text-decoration: none;
+      color: black;
+
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+    }
+  }
+
+  /* CENTER */
+  .center {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 128px;
+      line-height: 100%;
+      letter-spacing: -0.025em;
+      margin: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      span {
+        display: block;
+      }
+    }
+
+    .name-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 10px;
+
+      .line {
+        display: block;
+        margin: 0;
+      }
+
+      .name {
+        font-family: 'Overpass', sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        margin: 0;
+        color: #64bb99;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  /* RIGHT*/
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    align-items: center;
+
+    height: 100%;
+
+    .arrow {
+      width: 40px;
+      margin-bottom: 10px;
+    }
+
+    .scroll {
+      font-family: 'Overpass', sans-serif;
+      font-weight: 300;
+      font-size: 22px;
+      margin: 0;
+    }
+  }
+
+  .center .line {
+  max-width: 550px;
+  height: auto;
 }
-
-/* left */
-.left {
-  a {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    text-decoration: none;
-    color: black;
-  }
-}
-
-/* MITTE */
-.center {
-  text-align: center;
-
-  .title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 128px;
-    line-height: 100%;
-    letter-spacing: -0.025em;
-    margin: 0;
-  }
-
-  .line {
-    margin: 20px auto;
-    display: block;
-  }
-
-  .name {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 700;
-    font-size: 48px;
-    margin: 0;
-    color: #64bb99;
-  }
-
-}
-
-/* right */
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .arrow {
-    width: 40px;
-    margin-bottom: 10px;
-  }
-
-  .scroll {
-    font-family: 'Overpass', sans-serif;
-    font-weight: 300;
-    font-size: 22px;
-    margin: 0;
-  }
 }
