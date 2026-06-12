@@ -9,7 +9,6 @@
   align-items: center;
 
   box-sizing: border-box;
-
   position: relative;
   z-index: 2;
 }
@@ -23,8 +22,27 @@
   align-items: center;
 }
 
+/* LEFT */
+.footer-left {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.footer-logo {
+  position: absolute;
+  left: 0;
+  bottom: 34px;
+
+  height: 200px;
+  width: auto;
+
+  filter: invert(1);
+}
+
 .footer-left p {
   margin: 0;
+  margin-left: 55px;
 
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
@@ -34,17 +52,19 @@
   color: #FFFCF3;
 }
 
+/* RIGHT */
 .footer-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 12px;
 }
 
 .footer-icons {
   display: flex;
   align-items: center;
   gap: 24px;
+  margin-top: 6px;
 }
 
 .github {
@@ -74,4 +94,6 @@
 
   color: #FFFCF3;
   text-decoration: none;
+
+  margin-top: 6px;
 }
