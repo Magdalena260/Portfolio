@@ -1,17 +1,65 @@
+.portfolio {
+  width: 1242px;
+  margin: 200px auto 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.title {
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.description {
+  width: 525px;
+  text-align: center;
+
+  p {
+    font-family: 'Overpass', sans-serif;
+    font-size: 22px;
+    margin: 0;
+  }
+}
+
+.projects {
+  width: 1239px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-box {
+  width: 620px;
+  height: 393px;
+
+  background: #eaeaea;
+}
+
 .project-number {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 48px;
-  line-height: 120%;
-  letter-spacing: 0%;
-  text-align: right;
-  font-variant-numeric: proportional-nums;
 }
 
-h2 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 78px;
-  line-height: 100%;
-  letter-spacing: -0.025em;
+.bottom-left {
+  margin-top: 10px;
 }
