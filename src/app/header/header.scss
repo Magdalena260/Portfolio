@@ -1,0 +1,72 @@
+.header {
+  width: 1440px;
+  height: 92px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 100px;
+
+  box-sizing: border-box;
+
+  background: transparent;
+}
+
+/* LOGO */
+.left img {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+/* RIGHT */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* LANG SWITCH */
+.lang-switch {
+  display: flex;
+}
+
+/* BOXEN */
+.lang-switch .box {
+  width: 60px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #FFFCF3;
+  border: 2px solid #FFFCF3;
+}
+
+/* ACTIVE */
+.lang-switch .active {
+  background: #00BC8F;
+  color: #000;
+}
+
+/* BURGER */
+.burger {
+  width: 60px;
+  height: 40px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* LINES */
+.burger div {
+  height: 3px;
+  width: 100%;
+  background: #FFFCF3;
+}
