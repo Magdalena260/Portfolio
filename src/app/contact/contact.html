@@ -1,74 +1,53 @@
 <div class="contact">
 
-  <!-- TITEL -->
-  <div class="title">
-    <h2>Say hi!</h2>
-  </div>
+  <img class="background-shape" src="assets/arrows/rectangle.svg" alt="">
 
-  <!-- TEXT -->
-  <div class="text">
+  <div class="contact-inner">
 
-    <p class="green-text">
-      Want to discuss a new project?
-    </p>
+    <!-- LEFT -->
+    <div class="left">
+      <h2>Say hi!</h2>
+    </div>
 
-    <p class="description">
-      Say hello! Let's discuss your ideas and make it happen.
-    </p>
+    <!-- RIGHT -->
+    <div class="right">
 
-  </div>
+      <div class="text">
+        <p class="green-text">Want to discuss a new project?</p>
+        <p class="description">
+          Say hello! Let's discuss your ideas and make it happen.
+        </p>
+      </div>
 
-  <!-- FORMULAR -->
-  <form class="contact-form">
+      <form class="contact-form">
 
-    <input
-      type="text"
-      name="name"
-      placeholder="Your name"
-      required
-    >
+        <input type="text" placeholder="Your name">
+        <input type="email" placeholder="Your email">
 
-    <input
-      type="email"
-      name="email"
-      placeholder="Your email"
-      required
-    >
+        <!-- MESSAGE -->
+        <div class="message-box">
+          <textarea placeholder="Your message"></textarea>
+          <img class="message-icon" src="assets/arrows/group/mail.svg" alt="">
+        </div>
 
-    <textarea
-      name="message"
-      placeholder="Your message"
-      rows="5"
-      required
-    ></textarea>
+        <!-- PRIVACY -->
+        <div class="privacy">
+          <input type="checkbox" id="privacy">
+          <label for="privacy">
+            I've read the <a href="#">privacy policy</a> and agree to the processing of my data as outlined.
+          </label>
+        </div>
 
-    <!-- DATENSCHUTZ -->
-    <div class="privacy">
+        <button>Send message</button>
 
-      <input
-        type="checkbox"
-        id="privacy-policy"
-        required
-      >
-
-      <label for="privacy-policy">
-        I've read the
-        <a href="#">privacy policy</a>
-        and agree to the processing of my data as outlined.
-      </label>
+      </form>
 
     </div>
 
-    <!-- BUTTON -->
-    <button type="submit">
-      Send message
-    </button>
+  </div>
 
-  </form>
-
-  <!-- PFEIL NACH OBEN -->
   <div class="top-right">
-    <img src="assets/arrows/arrow_top.png" alt="Arrow Up">
+    <img src="assets/arrows/arrow_top.svg" alt="">
   </div>
 
 </div>
