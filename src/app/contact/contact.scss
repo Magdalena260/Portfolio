@@ -150,7 +150,7 @@
   width: 269px;
   height: 68px;
 
-  border: 4px solid #FFFCF3;
+  border: 2px solid #FFFCF3;
   background: transparent;
 
   color: #FFFCF3;
@@ -161,11 +161,11 @@
   margin: 15px auto 0;
 }
   
-   .send-btn:hover {
-    background:  #FFFCF3;
-    color: black;
-  
+.send-btn:hover {
+  background: #FFFCF3;
+  color: black !important;
 }
+
 
 .top-right {
   position: absolute;
