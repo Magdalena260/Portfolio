@@ -12,7 +12,7 @@
   h2 {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
-    font-size: 48px;
+    font-size: 78px;
     text-align: center;
     margin: 0;
   }
@@ -62,4 +62,88 @@
 
 .bottom-left {
   margin-top: 10px;
+}
+
+.about-me {
+  width: 1242px;
+  margin: 200px auto 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+/* LINKS */
+.about-left {
+  width: 50%;
+}
+
+.about-left h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 78px;
+  margin-bottom: 20px;
+}
+
+.about-left p {
+  font-family: 'Overpass', sans-serif;
+  font-size: 22px;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+
+/* Info Zeilen */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-family: 'Overpass', sans-serif;
+  font-size: 18px;
+}
+
+.info-item img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Button */
+.talk-btn {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: 2px solid black;
+  background: transparent;
+  cursor: pointer;
+  font-family: 'Overpass', sans-serif;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.talk-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* RECHTS */
+.about-right {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-img {
+  width: 533px;
+  height: 533px;
+  object-fit: cover;
+}
+
+/* PFEIL */
+.about-arrow {
+  position: absolute;
+  left: 50%;
+  bottom: -60px;
+  transform: translateX(-50%);
+  width: 40px;
+  height: auto;
 }
