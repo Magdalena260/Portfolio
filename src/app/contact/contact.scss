@@ -146,7 +146,7 @@
   text-decoration: none;
 }
 
-button {
+.send-btn {
   width: 269px;
   height: 68px;
 
@@ -155,11 +155,16 @@ button {
 
   color: #FFFCF3;
   font-size: 23px;
-
   cursor: pointer;
-  opacity: 0.5;
+ 
 
   margin: 15px auto 0;
+}
+  
+   .send-btn:hover {
+    background:  #FFFCF3;
+    color: black;
+  
 }
 
 .top-right {

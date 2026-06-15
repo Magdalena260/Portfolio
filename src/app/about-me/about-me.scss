@@ -65,8 +65,14 @@
 
       cursor: pointer;
 
-      margin-left: 160px; /* X-Achse nach rechts */
+      margin-left: 160px; 
     }
+
+    .talk-btn:hover {
+    background: black;
+    color: #FFFCF3;
+  
+}
   }
 
   /* RIGHT IMAGE */
