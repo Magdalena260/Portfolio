@@ -151,12 +151,16 @@
 .privacy input {
   width: 13px;
   height: 13px;
+
+  
 }
 
 .privacy a {
   color: #00BC8F;
   text-decoration: none;
 }
+
+
 
 
 .send-btn {
@@ -195,4 +199,8 @@
   bottom: 300px;
 
   z-index: 2;
+}
+.privacy input[type="checkbox"]:checked {
+  background: #00BC8F;
+  border-color: #00BC8F;
 }
