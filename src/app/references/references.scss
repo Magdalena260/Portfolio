@@ -81,7 +81,10 @@
   height: 40px;
 }
 
- .card img:hover{ color:#00BC8F; }
+.card:hover img {
+color:#00BC8F;
+}
+
 
 .card .name {
   font-family: 'Syne', sans-serif;
