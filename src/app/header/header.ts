@@ -9,8 +9,18 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   currentLang: string = 'en';
+  menuOpen = false;
 
   switchLanguage(lang: string) {
     this.currentLang = lang;
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  scrollTo(id: string) {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    this.menuOpen = false;
   }
 }
