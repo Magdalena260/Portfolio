@@ -36,9 +36,14 @@
 <!-- MENU -->
 <nav class="mobile-menu" [class.open]="menuOpen">
 
-  <div class="menu-item" (click)="scrollTo('about')">About</div>
-  <div class="menu-item" (click)="scrollTo('skills')">Skills</div>
-  <div class="menu-item" (click)="scrollTo('portfolio')">Portfolio</div>
-  
+  <div class="menu-top">
+    <img src="assets/icons/logo_mlheribor.svg" class="menu-logo">
+  </div>
+
+  <div class="menu-center">
+    <div class="menu-item" (click)="scrollTo('about')">About</div>
+    <div class="menu-item" (click)="scrollTo('skills')">Skills</div>
+    <div class="menu-item" (click)="scrollTo('portfolio')">Portfolio</div>
+  </div>
 
 </nav>

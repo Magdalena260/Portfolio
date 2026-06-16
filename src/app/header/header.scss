@@ -24,17 +24,15 @@
   gap: 32px;
 }
 
-/* LANGUAGE SWITCH */
+/* LANGUAGE */
 .lang {
   display: flex;
   align-items: center;
   gap: 12px;
-
   font-family: 'Overpass', sans-serif;
   font-size: 14px;
 }
 
-/* DEFAULT STATE */
 .lang div {
   cursor: pointer;
   padding: 4px 10px;
@@ -43,17 +41,15 @@
   color: #000;
 }
 
-/* HOVER (nur Sprache bleibt aktiv) */
 .lang div:hover {
   border: 2px solid #00BC8F;
 }
 
-/* ACTIVE LANGUAGE */
 .lang .active {
   border: 2px solid #00BC8F;
 }
 
-/* BURGER */
+/* BURGER (3 STRICHE) */
 .burger {
   width: 35px;
   height: 25px;
@@ -67,12 +63,13 @@
 
 .burger span {
   height: 3px;
+  width: 100%;
   background: black;
   border-radius: 2px;
   transition: 0.3s;
 }
 
-/* MENU OVERLAY */
+/* OVERLAY */
 .mobile-menu {
   position: fixed;
   inset: 0;
@@ -97,9 +94,28 @@
   pointer-events: all;
 }
 
-/* MENU ITEMS (KEIN HOVER!) */
+/* LOGO im Overlay */
+.menu-top {
+  position: absolute;
+  top: 30px;
+  left: 100px;
+}
+
+.menu-logo {
+  height: 120px;
+  width: auto;
+}
+
+/* MENU LINKS */
+.menu-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
 .menu-item {
-  font-size: 48px;
+  font-size: 78px;
   font-family: 'Syne', sans-serif;
   cursor: pointer;
   color: black;
