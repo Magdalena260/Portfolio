@@ -7,8 +7,19 @@
   <div class="right">
 
     <div class="lang">
-      <div class="active">EN</div>
-      <div>DE</div>
+
+      <div
+        [class.active]="currentLang === 'en'"
+        (click)="switchLanguage('en')">
+        EN
+      </div>
+
+      <div
+        [class.active]="currentLang === 'de'"
+        (click)="switchLanguage('de')">
+        DE
+      </div>
+
     </div>
 
     <div class="burger">

@@ -15,7 +15,6 @@
   height: 150px;
   width: auto;
   display: block;
-  
 }
 
 /* RIGHT AREA */
@@ -35,21 +34,28 @@
   font-size: 14px;
 }
 
-/* EN ACTIVE*/
+/* DEFAULT STATE (kein Rahmen sichtbar) */
+.lang div {
+  cursor: pointer;
+
+  padding: 4px 10px;
+  border: 2px solid transparent;
+
+  transition: all 0.2s ease;
+  color: #000;
+}
+
+/* HOVER STATE */
+.lang div:hover {
+  border: 2px solid #00BC8F;
+}
+
+/* ACTIVE STATE (aktuelle Sprache) */
 .lang .active {
   border: 2px solid #00BC8F;
-  padding: 4px 10px;
-
-  color: #000;
-  background: transparent;
 }
 
-/* DE */
-.lang div:not(.active) {
-  color: #000;
-}
-
-/* BURGER ICON */
+/* BURGER */
 .burger {
   display: flex;
   flex-direction: column;

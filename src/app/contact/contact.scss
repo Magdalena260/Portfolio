@@ -200,7 +200,17 @@
 
   z-index: 2;
 }
-.privacy input[type="checkbox"]:checked {
-  background: #00BC8F;
-  border-color: #00BC8F;
+
+.privacy input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+
+  background: none;
+  border: 2px solid #FFFCF3;
+
+  accent-color: #00BC8F;
+
+  border-radius: 50%;
+
+  cursor: pointer;
 }

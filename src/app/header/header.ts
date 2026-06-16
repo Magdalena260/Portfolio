@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
-export class HeaderComponent {}
+export class HeaderComponent {
+
+  currentLang: string = 'en';
+
+  switchLanguage(lang: string) {
+    this.currentLang = lang;
+  }
+}

@@ -10,91 +10,144 @@
   align-items: center;
 
   position: relative;
-
-  /* LEFT SIDE */
-  .about-left {
-    width: 610px;
-
-    display: flex;
-    flex-direction: column;
-
-    h2 {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 78px;
-      line-height: 100%;
-      letter-spacing: 0.01em;
-      margin: 0;
-
-      white-space: nowrap;
 }
 
-    }h2:hover{ color:#00BC8F; }
-
-    p {
-      font-family: 'Overpass', sans-serif;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 120%;
-      margin-top: 20px;
-    }
-
-    .info-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 8px;
-    }
-
-    .talk-btn {
-      margin-top: 40px;
-
-      font-family: 'Overpass', sans-serif;
-      font-weight: 400;
-      font-size: 23px;
-
-      width: 213px;
-      height: 68px;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      border: 4px solid black;
-      background: transparent;
-
-      cursor: pointer;
-
-      margin-left: 160px; 
-    }
-
-    .talk-btn:hover {
-    background: black;
-    color: #FFFCF3;
-  
+/* LEFT */
+.about-left {
+  width: 610px;
+  display: flex;
+  flex-direction: column;
 }
-  }
 
-  /* RIGHT IMAGE */
-  .about-right {
-    width: 553px;
-    height: 553px;
+.about-left h2 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 78px;
+  margin: 0;
+  white-space: nowrap;
+}
 
-    margin-top: 30px;
+.about-left p {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 120%;
+  margin-top: 20px;
+}
 
-    .profile-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-  }
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
 
-  /* ARROW */
-  .about-arrow {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.info-item img {
+  width: 40px;
+  height: 40px;
+}
 
-    pointer-events: none;
-  }
+.info-item span {
+  font-family: 'Overpass', sans-serif;
+  font-size: 18px;
+}
+
+/* BUTTON */
+.talk-btn {
+  margin-top: 40px;
+
+  font-family: 'Overpass', sans-serif;
+  font-size: 23px;
+
+  width: 213px;
+  height: 68px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 4px solid black;
+  background: transparent;
+  color: black;
+
+  cursor: pointer;
+
+  margin-left: 160px;
+
+  transition: all 0.3s ease;
+}
+
+.talk-btn:hover {
+  background: black;
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* RIGHT */
+.about-right {
+ 
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  gap: 25px;
+}
+
+/* IMAGE */
+.profile-img {
+  width: 533px;
+  height: 533px;
+  object-fit: cover;
+
+  display: block;
+
+  position: relative;
+  z-index: 2;
+  margin-top:290px;
+  margin-left: 80px;
+}
+
+
+/* HOVER FRAME */
+.about-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 533px;
+  height: 533px;
+
+  border: 2px solid transparent;
+  box-sizing: border-box;
+
+  transition: all 0.3s ease;
+
+  z-index: 3;
+  cursor: pointer;
+   margin-top:290px;
+   margin-left: 80px;
+}
+
+.about-right:hover::after {
+  border: 2px solid #000;
+  transform: translate(20px, 20px);
+}
+
+/* ARROW */
+.about-arrow {
+  width: auto;
+  height: auto;
+
+  display: block;
+   display: block;
+  margin-top: 1100px;
+ 
+}
+
+.about-me {
+  padding-bottom: 300px;
+}
