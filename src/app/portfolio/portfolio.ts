@@ -6,4 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './portfolio.html',
   styleUrl: './portfolio.scss'
 })
-export class PortfolioComponent {}
+export class PortfolioComponent {
+  activeProject: string | null = null;
+}
