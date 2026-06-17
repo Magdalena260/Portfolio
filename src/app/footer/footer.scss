@@ -24,7 +24,7 @@
   transform: translateY(-30px);
 }
 
-/* LEFT */
+/* LEFT SIDE */
 .footer-left {
   position: relative;
   display: flex;
@@ -54,7 +54,7 @@
   color: #FFFCF3;
 }
 
-/* RIGHT */
+/* RIGHT SIDE */
 .footer-right {
   display: flex;
   flex-direction: column;
@@ -62,6 +62,7 @@
   gap: 12px;
 }
 
+/* ICONS */
 .footer-icons {
   display: flex;
   align-items: center;
@@ -88,7 +89,7 @@
   display: block;
 }
 
-/* LEGAL NOTICE */
+/* LEGAL NOTICE LINK */
 .legal-notice {
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
@@ -98,13 +99,12 @@
   color: #FFFCF3;
   text-decoration: none;
 
-  margin-top: 6px;
-
   position: relative;
   display: inline-block;
+  cursor: pointer;
 }
 
-/* (2px) */
+/* underline animation */
 .legal-notice::after {
   content: "";
   position: absolute;
@@ -115,11 +115,11 @@
   height: 2px;
 
   background: #00BC8F;
-
   transition: width 0.3s ease;
 }
 
+/* YOUR ORIGINAL LOOK (fixed + clean) */
 .legal-notice:hover::after {
   width: 60%;
-  margin-left:35px;
+  margin-left: 35px;
 }
