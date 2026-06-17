@@ -23,15 +23,28 @@ h2 {
 }
 
 p {
-  font-family: 'Overpass', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 120%;
-  color: #000000;
+  color: #000;
   margin-bottom: 16px;
 }
 
 .green {
   color: #00BC8F;
   font-weight: 700;
+  text-decoration: none;
+}
+
+.date {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+a[href^="mailto"] {
+  text-decoration: none;
+  color: inherit;
+}
+a[href^="mailto"]:hover {
+  text-decoration: none;
 }
