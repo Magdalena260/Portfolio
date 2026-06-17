@@ -1,4 +1,3 @@
-
 /* =========================
    CONTAINER
 ========================= */
@@ -54,10 +53,17 @@
   flex-direction: row-reverse;
 }
 
+/* PROJECT NUMBERS HOVER (GREEN) */
 .project-number {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 48px;
+  transition: all 120ms ease-in-out;
+  cursor: pointer;
+}
+
+.project-number:hover {
+  color: #00BC8F;
 }
 
 /* =========================
@@ -92,7 +98,7 @@
   filter: grayscale(0%);
 }
 
-/* Frame overlay */
+/* Frame overlay (ALWAYS ABOVE IMAGE) */
 .frame {
   position: absolute;
   inset: 0;
