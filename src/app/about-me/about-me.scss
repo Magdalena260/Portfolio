@@ -1,160 +1,344 @@
-.about-me {
-  width: 1259px;
-  height: 681px;
+/**
+ * =========================
+ * GLOBAL LAYOUT
+ * =========================
+ */
 
-  margin-top: 120px;
-  margin-left: 100px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  position: relative;
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('img/desert.png');
+    background-size: cover;
+    background-position: center;
 }
 
-/* LEFT */
-.about-left {
-  width: 610px;
-  display: flex;
-  flex-direction: column;
+/**
+ * MAIN FRAME
+ */
+#uiFrame {
+    position: relative;
+    width: 820px;
+    height: 620px;
+    background-image: url('frame1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0px 15px 20px rgba(31, 30, 28, 0.8));
 }
 
-.about-left h2 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 78px;
-  margin: 0;
-  white-space: nowrap;
+/**
+ * GAME CONTAINER
+ */
+#gameContainer {
+    position: relative;
+    width: 720px;
+    height: 480px;
 }
 
-.about-left p {
-  font-family: 'Overpass', sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 120%;
-  margin-top: 20px;
+/**
+ * CANVAS
+ */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 720px;
+    height: 480px;
+    background-color: black;
+    display: block;
+    z-index: 1;
 }
 
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 8px;
+/**
+ * =========================
+ * OVERLAYS
+ * =========================
+ */
+
+#startScreen,
+.overlay,
+#howToPlayOverlay,
+#gameOverScreen,
+#winScreen {
+    position: absolute;
+    width: 720px;
+    height: 480px;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    z-index: 1000;
+    color: rgb(230, 200, 60);
+    font-family: "Rubik Gemstones", system-ui;
 }
 
-.info-item img {
-  width: 40px;
-  height: 40px;
+/**
+ * TEXT
+ */
+.howToText {
+    text-align: center;
+    max-width: 85%;
+    line-height: 1.5;
 }
 
-.info-item span {
-  font-family: 'Overpass', sans-serif;
-  font-size: 18px;
+.howToContent {
+    max-height: 320px;
+    overflow-y: auto;
+    padding-right: 10px;
 }
 
-/* BUTTON (anchor styled like button) */
-.talk-btn {
-  margin-top: 40px;
-  margin-left: 160px;
+/**
+ * =========================
+ * BUTTONS
+ * =========================
+ */
 
-  width: 213px;
-  height: 68px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-family: 'Overpass', sans-serif;
-  font-size: 23px;
-
-  border: 4px solid black;
-  background: transparent;
-  color: black;
-
-  cursor: pointer;
-
-  text-decoration: none;   
-  text-decoration-line: none;
-
-  transition: all 0.3s ease;
+button,
+.gameButton {
+    padding: 12px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #e6c200;
+    color: black;
+    font-weight: bold;
+    font-family: "Rubik Gemstones", system-ui;
+    transition: all 125ms ease-in-out;
+    position: relative;
+    z-index: 2;
 }
 
-.talk-btn:hover {
-  background: black;
-  color: white;
-  transform: translateY(-3px);
+button:hover,
+.gameButton:hover {
+    background-color: #fff08a;
+    transform: scale(1.05);
 }
 
-/* RIGHT */
-.about-right {
-  position: relative;
+/**
+ * =========================
+ * PROJECT LAYOUT
+ * =========================
+ */
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+.portfolio {
+    width: 100%;
+}
 
-  gap: 25px;
+.project-row {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.project-row.reverse {
+    flex-direction: row-reverse;
+}
+
+/**
+ * =========================
+ * PROJECT BOX
+ * =========================
+ */
+
+.project-box {
+    position: relative;
+    width: 420px;
+    height: 260px;
 }
 
 /* IMAGE */
-.profile-img {
-  width: 533px;
-  height: 533px;
-  object-fit: cover;
+.project-box img {
+    position: absolute;
+    inset: 0;
 
-  display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
-  position: relative;
-  z-index: 2;
+    filter: grayscale(100%);
+    transition: 0.4s ease;
 
-  margin-top: 290px;
-  margin-left: 80px;
+    z-index: 1;
 }
 
-/* HOVER FRAME */
-.about-right::after {
-  content: "";
-  position: absolute;
-
-  width: 533px;
-  height: 533px;
-
-  top: 0;
-  left: 0;
-
-  margin-top: 290px;
-  margin-left: 80px;
-
-  border: 2px solid transparent;
-  box-sizing: border-box;
-
-  transition: all 0.3s ease;
-
-  z-index: 3;
-  cursor: pointer;
+.project-box:hover img {
+    filter: grayscale(0%);
 }
 
-.about-right:hover::after {
-  border: 2px solid #000;
-  transform: translate(20px, 20px);
+/**
+ * =========================
+ * FIXED FRAME (OVER IMAGE)
+ * =========================
+ */
+
+.project-box .frame {
+    position: absolute;
+    inset: 0;
+
+    border: 4px solid black;
+
+    transform: translate(20px, 20px);
+    opacity: 0;
+
+    transition: 0.3s ease;
+
+    z-index: 5;   /* IMPORTANT: ALWAYS ABOVE IMAGE */
+    pointer-events: none;
 }
 
-/* ARROW */
-.about-arrow {
-  position: absolute;
-  bottom: -10px;
-  right: 3px;
+.project-box:hover .frame,
+.project-box.active .frame {
+    opacity: 1;
 }
 
-.about-arrow img {
-  display: block;
+/**
+ * ARROW
+ */
+.arrow {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+
+    width: 45px;
+    height: 45px;
+
+    border: 2px solid black;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: 0.3s ease;
+
+    z-index: 6;
 }
 
-/* EXTRA SPACE */
-.about-me {
-  padding-bottom: 400px;
+.project-row:hover .arrow {
+    opacity: 1;
+    transform: rotate(-45deg);
 }
 
-html {
-  scroll-behavior: smooth;
+/**
+ * =========================
+ * PROJECT INFO
+ * =========================
+ */
+
+.project-info {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.3s ease;
 }
+
+.project-info.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/**
+ * PROJECT NUMBER
+ */
+.project-number {
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    cursor: pointer;
+    transition: all 120ms ease-in-out;
+}
+
+.project-number:hover {
+    color: #2ecc71;
+}
+
+/**
+ * GITHUB BUTTON
+ */
+.talk-btn {
+    width: 213px;
+    height: 68px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Overpass', sans-serif;
+    font-size: 23px;
+
+    border: 4px solid black;
+    background: transparent;
+    color: black;
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.talk-btn:hover {
+    background: black;
+    color: #f6e7b4;
+}
+
+/**
+ * MUTE BUTTON
+ */
+#muteBtn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 5000;
+    padding: 10px 15px;
+    background-color: #ffcc00;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/**
+ * FOOTER
+ */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+/**
+ * GLOBAL FIX
+ */
+* {
+    box-sizing: border-box;
+}
+
+/**
+ * IMPRESSUM
+ */
+.imprint-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+.imprint-card {
+    background: #f6e7b4;
+    color: #5a3412;
+    padding: 30px;
+    max-width: 700px;
+    width: 100%;
+    font-family: "Rubik Gemstones", system-ui;
+    line-height: 1.8;
+    border-radius: 12px;
+    box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.55);
+}
+

@@ -1,5 +1,5 @@
 /* =========================
-   CONTAINER
+   PORTFOLIO LAYOUT
 ========================= */
 
 .portfolio {
@@ -12,15 +12,23 @@
   gap: 20px;
 }
 
-/* Title */
+/* TITLE */
+
 .title h2 {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 78px;
+  text-align: center;
   margin: 0;
+  transition: color 0.3s ease;
 }
 
-/* Description */
+.title h2:hover {
+  color: #00BC8F;
+}
+
+/* DESCRIPTION */
+
 .description {
   width: 525px;
   text-align: center;
@@ -32,9 +40,7 @@
   margin: 0;
 }
 
-/* =========================
-   PROJECT LAYOUT
-========================= */
+/* PROJECTS WRAPPER */
 
 .projects {
   width: 1239px;
@@ -42,6 +48,8 @@
   flex-direction: column;
   gap: 60px;
 }
+
+/* ROW */
 
 .project-row {
   display: flex;
@@ -53,159 +61,140 @@
   flex-direction: row-reverse;
 }
 
-/* PROJECT NUMBERS HOVER (GREEN) */
-.project-number {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 48px;
-  transition: all 120ms ease-in-out;
-  cursor: pointer;
-}
-
-.project-number:hover {
-  color: #00BC8F;
-}
-
 /* =========================
-   PROJECT BOX (FIXED STACK)
+   PROJECT BOX + FRAME
 ========================= */
 
 .project-box {
   width: 620px;
   height: 393px;
-
   position: relative;
-  overflow: hidden;
+  background: #eaeaea;
+  overflow: visible;
 }
 
-/* Image layer */
-.project-box img {
-  position: absolute;
-  inset: 0;
+/* IMAGE */
 
+.project-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 
   filter: grayscale(100%);
   transition: 0.4s ease;
-
-  z-index: 1;
 }
 
-/* Hover effect */
-.project-box:hover img {
+/* ACTIVE IMAGE */
+
+.project-box:hover img,
+.project-box.active img {
   filter: grayscale(0%);
 }
 
-/* Frame overlay (ALWAYS ABOVE IMAGE) */
-.frame {
+/* FRAME */
+
+.project-box::after {
+  content: "";
   position: absolute;
   inset: 0;
 
   border: 4px solid black;
+  box-sizing: border-box;
 
   transform: translate(20px, 20px);
 
   opacity: 0;
   transition: 0.3s ease;
 
-  z-index: 10;
+  pointer-events: none;
+  z-index: 5;
 }
 
-.project-box.active .frame {
+.project-box:hover::after,
+.project-box.active::after {
   opacity: 1;
 }
 
-/* Arrow */
+/* ARROW */
+
 .arrow {
   position: absolute;
   right: 20px;
   bottom: 20px;
 
-  width: 45px;
-  height: 45px;
-
-  border: 2px solid black;
-  border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  font-size: 24px;
   opacity: 0;
   transition: 0.3s ease;
 
-  z-index: 11;
+  z-index: 6;
 }
 
-.project-box.active .arrow {
+.project-row:hover .arrow {
   opacity: 1;
-  transform: rotate(-45deg);
 }
 
 /* =========================
-   INFO PANEL
+   PROJECT INFO
 ========================= */
 
 .project-info {
-  width: 475px;
-
-  display: none;
-  flex-direction: column;
-  gap: 10px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s ease;
 }
 
 .project-info.show {
-  display: flex;
-}
-
-/* Title */
-.project-info h3 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 45px;
-  margin: 0;
-}
-
-/* Tech */
-.tech {
-  font-family: 'Overpass', sans-serif;
-  font-size: 23px;
-  color: #00BC8F;
-}
-
-/* Text */
-.project-info p {
-  font-family: 'Overpass', sans-serif;
-  font-size: 16px;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* =========================
-   BUTTON
+   NUMBERS
+========================= */
+
+.project-number {
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  transition: color 0.3s ease;
+}
+
+/* ONLY ON PROJECT HOVER */
+
+.project-row:hover .project-number {
+  color: #00BC8F;
+}
+
+/* =========================
+   GITHUB BUTTON
 ========================= */
 
 .talk-btn {
-  width: 213px;
-  height: 68px;
+  display: inline-block;
+  margin-top: 20px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 12px 24px;
+  border: 2px solid black;
+  background: transparent;
 
   font-family: 'Overpass', sans-serif;
-  font-size: 23px;
+  font-size: 18px;
 
-  border: 4px solid black;
-  background: transparent;
-  color: black;
+  cursor: pointer;
+  transition: 0.3s ease;
 
   text-decoration: none;
-  transition: all 0.3s ease;
+  color: black;
 }
 
 .talk-btn:hover {
   background: black;
   color: white;
-  transform: translateY(-3px);
+}
+
+a.talk-btn,
+a.talk-btn:hover,
+a.talk-btn:visited,
+a.talk-btn:focus {
+  text-decoration: none;
 }
