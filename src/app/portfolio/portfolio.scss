@@ -12,7 +12,9 @@
   gap: 20px;
 }
 
-/* TITLE */
+/* =========================
+   TITLE
+========================= */
 
 .title h2 {
   font-family: 'Syne', sans-serif;
@@ -27,7 +29,9 @@
   color: #00BC8F;
 }
 
-/* DESCRIPTION */
+/* =========================
+   DESCRIPTION
+========================= */
 
 .description {
   width: 525px;
@@ -40,7 +44,9 @@
   margin: 0;
 }
 
-/* PROJECTS WRAPPER */
+/* =========================
+   PROJECTS WRAPPER
+========================= */
 
 .projects {
   width: 1239px;
@@ -49,12 +55,15 @@
   gap: 60px;
 }
 
-/* ROW */
+/* =========================
+   ROW LAYOUT
+========================= */
 
 .project-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 40px;
 }
 
 .project-row.reverse {
@@ -62,7 +71,18 @@
 }
 
 /* =========================
-   PROJECT BOX + FRAME
+   TECH TEXT
+========================= */
+
+.tech {
+  color: #00BC8F;
+  font-family: 'Overpass', sans-serif;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* =========================
+   PROJECT BOX
 ========================= */
 
 .project-box {
@@ -91,7 +111,9 @@
   filter: grayscale(0%);
 }
 
-/* FRAME */
+/* =========================
+   FRAME (CSS ONLY)
+========================= */
 
 .project-box::after {
   content: "";
@@ -115,7 +137,9 @@
   opacity: 1;
 }
 
-/* ARROW */
+/* =========================
+   ARROW
+========================= */
 
 .arrow {
   position: absolute;
@@ -159,7 +183,7 @@
   transition: color 0.3s ease;
 }
 
-/* ONLY ON PROJECT HOVER */
+/* only on project hover */
 
 .project-row:hover .project-number {
   color: #00BC8F;
@@ -191,6 +215,8 @@
   background: black;
   color: white;
 }
+
+/* remove underline completely */
 
 a.talk-btn,
 a.talk-btn:hover,

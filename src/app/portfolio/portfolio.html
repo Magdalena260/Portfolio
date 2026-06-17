@@ -13,15 +13,14 @@
   <div class="projects">
 
     <!-- JOIN -->
-    <div class="project-row">
+    <div class="project-row"
+         (mouseenter)="activeProject = 'join'"
+         (mouseleave)="activeProject = null">
 
       <div class="project-box"
-           (mouseenter)="activeProject = 'join'"
-           (mouseleave)="activeProject = null"
            [class.active]="activeProject === 'join'">
 
         <img src="assets/imgport/join.svg" alt="Join project">
-
         <div class="arrow">➜</div>
 
       </div>
@@ -30,7 +29,13 @@
         <h3>Join</h3>
         <div class="tech">Angular | TypeScript | Firebase</div>
         <p>Task manager inspired by Kanban system.</p>
-        <a class="talk-btn" href="#">GitHub</a>
+
+        <a class="talk-btn"
+           href="https://github.com/Magdalena260/Modul_8_Pokedex1304finallyoK"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub
+        </a>
       </div>
 
       <div class="project-number">01/04</div>
@@ -38,15 +43,14 @@
     </div>
 
     <!-- EL POLLO -->
-    <div class="project-row reverse">
+    <div class="project-row reverse"
+         (mouseenter)="activeProject = 'elpollo'"
+         (mouseleave)="activeProject = null">
 
       <div class="project-box"
-           (mouseenter)="activeProject = 'elpollo'"
-           (mouseleave)="activeProject = null"
            [class.active]="activeProject === 'elpollo'">
 
         <img src="assets/imgport/elpollo.svg" alt="El Pollo Loco">
-
         <div class="arrow">➜</div>
 
       </div>
@@ -55,7 +59,13 @@
         <h3>El Pollo Loco</h3>
         <div class="tech">JavaScript | HTML | CSS</div>
         <p>Jump-and-run game based on object-oriented approach.</p>
-        <a class="talk-btn" href="#">GitHub</a>
+
+        <a class="talk-btn"
+           href="https://github.com/Magdalena260/Modul-12_ElPocoLoco"
+           target="_blank"
+           rel="noopener noreferrer">
+          GitHub
+        </a>
       </div>
 
       <div class="project-number">02/04</div>
@@ -63,15 +73,14 @@
     </div>
 
     <!-- DABUBBLE -->
-    <div class="project-row">
+    <div class="project-row"
+         (mouseenter)="activeProject = 'bubble'"
+         (mouseleave)="activeProject = null">
 
       <div class="project-box"
-           (mouseenter)="activeProject = 'bubble'"
-           (mouseleave)="activeProject = null"
            [class.active]="activeProject === 'bubble'">
 
         <img src="assets/imgport/dabubble.svg" alt="DABubble">
-
         <div class="arrow">➜</div>
 
       </div>
@@ -80,7 +89,10 @@
         <h3>DABubble</h3>
         <div class="tech">Angular | TypeScript | Firebase</div>
         <p>Chat and collaboration app project.</p>
-        <a class="talk-btn" href="#">GitHub</a>
+
+        <a class="talk-btn" href="#" target="_blank" rel="noopener noreferrer">
+          GitHub
+        </a>
       </div>
 
       <div class="project-number">03/04</div>
@@ -88,15 +100,14 @@
     </div>
 
     <!-- POKEDEX -->
-    <div class="project-row reverse">
+    <div class="project-row reverse"
+         (mouseenter)="activeProject = 'pokedex'"
+         (mouseleave)="activeProject = null">
 
       <div class="project-box"
-           (mouseenter)="activeProject = 'pokedex'"
-           (mouseleave)="activeProject = null"
            [class.active]="activeProject === 'pokedex'">
 
         <img src="assets/imgport/pokedex.svg" alt="Pokédex">
-
         <div class="arrow">➜</div>
 
       </div>
@@ -104,8 +115,11 @@
       <div class="project-info" [class.show]="activeProject === 'pokedex'">
         <h3>Pokédex</h3>
         <div class="tech">JavaScript | HTML | CSS | API</div>
-        <p>API-based Pokémon search application.</p>
-        <a class="talk-btn" href="https://github.com/Magdalena260/Modul_8_Pokedex1304finallyoK">
+
+        <a class="talk-btn"
+           href="https://github.com/Magdalena260/Modul_8_Pokedex1304finallyoK"
+           target="_blank"
+           rel="noopener noreferrer">
           GitHub
         </a>
       </div>
