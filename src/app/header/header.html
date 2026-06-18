@@ -1,29 +1,35 @@
 <div class="header">
 
+  <!-- =========================
+       LOGO (LEFT SIDE)
+  ========================== -->
   <div class="left">
     <img src="assets/icons/logo_mlheribor.svg" alt="Logo">
   </div>
 
+  <!-- =========================
+       RIGHT SIDE (LANG + BURGER)
+  ========================== -->
   <div class="right">
 
+    <!-- LANGUAGE SWITCH -->
     <div class="lang">
 
       <div
         [class.active]="currentLang === 'en'"
-        [class.clicked]="clickState === 'en'"
         (click)="switchLanguage('en')">
         EN
       </div>
 
       <div
         [class.active]="currentLang === 'de'"
-        [class.clicked]="clickState === 'de'"
         (click)="switchLanguage('de')">
         DE
       </div>
 
     </div>
 
+    <!-- BURGER MENU ICON -->
     <div class="burger" (click)="toggleMenu()">
       <span></span>
       <span></span>
@@ -34,6 +40,9 @@
 
 </div>
 
+<!-- =========================
+     MOBILE MENU OVERLAY
+========================= -->
 <nav class="mobile-menu" [class.open]="menuOpen">
 
   <div class="menu-center">

@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -8,9 +8,9 @@ import { Component, Output, EventEmitter } from '@angular/core';
 })
 export class ReferencesComponent {
 
-  @Output() scrollToContact = new EventEmitter<void>();
-
   goToContact() {
-    this.scrollToContact.emit();
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
   }
 }

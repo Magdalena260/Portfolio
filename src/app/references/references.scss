@@ -3,7 +3,6 @@
   height: 565px;
 
   margin: 0 auto;
-
   position: relative;
 
   display: flex;
@@ -79,7 +78,7 @@
   border: 2px solid #00BC8F;
 }
 
-/* QUOTE ICON GREEN HOVER */
+/* QUOTE ICON */
 .card img {
   position: absolute;
   top: 40px;
@@ -122,20 +121,20 @@
   text-align: left;
 }
 
-/* ARROW */
+/* ARROW BUTTON */
 .bottom-right {
   position: absolute;
   bottom: -290px;
   right: 100px;
 
   cursor: pointer;
-  display: block;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .bottom-right img {
   display: block;
-}
-
-.references {
-  padding-bottom: 100px;
+  cursor: pointer;
 }

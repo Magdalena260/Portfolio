@@ -10,18 +10,12 @@ export class HeaderComponent {
 
   currentLang: string = 'en';
   menuOpen = false;
-  clickState: string | null = null;
 
   switchLanguage(lang: string) {
 
     if (this.currentLang === lang) return;
 
     this.currentLang = lang;
-    this.clickState = lang;
-
-    setTimeout(() => {
-      this.clickState = null;
-    }, 120);
   }
 
   toggleMenu() {
@@ -29,7 +23,10 @@ export class HeaderComponent {
   }
 
   scrollTo(id: string) {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth'
+    });
+
     this.menuOpen = false;
   }
 }

@@ -13,21 +13,18 @@
   z-index: 1001;
 }
 
-/* LOGO */
 .left img {
   height: 150px;
   width: auto;
   display: block;
 }
 
-/* RIGHT */
 .right {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
-/* LANG */
 .lang {
   display: flex;
   align-items: center;
@@ -37,58 +34,43 @@
   font-size: 14px;
 }
 
-/* BASE */
 .lang div {
   position: relative;
   cursor: pointer;
   padding: 4px 10px;
 
   border: 2px solid transparent;
-  transition: border 0.2s ease;
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 120%;
+  text-align: right;
 }
 
-/* =========================
-   UNDERLINE (CENTER + HALF WIDTH)
-========================= */
+/* HOVER LINE */
 .lang div::after {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -2px;
 
   width: 0%;
   height: 2px;
   background: black;
 
   transform: translateX(-50%);
-  transition: width 0.2s ease;
+  transition: width 0.2s ease, background 0.2s ease;
 }
 
-/* HOVER = HALF WIDTH */
 .lang div:hover::after {
   width: 50%;
 }
 
-/* NO BORDER ON HOVER */
-.lang div:hover {
-  border: 2px solid transparent;
-}
-
-/* =========================
-   CLICK STATE = BLACK (SHORT)
-========================= */
-.lang div.clicked {
-  border: 2px solid black;
-}
-
-/* =========================
-   ACTIVE STATE = GREEN (FINAL)
-========================= */
+/* ACTIVE ONLY (GREEN) */
 .lang div.active {
   border: 2px solid #00BC8F;
 }
 
-/* ACTIVE UNDERLINE (CENTER + HALF WIDTH) */
 .lang div.active::after {
   width: 50%;
   background: #00BC8F;
@@ -111,4 +93,44 @@
   width: 100%;
   background: black;
   border-radius: 2px;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+
+  background: #FFFCF3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 40px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-item {
+  font-size: 78px;
+  font-family: 'Syne', sans-serif;
+  cursor: pointer;
+  color: black;
 }

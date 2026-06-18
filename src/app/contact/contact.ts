@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ContactComponent {
 
-  scrollToTop() {
+  scrollToTop(): void {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
