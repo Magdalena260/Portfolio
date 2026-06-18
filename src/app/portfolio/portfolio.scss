@@ -1,3 +1,4 @@
+
 /* =========================
    PORTFOLIO LAYOUT
 ========================= */
@@ -89,12 +90,15 @@
   z-index: 1;
 }
 
-/* IMAGE */
+/* =========================
+   IMAGE FIX (WICHTIG)
+========================= */
 
 .project-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 
   filter: grayscale(100%);
   transition: 0.25s ease;
@@ -128,7 +132,7 @@
 }
 
 /* =========================
-   ARROW (CIRCLE)
+   ARROW CIRCLE (75x75 FIX)
 ========================= */
 
 .arrow {
@@ -140,7 +144,7 @@
   color: white;
 
   position: absolute;
-  right: -35px;
+  right: -57px;
   top: 50%;
 
   transform: translateY(-50%) rotate(-45deg);
@@ -149,13 +153,13 @@
   justify-content: center;
   align-items: center;
 
+  font-size: 26px;
+
   opacity: 0;
   transition: opacity 0.25s ease;
 
   z-index: 20;
   pointer-events: none;
-
-  font-size: 22px;
 }
 
 .project-row:hover .arrow {
@@ -163,7 +167,7 @@
 }
 
 .project-row.reverse .arrow {
-  left: -35px;
+  left: -20px;
   right: auto;
 }
 
@@ -197,6 +201,8 @@
   opacity: 0;
   transform: translateY(15px);
 
+  margin-left: 60px;
+
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
@@ -213,6 +219,8 @@
   font-family: 'Syne', sans-serif;
   font-size: 48px;
   color: black;
+
+  margin-left: 40px;
 
   transition: color 0.2s ease;
 }
@@ -249,4 +257,10 @@
 .talk-btn:hover {
   background: black;
   color: white;
+}
+
+/* focus fix */
+.talk-btn:focus,
+.talk-btn:focus-visible {
+  outline: none;
 }
