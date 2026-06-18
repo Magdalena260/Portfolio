@@ -20,16 +20,75 @@
   display: block;
 }
 
-/* RIGHT AREA */
+/* RIGHT */
 .right {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
-/* LANGUAGE (IM HEADER WEG) */
+/* LANG */
 .lang {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  font-family: 'Overpass', sans-serif;
+  font-size: 14px;
+}
+
+/* BASE */
+.lang div {
+  position: relative;
+  cursor: pointer;
+  padding: 4px 10px;
+
+  border: 2px solid transparent;
+  transition: border 0.2s ease;
+}
+
+/* =========================
+   HOVER = ONLY UNDERLINE
+========================= */
+.lang div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 0%;
+  height: 2px;
+  background: black;
+
+  transition: width 0.2s ease;
+}
+
+.lang div:hover::after {
+  width: 100%;
+}
+
+/* NO BORDER ON HOVER */
+.lang div:hover {
+  border: 2px solid transparent;
+}
+
+/* =========================
+   CLICK STATE = BLACK (SHORT)
+========================= */
+.lang div.clicked {
+  border: 2px solid black;
+}
+
+/* =========================
+   ACTIVE STATE = GREEN (FINAL)
+========================= */
+.lang div.active {
+  border: 2px solid #00BC8F;
+}
+
+.lang div.active::after {
+  width: 100%;
+  background: #00BC8F;
 }
 
 /* BURGER */
@@ -49,38 +108,4 @@
   width: 100%;
   background: black;
   border-radius: 2px;
-  display: block;
-}
-
-/* OVERLAY MENU */
-.mobile-menu {
-  position: fixed;
-  inset: 0;
-
-  background: #FFFCF3;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  gap: 40px;
-
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s ease;
-  z-index: 999;
-}
-
-.mobile-menu.open {
-  opacity: 1;
-  pointer-events: all;
-}
-
-/* MENU ITEMS */
-.menu-item {
-  font-size: 78px;
-  font-family: 'Syne', sans-serif;
-  cursor: pointer;
-  color: black;
 }

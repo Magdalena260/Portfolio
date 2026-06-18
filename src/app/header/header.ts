@@ -10,9 +10,18 @@ export class HeaderComponent {
 
   currentLang: string = 'en';
   menuOpen = false;
+  clickState: string | null = null;
 
   switchLanguage(lang: string) {
-    this.currentLang = lang;
+
+    if (this.currentLang === lang) return;
+
+    this.clickState = lang;
+
+    setTimeout(() => {
+      this.currentLang = lang;
+      this.clickState = null;
+    }, 120);
   }
 
   toggleMenu() {
