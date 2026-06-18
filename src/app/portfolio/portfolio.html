@@ -1,3 +1,9 @@
+<div class="portfolio">
+
+  <div class="title">
+    <h2>Portfolio</h2>
+  </div>
+
 <div class="projects">
 
   <!-- JOIN (links) -->
@@ -8,8 +14,15 @@
     <div class="project-box" [class.active]="activeProject === 'join'">
       <img src="assets/imgport/join.svg" alt="Join project">
 
-      <div class="arrow">➜</div>
-      <span class="arrow-big">↗</span>
+      <!-- Arrow Circle -->
+      <div class="arrow">
+        <img src="assets/arrows/arrow_down.svg" alt="arrow">
+      </div>
+
+      <!-- Big Arrow -->
+      <div class="arrow-big">
+        <img src="assets/arrows/arrow_dia.svg" alt="arrow dia">
+      </div>
     </div>
 
     <div class="project-info" [class.show]="activeProject === 'join'">
@@ -31,14 +44,22 @@
     <div class="project-box" [class.active]="activeProject === 'elpollo'">
       <img src="assets/imgport/elpollo.svg" alt="El Pollo Loco">
 
-      <div class="arrow">➜</div>
-      <span class="arrow-big">↗</span>
+      <!-- Arrow Circle -->
+      <div class="arrow">
+        <img src="assets/arrows/arrow_down.svg" alt="arrow">
+      </div>
+
+      <!-- Big Arrow -->
+      <div class="arrow-big">
+        <img src="assets/arrows/arrow_dia.svg" alt="arrow dia">
+      </div>
     </div>
 
     <div class="project-info" [class.show]="activeProject === 'elpollo'">
       <h3>El Pollo Loco</h3>
       <div class="tech">JavaScript | HTML | CSS</div>
-        <p>Little game with the character Pepe.</p>
+      <p>Little game with the character Pepe.</p>
+
       <a class="talk-btn" href="#" target="_blank">GitHub</a>
     </div>
 
@@ -53,14 +74,25 @@
     <div class="project-box" [class.active]="activeProject === 'pokedex'">
       <img src="assets/imgport/pokedex.svg" alt="Pokédex">
 
-      <div class="arrow">➜</div>
-      <span class="arrow-big">↗</span>
+      <!-- Arrow Circle -->
+      <div class="arrow">
+        <img src="assets/arrows/arrow_down.svg" alt="arrow">
+      </div>
+
+      <!-- Big Arrow -->
+      <div class="arrow-big">
+        <img src="assets/arrows/arrow_dia.svg" alt="arrow dia">
+      </div>
     </div>
 
     <div class="project-info" [class.show]="activeProject === 'pokedex'">
       <h3>Pokédex</h3>
       <div class="tech">JavaScript | HTML | CSS | API</div>
-      <p>API based libery, where you can find Pokémons.<br> Based on the PokéAPI.</p>
+      <p>
+        API based libery, where you can find Pokémons.<br>
+        Based on the PokéAPI.
+      </p>
+
       <a class="talk-btn" href="#" target="_blank">GitHub</a>
     </div>
 

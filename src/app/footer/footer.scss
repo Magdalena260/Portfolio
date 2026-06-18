@@ -62,7 +62,7 @@
   gap: 12px;
 }
 
-/* ICONS */
+/* ICON ROW */
 .footer-icons {
   display: flex;
   align-items: center;
@@ -70,26 +70,28 @@
   margin-top: 6px;
 }
 
-.github {
+/* ICON BASE */
+.footer-icons a img {
   width: 30px;
-  height: 29px;
-}
-
-.mail {
-  width: 26px;
-  height: 27px;
-}
-
-.linkedin {
-  width: 30px;
-  height: 29px;
-}
-
-.footer-right img {
+  height: 30px;
   display: block;
+
+  cursor: pointer;
+
+  transition: transform 0.2s ease;
 }
 
-/* LEGAL NOTICE LINK */
+/* HOVER: nur hoch (stärker) */
+.footer-icons a:hover img {
+  transform: translateY(-10px);
+}
+
+/* CLICK: noch stärker hoch */
+.footer-icons a:active img {
+  transform: translateY(-14px);
+}
+
+/* LEGAL NOTICE */
 .legal-notice {
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
@@ -118,7 +120,6 @@
   transition: width 0.3s ease;
 }
 
-/* YOUR ORIGINAL LOOK (fixed + clean) */
 .legal-notice:hover::after {
   width: 60%;
   margin-left: 35px;

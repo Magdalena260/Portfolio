@@ -1,24 +1,18 @@
-
 /* =========================
    PORTFOLIO LAYOUT
 ========================= */
 
 .portfolio {
   width: 1242px;
-
-  margin: 160px auto 160px;
+  margin: 160px auto;
   padding: 120px 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
-/* =========================
-   TITLE
-========================= */
-
+/* TITLE */
 .title h2 {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
@@ -32,10 +26,7 @@
   color: #00BC8F;
 }
 
-/* =========================
-   DESCRIPTION
-========================= */
-
+/* DESCRIPTION */
 .description {
   width: 525px;
   text-align: center;
@@ -48,7 +39,7 @@
 }
 
 /* =========================
-   PROJECTS WRAPPER
+   PROJECT WRAPPER
 ========================= */
 
 .projects {
@@ -58,16 +49,11 @@
   gap: 70px;
 }
 
-/* =========================
-   ROW LAYOUT
-========================= */
-
 .project-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
-
   position: relative;
 }
 
@@ -76,30 +62,21 @@
 }
 
 /* =========================
-   PROJECT BOX
+   IMAGE BOX
 ========================= */
 
 .project-box {
   width: 620px;
   height: 393px;
   position: relative;
-
   background: #eaeaea;
-
   overflow: visible;
-  z-index: 1;
 }
-
-/* =========================
-   IMAGE FIX (WICHTIG)
-========================= */
 
 .project-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-
   filter: grayscale(100%);
   transition: 0.25s ease;
 }
@@ -108,23 +85,16 @@
   filter: grayscale(0%);
 }
 
-/* =========================
-   FRAME
-========================= */
-
+/* FRAME */
 .project-box::after {
   content: "";
   position: absolute;
   inset: 0;
-
   border: 4px solid black;
   transform: translate(20px, 20px);
-
   opacity: 0;
   transition: 0.2s ease;
-
   pointer-events: none;
-  z-index: 2;
 }
 
 .project-row:hover .project-box::after {
@@ -132,42 +102,45 @@
 }
 
 /* =========================
-   ARROW CIRCLE (75x75 FIX)
+   SMALL ARROW CIRCLE
+   (down arrow)
 ========================= */
 
 .arrow {
   width: 75px;
   height: 75px;
-
   border-radius: 50%;
   background: black;
-  color: white;
 
   position: absolute;
-  right: -57px;
+  right: -35px;
   top: 50%;
-
-  transform: translateY(-50%) rotate(-45deg);
+  transform: translateY(-50%);
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  font-size: 26px;
-
   opacity: 0;
-  transition: opacity 0.25s ease;
-
-  z-index: 20;
-  pointer-events: none;
+  transition: 0.25s ease;
+  z-index: 10;
 }
 
 .project-row:hover .arrow {
   opacity: 1;
 }
 
+/* kleiner Pfeil */
+.arrow img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transform: rotate(0deg);
+}
+
+/* reverse Seite */
 .project-row.reverse .arrow {
-  left: -20px;
+  left: -35px;
   right: auto;
 }
 
@@ -180,30 +153,36 @@
   right: 20px;
   top: 20px;
 
-  font-size: 34px;
-
   opacity: 0;
-  transform: rotate(0deg);
-
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: 0.25s ease;
 }
 
 .project-row:hover .arrow-big {
   opacity: 1;
+}
+
+/* großer diagonal Pfeil */
+.arrow-big img {
+  width: 34px;
+  height: 34px;
+  filter: brightness(0) invert(1);
+  transform: rotate(0deg);
+}
+
+/* optional: leichte rotation beim hover */
+.project-row:hover .arrow-big img {
   transform: rotate(45deg);
 }
 
 /* =========================
-   PROJECT INFO
+   INFO
 ========================= */
 
 .project-info {
   opacity: 0;
   transform: translateY(15px);
-
   margin-left: 60px;
-
-  transition: opacity 0.25s ease, transform 0.25s ease;
+  transition: 0.25s ease;
 }
 
 .project-row:hover .project-info {
@@ -211,56 +190,35 @@
   transform: translateY(0);
 }
 
-/* =========================
-   NUMBER
-========================= */
-
+/* NUMBER */
 .project-number {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Syne';
   font-size: 48px;
-  color: black;
-
   margin-left: 40px;
-
-  transition: color 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .project-row:hover .project-number {
   color: #00BC8F;
 }
 
-/* =========================
-   TECH
-========================= */
-
+/* TECH */
 .tech {
   color: #00BC8F;
 }
 
-/* =========================
-   BUTTON
-========================= */
-
+/* BUTTON */
 .talk-btn {
   display: inline-block;
   margin-top: 20px;
-
   padding: 12px 24px;
   border: 2px solid black;
-
   text-decoration: none;
   color: black;
-
   transition: 0.3s ease;
 }
 
 .talk-btn:hover {
   background: black;
   color: white;
-}
-
-/* focus fix */
-.talk-btn:focus,
-.talk-btn:focus-visible {
-  outline: none;
 }
