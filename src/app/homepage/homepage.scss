@@ -1,5 +1,7 @@
-main {
-  display: flex;
-  flex-direction: column;
-  gap: 160px;
+.about-me,
+.my-skills,
+.references,
+.portfolio {
+  margin: 160px auto;
+  width: 1240px;
 }
