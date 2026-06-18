@@ -16,10 +16,10 @@ export class HeaderComponent {
 
     if (this.currentLang === lang) return;
 
+    this.currentLang = lang;
     this.clickState = lang;
 
     setTimeout(() => {
-      this.currentLang = lang;
       this.clickState = null;
     }, 120);
   }
