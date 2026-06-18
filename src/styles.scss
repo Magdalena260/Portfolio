@@ -17,3 +17,8 @@ h1,
 h2 {
   font-family: 'Syne', sans-serif;
 }
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 160px;
+}

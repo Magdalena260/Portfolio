@@ -1,132 +1,70 @@
-<div class="portfolio">
+<div class="projects">
 
-  <div class="title">
-    <h2>Portfolio</h2>
+  <!-- JOIN (links) -->
+  <div class="project-row"
+       (mouseenter)="activeProject = 'join'"
+       (mouseleave)="activeProject = null">
+
+    <div class="project-box" [class.active]="activeProject === 'join'">
+      <img src="assets/imgport/join.svg" alt="Join project">
+
+      <div class="arrow">➜</div>
+      <span class="arrow-big">↗</span>
+    </div>
+
+    <div class="project-info" [class.show]="activeProject === 'join'">
+      <h3>Join</h3>
+      <div class="tech">Angular | TypeScript | Firebase</div>
+      <p>Task manager inspired by Kanban system.</p>
+
+      <a class="talk-btn" href="#" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-number">01/03</div>
   </div>
 
-  <div class="description">
-    <p>
-      Explore a selection of my work here - interact with projects to see my skills in action.
-    </p>
+  <!-- EL POLLO (rechts) -->
+  <div class="project-row reverse"
+       (mouseenter)="activeProject = 'elpollo'"
+       (mouseleave)="activeProject = null">
+
+    <div class="project-box" [class.active]="activeProject === 'elpollo'">
+      <img src="assets/imgport/elpollo.svg" alt="El Pollo Loco">
+
+      <div class="arrow">➜</div>
+      <span class="arrow-big">↗</span>
+    </div>
+
+    <div class="project-info" [class.show]="activeProject === 'elpollo'">
+      <h3>El Pollo Loco</h3>
+      <div class="tech">JavaScript | HTML | CSS</div>
+        <p>Little game with the character Pepe. Fight against the Endboss!</p>
+      <a class="talk-btn" href="#" target="_blank">GitHub</a>
+    </div>
+
+    <div class="project-number">02/03</div>
   </div>
 
-  <div class="projects">
+  <!-- POKEDEX (links) -->
+  <div class="project-row"
+       (mouseenter)="activeProject = 'pokedex'"
+       (mouseleave)="activeProject = null">
 
-    <!-- JOIN -->
-    <div class="project-row"
-         (mouseenter)="activeProject = 'join'"
-         (mouseleave)="activeProject = null">
+    <div class="project-box" [class.active]="activeProject === 'pokedex'">
+      <img src="assets/imgport/pokedex.svg" alt="Pokédex">
 
-      <div class="project-box"
-           [class.active]="activeProject === 'join'">
-
-        <img src="assets/imgport/join.svg" alt="Join project">
-        <div class="arrow">➜</div>
-
-      </div>
-
-      <div class="project-info" [class.show]="activeProject === 'join'">
-        <h3>Join</h3>
-        <div class="tech">Angular | TypeScript | Firebase</div>
-        <p>Task manager inspired by Kanban system.</p>
-
-        <a class="talk-btn"
-           href="https://github.com/Magdalena260/Modul_8_Pokedex1304finallyoK"
-           target="_blank"
-           rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
-
-      <div class="project-number">01/04</div>
-
+      <div class="arrow">➜</div>
+      <span class="arrow-big">↗</span>
     </div>
 
-    <!-- EL POLLO -->
-    <div class="project-row reverse"
-         (mouseenter)="activeProject = 'elpollo'"
-         (mouseleave)="activeProject = null">
-
-      <div class="project-box"
-           [class.active]="activeProject === 'elpollo'">
-
-        <img src="assets/imgport/elpollo.svg" alt="El Pollo Loco">
-        <div class="arrow">➜</div>
-
-      </div>
-
-      <div class="project-info" [class.show]="activeProject === 'elpollo'">
-        <h3>El Pollo Loco</h3>
-        <div class="tech">JavaScript | HTML | CSS</div>
-        <p>Jump-and-run game based on object-oriented approach.</p>
-
-        <a class="talk-btn"
-           href="https://github.com/Magdalena260/Modul-12_ElPocoLoco"
-           target="_blank"
-           rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
-
-      <div class="project-number">02/04</div>
-
+    <div class="project-info" [class.show]="activeProject === 'pokedex'">
+      <h3>Pokédex</h3>
+      <div class="tech">JavaScript | HTML | CSS | API</div>
+      <p>API based libery, where you can find Pokémons. Based on the PokéAPI.</p>
+      <a class="talk-btn" href="#" target="_blank">GitHub</a>
     </div>
 
-    <!-- DABUBBLE -->
-    <div class="project-row"
-         (mouseenter)="activeProject = 'bubble'"
-         (mouseleave)="activeProject = null">
-
-      <div class="project-box"
-           [class.active]="activeProject === 'bubble'">
-
-        <img src="assets/imgport/dabubble.svg" alt="DABubble">
-        <div class="arrow">➜</div>
-
-      </div>
-
-      <div class="project-info" [class.show]="activeProject === 'bubble'">
-        <h3>DABubble</h3>
-        <div class="tech">Angular | TypeScript | Firebase</div>
-        <p>Chat and collaboration app project.</p>
-
-        <a class="talk-btn" href="#" target="_blank" rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
-
-      <div class="project-number">03/04</div>
-
-    </div>
-
-    <!-- POKEDEX -->
-    <div class="project-row reverse"
-         (mouseenter)="activeProject = 'pokedex'"
-         (mouseleave)="activeProject = null">
-
-      <div class="project-box"
-           [class.active]="activeProject === 'pokedex'">
-
-        <img src="assets/imgport/pokedex.svg" alt="Pokédex">
-        <div class="arrow">➜</div>
-
-      </div>
-
-      <div class="project-info" [class.show]="activeProject === 'pokedex'">
-        <h3>Pokédex</h3>
-        <div class="tech">JavaScript | HTML | CSS | API</div>
-
-        <a class="talk-btn"
-           href="https://github.com/Magdalena260/Modul_8_Pokedex1304finallyoK"
-           target="_blank"
-           rel="noopener noreferrer">
-          GitHub
-        </a>
-      </div>
-
-      <div class="project-number">04/04</div>
-
-    </div>
-
+    <div class="project-number">03/03</div>
   </div>
+
 </div>
