@@ -13,7 +13,6 @@
   padding: 40px 100px;
   box-sizing: border-box;
 
-  /* wichtig für smooth anchor scroll positioning */
   scroll-margin-top: 100px;
 }
 
@@ -72,6 +71,7 @@
 
   padding: 30px;
   box-sizing: border-box;
+
   transition: border 0.3s ease;
 }
 
@@ -79,6 +79,7 @@
   border: 2px solid #00BC8F;
 }
 
+/* QUOTE ICON GREEN HOVER */
 .card img {
   position: absolute;
   top: 40px;
@@ -87,6 +88,12 @@
 
   width: 48px;
   height: 40px;
+
+  transition: filter 0.3s ease;
+}
+
+.card:hover img {
+  filter: invert(49%) sepia(90%) saturate(230%) hue-rotate(102deg);
 }
 
 /* TEXT */
@@ -115,20 +122,20 @@
   text-align: left;
 }
 
-/* ARROW → (WICHTIG: clickable!) */
+/* ARROW */
 .bottom-right {
   position: absolute;
   bottom: -290px;
   right: 100px;
 
   cursor: pointer;
+  display: block;
 }
 
 .bottom-right img {
   display: block;
 }
 
-/* extra spacing fix */
 .references {
   padding-bottom: 100px;
 }

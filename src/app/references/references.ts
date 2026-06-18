@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-references',
@@ -6,4 +6,11 @@ import { Component } from '@angular/core';
   templateUrl: './references.html',
   styleUrl: './references.scss'
 })
-export class ReferencesComponent {}
+export class ReferencesComponent {
+
+  @Output() scrollToContact = new EventEmitter<void>();
+
+  goToContact() {
+    this.scrollToContact.emit();
+  }
+}
