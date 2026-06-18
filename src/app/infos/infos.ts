@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-infos',
@@ -6,4 +6,27 @@ import { Component } from '@angular/core';
   templateUrl: './infos.html',
   styleUrl: './infos.scss'
 })
-export class InfosComponent {}
+export class InfosComponent implements AfterViewInit {
+
+  @ViewChild('infoSection') infoSection!: ElementRef;
+  @ViewChild('arrow') arrow!: ElementRef;
+
+  ngAfterViewInit() {
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+          this.arrow.nativeElement.classList.add('active');
+        } else {
+          this.arrow.nativeElement.classList.remove('active');
+        }
+
+      });
+    }, {
+      threshold: 0.4
+    });
+
+    observer.observe(this.infoSection.nativeElement);
+  }
+}

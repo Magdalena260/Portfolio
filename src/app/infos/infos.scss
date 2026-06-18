@@ -5,95 +5,107 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   padding: 40px 80px;
+}
 
-  /* LEFT */
-  .left {
-    display: flex;
-    align-items: flex-end;
-    height: 100%;
+/* LEFT */
+.info .left {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+}
 
-    a {
-      font-family: 'Overpass', sans-serif;
-      font-weight: 400;
-      font-size: 18px;
-      text-decoration: none;
-      color: black;
+.info .left a {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
 
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-    }
-  }
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
 
-  /* CENTER */
-  .center {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+/* CENTER */
+.info .center {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-    .title {
-      font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 128px;
-      line-height: 100%;
-      letter-spacing: -0.025em;
-      margin: 0;
+.info .center .title {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 128px;
+  line-height: 100%;
+  letter-spacing: -0.025em;
+  margin: 0;
 
-      display: flex;
-      flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
 
-      span {
-        display: block;
-      }
-    }
+.info .center .title span {
+  display: block;
+}
 
-    .name-row {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 10px;
+.info .center .name-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
 
-      .line {
-        display: block;
-        margin: 0;
-      }
-
-      .name {
-        font-family: 'Overpass', sans-serif;
-        font-weight: 700;
-        font-size: 48px;
-        margin: 0;
-        color:#00BC8F;
-        white-space: nowrap;
-      }
-    }
-  }
-
-  /* RIGHT*/
-  .right {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    align-items: center;
-
-    height: 100%;
-
-    .arrow {
-      width: 40px;
-      margin-bottom: 10px;
-    }
-
-    .scroll {
-      font-family: 'Overpass', sans-serif;
-      font-weight: 300;
-      font-size: 22px;
-      margin: 0;
-    }
-  }
-
-  .center .line {
+.info .center .name-row .line {
+  display: block;
+  margin: 0;
   max-width: 550px;
   height: auto;
 }
+
+.info .center .name-row .name {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  margin: 0;
+  color: #00BC8F;
+  white-space: nowrap;
+}
+
+/* RIGHT */
+.info .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100%;
+}
+
+/* ARROW BASE */
+.info .right .arrow {
+  width: 40px;
+  margin-bottom: 10px;
+
+  opacity: 0.6;
+  transform: translateY(0px);
+}
+
+/* ONLY WHEN ACTIVE */
+.info .right .arrow.active {
+  animation: scrollArrow 4s ease-in-out infinite;
+}
+
+/* KEYFRAMES */
+@keyframes scrollArrow {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(12px); }
+  100% { transform: translateY(0px); }
+}
+
+.info .right .scroll {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  margin: 0;
 }
