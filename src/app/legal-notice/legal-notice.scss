@@ -4,6 +4,10 @@
   font-family: 'Overpass', sans-serif;
 }
 
+/* =========================
+   TITLE
+========================= */
+
 .main-title {
   font-family: 'Syne', sans-serif;
   font-size: 78px;
@@ -12,7 +16,11 @@
   margin-bottom: 80px;
 }
 
-h2 {
+/* =========================
+   TEXT SECTIONS (SCOPED!)
+========================= */
+
+.legal-wrapper h2 {
   font-family: 'Overpass', sans-serif;
   font-size: 24px;
   font-weight: 800;
@@ -22,7 +30,7 @@ h2 {
   margin-bottom: 16px;
 }
 
-p {
+.legal-wrapper p {
   font-size: 16px;
   font-weight: 400;
   line-height: 120%;
@@ -30,21 +38,66 @@ p {
   margin-bottom: 16px;
 }
 
+/* =========================
+   LINKS
+========================= */
+
 .green {
   color: #00BC8F;
   font-weight: 700;
   text-decoration: none;
 }
 
+a[href^="mailto"] {
+  text-decoration: none;
+  color: inherit;
+}
+
+a[href^="mailto"]:hover {
+  text-decoration: none;
+}
+
+/* =========================
+   DATE
+========================= */
+
 .date {
   margin-top: 40px;
   font-size: 14px;
 }
 
-a[href^="mailto"] {
-  text-decoration: none;
-  color: inherit;
+/* =========================
+   FOOTER SECTION
+========================= */
+
+.legal-footer {
+  margin-top: 80px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-a[href^="mailto"]:hover {
-  text-decoration: none;
+
+/* RECTANGLE (BACKGROUND LAYER) */
+.legal-rectangle {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+bottom: -150px; 
+  z-index: 1;
+  width: auto;
+  height: auto;
+}
+
+/* TEXT ON TOP */
+.legal-footer-text {
+  position: relative;
+  z-index: 2;
+
+  font-family: 'Overpass', sans-serif;
+  font-size: 14px;
+  color: #000;
+  opacity: 0.8;
 }
