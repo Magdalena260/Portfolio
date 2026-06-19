@@ -4,12 +4,15 @@
 }
 
 @font-face {
-  font-family: 'Syne', ExtraBold;
-  src: url('/assets/fonts/syneextrabold/syne.extra.ttf') format('truetype');
+  font-family: 'Syne';
+  src: url('/assets/fonts/synebold/Syne-Bold.ttf') format('truetype');
+  font-weight: 700;
 }
+
 @font-face {
-  font-family: 'Syne', Bold;
-  src: url('/assets/fonts/synebold/static/Syne-Bold.ttf') format('truetype');
+  font-family: 'Syne';
+  src: url('/assets/fonts/syneextrabold/syne.extra.ttf') format('truetype');
+  font-weight: 800;
 }
 
 body {
@@ -21,6 +24,7 @@ h1,
 h2 {
   font-family: 'Syne', sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
