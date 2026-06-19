@@ -1,64 +1,101 @@
 /* =========================
-   PORTFOLIO LAYOUT
+   PORTFOLIO WRAPPER
 ========================= */
 
 .portfolio {
-  width: 1242px;
+  width: 1239px;
   margin: 160px auto;
-  padding: 120px 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
-
-/* TITLE */
-.title h2 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 78px;
-  text-align: center;
-  margin: 0;
-  transition: color 0.3s ease;
-}
-
-.title h2:hover {
-  color: #00BC8F;
-}
-
-/* DESCRIPTION */
-.description {
-  width: 525px;
-  text-align: center;
-}
-
-.description p {
-  font-family: 'Overpass', sans-serif;
-  font-size: 22px;
-  margin: 0;
+  gap: 80px;
 }
 
 /* =========================
-   PROJECT WRAPPER
+   ROW
 ========================= */
 
-.projects {
-  width: 1239px;
-  display: flex;
-  flex-direction: column;
-  gap: 70px;
-}
-
 .project-row {
+  width: 1239px;
+  height: 460px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 40px;
+
   position: relative;
 }
 
 .project-row.reverse {
   flex-direction: row-reverse;
+}
+
+/* =========================
+   LEFT TEXT BLOCK (45px rechts)
+========================= */
+
+.project-info {
+  width: 501px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  opacity: 0;
+  transform: translateX(45px);
+  transition: 0.25s ease;
+}
+
+.project-row:hover .project-info {
+  opacity: 1;
+  transform: translateX(45px);
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.project-info h3 {
+  font-family: 'Syne';
+  font-size: 45px;
+  margin: 0;
+}
+
+.tech {
+  font-family: 'Overpass';
+  font-size: 23px;
+  color: #00BC8F;
+}
+
+.project-info p {
+  font-family: 'Overpass';
+  font-size: 16px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.talk-btn,
+.github-btn {
+  width: fit-content;
+  padding: 12px 24px;
+  border: 2px solid #000;
+
+  text-decoration: none;
+  font-family: 'Overpass';
+  font-size: 16px;
+
+  color: #000;
+  background: transparent;
+
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.talk-btn:hover,
+.github-btn:hover {
+  background: #000;
+  color: #f5e6c8;
 }
 
 /* =========================
@@ -69,14 +106,21 @@
   width: 620px;
   height: 393px;
   position: relative;
-  background: #eaeaea;
   overflow: visible;
 }
+
+/* =========================
+   IMAGE
+========================= */
 
 .project-box img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  position: relative;
+  z-index: 2;
+
   filter: grayscale(100%);
   transition: 0.25s ease;
 }
@@ -85,35 +129,39 @@
   filter: grayscale(0%);
 }
 
-/* FRAME */
-.project-box::after {
+/* =========================
+   FRAME
+========================= */
+
+.project-box::before {
   content: "";
   position: absolute;
-  inset: 0;
-  border: 4px solid black;
-  transform: translate(20px, 20px);
-  opacity: 0;
-  transition: 0.2s ease;
+
+  width: 100%;
+  height: 100%;
+
+  top: 20px;
+  left: 20px;
+
+  border: 4px solid #000;
+
+  z-index: 3;
   pointer-events: none;
 }
 
-.project-row:hover .project-box::after {
-  opacity: 1;
-}
-
 /* =========================
-   SMALL ARROW CIRCLE
-   (down arrow)
+   ARROW LEFT
 ========================= */
 
 .arrow {
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  background: black;
+
+  background: #000;
 
   position: absolute;
-  right: -35px;
+  left: -37px;
   top: 50%;
   transform: translateY(-50%);
 
@@ -121,27 +169,20 @@
   justify-content: center;
   align-items: center;
 
+  z-index: 5;
+
   opacity: 0;
   transition: 0.25s ease;
-  z-index: 10;
 }
 
 .project-row:hover .arrow {
   opacity: 1;
 }
 
-/* kleiner Pfeil */
 .arrow img {
   width: 22px;
   height: 22px;
   filter: brightness(0) invert(1);
-  transform: rotate(0deg);
-}
-
-/* reverse Seite */
-.project-row.reverse .arrow {
-  left: -35px;
-  right: auto;
 }
 
 /* =========================
@@ -150,8 +191,10 @@
 
 .arrow-big {
   position: absolute;
-  right: 20px;
   top: 20px;
+  right: 20px;
+
+  z-index: 5;
 
   opacity: 0;
   transition: 0.25s ease;
@@ -161,64 +204,19 @@
   opacity: 1;
 }
 
-/* großer diagonal Pfeil */
 .arrow-big img {
   width: 34px;
   height: 34px;
-  filter: brightness(0) invert(1);
-  transform: rotate(0deg);
-}
 
-/* optional: leichte rotation beim hover */
-.project-row:hover .arrow-big img {
+  filter: brightness(0) invert(1);
   transform: rotate(45deg);
 }
 
 /* =========================
-   INFO
+   NUMBER
 ========================= */
 
-.project-info {
-  opacity: 0;
-  transform: translateY(15px);
-  margin-left: 60px;
-  transition: 0.25s ease;
-}
-
-.project-row:hover .project-info {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* NUMBER */
 .project-number {
   font-family: 'Syne';
   font-size: 48px;
-  margin-left: 40px;
-  transition: 0.2s ease;
-}
-
-.project-row:hover .project-number {
-  color: #00BC8F;
-}
-
-/* TECH */
-.tech {
-  color: #00BC8F;
-}
-
-/* BUTTON */
-.talk-btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 24px;
-  border: 2px solid black;
-  text-decoration: none;
-  color: black;
-  transition: 0.3s ease;
-}
-
-.talk-btn:hover {
-  background: black;
-  color: white;
 }
