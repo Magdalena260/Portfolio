@@ -4,8 +4,12 @@
 }
 
 @font-face {
-  font-family: 'Syne';
+  font-family: 'Syne', ExtraBold;
   src: url('/assets/fonts/syneextrabold/syne.extra.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Syne', Bold;
+  src: url('/assets/fonts/synebold/static/Syne-Bold.ttf') format('truetype');
 }
 
 body {
