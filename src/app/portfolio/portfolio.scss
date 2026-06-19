@@ -208,20 +208,26 @@
 ========================= */
 
 .talk-btn {
-  padding: 8px 14px;   
-  border: 2px solid #000;
+  width: 189px;
+  height: 68px;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid #000;
   text-decoration: none;
   color: #000;
 
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.3s ease;
-}
+  font-family: 'Overpass';
+  font-weight: 400;
+  font-size: 23px;
+  line-height: 120%;
+  letter-spacing: 0;
 
-.project-row:hover .talk-btn {
-  opacity: 1;
-  transform: translateY(0);
+  box-sizing: border-box;
+
+  transition: 0.3s ease;
 }
 
 .talk-btn:hover {
@@ -229,9 +235,6 @@
   color: #f5e6c8;
 }
 
-/* =========================
-   NUMBER (01/03 bleibt stabil)
-========================= */
 
 .project-number {
   font-family: 'Syne';
