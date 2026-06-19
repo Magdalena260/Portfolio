@@ -1,3 +1,8 @@
+
+/* =========================
+   CONTAINER
+========================= */
+
 .my-skills {
   width: 1240px;
   height: 687px;
@@ -10,7 +15,10 @@
   align-items: center;
 }
 
-/* TITLE */
+/* =========================
+   TITLE
+========================= */
+
 .my-skills .title {
   position: absolute;
   top: -35px;
@@ -34,7 +42,10 @@
   color: #00BC8F;
 }
 
-/* SKILLS BOX */
+/* =========================
+   SKILLS BOX
+========================= */
+
 .skills-box {
   width: 1012px;
   height: 600px;
@@ -51,7 +62,10 @@
   margin-top: 15px;
 }
 
-/* GRID */
+/* =========================
+   GRID
+========================= */
+
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -63,7 +77,10 @@
   align-items: center;
 }
 
-/* SINGLE SKILL */
+/* =========================
+   SKILL ITEM
+========================= */
+
 .skill {
   width: 100px;
   height: 110px;
@@ -90,7 +107,10 @@
   text-align: center;
 }
 
-/* CONTACT BOX */
+/* =========================
+   CONTACT BOX
+========================= */
+
 .contact-box {
   margin-top: auto;
 
@@ -115,19 +135,21 @@
 }
 
 /* =========================
-   CONTACT ME ANIMATION
-   ========================= */
+   CONTACT LINK (FINAL FIX)
+========================= */
 
 .contact-text {
   color: #64b992;
   cursor: pointer;
+  text-decoration: none;
   font-weight: 400;
-  transition: font-weight 0.2s ease;
 }
 
-/* nur "tact me" underline */
+/* only "ct me" underline */
 .underline-part {
   position: relative;
+  font-weight: 400;
+  transition: font-weight 0.2s ease;
 }
 
 .underline-part::after {
@@ -148,8 +170,12 @@
   transition: transform 0.25s ease;
 }
 
-/* Hover */
+/* hover effects */
 .contact-text:hover {
+  font-weight: 700;
+}
+
+.contact-text:hover .underline-part {
   font-weight: 700;
 }
 
@@ -157,7 +183,10 @@
   transform: scaleX(1);
 }
 
-/* ARROW */
+/* =========================
+   ARROW
+========================= */
+
 .skills-arrow {
   margin-top: 20px;
 }
@@ -166,7 +195,10 @@
   display: block;
 }
 
-/* SMOOTH SCROLL */
+/* =========================
+   SMOOTH SCROLL
+========================= */
+
 html {
   scroll-behavior: smooth;
 }
