@@ -127,7 +127,7 @@
   opacity: 0;
   transform: translateY(-50%) scale(0.6);
 
-  transition: opacity 0.25s ease, transform 0.35s ease;
+  transition: opacity 0.30s ease, transform 0.35s ease;
 
   z-index: 9999;
   pointer-events: none;
@@ -153,8 +153,8 @@
 ========================= */
 
 .arrow img {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 
   filter: brightness(0) invert(1);
 
@@ -253,5 +253,5 @@
 .project-number {
   font-family: 'Syne';
   font-size: 48px;
-  font-weight: 600;
+  font-weight: 700;
 }
