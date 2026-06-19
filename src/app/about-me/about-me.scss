@@ -10,6 +10,8 @@
   align-items: center;
 
   position: relative;
+
+  padding-bottom: 400px;
 }
 
 /* LEFT */
@@ -19,14 +21,22 @@
   flex-direction: column;
 }
 
+/* H2 ONLY ADD: GREEN HOVER */
 .about-left h2 {
   font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 78px;
   margin: 0;
   white-space: nowrap;
+
+  transition: color 0.3s ease;
 }
 
+.about-left h2:hover {
+  color: #00BC8F;
+}
+
+/* TEXT */
 .about-left p {
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
@@ -35,6 +45,7 @@
   margin-top: 20px;
 }
 
+/* INFO */
 .info-item {
   display: flex;
   align-items: center;
@@ -52,7 +63,7 @@
   font-size: 18px;
 }
 
-/* BUTTON */
+/* BUTTON (UNCHANGED) */
 .talk-btn {
   margin-top: 40px;
 
@@ -85,8 +96,6 @@
 
 /* RIGHT */
 .about-right {
- 
-
   position: relative;
 
   display: flex;
@@ -106,12 +115,12 @@
 
   position: relative;
   z-index: 2;
-  margin-top:290px;
+
+  margin-top: 290px;
   margin-left: 80px;
 }
 
-
-/* HOVER FRAME */
+/* FRAME */
 .about-right::after {
   content: "";
   position: absolute;
@@ -127,9 +136,9 @@
   transition: all 0.3s ease;
 
   z-index: 3;
-  cursor: pointer;
-   margin-top:290px;
-   margin-left: 80px;
+
+  margin-top: 290px;
+  margin-left: 80px;
 }
 
 .about-right:hover::after {
@@ -137,20 +146,20 @@
   transform: translate(20px, 20px);
 }
 
-
+/* ARROW */
 .about-arrow {
   position: absolute;
   bottom: -10px;
   right: 30px;
-
-  img {
-    display: block;
-  }
 }
 
-.about-me {
-  padding-bottom: 400px;
+.about-arrow img {
+  display: block;
 }
-.talk-btn {
+
+.talk-btn,
+.talk-btn:visited,
+.talk-btn:hover,
+.talk-btn:active {
   text-decoration: none;
 }
