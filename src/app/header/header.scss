@@ -134,3 +134,15 @@
   cursor: pointer;
   color: black;
 }
+
+:host {
+  display: block;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
