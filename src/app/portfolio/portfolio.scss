@@ -21,6 +21,7 @@
 
 .title h2 {
   font-family: 'Syne';
+
   font-weight: 800;
   font-size: 78px;
   margin: 0;
@@ -202,7 +203,7 @@
 
 /* TEXT */
 .project-info h3 {
-  font-family: 'Syne';
+  font-family: 'Syne', ExtraBold;
   font-size: 45px;
   margin: 0;
 }
@@ -251,7 +252,10 @@
 
 /* NUMBER */
 .project-number {
-  font-family: 'Syne';
+ 
+   font-family: 'Syne', bold;
+  line-height: 120%;
+  text-align: right;
   font-size: 48px;
   font-weight: 700;
 }
