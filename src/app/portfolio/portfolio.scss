@@ -83,10 +83,7 @@
   filter: grayscale(0%);
 }
 
-/* =========================
-   FRAME (ÜBER DEM IMAGE)
-========================= */
-
+/* FRAME */
 .project-box::before {
   content: "";
   position: absolute;
@@ -101,7 +98,7 @@
   opacity: 0;
   transition: 0.25s ease;
 
-  z-index: 5; /* 👈 über Bild */
+  z-index: 5;
   pointer-events: none;
 }
 
@@ -110,7 +107,7 @@
 }
 
 /* =========================
-   ARROW
+   ARROW (STABIL & CLEAN)
 ========================= */
 
 .arrow {
@@ -121,7 +118,8 @@
 
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+
+  transform: translateY(-50%) scale(0.6);
 
   display: flex;
   justify-content: center;
@@ -130,48 +128,47 @@
   opacity: 0;
   z-index: 20;
   pointer-events: none;
+
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
+/* SHOW */
+.project-row:hover .arrow {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.4);
+}
+
+/* ICON */
 .arrow img {
   width: 22px;
   height: 22px;
   filter: brightness(0) invert(1);
+
+  transform: rotate(90deg); /* ↓ START */
+  transition: transform 0.3s ease;
 }
 
-/* JOIN + POKEDEX → rechts außen */
+/* POSITION */
 .project-row:not(.reverse) .arrow {
   right: -37px;
 }
 
-/* EL POLLO → links außen */
 .project-row.reverse .arrow {
   left: -37px;
 }
 
-/* ANIMATION */
-.project-row:hover .arrow {
-  animation: arrowFlow 0.9s forwards;
+/* =========================
+   DIRECTION (FINAL)
+========================= */
+
+/* JOIN + POKEDEX → ↗ */
+.project-row:not(.reverse):hover .arrow img {
+  transform: rotate(-45deg);
 }
 
-@keyframes arrowFlow {
-  0% {
-    opacity: 0;
-    transform: translateY(-50%) scale(0.6);
-  }
-
-  20% {
-    opacity: 1;
-    transform: translateY(-50%) scale(1);
-  }
-
-  55% {
-    transform: translateY(-50%) scale(1.3);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.4);
-  }
+/* EL POLLO → ↖ */
+.project-row.reverse:hover .arrow img {
+  transform: rotate(-45deg);
 }
 
 /* =========================
@@ -189,17 +186,16 @@
   transition: 0.5s ease;
 }
 
-/* JOIN + POKEDEX → nach rechts */
+/* JOIN + POKEDEX */
 .project-row:not(.reverse) .project-info {
   transform: translateX(60px);
 }
 
-/* EL POLLO bleibt normal */
+/* EL POLLO */
 .project-row.reverse .project-info {
   transform: translateX(0);
 }
 
-/* HOVER */
 .project-row:hover .project-info {
   opacity: 1;
   transform: translateX(60px);
