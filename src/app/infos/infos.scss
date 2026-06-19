@@ -21,122 +21,14 @@
 
 .right {
   display: flex;
-  align-items: center;
-  gap: 32px;
-}
-
-.lang {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  font-family: 'Overpass', sans-serif;
-  font-size: 14px;
-}
-
-.lang div {
-  position: relative;
-  cursor: pointer;
-  padding: 4px 10px;
-
-  border: 2px solid transparent;
-  font-family: 'Syne', sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 120%;
-  text-align: right;
-}
-
-/* HOVER LINE */
-.lang div::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -2px;
-
-  width: 0%;
-  height: 2px;
-  background: black;
-
-  transform: translateX(-50%);
-  transition: width 0.2s ease, background 0.2s ease;
-}
-
-.lang div:hover::after {
-  width: 50%;
-}
-
-/* ACTIVE ONLY (GREEN) */
-.lang div.active {
-  border: 2px solid #00BC8F;
-}
-
-.lang div.active::after {
-  width: 50%;
-  background: #00BC8F;
-}
-
-/* BURGER */
-.burger {
-  width: 35px;
-  height: 25px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  cursor: pointer;
-}
-
-.burger span {
-  height: 3px;
-  width: 100%;
-  background: black;
-  border-radius: 2px;
-}
-
-/* MOBILE MENU */
-.mobile-menu {
-  position: fixed;
-  inset: 0;
-
-  background: #FFFCF3;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-  gap: 40px;
-
-  opacity: 0;
-  pointer-events: none;
-
-  transition: 0.3s ease;
-  z-index: 999;
-}
-
-.mobile-menu.open {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.menu-center {
-  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-}
-
-.menu-item {
-  font-size: 78px;
-  font-family: 'Syne', sans-serif;
-  cursor: pointer;
-  color: black;
+  justify-content: flex-end;
+  gap: 10px;
 }
 
 /* =========================
-   HERO INFO SECTION
+   INFO SECTION
 ========================= */
 
 .info {
@@ -180,7 +72,6 @@
   font-weight: 800;
   font-size: 128px;
   line-height: 100%;
-  letter-spacing: -0.025em;
   margin: 0;
 
   display: flex;
@@ -200,9 +91,7 @@
 
 .info .center .name-row .line {
   display: block;
-  margin: 0;
   max-width: 550px;
-  height: auto;
 }
 
 .info .center .name-row .name {
@@ -211,64 +100,54 @@
   font-size: 48px;
   margin: 0;
   color: #00BC8F;
-  white-space: nowrap;
-}
-
-/* RIGHT */
-.info .right {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 100%;
-}
-
-/* SCROLL ARROW */
-.info .right .arrow {
-  width: 100px;
-  margin-bottom: 10px;
-  opacity: 0.8;
-
-  animation: scrollArrow 2s ease-in-out infinite;
-}
-
-/* SCROLL TEXT */
-.info .right .scroll {
-  font-family: 'Overpass', sans-serif;
-  font-weight: 300;
-  font-size: 22px;
-  margin: 0;
-  line-height: 100%;
-  text-align: center;
 }
 
 /* =========================
-   SCROLL ANIMATION (CUT LOOP)
+   RIGHT SECTION
 ========================= */
 
-@keyframes scrollArrow {
+.scroll-mask {
+  height: 140px;
+  width: 130px;
 
+  overflow: hidden;
+  position: relative;
+}
+
+.scroll-arrow {
+  width: 130px;
+
+  position: absolute;
+  left: 0;
+
+  animation: arrowFlow 1.2s linear infinite;
+  will-change: transform;
+}
+
+/* TEXT */
+.scroll {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+/* =========================
+   PERFECT FIGMA LOOP
+========================= */
+
+@keyframes arrowFlow {
   0% {
-    transform: translateY(-10px);
-    opacity: 0;
-  }
-
-  15% {
-    opacity: 1;
-  }
-
-  70% {
-    transform: translateY(20px);
-    opacity: 1;
-  }
-
-  71% {
-    transform: translateY(-10px);
-    opacity: 0;
+    transform: translateY(-140px);
   }
 
   100% {
-    transform: translateY(-10px);
-    opacity: 0;
+    transform: translateY(140px);
   }
+}
+
+.right {
+  margin-top: 350px;
 }
