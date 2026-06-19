@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Ebene_1" data-name="Ebene 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 94.93 52.83">
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 94.93 52.83">
+  <!-- Generator: Adobe Illustrator 30.5.1, SVG Export Plug-In . SVG Version: 2.1.4 Build 3)  -->
   <defs>
     <style>
-      .cls-1 {
+      .st0 {
         fill: none;
         stroke: #fff;
         stroke-width: 4px;
       }
     </style>
   </defs>
-  <path class="cls-1" d="M67.1,51.41l25-25L67.1,1.41"/>
-  <path class="cls-1" d="M0,26.41h92.1"/>
+  <path class="st0" d="M67.1,51.41l25-25L67.1,1.41"/>
+  <path class="st0" d="M0,26.41h92.1"/>
 </svg>
