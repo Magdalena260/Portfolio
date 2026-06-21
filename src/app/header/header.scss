@@ -1,6 +1,12 @@
 .header {
-  width: 1440px;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
   height: 92px;
+
+  z-index: 9999;
 
   display: flex;
   justify-content: space-between;
@@ -9,8 +15,7 @@
   padding: 0 100px;
   box-sizing: border-box;
 
-  position: relative;
-  z-index: 1001;
+  background-color: #FFFCF3;
 }
 
 /* LOGO */
@@ -27,63 +32,65 @@
   gap: 32px;
 }
 
-/* LANGUAGE SWITCH */
+/* LANGUAGE */
 .lang {
   display: flex;
-  align-items: center;
   gap: 12px;
 
   font-family: 'Overpass', sans-serif;
   font-size: 14px;
 }
 
-/* BASE BUTTON */
+/* ITEM */
 .lang div {
   position: relative;
   cursor: pointer;
-  padding: 4px 10px;
+  padding: 6px 10px;
 
   border: 2px solid transparent;
-  transition: border 0.25s ease;
+
+  transition: 
+    border-color 0.25s ease,
+    transform 0.2s ease;
 }
 
-/* UNDERLINE (HOVER ONLY) */
+/* ACTIVE BORDER (GREEN) */
+.lang div.active {
+  border-color: #00BC8F;
+}
+
+/* HOVER LIFT */
+.lang div:hover {
+  transform: translateY(-1px);
+}
+
+/* 🔥 UNDERLINE DIREKT UNTER TEXT (NICHT ZENTRIERT) */
 .lang div::after {
   content: "";
   position: absolute;
-  left: 0;
-  bottom: 0;
 
-  width: 0%;
+  left: 10px;   /* 👈 startet beim Text */
+  right: 10px;  /* 👈 endet beim Text */
+
+  bottom: -4px; /* etwas tiefer */
+
   height: 2px;
   background: black;
 
-  transition: width 0.2s ease;
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.25s ease, background 0.25s ease;
 }
 
+/* HOVER = STRICH REIN */
 .lang div:hover::after {
-  width: 100%;
+  transform: scaleX(1);
 }
 
-/* IMPORTANT: NO BORDER ON HOVER */
-.lang div:hover {
-  border: 2px solid transparent;
-}
-
-/* CLICK STATE (black frame) */
-.lang div.clicked {
-  border: 2px solid black;
-}
-
-/* ACTIVE STATE (green frame) */
-.lang div.active {
-  border: 2px solid #00BC8F;
-}
-
-/* ACTIVE UNDERLINE */
+/* ACTIVE = STRICH WEG */
 .lang div.active::after {
-  width: 100%;
-  background: #00BC8F;
+  transform: scaleX(0);
 }
 
 /* BURGER */
@@ -131,7 +138,7 @@
   pointer-events: all;
 }
 
-/* MENU ITEMS */
+/* MENU */
 .menu-center {
   display: flex;
   flex-direction: column;

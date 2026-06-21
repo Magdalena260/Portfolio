@@ -9,15 +9,15 @@
     <div class="lang">
 
       <div
-        [class.active]="currentLang === 'en'"
         [class.clicked]="clickedLang === 'en'"
+        [class.active]="currentLang === 'en'"
         (click)="switchLanguage('en')">
         EN
       </div>
 
       <div
-        [class.active]="currentLang === 'de'"
         [class.clicked]="clickedLang === 'de'"
+        [class.active]="currentLang === 'de'"
         (click)="switchLanguage('de')">
         DE
       </div>
@@ -35,13 +35,9 @@
 </div>
 
 <nav class="mobile-menu" [class.open]="menuOpen">
-
   <div class="menu-center">
-
     <div class="menu-item" (click)="scrollTo('about')">About</div>
     <div class="menu-item" (click)="scrollTo('skills')">Skills</div>
     <div class="menu-item" (click)="scrollTo('portfolio')">Portfolio</div>
-
   </div>
-
 </nav>
