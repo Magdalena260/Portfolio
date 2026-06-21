@@ -11,8 +11,25 @@ export class HeaderComponent {
   currentLang: string = 'en';
   menuOpen = false;
 
+  clickedLang: string | null = null;
+
   switchLanguage(lang: string) {
+
+    if (this.currentLang === lang) {
+      this.triggerClick(lang);
+      return;
+    }
+
     this.currentLang = lang;
+    this.triggerClick(lang);
+  }
+
+  triggerClick(lang: string) {
+    this.clickedLang = lang;
+
+    setTimeout(() => {
+      this.clickedLang = null;
+    }, 250);
   }
 
   toggleMenu() {
@@ -20,7 +37,10 @@ export class HeaderComponent {
   }
 
   scrollTo(id: string) {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({
+      behavior: 'smooth'
+    });
+
     this.menuOpen = false;
   }
 }

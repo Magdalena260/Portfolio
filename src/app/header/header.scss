@@ -13,18 +13,21 @@
   z-index: 1001;
 }
 
+/* LOGO */
 .left img {
   height: 150px;
   width: auto;
   display: block;
 }
 
+/* RIGHT SIDE */
 .right {
   display: flex;
   align-items: center;
   gap: 32px;
 }
 
+/* LANGUAGE SWITCH */
 .lang {
   display: flex;
   align-items: center;
@@ -34,53 +37,52 @@
   font-size: 14px;
 }
 
+/* BASE BUTTON */
 .lang div {
   position: relative;
   cursor: pointer;
   padding: 4px 10px;
 
   border: 2px solid transparent;
-  transition: border 0.2s ease;
+  transition: border 0.25s ease;
 }
 
-/* =========================
-   UNDERLINE ONLY ON HOVER
-========================= */
+/* UNDERLINE (HOVER ONLY) */
 .lang div::after {
   content: "";
   position: absolute;
-  left: 50%;
-  bottom: -2px;
+  left: 0;
+  bottom: 0;
 
   width: 0%;
   height: 2px;
   background: black;
 
-  transform: translateX(-50%);
-  transition: width 0.2s ease, background 0.2s ease;
+  transition: width 0.2s ease;
 }
 
 .lang div:hover::after {
-  width: 50%;
+  width: 100%;
 }
 
-/* =========================
-   CLICK = BLACK FRAME (SHORT)
-========================= */
+/* IMPORTANT: NO BORDER ON HOVER */
+.lang div:hover {
+  border: 2px solid transparent;
+}
+
+/* CLICK STATE (black frame) */
 .lang div.clicked {
   border: 2px solid black;
 }
 
-/* =========================
-   ACTIVE = GREEN FRAME
-========================= */
+/* ACTIVE STATE (green frame) */
 .lang div.active {
   border: 2px solid #00BC8F;
 }
 
-/* underline follows active color */
+/* ACTIVE UNDERLINE */
 .lang div.active::after {
-  width: 50%;
+  width: 100%;
   background: #00BC8F;
 }
 
@@ -101,4 +103,45 @@
   width: 100%;
   background: black;
   border-radius: 2px;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+
+  background: #FFFCF3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  gap: 40px;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* MENU ITEMS */
+.menu-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.menu-item {
+  font-size: 78px;
+  font-family: 'Syne', sans-serif;
+  cursor: pointer;
+  color: black;
 }

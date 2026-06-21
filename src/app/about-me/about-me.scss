@@ -104,6 +104,8 @@
   height: 533px;
   object-fit: cover;
 
+  display: block;
+
   position: relative;
   z-index: 2;
 
@@ -111,7 +113,7 @@
   margin-left: 80px;
 }
 
-/* FRAME HOVER BORDER */
+/* FRAME BORDER EFFECT */
 .about-right::after {
   content: "";
   position: absolute;
@@ -138,7 +140,7 @@
 }
 
 /* =========================
-   ARROW FRAME ANIMATION
+   ARROW 7-FRAME ANIMATION
 ========================= */
 
 .about-arrow {
@@ -162,6 +164,7 @@
   animation-timing-function: ease-in;
 }
 
+/* 7 Frames */
 .f1 { animation-delay: 0ms; }
 .f2 { animation-delay: 200ms; }
 .f3 { animation-delay: 400ms; }
