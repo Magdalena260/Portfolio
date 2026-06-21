@@ -12,9 +12,6 @@ export class HeaderComponent {
   menuOpen = false;
 
   switchLanguage(lang: string) {
-
-    if (this.currentLang === lang) return;
-
     this.currentLang = lang;
   }
 
@@ -23,10 +20,7 @@ export class HeaderComponent {
   }
 
   scrollTo(id: string) {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: 'smooth'
-    });
-
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
     this.menuOpen = false;
   }
 }
