@@ -80,13 +80,16 @@ a[href^="mailto"]:hover {
 }
 
 .legal-rectangle {
-   position: absolute;
+  position: absolute;
   bottom: -150px;
 
-  left: 0;
-  width: 170%;
-  margin-right: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100vw;
+  max-width: none;
   height: auto;
+
   z-index: 1;
 }
 
