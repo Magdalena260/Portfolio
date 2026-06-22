@@ -9,18 +9,10 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   currentLang: string = 'en';
-  clickedLang: string | null = null;
-
   menuOpen = false;
 
   switchLanguage(lang: string) {
-
-    this.clickedLang = lang;
-
-    setTimeout(() => {
-      this.currentLang = lang;
-      this.clickedLang = null;
-    }, 120);
+    this.currentLang = lang;
   }
 
   toggleMenu() {

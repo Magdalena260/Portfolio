@@ -7,37 +7,50 @@
   <div class="right">
 
     <div class="lang">
-
       <div
-        [class.clicked]="clickedLang === 'en'"
         [class.active]="currentLang === 'en'"
         (click)="switchLanguage('en')">
         EN
       </div>
 
       <div
-        [class.clicked]="clickedLang === 'de'"
         [class.active]="currentLang === 'de'"
         (click)="switchLanguage('de')">
         DE
       </div>
-
     </div>
 
-    <div class="burger" (click)="toggleMenu()">
+    <div class="burger" (click)="toggleMenu()" [class.open]="menuOpen">
       <span></span>
       <span></span>
       <span></span>
     </div>
 
   </div>
-
 </div>
 
+<!-- OVERLAY -->
 <nav class="mobile-menu" [class.open]="menuOpen">
+
+  <div class="close" (click)="toggleMenu()">✕</div>
+
   <div class="menu-center">
-    <div class="menu-item" (click)="scrollTo('about')">About</div>
-    <div class="menu-item" (click)="scrollTo('skills')">Skills</div>
-    <div class="menu-item" (click)="scrollTo('portfolio')">Portfolio</div>
+
+    <div class="menu-item" (click)="scrollTo('about')">
+      About
+      <span class="box"></span>
+    </div>
+
+    <div class="menu-item" (click)="scrollTo('skills')">
+      Skills
+      <span class="box"></span>
+    </div>
+
+    <div class="menu-item" (click)="scrollTo('portfolio')">
+      Portfolio
+      <span class="box"></span>
+    </div>
+
   </div>
+
 </nav>
