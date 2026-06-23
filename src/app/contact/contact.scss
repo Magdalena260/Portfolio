@@ -1,41 +1,33 @@
 .contact {
   width: 1440px;
   height: 1285px;
-
   margin: 180px auto 0;
-
   position: relative;
   overflow: visible;
-
   box-sizing: border-box;
 }
 
-/* BACKGROUND IMAGE */
+/* BACKGROUND */
 .background-shape {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   z-index: 0;
   pointer-events: none;
 }
 
-/* MAIN WRAPPER */
+/* INNER */
 .contact-inner {
   position: relative;
   z-index: 2;
-
   display: flex;
   flex-direction: column;
-
   padding: 220px 100px 0;
 }
 
-/* LEFT SIDE */
+/* LEFT */
 .left {
   width: 426px;
 }
@@ -44,7 +36,6 @@
   font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 78px;
-
   color: #FFFCF3;
   margin: 0;
 }
@@ -53,27 +44,21 @@
   color: #00BC8F;
 }
 
-/* RIGHT SIDE */
+/* RIGHT */
 .right {
   width: 617px;
-
   margin-left: 350px;
   margin-top: 40px;
-
   display: flex;
   flex-direction: column;
   gap: 40px;
-
-  position: relative;
-  z-index: 2;
 }
 
-/* TEXT BLOCK */
+/* TEXT */
 .text .green-text {
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
   font-size: 32px;
-
   color: #00BC8F;
   margin: 0 0 24px 0;
 }
@@ -82,9 +67,7 @@
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
   font-size: 22px;
-
   color: #FFFCF3;
-  margin: 0;
 }
 
 /* FORM */
@@ -93,22 +76,23 @@
   flex-direction: column;
 }
 
-/* INPUTS + TEXTAREA */
+/* INPUT WRAPPER */
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+/* INPUTS */
 .contact-form input,
 .message-box textarea {
   width: 100%;
-
   background: transparent;
   border: none;
   border-bottom: 2px solid #FFFCF3;
-
   color: #FFFCF3;
-
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
-
   padding: 12px 0;
-
   box-sizing: border-box;
 }
 
@@ -116,7 +100,7 @@
   height: 50px;
 }
 
-/* MESSAGE BOX */
+/* MESSAGE */
 .message-box {
   position: relative;
   width: 100%;
@@ -125,8 +109,6 @@
 .message-box textarea {
   height: 160px;
   resize: none;
-
-  padding-right: 20px;
 }
 
 /* MESSAGE ICON */
@@ -134,21 +116,43 @@
   position: absolute;
   right: 0;
   bottom: 12px;
-
   width: 13px;
   height: 13px;
+}
 
+/* VALIDATION ICON */
+.input-status {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
   pointer-events: none;
 }
 
-/* PRIVACY SECTION */
+/* VALID / INVALID */
+.input-status.valid {
+  border: 2px solid #4dff88;
+  color: #4dff88;
+}
+
+.input-status.invalid {
+  border: 2px solid #ff4d4d;
+  color: #ff4d4d;
+}
+
+/* PRIVACY */
 .privacy {
   display: flex;
-  align-items: flex-start;
   gap: 12px;
-
   margin: 20px 0;
-
   font-size: 14px;
   color: #FFFCF3;
 }
@@ -156,15 +160,17 @@
 .privacy input {
   width: 16px;
   height: 16px;
-
-  background: none;
-  border: 2px solid #FFFCF3;
-
   accent-color: #00BC8F;
-
   border-radius: 50%;
+    margin-top: -1px;
+}
 
-  cursor: pointer;
+.privacy label {
+  transition: font-weight 0.2s ease;
+}
+
+.privacy label:hover {
+  font-weight: 700;
 }
 
 .privacy a {
@@ -172,29 +178,20 @@
   text-decoration: none;
 }
 
-/* SEND BUTTON */
+/* BUTTON */
 .send-btn {
   width: 269px;
   height: 68px;
-
   border: 2px solid #FFFCF3;
   background: transparent;
-
   color: #FFFCF3;
   font-size: 23px;
-
   cursor: pointer;
-
   margin: 15px auto 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   transition: all 0.25s ease;
-
-  position: relative;
-  z-index: 5;
 }
 
 .send-btn:hover {
@@ -202,13 +199,51 @@
   color: #000;
 }
 
-/* TOP RIGHT SCROLL BUTTON */
+/* STATUS MESSAGE */
+.form-status {
+  margin-top: 25px;
+  font-family: 'Overpass', sans-serif;
+  font-size: 14px;
+  padding-left: 12px;
+  border-left: 2px solid;
+  animation: fadeIn 0.25s ease;
+}
+
+.form-status.success {
+  color: #4dff88;
+  border-color: #4dff88;
+}
+
+.form-status.error {
+  color: #ff4d4d;
+  border-color: #ff4d4d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ERRORS */
+.error,
+small {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+/* TOP BUTTON */
 .top-right {
   position: absolute;
   right: 100px;
   bottom: 300px;
-
-  z-index: 2;
 }
 
 .top-right img {
