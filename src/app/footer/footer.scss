@@ -82,12 +82,12 @@
   transition: transform 0.2s ease;
 }
 
-/* HOVER: nur hoch (stärker) */
+/* HOVER */
 .footer-icons a:hover img {
   transform: translateY(-10px);
 }
 
-/* CLICK: noch stärker hoch */
+/* CLICK*/
 .footer-icons a:active img {
   transform: translateY(-14px);
 }

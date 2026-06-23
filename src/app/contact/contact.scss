@@ -254,3 +254,14 @@ small {
 .top-right img:hover {
   transform: translateY(-5px);
 }
+.privacy label a {
+  cursor: pointer;
+  color: #00BC8F;
+  text-decoration: none;
+  font-weight: 400;
+  transition: all 0.2s ease;
+}
+
+.privacy label a:hover {
+  font-weight: 700;
+}
