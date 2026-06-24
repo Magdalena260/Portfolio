@@ -1,4 +1,4 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { InfosComponent } from '../infos/infos';
 import { AboutMeComponent } from '../about-me/about-me';
 import { MySkillsComponent } from '../my-skills/my-skills';
@@ -18,17 +18,19 @@ import { ContactComponent } from '../contact/contact';
     ContactComponent
   ],
   templateUrl: './homepage.html',
-  styleUrl: './homepage.scss'
+  styleUrls: ['./homepage.scss']
 })
 export class HomepageComponent {
 
-  @ViewChild(ContactComponent, { read: ElementRef })
-  contactSection!: ElementRef;
-
   scrollToContact() {
-    this.contactSection.nativeElement.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
+    document.getElementById('contact')?.scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
+
+  goToReferences() {
+    document.getElementById('references')?.scrollIntoView({
+      behavior: 'smooth'
     });
   }
 }

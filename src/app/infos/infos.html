@@ -1,4 +1,4 @@
-<div class="info">
+<div class="info" #infoSection>
 
   <!-- LINKS -->
   <div class="left">
@@ -26,13 +26,13 @@
   <div class="right">
 
     <div class="scroll-mask">
-      <img class="arrow scroll-arrow"
+      <img #arrow class="arrow scroll-arrow"
            src="assets/arrows/arrow_down.svg"
            alt="Scroll Arrow">
     </div>
 
     <p class="scroll">
-      {{ 'infos.scroll' | translate }}<br>Down
+      {{ 'infos.scroll' | translate }}
     </p>
 
   </div>

@@ -13,7 +13,7 @@
 
   "about": {
     "title": "About me",
-    "text": "Hi, I'm Magdalena. After studying design with a focus on surfaces and several work experiences, I became a Fullstack Developer.",
+    "text": "Hi, I'm Magdalena. After studying design with a focus on surfaces and several work experiences, I decided to become a Fullstack Developer.",
     "location": "Based in Solingen",
     "remote": "Open to remote work",
     "button": "Let’s talk"
@@ -50,17 +50,17 @@
     "card1": {
       "name": "Team member 1",
       "role": "Partner",
-      "text": "Great collaboration."
+      "text": "Very pleasant collaboration."
     },
     "card2": {
       "name": "Team member 2",
       "role": "Partner",
-      "text": "Reliable and structured."
+      "text": "Reliable and structured teamwork."
     },
     "card3": {
       "name": "Team member 3",
       "role": "Partner",
-      "text": "Excellent teamwork."
+      "text": "Great communication and teamwork."
     }
   },
 

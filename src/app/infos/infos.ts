@@ -14,6 +14,7 @@ export class InfosComponent implements AfterViewInit {
   @ViewChild('arrow') arrow!: ElementRef;
 
   ngAfterViewInit() {
+    if (!this.infoSection || !this.arrow) return;
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
