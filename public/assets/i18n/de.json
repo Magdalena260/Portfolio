@@ -36,7 +36,29 @@
 
   "references": {
     "title": "Referenzen",
-    "text": "Ich arbeite sowohl selbstständig als auch im Team sehr gut."
+    "text1": "Ich arbeite sowohl selbstständig als auch im Team.",
+    "text2": "Das sagen meine Kolleg:innen über mich.",
+
+    "card1": {
+      "name": "Teammitglied 1",
+      "role": "Teampartner",
+      "text": "Dies ist ein Platzhalter-Referenztext über Zusammenarbeit und Teamarbeit."
+    },
+    "card2": {
+      "name": "Teammitglied 2",
+      "role": "Teampartner",
+      "text": "Dies ist ein Platzhalter-Referenztext über Zusammenarbeit und Teamarbeit."
+    },
+    "card3": {
+      "name": "Teammitglied 3",
+      "role": "Teampartner",
+      "text": "Dies ist ein Platzhalter-Referenztext über Zusammenarbeit und Teamarbeit."
+    }
+  },
+
+  "footer": {
+    "copy": "© Magdalena Laurisch 2026",
+    "legal": "Impressum"
   },
 
   "legal": {

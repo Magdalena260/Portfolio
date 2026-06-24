@@ -1,7 +1,7 @@
 <div id="skills" class="my-skills">
 
   <div class="title">
-    <h2>My skills</h2>
+    <h2>{{ 'skills.title' | translate }}</h2>
   </div>
 
   <div class="skills-box">
@@ -75,7 +75,7 @@
 
       <div class="skill">
         <img src="assets/icons/learning.svg" alt="Learning">
-        <p>Continued Learning</p>
+        <p>{{ 'skills.footer' | translate }}</p>
       </div>
 
       <div class="skill">
@@ -85,25 +85,23 @@
 
     </div>
 
-    <!-- CONTACT BOX -->
     <div class="contact-box">
 
       <img src="assets/icons/learning.svg" alt="Learn Icon">
 
       <p>
-        Don’t see the skill you need?
+        {{ 'skills.contactText' | translate }}
         <a href="#contact" class="contact-text">
-          Conta<span class="underline-part">ct me</span>
+          {{ 'skills.contactLink' | translate }}
         </a>
       </p>
 
-      <p>I’m always ready to learn!</p>
+      <p>{{ 'skills.footer' | translate }}</p>
 
     </div>
 
   </div>
 
-  <!-- ARROW -->
   <a href="#references" class="skills-arrow">
     <img src="assets/arrows/arrow_right.svg" alt="Arrow">
   </a>

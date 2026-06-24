@@ -1,10 +1,11 @@
 <div class="portfolio" id="portfolio">
 
   <div class="title">
-    <h2>Portfolio</h2>
+    <h2>{{ 'portfolio.title' | translate }}</h2>
+
     <p>
-      Explore a selection of my work here -<br>
-      Interact with projects to see my skills in action.
+      {{ 'portfolio.text1' | translate }}<br>
+      {{ 'portfolio.text2' | translate }}
     </p>
   </div>
 
@@ -23,10 +24,12 @@
 
       <div class="project-info shift-right">
         <h3>Join</h3>
-        <div class="tech">Angular | TypeScript | Firebase</div>
-        <p>Task manager inspired by Kanban.</p>
+        <div class="tech">{{ 'portfolio.joinTech' | translate }}</div>
+        <p>{{ 'portfolio.joinDesc' | translate }}</p>
 
-        <a class="talk-btn" href="#" target="_blank">GitHub</a>
+        <a class="talk-btn" href="#" target="_blank">
+          {{ 'portfolio.github' | translate }}
+        </a>
       </div>
 
       <div class="project-number">01/03</div>
@@ -45,10 +48,18 @@
 
       <div class="project-info">
         <h3>El Pollo<br>Loco</h3>
-        <div class="tech">JavaScript | HTML | CSS</div>
-        <p>Little game with Pepe.</p>
 
-        <a class="talk-btn" href="https://github.com/Magdalena260/Modul-12_ElPocoLoco" target="_blank">GitHub</a>
+        <div class="tech">
+          {{ 'portfolio.elpolloTech' | translate }}
+        </div>
+
+        <p>{{ 'portfolio.elpolloDesc' | translate }}</p>
+
+        <a class="talk-btn"
+           href="https://github.com/Magdalena260/Modul-12_ElPocoLoco"
+           target="_blank">
+          {{ 'portfolio.github' | translate }}
+        </a>
       </div>
 
       <div class="project-number">02/03</div>
@@ -67,15 +78,22 @@
 
       <div class="project-info shift-right">
         <h3>Pokédex</h3>
-        <div class="tech">JavaScript | API | HTML | CSS</div>
-        <p>API-based Pokémon library.</p>
 
-        <a class="talk-btn" href="https://github.com/Magdalena260/Modul_8_Pokedex1304finallyoK" target="_blank">GitHub</a>
+        <div class="tech">
+          {{ 'portfolio.pokedexTech' | translate }}
+        </div>
+
+        <p>{{ 'portfolio.pokedexDesc' | translate }}</p>
+
+        <a class="talk-btn"
+           href="https://github.com/Magdalena260/Modul_8_Pokedex1304finallyoK"
+           target="_blank">
+          {{ 'portfolio.github' | translate }}
+        </a>
       </div>
 
       <div class="project-number">03/03</div>
     </div>
 
   </div>
-
 </div>

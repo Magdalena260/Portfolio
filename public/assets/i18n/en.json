@@ -36,7 +36,29 @@
 
   "references": {
     "title": "References",
-    "text": "I thrive both independently and as part of a team."
+    "text1": "I work both independently and as part of a team.",
+    "text2": "Here’s what my colleagues say about me.",
+
+    "card1": {
+      "name": "Team Member 1",
+      "role": "Team Partner",
+      "text": "This is a reference text placeholder about collaboration and teamwork."
+    },
+    "card2": {
+      "name": "Team Member 2",
+      "role": "Team Partner",
+      "text": "This is a reference text placeholder about collaboration and teamwork."
+    },
+    "card3": {
+      "name": "Team Member 3",
+      "role": "Team Partner",
+      "text": "This is a reference text placeholder about collaboration and teamwork."
+    }
+  },
+
+  "footer": {
+    "copy": "© Magdalena Laurisch 2026",
+    "legal": "Legal Notice"
   },
 
   "legal": {

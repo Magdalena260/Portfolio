@@ -5,94 +5,56 @@
   <div class="contact-inner">
 
     <div class="left">
-      <h2>Say hi!</h2>
+      <h2>{{ 'contact.title' | translate }}</h2>
     </div>
 
     <div class="right">
 
       <div class="text">
-        <p class="green-text">Want to discuss a new project?</p>
+        <p class="green-text">
+          {{ 'contact.subtitle' | translate }}
+        </p>
+
         <p class="description">
-          Say hello! Let's discuss your ideas and make it happen.
+          {{ 'contact.description' | translate }}
         </p>
       </div>
 
       <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendEmail()">
 
-        <!-- NAME -->
         <div class="input-wrapper">
-          <input type="text" formControlName="name" placeholder="Your name">
-
-          <div class="input-status"
-               [class.valid]="contactForm.get('name')?.valid && contactForm.get('name')?.touched"
-               [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-            {{ contactForm.get('name')?.valid ? '✓' : '✕' }}
-          </div>
+          <input type="text" formControlName="name" placeholder="{{ 'contact.name' | translate }}">
         </div>
 
-        <div class="error" *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-          Name is required
-        </div>
-
-        <!-- EMAIL -->
         <div class="input-wrapper">
-          <input type="email" formControlName="email" placeholder="Your email">
-
-          <div class="input-status"
-               [class.valid]="contactForm.get('email')?.valid && contactForm.get('email')?.touched"
-               [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-            {{ contactForm.get('email')?.valid ? '✓' : '✕' }}
-          </div>
+          <input type="email" formControlName="email" placeholder="{{ 'contact.email' | translate }}">
         </div>
 
-        <div class="error" *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-          Valid email required
-        </div>
-
-        <!-- MESSAGE -->
         <div class="input-wrapper message-box">
-          <textarea formControlName="message" placeholder="Your message"></textarea>
-
-          <div class="input-status"
-               [class.valid]="contactForm.get('message')?.valid && contactForm.get('message')?.touched"
-               [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
-            {{ contactForm.get('message')?.valid ? '✓' : '✕' }}
-          </div>
-
+          <textarea formControlName="message" placeholder="{{ 'contact.message' | translate }}"></textarea>
           <img class="message-icon" src="assets/arrows/group.svg" alt="">
         </div>
 
-        <div class="error" *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
-          Message is required
-        </div>
-
-        <!-- PRIVACY -->
         <div class="privacy">
           <input type="checkbox" id="privacy" formControlName="privacy">
 
           <label for="privacy">
-            I've read the
-            <a routerLink="/privacy">privacy policy</a>
-            and agree to the processing of my data as outlined.
+            {{ 'contact.privacy1' | translate }}
+            <a routerLink="/privacy">{{ 'contact.privacy2' | translate }}</a>
+            {{ 'contact.privacy3' | translate }}
           </label>
         </div>
 
-        <small *ngIf="contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid">
-          You must accept the privacy policy
-        </small>
-
-        <!-- BUTTON -->
         <button class="send-btn" type="submit">
-          Send message
+          {{ 'contact.button' | translate }}
         </button>
 
-        <!-- STATUS -->
         <div class="form-status success" *ngIf="emailSent">
-          Message sent successfully
+          {{ 'contact.success' | translate }}
         </div>
 
         <div class="form-status error" *ngIf="emailError">
-          Something went wrong
+          {{ 'contact.error' | translate }}
         </div>
 
       </form>

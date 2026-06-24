@@ -2,30 +2,28 @@
 
   <div class="about-left">
 
-    <h2>About me</h2>
+    <h2>{{ 'about.title' | translate }}</h2>
 
-    <p>
-      Hello, it’s me Magdalena. After my studies in design with a focus on surfaces and several job experiences, I decided to learn to become a Fullstack Developer.
-    </p>
+    <p>{{ 'about.text' | translate }}</p>
 
     <div class="info-item">
       <img src="assets/icons/house.svg" alt="Home Icon">
-      <span>Based in Solingen</span>
+      <span>{{ 'about.location' | translate }}</span>
     </div>
 
     <div class="info-item">
       <img src="assets/icons/laptop_chromebook.svg" alt="Laptop Icon">
-      <span>Open to work Remote</span>
+      <span>{{ 'about.remote' | translate }}</span>
     </div>
 
-    <a href="#contact" class="talk-btn">Let’s talk</a>
+    <a href="#contact" class="talk-btn">
+      {{ 'about.button' | translate }}
+    </a>
 
   </div>
 
   <div class="about-right">
     <img class="profile-img" src="assets/icons/testfoto.jpg" alt="Profile Image">
   </div>
-
- 
 
 </section>

@@ -29,7 +29,6 @@
   </div>
 </div>
 
-<!-- OVERLAY -->
 <nav class="mobile-menu" [class.open]="menuOpen">
 
   <div class="close" (click)="toggleMenu()">✕</div>
@@ -37,17 +36,17 @@
   <div class="menu-center">
 
     <div class="menu-item" (click)="scrollTo('about')">
-      About
+      {{ 'header.about' | translate }}
       <span class="box"></span>
     </div>
 
     <div class="menu-item" (click)="scrollTo('skills')">
-      Skills
+      {{ 'header.skills' | translate }}
       <span class="box"></span>
     </div>
 
     <div class="menu-item" (click)="scrollTo('portfolio')">
-      Portfolio
+      {{ 'header.portfolio' | translate }}
       <span class="box"></span>
     </div>
 

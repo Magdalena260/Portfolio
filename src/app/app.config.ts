@@ -13,15 +13,11 @@ import { routes } from './app.routes';
 
 import { provideHttpClient, HttpClient } from '@angular/common/http';
 
-import {
-  TranslateLoader,
-  TranslateModule
-} from '@ngx-translate/core';
-
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-// ✅ Loader mit Pfad + Dateiendung (WICHTIG)
-export function HttpLoaderFactory(http: HttpClient) {
+// FIX: Typ entspannt, damit kein TS-Fehler mehr kommt
+export function HttpLoaderFactory(http: HttpClient): any {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
 }
 

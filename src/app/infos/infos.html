@@ -11,8 +11,8 @@
   <div class="center">
 
     <h1 class="title">
-      Full stack
-      <span>developer</span>
+      {{ 'info.title' | translate }}
+      <span>{{ 'info.subtitle' | translate }}</span>
     </h1>
 
     <div class="name-row">
@@ -25,7 +25,6 @@
   <!-- RIGHT -->
   <div class="right">
 
-    <!-- MASK AREA -->
     <div class="scroll-mask">
       <img class="arrow scroll-arrow"
            src="assets/arrows/arrow_down.svg"
@@ -33,7 +32,7 @@
     </div>
 
     <p class="scroll">
-      Scroll<br>Down
+      {{ 'info.scroll' | translate }}<br>Down
     </p>
 
   </div>
