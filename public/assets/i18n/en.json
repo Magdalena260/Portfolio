@@ -1,0 +1,61 @@
+{
+  "header": {
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio"
+  },
+
+  "hero": {
+    "title": "Full stack",
+    "subtitle": "developer",
+    "scroll": "Scroll Down"
+  },
+
+  "about": {
+    "title": "About me",
+    "text": "Hello, it’s me Magdalena. After my studies in design with a focus on surfaces and several job experiences, I decided to become a Fullstack Developer.",
+    "location": "Based in Solingen",
+    "remote": "Open to work Remote",
+    "button": "Let’s talk"
+  },
+
+  "skills": {
+    "title": "My skills",
+    "contactText": "Don’t see the skill you need?",
+    "contactLink": "Contact me",
+    "footer": "I’m always ready to learn!"
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "joinDesc": "Task manager inspired by Kanban.",
+    "gameDesc": "Little game with Pepe.",
+    "pokedexDesc": "API-based Pokémon library."
+  },
+
+  "references": {
+    "title": "References",
+    "text": "I thrive both independently and as part of a team."
+  },
+
+  "legal": {
+    "title": "Legal Notice"
+  },
+
+  "privacy": {
+    "title": "Privacy Policy",
+    "p1": "Personal data is only processed where necessary.",
+    "p2": "According to GDPR, processing means any handling of data.",
+    "p3": "This privacy policy explains purpose and scope of data processing.",
+    "controllerTitle": "Controller Information",
+    "rightsTitle": "Rights of Users",
+    "rightsText": "You have the right to access, delete and transfer your data.",
+    "contactTitle": "Contact",
+    "contactText": "If you contact us, data will be stored for processing.",
+    "legalBasis": "Legal basis: Art. 6 GDPR",
+    "linkedinTitle": "LinkedIn",
+    "linkedinText": "We operate a LinkedIn profile.",
+    "linkedinLink": "Privacy Policy: LinkedIn"
+  }
+}

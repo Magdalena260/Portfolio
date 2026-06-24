@@ -1,0 +1,61 @@
+{
+  "header": {
+    "about": "Über mich",
+    "skills": "Fähigkeiten",
+    "portfolio": "Portfolio"
+  },
+
+  "hero": {
+    "title": "Fullstack",
+    "subtitle": "Entwicklerin",
+    "scroll": "Runterscrollen"
+  },
+
+  "about": {
+    "title": "Über mich",
+    "text": "Hallo, ich bin Magdalena. Nach meinem Studium im Bereich Design mit Fokus auf Oberflächen und mehreren Berufserfahrungen habe ich mich entschieden, Fullstack Entwicklerin zu werden.",
+    "location": "Wohnhaft in Solingen",
+    "remote": "Offen für Remote-Arbeit",
+    "button": "Lass uns sprechen"
+  },
+
+  "skills": {
+    "title": "Meine Fähigkeiten",
+    "contactText": "Du siehst die gesuchte Fähigkeit nicht?",
+    "contactLink": "Kontaktiere mich",
+    "footer": "Ich bin immer bereit zu lernen!"
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten – interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "joinDesc": "Task-Manager inspiriert von Kanban.",
+    "gameDesc": "Kleines Spiel mit Pepe.",
+    "pokedexDesc": "API-basierte Pokémon-Bibliothek."
+  },
+
+  "references": {
+    "title": "Referenzen",
+    "text": "Ich arbeite sowohl selbstständig als auch im Team sehr gut."
+  },
+
+  "legal": {
+    "title": "Impressum"
+  },
+
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "p1": "Personenbezogene Daten werden nur verarbeitet, soweit es notwendig ist.",
+    "p2": "Nach der DSGVO bedeutet Verarbeitung jede Art von Umgang mit Daten.",
+    "p3": "Diese Datenschutzerklärung erklärt Zweck und Umfang der Datenverarbeitung.",
+    "controllerTitle": "Verantwortlicher",
+    "rightsTitle": "Rechte der Nutzer",
+    "rightsText": "Du hast das Recht auf Auskunft, Löschung und Datenübertragbarkeit.",
+    "contactTitle": "Kontakt",
+    "contactText": "Wenn du uns kontaktierst, werden deine Daten zur Bearbeitung gespeichert.",
+    "legalBasis": "Rechtsgrundlage: Art. 6 DSGVO",
+    "linkedinTitle": "LinkedIn",
+    "linkedinText": "Wir betreiben ein LinkedIn-Profil.",
+    "linkedinLink": "Datenschutzerklärung: LinkedIn"
+  }
+}

@@ -229,3 +229,73 @@
 .close:hover {
   transform: rotate(90deg);
 }
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .header {
+    padding: 0 40px;
+  }
+
+  .left img {
+    height: 120px;
+    margin-left: -20px;
+  }
+
+  .menu-item {
+    font-size: 64px;
+  }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .header {
+    padding: 0 16px;
+    height: 80px;
+  }
+
+  .left img {
+    height: 90px;
+    margin-left: 0;
+  }
+
+  .right {
+    gap: 20px;
+  }
+
+  .lang {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .burger {
+    width: 30px;
+    height: 22px;
+  }
+
+  .menu-center {
+    gap: 30px;
+  }
+
+  .menu-item {
+    font-size: 48px;
+    padding: 10px 20px;
+  }
+
+  .close {
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+  }
+
+}
