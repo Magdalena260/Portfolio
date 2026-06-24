@@ -1,8 +1,10 @@
 import { Component, AfterViewInit, ElementRef, ViewChild } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-infos',
   standalone: true,
+  imports: [TranslateModule],
   templateUrl: './infos.html',
   styleUrl: './infos.scss'
 })

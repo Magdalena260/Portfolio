@@ -4,13 +4,16 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
 import { RouterModule } from '@angular/router';
 import emailjs from '@emailjs/browser';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    TranslateModule
   ],
   templateUrl: './contact.html',
   styleUrl: './contact.scss'
@@ -28,7 +31,6 @@ export class ContactComponent {
   });
 
   sendEmail(): void {
-
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
       return;
@@ -47,7 +49,6 @@ export class ContactComponent {
       'BZdAhTXuaPejPz_t2'
     )
     .then(() => {
-
       this.emailSent = true;
       this.emailError = false;
 
@@ -56,10 +57,8 @@ export class ContactComponent {
       setTimeout(() => {
         this.emailSent = false;
       }, 3500);
-
     })
     .catch((error) => {
-
       console.error('EmailJS error:', error);
 
       this.emailError = true;

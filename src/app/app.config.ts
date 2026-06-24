@@ -13,12 +13,16 @@ import { routes } from './app.routes';
 
 import { provideHttpClient, HttpClient } from '@angular/common/http';
 
-import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { Observable } from 'rxjs';
 
-// FIX: Typ entspannt, damit kein TS-Fehler mehr kommt
-export function HttpLoaderFactory(http: HttpClient): any {
-  return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
+/* SIMPLE WORKING TRANSLATE LOADER */
+class SimpleTranslateLoader implements TranslateLoader {
+  constructor(private http: HttpClient) {}
+
+  getTranslation(lang: string): Observable<any> {
+    return this.http.get(`/assets/i18n/${lang}.json`);
+  }
 }
 
 export const appConfig: ApplicationConfig = {
@@ -39,7 +43,7 @@ export const appConfig: ApplicationConfig = {
       TranslateModule.forRoot({
         loader: {
           provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
+          useClass: SimpleTranslateLoader,
           deps: [HttpClient]
         }
       })
