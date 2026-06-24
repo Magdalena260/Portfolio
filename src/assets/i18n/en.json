@@ -5,17 +5,17 @@
     "portfolio": "Portfolio"
   },
 
-  "hero": {
+  "infos": {
     "title": "Full stack",
     "subtitle": "developer",
-    "scroll": "Scroll Down"
+    "scroll": "Scroll down"
   },
 
   "about": {
     "title": "About me",
-    "text": "Hello, it’s me Magdalena. After my studies in design with a focus on surfaces and several job experiences, I decided to become a Fullstack Developer.",
+    "text": "Hi, I'm Magdalena. After studying design with a focus on surfaces and several work experiences, I became a Fullstack Developer.",
     "location": "Based in Solingen",
-    "remote": "Open to work Remote",
+    "remote": "Open to remote work",
     "button": "Let’s talk"
   },
 
@@ -28,32 +28,62 @@
 
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "text1": "A selection of my projects",
+    "text2": "Interact with the projects to learn more",
+
+    "joinTech": "Angular | TypeScript | HTML | CSS",
+    "elpolloTech": "JavaScript | Canvas",
+    "pokedexTech": "API | JavaScript | HTML | CSS",
+
     "joinDesc": "Task manager inspired by Kanban.",
-    "gameDesc": "Little game with Pepe.",
-    "pokedexDesc": "API-based Pokémon library."
+    "elpolloDesc": "A small canvas game with Pepe.",
+    "pokedexDesc": "API-based Pokémon library.",
+
+    "github": "GitHub"
   },
 
   "references": {
     "title": "References",
-    "text1": "I work both independently and as part of a team.",
-    "text2": "Here’s what my colleagues say about me.",
+    "text1": "I work independently and in teams.",
+    "text2": "Here’s what colleagues say about me.",
 
     "card1": {
-      "name": "Team Member 1",
-      "role": "Team Partner",
-      "text": "This is a reference text placeholder about collaboration and teamwork."
+      "name": "Team member 1",
+      "role": "Partner",
+      "text": "Great collaboration."
     },
     "card2": {
-      "name": "Team Member 2",
-      "role": "Team Partner",
-      "text": "This is a reference text placeholder about collaboration and teamwork."
+      "name": "Team member 2",
+      "role": "Partner",
+      "text": "Reliable and structured."
     },
     "card3": {
-      "name": "Team Member 3",
-      "role": "Team Partner",
-      "text": "This is a reference text placeholder about collaboration and teamwork."
+      "name": "Team member 3",
+      "role": "Partner",
+      "text": "Excellent teamwork."
     }
+  },
+
+  "contact": {
+    "title": "Say hi!",
+    "greenText": "Want to discuss a new project?",
+    "description": "Let’s talk about your ideas and bring them to life.",
+
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+
+    "nameError": "Name is required",
+    "emailError": "Please enter a valid email",
+    "messageError": "Message is required",
+
+    "privacyText": "I have read and agree to the privacy policy.",
+    "privacyError": "You must accept the privacy policy",
+
+    "button": "Send message",
+
+    "success": "Message sent successfully",
+    "failure": "Something went wrong"
   },
 
   "footer": {
@@ -62,22 +92,49 @@
   },
 
   "legal": {
-    "title": "Legal Notice"
+    "title": "Legal Notice",
+    "imprint": "Imprint",
+    "emailTitle": "Contact",
+    "acceptTitle": "Acceptance of terms",
+    "acceptText": "By using this website, you agree to the terms.",
+
+    "scopeTitle": "Scope",
+    "scopeText1": "Project created as part of training.",
+    "scopeText2": "Not for commercial use.",
+    "scopeText3": "No guarantee of completeness.",
+
+    "rightsTitle": "Rights",
+    "rightsText": "All rights reserved.",
+
+    "useTitle": "Use",
+    "useText": "For lawful use only.",
+
+    "disclaimerTitle": "Disclaimer",
+    "disclaimerText": "No liability for content.",
+
+    "indemnityTitle": "Indemnity",
+    "indemnityText": "No liability for damages.",
+
+    "date": "Date: 20 July 2026"
   },
 
   "privacy": {
     "title": "Privacy Policy",
-    "p1": "Personal data is only processed where necessary.",
-    "p2": "According to GDPR, processing means any handling of data.",
-    "p3": "This privacy policy explains purpose and scope of data processing.",
-    "controllerTitle": "Controller Information",
-    "rightsTitle": "Rights of Users",
-    "rightsText": "You have the right to access, delete and transfer your data.",
+    "p1": "Personal data is processed only when necessary.",
+    "p2": "Processing according to GDPR.",
+    "p3": "This policy explains usage.",
+
+    "controllerTitle": "Controller",
+    "rightsTitle": "User rights",
+    "rightsText": "Right to access and deletion.",
+
     "contactTitle": "Contact",
-    "contactText": "If you contact us, data will be stored for processing.",
+    "contactText": "Data is stored when contacting us.",
+
     "legalBasis": "Legal basis: Art. 6 GDPR",
+
     "linkedinTitle": "LinkedIn",
-    "linkedinText": "We operate a LinkedIn profile.",
-    "linkedinLink": "Privacy Policy: LinkedIn"
+    "linkedinText": "We use LinkedIn.",
+    "linkedinLink": "Privacy policy: LinkedIn"
   }
 }

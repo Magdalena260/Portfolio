@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -8,4 +8,12 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './about-me.html',
   styleUrls: ['./about-me.scss']
 })
-export
+export class AboutMeComponent {
+
+  @Output() scrollToContact = new EventEmitter<void>();
+
+  goToContact() {
+    this.scrollToContact.emit();
+  }
+
+}

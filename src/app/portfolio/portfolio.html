@@ -1,3 +1,43 @@
+
+<!-- INFO -->
+<div class="info">
+
+  <div class="left">
+    <a href="mailto:magdalena.laurisch@outlook.de">
+      magdalena.laurisch@outlook.de
+    </a>
+  </div>
+
+  <div class="center">
+
+    <h1 class="title">
+      {{ 'infos.title' | translate }}
+      <span>{{ 'infos.subtitle' | translate }}</span>
+    </h1>
+
+    <div class="name-row">
+      <img class="line" src="assets/arrows/line.svg" alt="line">
+      <p class="name">Magdalena Laurisch</p>
+    </div>
+
+  </div>
+
+  <div class="right">
+
+    <div class="scroll-mask">
+      <img class="arrow scroll-arrow" src="assets/arrows/arrow_down.svg" alt="Scroll">
+    </div>
+
+    <p class="scroll">
+      {{ 'infos.scroll' | translate }}
+    </p>
+
+  </div>
+
+</div>
+
+
+<!-- PORTFOLIO -->
 <div class="portfolio" id="portfolio">
 
   <div class="title">
@@ -23,19 +63,26 @@
       </div>
 
       <div class="project-info shift-right">
+
         <h3>Join</h3>
-        <div class="tech">{{ 'portfolio.joinTech' | translate }}</div>
+
+        <div class="tech">
+          {{ 'portfolio.joinTech' | translate }}
+        </div>
+
         <p>{{ 'portfolio.joinDesc' | translate }}</p>
 
-        <a class="talk-btn" href="#" target="_blank">
+        <a class="talk-btn" href="https://github.com" target="_blank">
           {{ 'portfolio.github' | translate }}
         </a>
+
       </div>
 
       <div class="project-number">01/03</div>
     </div>
 
-    <!-- EL POLLO -->
+
+    <!-- EL POLLO LOCO -->
     <div class="project-row reverse">
 
       <div class="project-box">
@@ -47,7 +94,11 @@
       </div>
 
       <div class="project-info">
-        <h3>El Pollo<br>Loco</h3>
+
+        <h3>
+          El Pollo<br>
+          Loco
+        </h3>
 
         <div class="tech">
           {{ 'portfolio.elpolloTech' | translate }}
@@ -55,15 +106,15 @@
 
         <p>{{ 'portfolio.elpolloDesc' | translate }}</p>
 
-        <a class="talk-btn"
-           href="https://github.com/Magdalena260/Modul-12_ElPocoLoco"
-           target="_blank">
+        <a class="talk-btn" href="https://github.com" target="_blank">
           {{ 'portfolio.github' | translate }}
         </a>
+
       </div>
 
       <div class="project-number">02/03</div>
     </div>
+
 
     <!-- POKEDEX -->
     <div class="project-row">
@@ -77,6 +128,7 @@
       </div>
 
       <div class="project-info shift-right">
+
         <h3>Pokédex</h3>
 
         <div class="tech">
@@ -85,11 +137,10 @@
 
         <p>{{ 'portfolio.pokedexDesc' | translate }}</p>
 
-        <a class="talk-btn"
-           href="https://github.com/Magdalena260/Modul_8_Pokedex1304finallyoK"
-           target="_blank">
+        <a class="talk-btn" href="https://github.com" target="_blank">
           {{ 'portfolio.github' | translate }}
         </a>
+
       </div>
 
       <div class="project-number">03/03</div>
@@ -97,3 +148,41 @@
 
   </div>
 </div>
+
+
+<!-- REFERENCES -->
+<section id="references" class="references">
+
+  <h2>{{ 'references.title' | translate }}</h2>
+
+  <p>
+    {{ 'references.text1' | translate }}<br>
+    {{ 'references.text2' | translate }}
+  </p>
+
+  <div class="reference-cards">
+
+    <div class="card">
+      <img src="assets/arrows/format_quote.svg">
+      <p>{{ 'references.card1.name' | translate }}</p>
+      <p>{{ 'references.card1.role' | translate }}</p>
+      <p>{{ 'references.card1.text' | translate }}</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/arrows/format_quote.svg">
+      <p>{{ 'references.card2.name' | translate }}</p>
+      <p>{{ 'references.card2.role' | translate }}</p>
+      <p>{{ 'references.card2.text' | translate }}</p>
+    </div>
+
+    <div class="card">
+      <img src="assets/arrows/format_quote.svg">
+      <p>{{ 'references.card3.name' | translate }}</p>
+      <p>{{ 'references.card3.role' | translate }}</p>
+      <p>{{ 'references.card3.text' | translate }}</p>
+    </div>
+
+  </div>
+
+</section>

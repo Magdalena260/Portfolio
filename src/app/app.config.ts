@@ -16,12 +16,12 @@ import { provideHttpClient, HttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { Observable } from 'rxjs';
 
-/* SIMPLE WORKING TRANSLATE LOADER */
+/* FIXED TRANSLATE LOADER */
 class SimpleTranslateLoader implements TranslateLoader {
   constructor(private http: HttpClient) {}
 
   getTranslation(lang: string): Observable<any> {
-    return this.http.get(`/assets/i18n/${lang}.json`);
+    return this.http.get(`assets/i18n/${lang}.json`);
   }
 }
 

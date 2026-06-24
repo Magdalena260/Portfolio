@@ -5,7 +5,7 @@
     "portfolio": "Portfolio"
   },
 
-  "hero": {
+  "infos": {
     "title": "Fullstack",
     "subtitle": "Entwicklerin",
     "scroll": "Runterscrollen"
@@ -28,32 +28,62 @@
 
   "portfolio": {
     "title": "Portfolio",
-    "subtitle": "Entdecke hier eine Auswahl meiner Arbeiten - interagiere mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+    "text1": "Eine Auswahl meiner Projekte",
+    "text2": "Interagiere mit den Projekten, um mehr zu erfahren",
+
+    "joinTech": "Angular | TypeScript | HTML | CSS",
+    "elpolloTech": "JavaScript | Canvas",
+    "pokedexTech": "API | JavaScript | HTML | CSS",
+
     "joinDesc": "Task-Manager inspiriert von Kanban.",
-    "gameDesc": "Kleines Spiel mit Pepe.",
-    "pokedexDesc": "API-basierte Pokémon-Bibliothek."
+    "elpolloDesc": "Ein kleines Canvas-Spiel mit Pepe.",
+    "pokedexDesc": "API-basierte Pokémon Bibliothek.",
+
+    "github": "GitHub"
   },
 
   "references": {
     "title": "Referenzen",
     "text1": "Ich arbeite sowohl selbstständig als auch im Team.",
-    "text2": "Das sagen meine Kolleg:innen über mich.",
+    "text2": "Das sagen Kolleg:innen über mich.",
 
     "card1": {
       "name": "Teammitglied 1",
       "role": "Teampartner",
-      "text": "Dies ist ein Platzhalter-Referenztext über Zusammenarbeit und Teamarbeit."
+      "text": "Sehr gute Zusammenarbeit im Projekt."
     },
     "card2": {
       "name": "Teammitglied 2",
       "role": "Teampartner",
-      "text": "Dies ist ein Platzhalter-Referenztext über Zusammenarbeit und Teamarbeit."
+      "text": "Zuverlässig und strukturiert."
     },
     "card3": {
       "name": "Teammitglied 3",
       "role": "Teampartner",
-      "text": "Dies ist ein Platzhalter-Referenztext über Zusammenarbeit und Teamarbeit."
+      "text": "Großartige Teamarbeit und Kommunikation."
     }
+  },
+
+  "contact": {
+    "title": "Sag Hallo!",
+    "greenText": "Möchtest du ein neues Projekt besprechen?",
+    "description": "Lass uns deine Ideen besprechen und sie Wirklichkeit werden lassen.",
+
+    "namePlaceholder": "Dein Name",
+    "emailPlaceholder": "Deine E-Mail",
+    "messagePlaceholder": "Deine Nachricht",
+
+    "nameError": "Name ist erforderlich",
+    "emailError": "Bitte gib eine gültige E-Mail ein",
+    "messageError": "Nachricht ist erforderlich",
+
+    "privacyText": "Ich habe die Datenschutzerklärung gelesen und stimme der Verarbeitung zu.",
+    "privacyError": "Du musst die Datenschutzerklärung akzeptieren",
+
+    "button": "Nachricht senden",
+
+    "success": "Nachricht erfolgreich gesendet",
+    "failure": "Etwas ist schiefgelaufen"
   },
 
   "footer": {
@@ -62,22 +92,49 @@
   },
 
   "legal": {
-    "title": "Impressum"
+    "title": "Impressum",
+    "imprint": "Impressum",
+    "emailTitle": "Kontakt",
+    "acceptTitle": "Annahme der Bedingungen",
+    "acceptText": "Durch Nutzung dieser Website stimmst du den Bedingungen zu.",
+
+    "scopeTitle": "Umfang",
+    "scopeText1": "Projekt im Rahmen einer Weiterbildung erstellt.",
+    "scopeText2": "Nicht kommerziell nutzbar.",
+    "scopeText3": "Keine Garantie auf Vollständigkeit.",
+
+    "rightsTitle": "Rechte",
+    "rightsText": "Alle Rechte vorbehalten.",
+
+    "useTitle": "Nutzung",
+    "useText": "Nur für rechtmäßige Zwecke.",
+
+    "disclaimerTitle": "Haftung",
+    "disclaimerText": "Keine Haftung für Inhalte.",
+
+    "indemnityTitle": "Freistellung",
+    "indemnityText": "Keine Haftung für Schäden.",
+
+    "date": "Datum: 20. Juli 2026"
   },
 
   "privacy": {
     "title": "Datenschutzerklärung",
-    "p1": "Personenbezogene Daten werden nur verarbeitet, soweit es notwendig ist.",
-    "p2": "Nach der DSGVO bedeutet Verarbeitung jede Art von Umgang mit Daten.",
-    "p3": "Diese Datenschutzerklärung erklärt Zweck und Umfang der Datenverarbeitung.",
+    "p1": "Personenbezogene Daten werden nur verarbeitet, soweit notwendig.",
+    "p2": "Verarbeitung im Sinne der DSGVO.",
+    "p3": "Diese Erklärung beschreibt die Nutzung.",
+
     "controllerTitle": "Verantwortlicher",
-    "rightsTitle": "Rechte der Nutzer",
-    "rightsText": "Du hast das Recht auf Auskunft, Löschung und Datenübertragbarkeit.",
+    "rightsTitle": "Nutzerrechte",
+    "rightsText": "Recht auf Auskunft und Löschung.",
+
     "contactTitle": "Kontakt",
-    "contactText": "Wenn du uns kontaktierst, werden deine Daten zur Bearbeitung gespeichert.",
+    "contactText": "Daten werden bei Kontakt gespeichert.",
+
     "legalBasis": "Rechtsgrundlage: Art. 6 DSGVO",
+
     "linkedinTitle": "LinkedIn",
-    "linkedinText": "Wir betreiben ein LinkedIn-Profil.",
-    "linkedinLink": "Datenschutzerklärung: LinkedIn"
+    "linkedinText": "Wir nutzen LinkedIn.",
+    "linkedinLink": "Datenschutz: LinkedIn"
   }
 }
