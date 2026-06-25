@@ -419,3 +419,43 @@
     height: 240px;
   }
 }
+
+/* =========================
+   ARROW ONLY RESPONSIVE FIX
+========================= */
+
+@media (max-width: 1024px) {
+
+  .about-arrow {
+    bottom: -140px;   
+  }
+
+  .about-arrow img {
+    width: 180px;    
+  }
+}
+
+@media (max-width: 768px) {
+
+  .about-arrow {
+    bottom: -120px;
+  }
+
+  .about-arrow img {
+    width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .about-arrow {
+    bottom: -100px;
+  }
+
+  .about-arrow img {
+    width: 110px;
+  }
+}
+.about-right {
+  margin-bottom: 120px;
+}
