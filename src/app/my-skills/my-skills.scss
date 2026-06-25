@@ -349,3 +349,26 @@ html {
     transform: none;
   }
 }
+@media (max-width: 768px) {
+
+  .skills-box {
+    margin-bottom: 20px;
+  }
+
+  .contact-box {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 480px) {
+
+  .skills-box {
+    margin-bottom: 15px;
+  }
+
+  .contact-box {
+    margin-top: 15px;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
