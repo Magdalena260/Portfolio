@@ -188,3 +188,21 @@
     padding: 20px;
   }
 }
+
+/* =========================
+   DESCRIPTION CENTER FIX
+========================= */
+
+.references {
+  text-align: center;
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.description p {
+  text-align: center;
+}
