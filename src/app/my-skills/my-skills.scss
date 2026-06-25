@@ -109,6 +109,8 @@
   height: 71px;
   object-fit: contain;
   display: block;
+   cursor: pointer;
+
 }
 
 .skill:hover img {
@@ -122,6 +124,7 @@
 .contact-box img {
   width: 75px;
   height: 75px;
+  cursor: pointer;
 }
 
 .contact-box img:hover {
@@ -147,8 +150,9 @@
   font-size: 16px;
   margin: 0;
   text-align: center;
-
-  transition: color 0.3s ease;
+ cursor: pointer;
+  transition
+  : color 0.3s ease;
 }
 
 .skill:hover p {
@@ -172,7 +176,7 @@
   font-family: 'Overpass', sans-serif;
   font-size: 22px;
 
-  margin-top: 30px; /* minimal nach unten */
+  margin-top: 30px; 
 }
 
 .contact-box p {

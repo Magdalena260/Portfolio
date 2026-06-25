@@ -1,73 +1,45 @@
 <section class="legal-wrapper">
 
-  <h1 class="main-title">{{ 'legal.title' | translate }}</h1>
+  <h1 class="main-title" [innerHTML]="'legal.title' | translate"></h1>
 
-  <h2>{{ 'legal.imprint' | translate }}</h2>
-
-  <p>
-    • Magdalena Laurisch<br>
-    • Grünewalderstraße 92<br>
-    • 42657 Solingen<br>
-  </p>
-
-  <h2>{{ 'legal.emailTitle' | translate }}</h2>
+  <h2 [innerHTML]="'legal.imprint' | translate"></h2>
 
   <p>
-    <a href="mailto:magdalena.laurisch@outlook.de">
-      magdalena.laurisch@outlook.de
-    </a>
+    Magdalena Laurisch<br>
+    Grünewalderstraße 92<br>
+    42657 Solingen<br>
+    Email: magdalena.laurisch@outlook.de
   </p>
 
-  <h2>{{ 'legal.acceptTitle' | translate }}</h2>
+  <p [innerHTML]="'legal.imprintText1' | translate"></p>
+  <p [innerHTML]="'legal.imprintText2' | translate"></p>
+  <p [innerHTML]="'legal.imprintText3' | translate"></p>
 
-  <p>
-    {{ 'legal.acceptText' | translate }}
-  </p>
+  <h2 [innerHTML]="'legal.acceptTitle' | translate"></h2>
+  <p [innerHTML]="'legal.acceptText' | translate"></p>
 
-  <h2>{{ 'legal.scopeTitle' | translate }}</h2>
+  <h2 [innerHTML]="'legal.scopeTitle' | translate"></h2>
+  <p [innerHTML]="'legal.scopeText' | translate"></p>
+  <p [innerHTML]="'legal.designText' | translate"></p>
 
-  <p>
-    {{ 'legal.scopeText1' | translate }}
-  </p>
+  <h2 [innerHTML]="'legal.rightsTitle' | translate"></h2>
+  <p [innerHTML]="'legal.rightsText' | translate"></p>
 
-  <p>
-    {{ 'legal.scopeText2' | translate }}
-  </p>
+  <h2 [innerHTML]="'legal.useTitle' | translate"></h2>
+  <p [innerHTML]="'legal.useText' | translate"></p>
 
-  <p>
-    {{ 'legal.scopeText3' | translate }}
-  </p>
+  <h2 [innerHTML]="'legal.disclaimerTitle' | translate"></h2>
+  <p [innerHTML]="'legal.disclaimerText' | translate"></p>
 
-  <h2>{{ 'legal.rightsTitle' | translate }}</h2>
+  <h2 [innerHTML]="'legal.indemnityTitle' | translate"></h2>
+  <p [innerHTML]="'legal.indemnityText' | translate"></p>
 
-  <p>
-    {{ 'legal.rightsText' | translate }}
-  </p>
+  <p [innerHTML]="'legal.contactText' | translate"></p>
 
-  <h2>{{ 'legal.useTitle' | translate }}</h2>
-
-  <p>
-    {{ 'legal.useText' | translate }}
-  </p>
-
-  <h2>{{ 'legal.disclaimerTitle' | translate }}</h2>
-
-  <p>
-    {{ 'legal.disclaimerText' | translate }}
-  </p>
-
-  <h2>{{ 'legal.indemnityTitle' | translate }}</h2>
-
-  <p>
-    {{ 'legal.indemnityText' | translate }}
-  </p>
-
-  <p class="date">
-    {{ 'legal.date' | translate }}
-  </p>
+  <p class="legal-date" [innerHTML]="'legal.date' | translate"></p>
 
   <div class="legal-footer">
-    <img class="legal-rectangle" src="assets/arrows/rectangle_s.svg" alt="">
+    <img class="legal-rectangle" src="assets/arrows/rectangle_s.svg">
   </div>
 
 </section>

@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+/* BACKGROUND */
 .background-shape {
   position: absolute;
   inset: 0;
@@ -17,6 +18,7 @@
   pointer-events: none;
 }
 
+/* INNER */
 .contact-inner {
   position: relative;
   z-index: 2;
@@ -25,6 +27,7 @@
   padding: 220px 100px 0;
 }
 
+/* LEFT */
 .left {
   width: 426px;
 }
@@ -41,6 +44,7 @@
   color: #00BC8F;
 }
 
+/* RIGHT */
 .right {
   width: 617px;
   margin-left: 350px;
@@ -50,6 +54,7 @@
   gap: 40px;
 }
 
+/* TEXT */
 .text .green-text {
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
@@ -65,16 +70,19 @@
   color: #FFFCF3;
 }
 
+/* FORM */
 .contact-form {
   display: flex;
   flex-direction: column;
 }
 
+/* INPUT WRAPPER */
 .input-wrapper {
   position: relative;
   width: 100%;
 }
 
+/* INPUTS */
 .contact-form input,
 .message-box textarea {
   width: 100%;
@@ -92,6 +100,7 @@
   height: 50px;
 }
 
+/* MESSAGE */
 .message-box {
   position: relative;
   width: 100%;
@@ -102,6 +111,7 @@
   resize: none;
 }
 
+/* MESSAGE ICON */
 .message-icon {
   position: absolute;
   right: 0;
@@ -110,6 +120,7 @@
   height: 13px;
 }
 
+/* VALIDATION ICON */
 .input-status {
   position: absolute;
   right: 0;
@@ -117,6 +128,7 @@
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
+  border-radius: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -125,16 +137,18 @@
   pointer-events: none;
 }
 
+/* VALID / INVALID */
 .input-status.valid {
-  border-bottom: 2px solid #4dff88;
+  border: 2px solid #4dff88;
   color: #4dff88;
 }
 
 .input-status.invalid {
-  border-bottom: 2px solid #ff4d4d;
+  border: 2px solid #ff4d4d;
   color: #ff4d4d;
 }
 
+/* PRIVACY */
 .privacy {
   display: flex;
   gap: 12px;
@@ -147,9 +161,24 @@
   width: 16px;
   height: 16px;
   accent-color: #00BC8F;
-  margin-top: -1px;
+  border-radius: 50%;
+    margin-top: -1px;
 }
 
+.privacy label {
+  transition: font-weight 0.2s ease;
+}
+
+.privacy label:hover {
+  font-weight: 700;
+}
+
+.privacy a {
+  color: #00BC8F;
+  text-decoration: none;
+}
+
+/* BUTTON */
 .send-btn {
   width: 269px;
   height: 68px;
@@ -170,12 +199,14 @@
   color: #000;
 }
 
+/* STATUS MESSAGE */
 .form-status {
   margin-top: 25px;
   font-family: 'Overpass', sans-serif;
   font-size: 14px;
   padding-left: 12px;
   border-left: 2px solid;
+  animation: fadeIn 0.25s ease;
 }
 
 .form-status.success {
@@ -188,6 +219,18 @@
   border-color: #ff4d4d;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ERRORS */
 .error,
 small {
   color: #ff4d4d;
@@ -196,6 +239,7 @@ small {
   display: block;
 }
 
+/* TOP BUTTON */
 .top-right {
   position: absolute;
   right: 100px;
@@ -210,8 +254,13 @@ small {
 .top-right img:hover {
   transform: translateY(-5px);
 }
-
-.privacy label a {
-  color: #00BC8F;
+.privacy a.green {
+  color: #00BC8F !important;
   text-decoration: none;
-} 
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.privacy a.green:hover {
+  font-weight: 700;
+}
