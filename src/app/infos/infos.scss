@@ -116,6 +116,7 @@
 
   overflow: hidden;
   position: relative;
+  margin-top: 30px;
 }
 
 .scroll-arrow {
@@ -138,6 +139,10 @@
   margin: 0;
 }
 
+
+.right {
+  transform: translateY(10px);
+}
 /* =========================
    PERFECT FIGMA LOOP
 ========================= */
@@ -156,102 +161,36 @@
   margin-top: 350px;
 }
 
-/* =========================
-   TABLET
-========================= */
+
 @media (max-width: 1024px) {
 
   .info {
     width: 100%;
-    padding: 40px 40px;
+    padding: 30px 40px;
+    height: auto;
   }
 
   .info .center .title {
-    font-size: 90px;
+    font-size: 80px;
   }
 
   .info .center .name-row .name {
-    font-size: 36px;
-  }
-
-  .info .center .name-row .line {
-    max-width: 350px;
-  }
-
-  .scroll {
-    font-size: 18px;
-  }
-
-  .scroll-mask {
-    height: 120px;
-    width: 110px;
-  }
-
-  .scroll-arrow {
-    width: 110px;
+    font-size: 32px;
   }
 
   .right {
-    margin-top: 200px;
-  }
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 768px) {
-
-  .info {
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px 20px;
-  }
-
-  .info .left {
-    height: auto;
-    margin-bottom: 20px;
-  }
-
-  .info .left a {
-    writing-mode: horizontal-tb;
-    transform: none;
-  }
-
-  .info .center {
-    align-items: center;
-  }
-
-  .info .center .title {
-    font-size: 60px;
-  }
-
-  .info .center .name-row {
-    justify-content: center;
-  }
-
-  .info .center .name-row .line {
-    max-width: 220px;
-  }
-
-  .info .center .name-row .name {
-    font-size: 28px;
-  }
-
-  .right {
-    margin-top: 40px;
-    align-items: center;
+    gap: 40px;
+    margin-top: 0;
+    flex-shrink: 0;
   }
 
   .scroll-mask {
-    height: 100px;
-    width: 90px;
+    width: 100px;
+    height: 110px;
   }
 
   .scroll-arrow {
-    width: 90px;
+    width: 100px;
   }
 
   .scroll {
@@ -259,20 +198,58 @@
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+
+  .info {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+  }
 
   .info .center .title {
-    font-size: 42px;
+    font-size: 55px;
   }
 
   .info .center .name-row .name {
-    font-size: 22px;
+    font-size: 24px;
   }
 
-  .info .center .name-row .line {
-    max-width: 160px;
+  .right {
+    gap: 25px;
+    flex-shrink: 0;
+    align-items: center;
+  }
+
+  .scroll-mask {
+    width: 80px;
+    height: 90px;
+  }
+
+  .scroll-arrow {
+    width: 80px;
+  }
+
+  .scroll {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .info .center .title {
+    font-size: 38px;
+  }
+
+  .info .center .name-row .name {
+    font-size: 20px;
+  }
+
+  .right {
+    gap: 15px;
   }
 }
