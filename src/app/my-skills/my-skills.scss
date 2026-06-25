@@ -248,3 +248,96 @@ html {
     transform: translateX(0);
   }
 }
+@media (max-width: 768px) {
+
+  .my-skills {
+    width: 100%;
+    height: auto;
+    margin: 80px 0;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .my-skills .title {
+    position: absolute;
+    top: -22px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 12px;
+  }
+
+  .my-skills .title h2 {
+    font-size: 42px;
+    white-space: nowrap;
+  }
+
+  .skills-box {
+    width: 100%;
+    height: auto;
+
+    padding: 50px 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 3px solid black;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    row-gap: 32px;
+    column-gap: 12px;
+
+    margin-top: 20px;
+  }
+
+  .skill {
+    width: auto;
+    height: auto;
+    gap: 10px;
+  }
+
+  .skill img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .skill p {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .contact-box {
+    margin-top: 40px;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .contact-box img {
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+  }
+
+  .contact-box p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .skills-arrow {
+    margin-top: 40px;
+  }
+
+  .skills-arrow img {
+    width: 120px;
+    margin-left: 0;
+  }
+}

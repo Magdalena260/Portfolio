@@ -248,3 +248,101 @@ small {
 .top-right img:hover {
   transform: translateY(-5px);
 }
+@media (max-width: 768px) {
+
+  .contact {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+    padding: 80px 20px 60px;
+    box-sizing: border-box;
+  }
+
+  .contact-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+    margin: 0;
+  }
+
+  .right {
+    margin-left: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .left h2 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .text {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 30px;
+    text-align: center;
+  }
+
+  .green-text {
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  .description {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .input-wrapper {
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+    box-sizing: border-box;
+  }
+
+  textarea {
+    min-height: 160px;
+  }
+
+  .privacy {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .send-btn {
+    width: 220px;
+    height: 60px;
+    margin: 25px auto 0;
+  }
+
+  .form-status {
+    text-align: center;
+  }
+
+  .top-right {
+    right: 20px;
+    bottom: 40px;
+  }
+}
