@@ -48,7 +48,7 @@
 
 .skills-box {
   width: 1240px;
-  height: 620px;
+  height: 680px; /* leicht größer nach unten */
 
   border: 4px solid black;
 
@@ -101,7 +101,7 @@
 }
 
 /* =========================
-   ICONS (SKILLS)
+   ICONS
 ========================= */
 
 .skill img {
@@ -116,7 +116,7 @@
 }
 
 /* =========================
-   CONTACT ICON (75px)
+   CONTACT ICON
 ========================= */
 
 .contact-box img {
@@ -129,7 +129,7 @@
 }
 
 /* =========================
-   ARROW ICON (UNCHANGED!)
+   ARROW ICON
 ========================= */
 
 .skills-arrow img {
@@ -171,7 +171,8 @@
 
   font-family: 'Overpass', sans-serif;
   font-size: 22px;
-  margin-top: 20px;
+
+  margin-top: 30px; /* minimal nach unten */
 }
 
 .contact-box p {
@@ -188,11 +189,15 @@
   font-weight: 400;
 }
 
-.underline-part {
+.contact-text:hover {
+  font-weight: 700;
+}
+
+.contact-text span {
   position: relative;
 }
 
-.underline-part::after {
+.contact-text span::after {
   content: "";
   position: absolute;
 
@@ -210,11 +215,7 @@
   transition: transform 0.25s ease;
 }
 
-.contact-text:hover {
-  font-weight: 700;
-}
-
-.contact-text:hover .underline-part::after {
+.contact-text:hover span::after {
   transform: scaleX(1);
 }
 
@@ -227,11 +228,10 @@ html {
 }
 
 /* =========================
-   FINAL SWUSH (MORE RIGHT, NO CHANGE IN SIZE)
+   ANIMATION
 ========================= */
 
 @keyframes iconSwush {
-
   0% {
     transform: translateX(0);
   }
