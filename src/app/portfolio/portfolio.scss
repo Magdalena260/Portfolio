@@ -262,3 +262,77 @@
   font-size: 48px;
   font-weight: 700;
 }
+
+
+@media (max-width: 1024px) {
+
+  .portfolio {
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .project-row {
+    width: 100%;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .project-box {
+    width: 100%;
+    height: auto;
+  }
+
+  .project-info {
+    width: 100%;
+    transform: none !important;
+    opacity: 1;
+  }
+
+  .project-number {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .title h2 {
+    font-size: 42px;
+  }
+
+  .title p {
+    font-size: 18px;
+  }
+
+  .project-info h3 {
+    font-size: 32px;
+  }
+
+  .tech {
+    font-size: 18px;
+  }
+
+  .project-info p {
+    font-size: 14px;
+  }
+
+  .talk-btn {
+    width: 160px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title h2 {
+    font-size: 32px;
+  }
+
+  .project-info h3 {
+    font-size: 26px;
+  }
+
+  .project-number {
+    font-size: 32px;
+  }
+}

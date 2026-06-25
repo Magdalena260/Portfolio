@@ -138,3 +138,53 @@
   display: block;
   cursor: pointer;
 }
+
+
+@media (max-width: 1024px) {
+
+  .references {
+    width: 100%;
+    height: auto;
+    padding: 40px;
+  }
+
+  .reference-cards {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .card {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .card {
+    width: 100%;
+  }
+
+  .title h2 {
+    font-size: 42px;
+  }
+
+  .description p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .title h2 {
+    font-size: 32px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}
