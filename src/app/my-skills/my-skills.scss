@@ -341,3 +341,11 @@ html {
     margin-left: 0;
   }
 }
+@media (max-width: 768px) {
+
+  .contact-box {
+    margin-top: 40px;
+    position: static;  
+    transform: none;
+  }
+}
