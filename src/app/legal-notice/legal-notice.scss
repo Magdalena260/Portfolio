@@ -1,6 +1,6 @@
 .legal-wrapper {
   width: 980px;
-  margin: 120px auto;
+  margin: 100px auto;
   font-family: 'Overpass', sans-serif;
 }
 
@@ -13,7 +13,7 @@
   font-size: 78px;
   font-weight: 800;
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 50px;
 }
 
 /* =========================
@@ -26,8 +26,9 @@
   font-weight: 800;
   line-height: 120%;
   color: #00BC8F;
-  margin-top: 40px;
-  margin-bottom: 16px;
+
+  margin-top: 24px;
+  margin-bottom: 8px;
 }
 
 .legal-wrapper p {
@@ -35,7 +36,8 @@
   font-weight: 400;
   line-height: 120%;
   color: #000;
-  margin-bottom: 16px;
+
+  margin-bottom: 10px;
 }
 
 /* =========================
@@ -62,7 +64,7 @@ a[href^="mailto"]:hover {
 ========================= */
 
 .date {
-  margin-top: 40px;
+  margin-top: 24px;
   font-size: 14px;
 }
 
@@ -71,7 +73,7 @@ a[href^="mailto"]:hover {
 ========================= */
 
 .legal-footer {
-  margin-top: 80px;
+  margin-top: 60px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -94,6 +96,7 @@ a[href^="mailto"]:hover {
 }
 
 /* TEXT ON TOP */
+
 .legal-footer-text {
   position: relative;
   z-index: 2;
@@ -103,11 +106,15 @@ a[href^="mailto"]:hover {
   color: #000;
   opacity: 0.8;
 }
+
 .green-thin {
   color: #00BC8F !important;
   font-weight: 400;
 }
 
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 1024px) {
 
@@ -119,6 +126,7 @@ a[href^="mailto"]:hover {
 
   .main-title {
     font-size: 56px;
+    margin-bottom: 40px;
   }
 }
 
@@ -130,14 +138,17 @@ a[href^="mailto"]:hover {
 
   .main-title {
     font-size: 42px;
+    margin-bottom: 30px;
   }
 
   .legal-wrapper h2 {
     font-size: 20px;
+    margin-top: 20px;
   }
 
   .legal-wrapper p {
     font-size: 14px;
+    margin-bottom: 8px;
   }
 }
 
