@@ -1,42 +1,49 @@
 <section class="legal-wrapper">
 
-  <h1 class="main-title" [innerHTML]="'legal.title' | translate"></h1>
+  <h1 class="main-title">{{ 'legal.title' | translate }}</h1>
 
-  <h2 [innerHTML]="'legal.imprint' | translate"></h2>
+  <h2>{{ 'legal.imprint' | translate }}</h2>
 
   <p>
     Magdalena Laurisch<br>
     Grünewalderstraße 92<br>
     42657 Solingen<br>
-    Email: magdalena.laurisch@outlook.de
+    Email: magdalena.laurisch@outlook.de<br>
+    Phone: 01633930971
   </p>
 
-  <p [innerHTML]="'legal.imprintText1' | translate"></p>
-  <p [innerHTML]="'legal.imprintText2' | translate"></p>
-  <p [innerHTML]="'legal.imprintText3' | translate"></p>
+  <h2>{{ 'legal.acceptTitle' | translate }}</h2>
+  <p>{{ 'legal.acceptText' | translate }}</p>
 
-  <h2 [innerHTML]="'legal.acceptTitle' | translate"></h2>
-  <p [innerHTML]="'legal.acceptText' | translate"></p>
+  <h2>{{ 'legal.scopeTitle' | translate }}</h2>
 
-  <h2 [innerHTML]="'legal.scopeTitle' | translate"></h2>
-  <p [innerHTML]="'legal.scopeText' | translate"></p>
-  <p [innerHTML]="'legal.designText' | translate"></p>
+  <p>
+    {{ 'legal.scopeText' | translate }}
+  </p>
 
-  <h2 [innerHTML]="'legal.rightsTitle' | translate"></h2>
-  <p [innerHTML]="'legal.rightsText' | translate"></p>
+  <p>
+    Das <span class="green-thin">Portfolio</span> wurde im Rahmen eines Bootcamps erstellt.
+  </p>
 
-  <h2 [innerHTML]="'legal.useTitle' | translate"></h2>
-  <p [innerHTML]="'legal.useText' | translate"></p>
+  <p>
+    Das Design gehört der <span class="green-thin">Developer Akademie GmbH</span>.
+  </p>
 
-  <h2 [innerHTML]="'legal.disclaimerTitle' | translate"></h2>
-  <p [innerHTML]="'legal.disclaimerText' | translate"></p>
+  <h2>{{ 'legal.rightsTitle' | translate }}</h2>
+  <p>{{ 'legal.rightsText' | translate }}</p>
 
-  <h2 [innerHTML]="'legal.indemnityTitle' | translate"></h2>
-  <p [innerHTML]="'legal.indemnityText' | translate"></p>
+  <h2>{{ 'legal.useTitle' | translate }}</h2>
+  <p>{{ 'legal.useText' | translate }}</p>
 
-  <p [innerHTML]="'legal.contactText' | translate"></p>
+  <h2>{{ 'legal.disclaimerTitle' | translate }}</h2>
+  <p>{{ 'legal.disclaimerText' | translate }}</p>
 
-  <p class="legal-date" [innerHTML]="'legal.date' | translate"></p>
+  <h2>{{ 'legal.indemnityTitle' | translate }}</h2>
+  <p>{{ 'legal.indemnityText' | translate }}</p>
+
+  <p>{{ 'legal.contactText' | translate }}</p>
+
+  <p class="legal-date">{{ 'legal.date' | translate }}</p>
 
   <div class="legal-footer">
     <img class="legal-rectangle" src="assets/arrows/rectangle_s.svg">

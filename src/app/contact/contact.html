@@ -24,66 +24,83 @@
 
         <!-- NAME -->
         <div class="input-wrapper">
-          <input type="text" formControlName="name"
-                 [placeholder]="'contact.namePlaceholder' | translate">
+          <input
+            type="text"
+            formControlName="name"
+            [placeholder]="'contact.namePlaceholder' | translate">
 
-          <div class="input-status"
-               [class.valid]="contactForm.get('name')?.valid && contactForm.get('name')?.touched"
-               [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+          <div
+            class="input-status"
+            [class.valid]="contactForm.get('name')?.valid && contactForm.get('name')?.touched"
+            [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
             {{ contactForm.get('name')?.valid ? '✓' : '✕' }}
           </div>
         </div>
 
-        <div class="error"
-             *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+        <div
+          class="error"
+          *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
           {{ 'contact.nameError' | translate }}
         </div>
 
         <!-- EMAIL -->
         <div class="input-wrapper">
-          <input type="email" formControlName="email"
-                 [placeholder]="'contact.emailPlaceholder' | translate">
+          <input
+            type="email"
+            formControlName="email"
+            [placeholder]="'contact.emailPlaceholder' | translate">
 
-          <div class="input-status"
-               [class.valid]="contactForm.get('email')?.valid && contactForm.get('email')?.touched"
-               [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+          <div
+            class="input-status"
+            [class.valid]="contactForm.get('email')?.valid && contactForm.get('email')?.touched"
+            [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
             {{ contactForm.get('email')?.valid ? '✓' : '✕' }}
           </div>
         </div>
 
-        <div class="error"
-             *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+        <div
+          class="error"
+          *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
           {{ 'contact.emailError' | translate }}
         </div>
 
         <!-- MESSAGE -->
         <div class="input-wrapper message-box">
-          <textarea formControlName="message"
-                    [placeholder]="'contact.messagePlaceholder' | translate"></textarea>
+          <textarea
+            formControlName="message"
+            [placeholder]="'contact.messagePlaceholder' | translate"></textarea>
 
-          <div class="input-status"
-               [class.valid]="contactForm.get('message')?.valid && contactForm.get('message')?.touched"
-               [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+          <div
+            class="input-status"
+            [class.valid]="contactForm.get('message')?.valid && contactForm.get('message')?.touched"
+            [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
             {{ contactForm.get('message')?.valid ? '✓' : '✕' }}
           </div>
 
           <img class="message-icon" src="assets/arrows/group.svg" alt="">
         </div>
 
-        <div class="error"
-             *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+        <div
+          class="error"
+          *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
           {{ 'contact.messageError' | translate }}
         </div>
 
         <!-- PRIVACY -->
         <div class="privacy">
-          <input type="checkbox" id="privacy" formControlName="privacy">
+          <input
+            type="checkbox"
+            id="privacy"
+            formControlName="privacy">
 
-          <label for="privacy">
+          <label>
             {{ 'contact.privacyText' | translate }}
 
-            <a routerLink="/privacy">
-              {{ 'footer.legal' | translate }}
+            <a
+              routerLink="/privacy"
+              class="green"
+              (click)="$event.stopPropagation()">
+              {{ 'privacy.title' | translate }}
             </a>
           </label>
         </div>

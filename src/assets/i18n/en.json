@@ -2,8 +2,87 @@
   "header": {
     "about": "About",
     "skills": "Skills",
-    "portfolio": "<span class='green'>Portfolio</span>",
-    "legal": "Legal Notice"
+    "portfolio": "Portfolio"
+  },
+
+  "infos": {
+    "title": "Full stack",
+    "subtitle": "developer",
+    "scroll": "Scroll down"
+  },
+
+  "about": {
+    "title": "About me",
+    "text": "Hi, I'm Magdalena. After studying design with a focus on surfaces and several work experiences, I decided to become a Fullstack Developer.",
+    "location": "Based in Solingen",
+    "remote": "Open to remote work",
+    "button": "Let’s talk"
+  },
+
+  "skills": {
+    "title": "My skills",
+    "contactText": "Don’t see the skill you need?",
+    "contactLink": "Contact me",
+    "footer": "I’m always ready to learn!"
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "text1": "A selection of my projects",
+    "text2": "Interact with the projects to learn more",
+
+    "joinTech": "Angular | TypeScript | HTML | CSS",
+    "elpolloTech": "JavaScript | Canvas",
+    "pokedexTech": "API | JavaScript | HTML | CSS",
+
+    "joinDesc": "Task manager inspired by Kanban.",
+    "elpolloDesc": "A small canvas game with Pepe.",
+    "pokedexDesc": "API-based Pokémon library.",
+
+    "github": "GitHub"
+  },
+
+  "references": {
+    "title": "References",
+    "text1": "I work independently and in teams.",
+    "text2": "Here’s what colleagues say about me.",
+
+    "card1": {
+      "name": "Team member 1",
+      "role": "Partner",
+      "text": "Very pleasant collaboration."
+    },
+    "card2": {
+      "name": "Team member 2",
+      "role": "Partner",
+      "text": "Reliable and structured teamwork."
+    },
+    "card3": {
+      "name": "Team member 3",
+      "role": "Partner",
+      "text": "Great communication and teamwork."
+    }
+  },
+
+  "contact": {
+    "title": "Say hi!",
+    "greenText": "Want to discuss a new project?",
+    "description": "Let’s talk about your ideas and bring them to life.",
+
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "Your email",
+    "messagePlaceholder": "Your message",
+
+    "nameError": "Name is required",
+    "emailError": "Please enter a valid email",
+    "messageError": "Message is required",
+
+    "privacyText": "I have read and agree to the",
+    "privacyError": "You must accept the privacy policy",
+
+    "button": "Send message",
+    "success": "Message sent successfully",
+    "failure": "Something went wrong"
   },
 
   "footer": {
@@ -15,54 +94,75 @@
     "title": "Legal Notice",
 
     "imprint": "Imprint",
-    "imprintText1": "Magdalena Laurisch",
-    "imprintText2": "Grünewalderstraße 92",
-    "imprintText3": "42657 Solingen",
-    "imprintEmail": "Email: magdalena.laurisch@outlook.de",
+    "imprint_name": "Magdalena Laurisch",
+    "imprint_address": "Grünewalderstraße 92",
+    "imprint_city": "42657 Solingen",
+    "imprint_email": "Email: magdalena.laurisch@outlook.de",
+    "imprint_phone": "Phone: 01633930971",
 
     "acceptTitle": "Acceptance of terms",
-    "acceptText": "By accessing and using <span class='green'>Portfolio</span> (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
+    "acceptText": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
 
     "scopeTitle": "Scope and ownership of the product",
-    "scopeText": "<span class='green'>Portfolio</span> has been developed as part of a student group project in a web development bootcamp at the <span class='green'>Developer Akademie</span> GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
+    "scopeText": "Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.",
 
-    "designText": "The design of <span class='green'>Portfolio</span> is owned by the <span class='green'>Developer Akademie</span> GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+    "designText": "The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
 
     "rightsTitle": "Proprietary rights",
-    "rightsText": "Aside from the design owned by <span class='green'>Developer Akademie</span> GmbH, we, the listed students, retain all proprietary rights in <span class='green'>Portfolio</span>, including any associated copyrighted material, trademarks, and other proprietary information.",
+    "rightsText": "Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.",
 
     "useTitle": "Use of the product",
-    "useText": "<span class='green'>Portfolio</span> is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use for illegal activities is strictly prohibited.",
+    "useText": "Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.",
 
     "disclaimerTitle": "Disclaimer of warranties and limitation of liability",
-    "disclaimerText": "<span class='green'>Portfolio</span> is provided \"as is\" without warranty of any kind. In no event will we or the <span class='green'>Developer Akademie</span> be liable for any damages arising from its use.",
+    "disclaimerText": "Portfolio is provided \"as is\" without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.",
 
     "indemnityTitle": "Indemnity",
-    "indemnityText": "You agree to indemnify and hold harmless us, the listed students, and the <span class='green'>Developer Akademie</span> from any claim arising out of your use of <span class='green'>Portfolio</span>.",
+    "indemnityText": "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.",
 
-    "contactText": "For any questions, please contact us at magdalena.laurisch@outlook.de",
+    "contactText": "For any questions or notices, please contact us at magdalena.laurisch@outlook.de.",
+
     "date": "Date: July 26, 2025"
   },
 
   "privacy": {
     "title": "Privacy Policy",
 
-    "p1": "Personal data will only be processed to the extent necessary to provide a functional website.",
-    "p2": "Processing means any operation such as collection, storage or use of personal data.",
-    "p3": "This policy explains type, scope and purpose of data processing.",
+    "p1": "Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.",
 
-    "controllerTitle": "Controller",
-    "controllerText": "Magdalena Laurisch, Grünewalderstraße 92, 42657 Solingen, Email: magdalena.laurisch@outlook.de",
+    "p2": "Per Art. 4 No. 1 of Regulation (EU) 2016/679, i.e. the General Data Protection Regulation (hereinafter referred to as the „GDPR“), „processing“ refers to any operation or set of operations such as collection, recording, organization, structuring, storage, adaptation, alteration, retrieval, consultation, use, disclosure by transmission, dissemination, or otherwise making available, alignment, or combination, restriction, erasure, or destruction performed on personal data, whether by automated means or not.",
 
-    "rightsTitle": "User Rights",
-    "rightsText": "Users have rights of access, correction, deletion and objection under GDPR.",
+    "p3": "The following privacy policy is intended to inform you in particular about the type, scope, purpose, duration, and legal basis for the processing of such data either under our own control or in conjunction with others. We also inform you below about the third-party components we use to optimize our website and improve the user experience which may result in said third parties also processing data they collect and control.",
+
+    "structureTitle": "Our privacy policy is structured as follows:",
+    "structure1": "I. Information about us as controllers of your data",
+    "structure2": "II. The rights of users and data subjects",
+    "structure3": "III. Information about the data processing",
+
+    "controllerTitle": "I. Information about us as controllers of your data",
+    "controllerText": "The party responsible for this website (the controller) is: Magdalena Laurisch, Grünewalderstraße 92, 42657 Solingen, Email: magdalena.laurisch@outlook.de, Phone: 01633930971",
+
+    "dpoTitle": "The controller’s data protection officer is:",
+    "dpoText": "[DSB information]",
+    "dpoExtra": "[External DPO information]",
+
+    "rightsTitle": "II. The rights of users and data subjects",
+    "rightsText": "Users and data subjects have rights under GDPR (Art. 15–20) including access, correction, deletion, restriction, portability.",
+    "rightsText2": "They also have the right to object under Art. 21 GDPR.",
+
+    "processingTitle": "III. Information about the data processing",
+    "processingText": "Data will be deleted or blocked once the purpose ceases to apply unless legal retention obligations exist.",
 
     "contactTitle": "Contact",
-    "contactText": "If you contact us, your data will be used to process your request.",
-
-    "legalBasis": "Legal basis: Art. 6 GDPR",
+    "contactText": "If you contact us via email or contact form, the data will be used to process your request. Legal basis: Art. 6 Para. 1 lit. b GDPR.",
 
     "linkedinTitle": "LinkedIn",
-    "linkedinText": "LinkedIn privacy policy applies for external data processing."
+    "linkedinText1": "We maintain an online presence on LinkedIn to present our company and communicate with customers/prospects.",
+    "linkedinText2": "We would like to point out that this may involve data processing outside the EU.",
+
+    "linkedinLinkText": "LinkedIn Privacy Policy:",
+    "linkedinLink": "https://www.linkedin.com/legal/privacy-policy",
+
+    "footerNote": "Model Data Protection Statement for Anwaltskanzlei Weiß & Partner"
   }
 }

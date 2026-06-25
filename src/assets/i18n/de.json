@@ -2,8 +2,87 @@
   "header": {
     "about": "Über mich",
     "skills": "Skills",
-    "portfolio": "<span class='green'>Portfolio</span>",
-    "legal": "Impressum"
+    "portfolio": "Portfolio"
+  },
+
+  "infos": {
+    "title": "Full stack",
+    "subtitle": "Entwicklerin",
+    "scroll": "Runterscrollen"
+  },
+
+  "about": {
+    "title": "Über mich",
+    "text": "Hi, ich bin Magdalena. Nach meinem Designstudium und Berufserfahrung habe ich mich entschieden, Fullstack Entwicklerin zu werden.",
+    "location": "Solingen",
+    "remote": "Remote möglich",
+    "button": "Kontakt"
+  },
+
+  "skills": {
+    "title": "Meine Skills",
+    "contactText": "Fehlt dir eine Fähigkeit?",
+    "contactLink": "Kontaktiere mich",
+    "footer": "Ich lerne immer weiter!"
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "text1": "Eine Auswahl meiner Projekte",
+    "text2": "Interagiere mit den Projekten",
+
+    "joinTech": "Angular | TypeScript | HTML | CSS",
+    "elpolloTech": "JavaScript | Canvas",
+    "pokedexTech": "API | JavaScript | HTML | CSS",
+
+    "joinDesc": "Task Manager im Kanban-Stil.",
+    "elpolloDesc": "Kleines Canvas Game.",
+    "pokedexDesc": "Pokémon API App.",
+
+    "github": "GitHub"
+  },
+
+  "references": {
+    "title": "Referenzen",
+    "text1": "Ich arbeite allein und im Team.",
+    "text2": "Das sagen Kollegen über mich.",
+
+    "card1": {
+      "name": "Teammitglied 1",
+      "role": "Partner",
+      "text": "Sehr gute Zusammenarbeit."
+    },
+    "card2": {
+      "name": "Teammitglied 2",
+      "role": "Partner",
+      "text": "Strukturiert und zuverlässig."
+    },
+    "card3": {
+      "name": "Teammitglied 3",
+      "role": "Partner",
+      "text": "Sehr gute Kommunikation."
+    }
+  },
+
+  "contact": {
+    "title": "Sag Hallo!",
+    "greenText": "Neues Projekt?",
+    "description": "Lass uns sprechen.",
+
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "E-Mail",
+    "messagePlaceholder": "Nachricht",
+
+    "nameError": "Name erforderlich",
+    "emailError": "Ungültige E-Mail",
+    "messageError": "Nachricht erforderlich",
+
+    "privacyText": "Ich stimme der Datenschutzerklärung zu.",
+    "privacyError": "Zustimmung erforderlich",
+
+    "button": "Senden",
+    "success": "Gesendet",
+    "failure": "Fehler"
   },
 
   "footer": {
@@ -15,54 +94,72 @@
     "title": "Impressum",
 
     "imprint": "Impressum",
-    "imprintText1": "Magdalena Laurisch",
-    "imprintText2": "Grünewalderstraße 92",
-    "imprintText3": "42657 Solingen",
-    "imprintEmail": "E-Mail: magdalena.laurisch@outlook.de",
+    "imprint_name": "Magdalena Laurisch",
+    "imprint_address": "Grünewalderstraße 92",
+    "imprint_city": "42657 Solingen",
+    "imprint_email": "E-Mail: magdalena.laurisch@outlook.de",
+    "imprint_phone": "Telefon: 01633930971",
 
-    "acceptTitle": "Annahme der Bedingungen",
-    "acceptText": "<span class='green'>Portfolio</span> ist ein Studentenprojekt im Rahmen eines Bootcamps der <span class='green'>Developer Akademie</span>. Durch Nutzung akzeptierst du die Bedingungen.",
+    "acceptTitle": "Akzeptanz der Bedingungen",
+    "acceptText": "Durch die Nutzung akzeptierst du die Bedingungen...",
 
     "scopeTitle": "Geltungsbereich und Eigentum",
-    "scopeText": "<span class='green'>Portfolio</span> wurde im Rahmen eines Webentwicklungs-Bootcamps bei der <span class='green'>Developer Akademie</span> erstellt und dient nur zu Lernzwecken.",
+    "scopeText": "Das Portfolio wurde im Rahmen eines Bootcamps erstellt.",
+    "designText": "Das Design von Portfolio gehört der Developer Akademie GmbH.",
 
-    "designText": "Das Design von <span class='green'>Portfolio</span> gehört der <span class='green'>Developer Akademie</span>. Jede Nutzung ohne Erlaubnis ist untersagt.",
-
-    "rightsTitle": "Eigentumsrechte",
-    "rightsText": "Alle Rechte an <span class='green'>Portfolio</span> verbleiben bei den Studierenden und der <span class='green'>Developer Akademie</span>.",
+    "rightsTitle": "Urheberrechte",
+    "rightsText": "Alle Rechte bleiben bei den Studierenden.",
 
     "useTitle": "Nutzung",
-    "useText": "<span class='green'>Portfolio</span> darf nur legal verwendet werden.",
+    "useText": "Nur für legale Zwecke erlaubt.",
 
-    "disclaimerTitle": "Haftungsausschluss",
-    "disclaimerText": "Für <span class='green'>Portfolio</span> wird keine Haftung übernommen.",
+    "disclaimerTitle": "Haftung",
+    "disclaimerText": "Keine Haftung für Schäden.",
 
     "indemnityTitle": "Freistellung",
-    "indemnityText": "Nutzer stellen die <span class='green'>Developer Akademie</span> und Studierende von Ansprüchen frei.",
+    "indemnityText": "Du bist selbst verantwortlich.",
 
     "contactText": "Kontakt: magdalena.laurisch@outlook.de",
+
     "date": "Datum: 26. Juli 2025"
   },
 
   "privacy": {
     "title": "Datenschutzerklärung",
 
-    "p1": "Personenbezogene Daten werden nur im notwendigen Umfang verarbeitet.",
-    "p2": "Verarbeitung umfasst Erhebung, Speicherung und Nutzung von Daten.",
-    "p3": "Diese Erklärung informiert über Art und Zweck der Verarbeitung.",
+    "p1": "Personenbezogene Daten werden nur verarbeitet, soweit notwendig.",
+    "p2": "Verarbeitung im Sinne der DSGVO.",
+    "p3": "Diese Datenschutzerklärung informiert darüber.",
 
-    "controllerTitle": "Verantwortlicher",
-    "controllerText": "Magdalena Laurisch, Grünewalderstraße 92, 42657 Solingen, E-Mail: magdalena.laurisch@outlook.de",
+    "structureTitle": "Aufbau der Datenschutzerklärung",
+    "structure1": "I. Verantwortliche Stelle",
+    "structure2": "II. Rechte der Nutzer",
+    "structure3": "III. Datenverarbeitung",
+
+    "controllerTitle": "Verantwortliche Stelle",
+    "controllerText": "Magdalena Laurisch, Solingen, Deutschland, E-Mail: magdalena.laurisch@outlook.de, Telefon: 01633930971",
+
+    "dpoTitle": "Datenschutzbeauftragter",
+    "dpoText": "Keine Angaben",
+    "dpoExtra": "",
 
     "rightsTitle": "Rechte der Nutzer",
-    "rightsText": "Nutzer haben Rechte auf Auskunft, Berichtigung und Löschung nach DSGVO.",
+    "rightsText": "Du hast Rechte nach der DSGVO.",
+    "rightsText2": "Du kannst jederzeit widersprechen.",
+
+    "processingTitle": "Datenverarbeitung",
+    "processingText": "Daten werden gelöscht sobald nicht mehr benötigt.",
 
     "contactTitle": "Kontakt",
-    "contactText": "Bei Kontaktaufnahme werden Daten zur Bearbeitung verwendet.",
-
-    "legalBasis": "Rechtsgrundlage: Art. 6 DSGVO",
+    "contactText": "Daten werden nur zur Bearbeitung genutzt.",
 
     "linkedinTitle": "LinkedIn",
-    "linkedinText": "Für LinkedIn gilt die externe Datenschutzerklärung."
+    "linkedinText1": "Wir nutzen LinkedIn.",
+    "linkedinText2": "Daten können außerhalb der EU verarbeitet werden.",
+
+    "linkedinLinkText": "LinkedIn Datenschutz:",
+    "linkedinLink": "https://www.linkedin.com/legal/privacy-policy",
+
+    "footerNote": "Musterdatenschutzerklärung"
   }
 }
