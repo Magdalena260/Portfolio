@@ -157,3 +157,99 @@
   animation-timing-function: ease-in;
 }
 
+
+/* =========================
+   TABLET
+========================= */
+@media (max-width: 1024px) {
+
+  .about-me {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 40px;
+    flex-direction: column;
+    align-items: center;
+    transform: none;
+  }
+
+  .about-left {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-left h2 {
+    font-size: 56px;
+    margin-top: 0;
+    white-space: normal;
+  }
+
+  .about-left p {
+    font-size: 20px;
+  }
+
+  .talk-btn {
+    margin-left: 0;
+  }
+
+  .about-right {
+    margin-top: 40px;
+    align-items: center;
+  }
+
+  .profile-img,
+  .about-right::after {
+    width: 420px;
+    height: 420px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+@media (max-width: 768px) {
+
+  .about-me {
+    padding: 0 20px;
+  }
+
+  .about-left h2 {
+    font-size: 40px;
+  }
+
+  .about-left p {
+    font-size: 18px;
+  }
+
+  .info-item span {
+    font-size: 16px;
+  }
+
+  .profile-img,
+  .about-right::after {
+    width: 300px;
+    height: 300px;
+  }
+
+  .talk-btn {
+    width: 180px;
+    height: 60px;
+    font-size: 18px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+@media (max-width: 480px) {
+
+  .about-left h2 {
+    font-size: 32px;
+  }
+
+  .profile-img,
+  .about-right::after {
+    width: 240px;
+    height: 240px;
+  }
+}
