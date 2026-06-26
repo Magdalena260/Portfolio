@@ -209,7 +209,7 @@ html {
   }
 
   .my-skills .title h2 {
-    font-size: 28px;
+    font-size: 36px;
     white-space: nowrap;
   }
 
@@ -245,10 +245,11 @@ html {
   }
 
   .contact-box {
-    margin-top: 75px;
-    justify-content: flex-start;
+    margin-top: 70px;
+    display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
-    gap: 8px;
+    gap: 12px;
     font-size: 12px;
     line-height: 140%;
   }
@@ -257,11 +258,21 @@ html {
     width: 45px;
     height: 45px;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 3px;
   }
 
   .contact-box p {
     margin: 0;
+  }
+
+  .contact-box p:first-of-type {
+    width: calc(100% - 57px);
+  }
+
+  .contact-box p:last-of-type {
+    width: calc(100% - 57px);
+    margin-left: 57px;
+    margin-top: -4px;
   }
 
   .skills-arrow {
@@ -275,6 +286,7 @@ html {
     margin-left: 0;
   }
 }
+
 @media (max-width: 420px) {
 
   .my-skills {
@@ -283,7 +295,7 @@ html {
   }
 
   .my-skills .title h2 {
-    font-size: 26px;
+    font-size: 36px;
   }
 
   .skills-box {
@@ -317,11 +329,11 @@ html {
   }
 
   .contact-box {
-    margin-top: 75px;
+    margin-top: 65px;
     display: flex;
-    justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: flex-start;
-    gap: 8px;
+    gap: 10px;
     font-size: 11px;
     line-height: 140%;
   }
@@ -329,12 +341,22 @@ html {
   .contact-box img {
     width: 42px;
     height: 42px;
-    margin-top: 2px;
     flex-shrink: 0;
+    margin-top: 3px;
   }
 
   .contact-box p {
     margin: 0;
+  }
+
+  .contact-box p:first-of-type {
+    width: calc(100% - 52px);
+  }
+
+  .contact-box p:last-of-type {
+    width: calc(100% - 52px);
+    margin-left: 52px;
+    margin-top: -4px;
   }
 
   .skills-arrow {
