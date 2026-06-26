@@ -130,7 +130,6 @@
   display: block;
   transform: scaleX(-1);
 }
-
 @media (max-width: 1024px) {
 
   .about-me {
@@ -186,9 +185,6 @@
   .about-arrow img {
     width: 180px;
   }
-  .info-item:first-child img {
-    margin-left: -30px;
-}
 }
 
 @media (max-width: 768px) {
@@ -236,9 +232,6 @@
   .about-arrow img {
     width: 140px;
   }
-  .info-item:first-child img {
-    margin-left: -10px;
-}
 }
 
 @media (max-width: 480px) {
@@ -265,27 +258,23 @@
   }
 
   .info-item {
+    display: flex;
+    align-items: center;
     gap: 8px;
+  }
+
+  .info-item:first-of-type {
+    margin-left: -50px !important;
   }
 
   .info-item img {
     width: 18px;
     height: 18px;
-     margin-left: -20px;
-  }
-
-  .info-item:first-of-type img {
-    margin-right: -20px;
   }
 
   .info-item span {
     font-size: 12px;
   }
-
-  .info-item:first-child img {
-    position: relative !important;
-    left: -15px !important;
-}
 
   .talk-btn {
     width: 120px;
@@ -326,8 +315,4 @@
     height: auto;
     display: block;
   }
-
-  .info-item:first-child img {
-    margin-left: -10px;
-}
 }
