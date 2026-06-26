@@ -34,3 +34,10 @@ h2 {
   color: #00BC8F !important;
   font-weight: 400;
 }
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

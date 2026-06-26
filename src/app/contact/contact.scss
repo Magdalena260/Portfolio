@@ -76,12 +76,13 @@
   flex-direction: column;
 }
 
-/* INPUT */
+/* INPUT WRAPPER */
 .input-wrapper {
   position: relative;
   width: 100%;
 }
 
+/* INPUTS */
 .contact-form input,
 .message-box textarea {
   width: 100%;
@@ -102,6 +103,7 @@
 /* MESSAGE */
 .message-box {
   position: relative;
+  width: 100%;
 }
 
 .message-box textarea {
@@ -109,6 +111,7 @@
   resize: none;
 }
 
+/* MESSAGE ICON */
 .message-icon {
   position: absolute;
   right: 0;
@@ -117,7 +120,7 @@
   height: 13px;
 }
 
-/* STATUS */
+/* VALIDATION ICON */
 .input-status {
   position: absolute;
   right: 0;
@@ -125,6 +128,7 @@
   transform: translateY(-50%);
   width: 18px;
   height: 18px;
+  border-radius: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,6 +137,7 @@
   pointer-events: none;
 }
 
+/* VALID / INVALID */
 .input-status.valid {
   border: 2px solid #4dff88;
   color: #4dff88;
@@ -150,19 +155,17 @@
   margin: 20px 0;
   font-size: 14px;
   color: #FFFCF3;
-  align-items: flex-start;
 }
 
 .privacy input {
   width: 16px;
   height: 16px;
   accent-color: #00BC8F;
-  margin-top: 2px;
-  flex-shrink: 0;
+  border-radius: 50%;
+    margin-top: -1px;
 }
 
 .privacy label {
-  line-height: 1.5;
   transition: font-weight 0.2s ease;
 }
 
@@ -170,19 +173,9 @@
   font-weight: 700;
 }
 
-.privacy a.green {
-  color: #00BC8F !important;
+.privacy a {
+  color: #00BC8F;
   text-decoration: none;
-  cursor: pointer;
-  margin-left: 4px;
-  transition: all 0.2s ease;
-  position: relative;
-  z-index: 100;
-}
-
-.privacy a.green:hover {
-  text-decoration: none; /* <- underline AUS */
-  font-weight: 700;
 }
 
 /* BUTTON */
@@ -206,12 +199,14 @@
   color: #000;
 }
 
-/* STATUS */
+/* STATUS MESSAGE */
 .form-status {
   margin-top: 25px;
+  font-family: 'Overpass', sans-serif;
   font-size: 14px;
   padding-left: 12px;
   border-left: 2px solid;
+  animation: fadeIn 0.25s ease;
 }
 
 .form-status.success {
@@ -222,6 +217,17 @@
 .form-status.error {
   color: #ff4d4d;
   border-color: #ff4d4d;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ERRORS */
@@ -248,101 +254,13 @@ small {
 .top-right img:hover {
   transform: translateY(-5px);
 }
-@media (max-width: 768px) {
+.privacy a.green {
+  color: #00BC8F !important;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
 
-  .contact {
-    width: 100%;
-    height: auto;
-    margin-top: 100px;
-    padding: 80px 20px 60px;
-    box-sizing: border-box;
-  }
-
-  .contact-inner {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 0;
-  }
-
-  .left,
-  .right {
-    width: 100%;
-    margin: 0;
-  }
-
-  .right {
-    margin-left: 0;
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .left h2 {
-    font-size: 56px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .text {
-    width: 100%;
-    max-width: 350px;
-    margin: 0 auto 30px;
-    text-align: center;
-  }
-
-  .green-text {
-    font-size: 28px;
-    line-height: 1.2;
-    text-align: center;
-  }
-
-  .description {
-    font-size: 18px;
-    text-align: center;
-  }
-
-  .contact-form {
-    width: 100%;
-  }
-
-  .input-wrapper {
-    width: 100%;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    font-size: 16px;
-    box-sizing: border-box;
-  }
-
-  textarea {
-    min-height: 160px;
-  }
-
-  .privacy {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-    font-size: 13px;
-  }
-
-  .send-btn {
-    width: 220px;
-    height: 60px;
-    margin: 25px auto 0;
-  }
-
-  .form-status {
-    text-align: center;
-  }
-
-  .top-right {
-    right: 20px;
-    bottom: 40px;
-  }
+.privacy a.green:hover {
+  font-weight: 700;
 }

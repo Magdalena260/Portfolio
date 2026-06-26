@@ -13,6 +13,7 @@
   box-sizing: border-box;
 
   scroll-margin-top: 100px;
+  text-align: center;
 }
 
 /* TITLE */
@@ -31,17 +32,20 @@
 
 /* DESCRIPTION */
 .description {
-  width: 560px;
+  width: 100%;
   margin-top: 20px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .description p {
+  width: 560px;
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: 120%;
   margin: 0;
+  text-align: center;
 }
 
 /* CARDS */
@@ -97,7 +101,7 @@
 
 /* TEXT */
 .card .name {
-  font-family: 'Syne', bold;
+  font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 16px;
   margin: 10px 0 0 0;
@@ -118,10 +122,10 @@
   font-size: 18px;
   line-height: 120%;
   margin: 15px 0 0 0;
-  text-align: left;
+  text-align: center;
 }
 
-/* ARROW BUTTON */
+/* ARROW */
 .bottom-right {
   position: absolute;
   bottom: -290px;
@@ -139,7 +143,9 @@
   cursor: pointer;
 }
 
-
+/* =========================
+   TABLET
+========================= */
 @media (max-width: 1024px) {
 
   .references {
@@ -155,29 +161,40 @@
 
   .card {
     width: 45%;
-    margin-bottom: 20px;
   }
 
-  .description {
+  .description p {
     width: 100%;
+    padding: 0 20px;
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
 @media (max-width: 768px) {
-
-  .card {
-    width: 100%;
-  }
 
   .title h2 {
     font-size: 42px;
   }
 
+  .card {
+    width: 100%;
+  }
+
   .description p {
     font-size: 18px;
   }
+
+  .bottom-right {
+    bottom: -200px;
+    right: 40px;
+  }
 }
 
+/* =========================
+   SMALL MOBILE
+========================= */
 @media (max-width: 480px) {
 
   .title h2 {
@@ -187,22 +204,14 @@
   .card {
     padding: 20px;
   }
-}
 
-/* =========================
-   DESCRIPTION CENTER FIX
-========================= */
+  .description p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
 
-.references {
-  text-align: center;
-}
-
-.description {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-.description p {
-  text-align: center;
+  .bottom-right {
+    bottom: -160px;
+    right: 20px;
+  }
 }

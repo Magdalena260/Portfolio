@@ -1,4 +1,4 @@
-.header {
+header {
   width: 1440px;
   height: 92px;
 
@@ -106,10 +106,7 @@
   color: #00BC8F;
 }
 
-/* =========================
-   RIGHT SECTION
-========================= */
-
+/* RIGHT */
 .scroll-mask {
   height: 140px;
   width: 130px;
@@ -129,45 +126,39 @@
   will-change: transform;
 }
 
-/* TEXT */
 .scroll {
   font-family: 'Overpass', sans-serif;
   font-weight: 300;
   font-size: 22px;
-  line-height: 100%;
   text-align: center;
   margin: 0;
 }
 
-
 .right {
   transform: translateY(10px);
-}
-/* =========================
-   PERFECT FIGMA LOOP
-========================= */
-
-@keyframes arrowFlow {
-  0% {
-    transform: translateY(-140px);
-  }
-
-  100% {
-    transform: translateY(140px);
-  }
-}
-
-.right {
   margin-top: 350px;
 }
 
+@keyframes arrowFlow {
+  0% { transform: translateY(-140px); }
+  100% { transform: translateY(140px); }
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
 
 @media (max-width: 1024px) {
 
   .info {
     width: 100%;
-    padding: 30px 40px;
     height: auto;
+    padding: 30px 40px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
 
   .info .center .title {
@@ -179,9 +170,9 @@
   }
 
   .right {
-    gap: 40px;
     margin-top: 0;
-    flex-shrink: 0;
+    transform: none;
+    align-items: center;
   }
 
   .scroll-mask {
@@ -196,19 +187,30 @@
   .scroll {
     font-size: 16px;
   }
+
+  .info .left {
+    order: 3;
+  }
+
+  .info .center {
+    order: 1;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info .center .name-row {
+    justify-content: center;
+  }
+
+  .info .right {
+    order: 2;
+  }
 }
 
 @media (max-width: 768px) {
 
   .info {
-    width: 100%;
-    height: auto;
     padding: 20px;
-  }
-
-  .center {
-    display: flex;
-    align-items: center;
   }
 
   .info .center .title {
@@ -221,8 +223,6 @@
 
   .right {
     gap: 25px;
-    flex-shrink: 0;
-    align-items: center;
   }
 
   .scroll-mask {
@@ -236,6 +236,12 @@
 
   .scroll {
     font-size: 14px;
+  }
+
+  .info .left a {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 16px;
   }
 }
 
@@ -251,5 +257,18 @@
 
   .right {
     gap: 15px;
+  }
+
+  .scroll-mask {
+    width: 70px;
+    height: 80px;
+  }
+
+  .scroll-arrow {
+    width: 70px;
+  }
+
+  .scroll {
+    font-size: 14px;
   }
 }
