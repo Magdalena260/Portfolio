@@ -49,6 +49,7 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
+  
 }
 
 .project-row.reverse {
@@ -234,6 +235,7 @@
 
   .project-row {
     width: 100%;
+     margin-bottom: 100px;
   }
 
   .project-box {
@@ -281,6 +283,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
+     margin-bottom: 100px;
   }
 
   .project-number {
@@ -382,4 +385,18 @@
   .project-box::before {
     display: none;
   }
+
+.project-row,
+.project-row.reverse {
+  width: 100%;
+  min-height: auto;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  margin-bottom: 300px;
+}
+
+.project-row:last-child {
+  margin-bottom: 0;
+}
 }
