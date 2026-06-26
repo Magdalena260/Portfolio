@@ -265,7 +265,7 @@
   }
 
   .title h2 {
-    font-size: 45px;
+    font-size: 36px;
     line-height: 100%;
   }
 
@@ -283,7 +283,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
-     margin-bottom: 100px;
+    margin-bottom: 100px;
   }
 
   .project-number {
@@ -331,7 +331,7 @@
   }
 
   .project-info h3 {
-    font-size: 32px;
+    font-size: 24px;
   }
 
   .tech {
@@ -367,11 +367,14 @@
   }
 
   .title h2 {
-    font-size: 42px;
+    font-size: 36px;
+    text-align: center;
   }
 
   .title p {
     font-size: 16px;
+    text-align: center;
+    line-height: 120%;
   }
 
   .project-number {
@@ -379,24 +382,45 @@
   }
 
   .project-info {
-    display: none;
+    display: flex;
+    width: 100%;
+    gap: 8px;
+    margin-top: 16px;
+  }
+
+  .project-info h3 {
+    font-size: 20px;
+  }
+
+  .tech {
+    font-size: 16px;
+  }
+
+  .project-info p {
+    font-size: 10px;
+  }
+
+  .talk-btn {
+    width: 140px;
+    height: 50px;
+    font-size: 16px;
   }
 
   .project-box::before {
     display: none;
   }
 
-.project-row,
-.project-row.reverse {
-  width: 100%;
-  min-height: auto;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 12px;
-  margin-bottom: 300px;
-}
+  .project-row,
+  .project-row.reverse {
+    width: 100%;
+    min-height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin-bottom: 120px;
+  }
 
-.project-row:last-child {
-  margin-bottom: 0;
-}
+  .project-row:last-child {
+    margin-bottom: 0;
+  }
 }
