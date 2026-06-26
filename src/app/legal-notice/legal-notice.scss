@@ -79,3 +79,85 @@ a[href^="mailto"] {
 
   pointer-events: none;
 }
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .legal-wrapper,
+  .privacy-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 120px 22px 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
+
+  .main-title {
+    font-size: 32px;
+    line-height: 1.1;
+    margin: 0 0 35px;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    margin: 32px 0 14px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.35;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .back-arrow {
+    right: 24px;
+    top: 105px;
+  }
+
+  .footer,
+  app-footer {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  footer {
+    width: 100%;
+    max-width: 100%;
+    height: 260px;
+    padding: 60px 20px 30px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  footer .left,
+  footer .right,
+  footer .footer-content {
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  footer img.logo,
+  footer .logo img {
+    width: 70px;
+    height: auto;
+  }
+
+  footer .icons {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+  }
+
+  footer .copy {
+    font-size: 22px;
+    white-space: nowrap;
+  }
+}

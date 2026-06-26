@@ -163,7 +163,6 @@
   transform: scaleX(1);
 }
 
-/* L-ANKER */
 .menu-item::before {
   content: "";
   position: absolute;
@@ -187,7 +186,7 @@
   opacity: 0;
 }
 
-/* RAHMEN */
+
 .menu-item span.box {
   position: absolute;
   inset: 0;
