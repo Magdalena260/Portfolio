@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 100px;
   box-sizing: border-box;
   background-color: #FFFCF3;
 }
@@ -16,28 +16,27 @@
 .left {
   display: flex;
   align-items: center;
-  height: 92px;
+  height: 100%;
+    margin-left: -2x;
 }
 
 .left img {
-  height: 120px;
+  height: 150px;
   width: auto;
   display: block;
-  margin-left: 0;
-  transform: translateY(0);
+  margin-left: -4px;
 }
 
 .right {
   display: flex;
   align-items: center;
   gap: 32px;
-  height: 92px;
-  margin-right: 0;
+  height: 100%;
+   margin-right: 40px;
 }
 
 .lang {
   display: flex;
-  align-items: center;
   gap: 12px;
   font-family: 'Overpass', sans-serif;
   font-size: 14px;
@@ -197,10 +196,21 @@
 }
 
 @keyframes boxShow {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  85% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 .menu-item:hover span.box {
@@ -222,36 +232,39 @@
 }
 
 @media (max-width: 1024px) {
+
   .header {
-    padding: 0 20px;
+    padding: 0 40px;
   }
 
   .left img {
-    height: 115px;
+    height: 130px;
+    margin-left: -20px;
+  }
+
+  .right {
+    margin-right: -10px;
   }
 
   .menu-item {
     font-size: 64px;
   }
+
 }
 
 @media (max-width: 768px) {
-  .header {
-    height: 80px;
-    padding: 0 14px;
-  }
 
-  .left {
+  .header {
+    padding: 0 16px;
     height: 80px;
   }
 
   .left img {
-    height: 85px;
+    height: 90px;
     margin-left: 0;
   }
 
   .right {
-    height: 80px;
     gap: 0;
     margin-right: 0;
   }
@@ -279,4 +292,5 @@
     right: 24px;
     font-size: 32px;
   }
+
 }
