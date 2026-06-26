@@ -1,13 +1,18 @@
 .legal-wrapper {
-  width: 980px;
+  width: 100%;
+  max-width: 980px;
   margin: 100px auto;
+  padding: 0 20px;
   font-family: 'Overpass', sans-serif;
+
+  /* WICHTIG */
+  height: auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: visible;
 }
 
-/* =========================
-   TITLE
-========================= */
-
+/* TITLE */
 .main-title {
   font-family: 'Syne', sans-serif;
   font-size: 78px;
@@ -16,34 +21,26 @@
   margin-bottom: 50px;
 }
 
-/* =========================
-   TEXT SECTIONS (SCOPED!)
-========================= */
-
+/* HEADINGS */
 .legal-wrapper h2 {
-  font-family: 'Overpass', sans-serif;
   font-size: 24px;
   font-weight: 800;
-  line-height: 120%;
   color: #00BC8F;
-
   margin-top: 24px;
   margin-bottom: 8px;
+  line-height: 1.2;
 }
 
+/* TEXT */
 .legal-wrapper p {
   font-size: 16px;
   font-weight: 400;
-  line-height: 120%;
+  line-height: 1.5;
   color: #000;
-
   margin-bottom: 10px;
 }
 
-/* =========================
-   LINKS
-========================= */
-
+/* LINKS */
 .green {
   color: #00BC8F;
   font-weight: 700;
@@ -55,110 +52,30 @@ a[href^="mailto"] {
   color: inherit;
 }
 
-a[href^="mailto"]:hover {
-  text-decoration: none;
-}
-
-/* =========================
-   DATE
-========================= */
-
-.date {
+/* DATE */
+.date,
+.legal-date {
   margin-top: 24px;
   font-size: 14px;
 }
 
-/* =========================
-   FOOTER SECTION
-========================= */
-
+/* FOOTER IMAGE */
 .legal-footer {
-  margin-top: 60px;
+  margin-top: 80px;
   position: relative;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .legal-rectangle {
   position: absolute;
-  bottom: -150px;
-
+  bottom: -120px;
   left: 50%;
   transform: translateX(-50%);
 
-  width: 100vw;
-  max-width: none;
+  width: 90vw;
   height: auto;
+  max-width: none;
 
-  z-index: 1;
-}
-
-/* TEXT ON TOP */
-
-.legal-footer-text {
-  position: relative;
-  z-index: 2;
-
-  font-family: 'Overpass', sans-serif;
-  font-size: 14px;
-  color: #000;
-  opacity: 0.8;
-}
-
-.green-thin {
-  color: #00BC8F !important;
-  font-weight: 400;
-}
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1024px) {
-
-  .legal-wrapper {
-    width: 100%;
-    padding: 0 40px;
-    margin: 80px auto;
-  }
-
-  .main-title {
-    font-size: 56px;
-    margin-bottom: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .legal-wrapper {
-    padding: 0 20px;
-  }
-
-  .main-title {
-    font-size: 42px;
-    margin-bottom: 30px;
-  }
-
-  .legal-wrapper h2 {
-    font-size: 20px;
-    margin-top: 20px;
-  }
-
-  .legal-wrapper p {
-    font-size: 14px;
-    margin-bottom: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .main-title {
-    font-size: 32px;
-  }
-
-  .legal-wrapper h2 {
-    font-size: 18px;
-  }
+  pointer-events: none;
 }
