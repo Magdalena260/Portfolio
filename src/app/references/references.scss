@@ -1,6 +1,7 @@
 .references {
-  width: 1440px;
-  height: 565px;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 565px;
 
   margin: 0 auto;
   position: relative;
@@ -16,9 +17,8 @@
   text-align: center;
 }
 
-/* TITLE */
 .title h2 {
-  font-family: 'Syne', ExtraBold;
+  font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 78px;
   margin: 0;
@@ -30,7 +30,6 @@
   color: #00BC8F;
 }
 
-/* DESCRIPTION */
 .description {
   width: 100%;
   margin-top: 20px;
@@ -48,11 +47,8 @@
   text-align: center;
 }
 
-/* CARDS */
 .reference-cards {
   width: 100%;
-  height: 344px;
-
   margin-top: 40px;
 
   display: flex;
@@ -62,7 +58,7 @@
 
 .card {
   width: 397px;
-  height: 344px;
+  min-height: 344px;
 
   border: 2px solid black;
 
@@ -82,10 +78,9 @@
   border: 2px solid #00BC8F;
 }
 
-/* QUOTE ICON */
 .card img {
   position: absolute;
-  top: 40px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
 
@@ -99,12 +94,11 @@
   filter: invert(49%) sepia(90%) saturate(230%) hue-rotate(102deg);
 }
 
-/* TEXT */
 .card .name {
   font-family: 'Syne', sans-serif;
   font-weight: 700;
   font-size: 16px;
-  margin: 10px 0 0 0;
+  margin: 25px 0 0 0;
   text-align: center;
 }
 
@@ -125,10 +119,9 @@
   text-align: center;
 }
 
-/* ARROW */
 .bottom-right {
   position: absolute;
-  bottom: -290px;
+  bottom: -170px;
   right: 100px;
 
   cursor: pointer;
@@ -143,75 +136,116 @@
   cursor: pointer;
 }
 
-/* =========================
-   TABLET
-========================= */
-@media (max-width: 1024px) {
-
+@media (max-width: 1200px) {
   .references {
+    padding: 40px 60px;
+  }
+
+  .card {
+    width: 31%;
+  }
+
+  .card .text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .references {
+    padding: 40px 32px;
+  }
+
+  .title h2 {
+    font-size: 56px;
+  }
+
+  .description p {
     width: 100%;
-    height: auto;
-    padding: 40px;
+    max-width: 560px;
+    font-size: 20px;
   }
 
   .reference-cards {
-    flex-wrap: wrap;
-    height: auto;
-  }
-
-  .card {
-    width: 45%;
-  }
-
-  .description p {
-    width: 100%;
-    padding: 0 20px;
-  }
-}
-
-/* =========================
-   MOBILE
-========================= */
-@media (max-width: 768px) {
-
-  .title h2 {
-    font-size: 42px;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 
   .card {
     width: 100%;
-  }
-
-  .description p {
-    font-size: 18px;
+    max-width: 397px;
+    min-height: 344px;
   }
 
   .bottom-right {
-    bottom: -200px;
-    right: 40px;
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: 40px;
+    align-self: flex-end;
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
 @media (max-width: 480px) {
+  .references {
+    padding: 40px 16px;
+    align-items: flex-start;
+    text-align: left;
+  }
 
   .title h2 {
     font-size: 32px;
+    text-align: left;
   }
 
-  .card {
-    padding: 20px;
+  .description {
+    justify-content: flex-start;
   }
 
   .description p {
-    font-size: 16px;
-    padding: 0 10px;
+    font-size: 14px;
+    text-align: left;
+    padding: 0;
+  }
+
+  .reference-cards {
+    margin-top: 30px;
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: none;
+    min-height: 160px;
+    padding: 45px 14px 20px;
+  }
+
+  .card img {
+    top: 18px;
+    width: 28px;
+    height: auto;
+  }
+
+  .card .name {
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  .card .partner {
+    font-size: 10px;
+  }
+
+  .card .text {
+    font-size: 12px;
+    text-align: left;
   }
 
   .bottom-right {
-    bottom: -160px;
-    right: 20px;
+    margin-top: 30px;
+    align-self: center;
+  }
+
+  .bottom-right img {
+    width: 90px;
   }
 }

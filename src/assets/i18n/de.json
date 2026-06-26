@@ -6,21 +6,21 @@
   },
 
   "infos": {
-    "title": "Full stack",
+    "title": "Full Stack",
     "subtitle": "Entwicklerin",
     "scroll": "Runterscrollen"
   },
 
   "about": {
     "title": "Über mich",
-    "text": "Hi, ich bin Magdalena. Nach meinem Designstudium in Produktdesign mit Oberflächenschwerpunkt und einiger Berufserfahrung habe ich mich entschieden, Fullstack Entwicklerin zu werden.",
+    "text": "Hi, ich bin Magdalena. Nach meinem Studium im Produktdesign mit Fokus auf Interface Design und etwas Berufserfahrung habe ich mich entschieden, Full Stack Entwicklerin zu werden.",
     "location": "Solingen",
     "remote": "Remote möglich",
     "button": "Kontakt"
   },
 
   "skills": {
-    "title": "Kompetenzen",
+    "title": "Skills",
     "contactText": "Fehlt dir eine Fähigkeit?",
     "contactLink": "Kontaktiere mich",
     "footer": "Ich lerne immer weiter!"
@@ -35,8 +35,8 @@
     "elpolloTech": "JavaScript | Canvas",
     "pokedexTech": "API | JavaScript | HTML | CSS",
 
-    "joinDesc": "Task Manager im Kanban-Stil.",
-    "elpolloDesc": "Kleines Canvas Game.",
+    "joinDesc": "Task-Manager im Kanban-Stil.",
+    "elpolloDesc": "Kleines Canvas-Spiel.",
     "pokedexDesc": "Pokémon API App.",
 
     "github": "GitHub"
@@ -44,7 +44,7 @@
 
   "references": {
     "title": "Referenzen",
-    "text1": "Ich arbeite allein und im Team.",
+    "text1": "Ich arbeite einzeln und im Team.",
     "text2": "Das sagen Kollegen über mich.",
 
     "card1": {
@@ -101,10 +101,10 @@
     "imprint_phone": "Telefon: 01633930971",
 
     "acceptTitle": "Akzeptanz der Bedingungen",
-    "acceptText": "Durch die Nutzung akzeptierst du die Bedingungen...",
+    "acceptText": "Durch die Nutzung dieser Website akzeptierst du die folgenden Bedingungen.",
 
     "scopeTitle": "Geltungsbereich und Eigentum",
-    "scopeText": "Das Portfolio wurde im Rahmen eines Bootcamps erstellt.",
+    "scopeText": "Dieses Portfolio wurde im Rahmen eines Bootcamp-Projekts erstellt.",
     "designText": "Das Design von Portfolio gehört der Developer Akademie GmbH.",
 
     "rightsTitle": "Urheberrechte",
@@ -113,11 +113,11 @@
     "useTitle": "Nutzung",
     "useText": "Nur für legale Zwecke erlaubt.",
 
-    "disclaimerTitle": "Haftung",
+    "disclaimerTitle": "Haftungsausschluss",
     "disclaimerText": "Keine Haftung für Schäden.",
 
     "indemnityTitle": "Freistellung",
-    "indemnityText": "Du bist selbst verantwortlich.",
+    "indemnityText": "Du bist für dein Handeln verantwortlich.",
 
     "contactText": "Kontakt: magdalena.laurisch@outlook.de",
 
@@ -127,9 +127,9 @@
   "privacy": {
     "title": "Datenschutzerklärung",
 
-    "p1": "Personenbezogene Daten werden nur verarbeitet, soweit notwendig.",
-    "p2": "Verarbeitung im Sinne der DSGVO.",
-    "p3": "Diese Datenschutzerklärung informiert darüber.",
+    "p1": "Personenbezogene Daten werden nur verarbeitet, soweit dies notwendig ist, um eine funktionale Website bereitzustellen.",
+    "p2": "Verarbeitung gemäß DSGVO.",
+    "p3": "Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten.",
 
     "structureTitle": "Aufbau der Datenschutzerklärung",
     "structure1": "I. Verantwortliche Stelle",
@@ -140,24 +140,24 @@
     "controllerText": "Magdalena Laurisch, Solingen, Deutschland, E-Mail: magdalena.laurisch@outlook.de, Telefon: 01633930971",
 
     "dpoTitle": "Datenschutzbeauftragter",
-    "dpoText": "Keine Angaben",
+    "dpoText": "Nicht angegeben",
     "dpoExtra": "",
 
     "rightsTitle": "Rechte der Nutzer",
-    "rightsText": "Du hast Rechte nach der DSGVO.",
+    "rightsText": "Du hast Rechte gemäß DSGVO.",
     "rightsText2": "Du kannst jederzeit widersprechen.",
 
     "processingTitle": "Datenverarbeitung",
-    "processingText": "Daten werden gelöscht sobald nicht mehr benötigt.",
+    "processingText": "Daten werden gelöscht, sobald sie nicht mehr benötigt werden.",
 
     "contactTitle": "Kontakt",
-    "contactText": "Daten werden nur zur Bearbeitung genutzt.",
+    "contactText": "Daten werden nur zur Bearbeitung deiner Anfrage verwendet.",
 
     "linkedinTitle": "LinkedIn",
     "linkedinText1": "Wir nutzen LinkedIn.",
-    "linkedinText2": "Daten können außerhalb der EU verarbeitet werden.",
+    "linkedinText2": "Dabei können Daten außerhalb der EU verarbeitet werden.",
 
-    "linkedinLinkText": "LinkedIn Datenschutz:",
+    "linkedinLinkText": "LinkedIn Datenschutzerklärung:",
     "linkedinLink": "https://www.linkedin.com/legal/privacy-policy",
 
     "footerNote": "Musterdatenschutzerklärung"

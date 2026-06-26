@@ -1,25 +1,17 @@
 .about-me {
-  width: 1259px;
+  width: 100%;
+  max-width: 1259px;
   min-height: 700px;
-
-  margin-top: 30px;
-  margin-left: 100px;
-
+  margin: 80px auto 0;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
-  position: relative;
-
-  padding-bottom: 120px;
-
-  transform: translateY(-40px);
+  padding-bottom: 220px;
+  box-sizing: border-box;
+  scroll-margin-top: 100px;
 }
 
-
-.about-me {
-  margin-top: 80px;
-}
 .about-left {
   width: 610px;
   display: flex;
@@ -30,11 +22,10 @@
   font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 78px;
-  margin: 0;
+  margin: -120px 0 0;
   white-space: nowrap;
   transition: color 0.3s ease;
   line-height: 1;
-  margin-top: -120px;
 }
 
 .about-left h2:hover {
@@ -69,23 +60,17 @@
 .talk-btn {
   margin-top: 40px;
   margin-left: 160px;
-
   font-family: 'Overpass', sans-serif;
   font-size: 23px;
-
   width: 213px;
   height: 68px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   border: 4px solid black;
   background: transparent;
   color: black;
-
   cursor: pointer;
-
   transition: all 0.3s ease;
   text-decoration: none;
 }
@@ -101,6 +86,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-bottom: 120px;
 }
 
 .profile-img {
@@ -108,10 +94,8 @@
   height: 533px;
   object-fit: cover;
   display: block;
-
   position: relative;
   z-index: 2;
-
   margin: 0;
 }
 
@@ -120,13 +104,10 @@
   position: absolute;
   top: 0;
   left: 0;
-
   width: 533px;
   height: 533px;
-
   border: 2px solid transparent;
   box-sizing: border-box;
-
   transition: all 0.3s ease;
   z-index: 3;
 }
@@ -138,206 +119,32 @@
 
 .about-arrow {
   position: absolute;
-  bottom: -10px;
-  right: 30px;
-
-  width: 40px;
-  height: 120px;
-}
-
-.frame {
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 40px;
-  opacity: 0;
-
-  animation: arrowFrames 1.4s infinite;
-  animation-timing-function: ease-in;
-}
-
-/* =========================
-   ABOUT ME
-========================= */
-
-.about-me {
-  width: 1259px;
-  min-height: 700px;
-
-  margin-top: 30px;
-  margin-left: 100px;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  position: relative;
-
-  padding-bottom: 120px;
-
-  transform: translateY(-40px);
-}
-
-.about-me {
-  margin-top: 80px;
-}
-
-.about-left {
-  width: 610px;
-  display: flex;
-  flex-direction: column;
-}
-
-.about-left h2 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 78px;
-  margin: 0;
-  white-space: nowrap;
-  transition: color 0.3s ease;
-  line-height: 1;
-  margin-top: -120px;
-}
-
-.about-left h2:hover {
-  color: #00BC8F;
-}
-
-.about-left p {
-  font-family: 'Overpass', sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 120%;
-  margin-top: 40px;
-}
-
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-top: 8px;
-}
-
-.info-item img {
-  width: 40px;
-  height: 40px;
-}
-
-.info-item span {
-  font-family: 'Overpass', sans-serif;
-  font-size: 18px;
-}
-
-.talk-btn {
-  margin-top: 40px;
-  margin-left: 160px;
-
-  font-family: 'Overpass', sans-serif;
-  font-size: 23px;
-
-  width: 213px;
-  height: 68px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  border: 4px solid black;
-  background: transparent;
-  color: black;
-
-  cursor: pointer;
-
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.talk-btn:hover {
-  background: black;
-  color: white;
-  transform: translateY(-3px);
-}
-
-/* =========================
-   RIGHT SIDE
-========================= */
-
-.about-right {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.profile-img {
-  width: 533px;
-  height: 533px;
-  object-fit: cover;
-  display: block;
-
-  position: relative;
-  z-index: 2;
-  margin: 0;
-}
-
-.about-right::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 533px;
-  height: 533px;
-
-  border: 2px solid transparent;
-  box-sizing: border-box;
-
-  transition: all 0.3s ease;
-  z-index: 3;
-}
-
-.about-right:hover::after {
-  border: 2px solid #000;
-  transform: translate(20px, 20px);
-}
-
-/* =========================
-   ABOUT ARROW FIX
-========================= */
-
-.about-arrow {
-  position: absolute;
-  bottom: -220px;
+  bottom: -300px;
   left: 60%;
   transform: translateX(-50%);
 }
 
 .about-arrow img {
-  width: 250px;   
+  width: 250px;
   height: auto;
   display: block;
-
   transform: scaleX(-1);
 }
-
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width: 1024px) {
 
   .about-me {
-    width: 100%;
-    margin-left: 0;
-    padding: 0 40px;
+    max-width: none;
+    min-height: auto;
+    margin: 80px auto 0;
+    padding: 0 40px 190px;
     flex-direction: column;
     align-items: center;
-    transform: none;
   }
 
   .about-left {
     width: 100%;
+    max-width: 610px;
     align-items: center;
     text-align: center;
   }
@@ -358,7 +165,9 @@
 
   .about-right {
     margin-top: 40px;
+    margin-bottom: 80px;
     align-items: center;
+    position: relative;
   }
 
   .profile-img,
@@ -366,18 +175,26 @@
     width: 420px;
     height: 420px;
   }
+
+  .about-arrow {
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 40px);
+    transform: translateX(-50%);
+  }
+
+  .about-arrow img {
+    width: 180px;
+  }
+  .info-item:first-child img {
+    margin-left: -30px;
 }
-
-
-
-/* =========================
-   MOBILE
-========================= */
+}
 
 @media (max-width: 768px) {
 
   .about-me {
-    padding: 0 20px;
+    padding: 0 20px 260px;
   }
 
   .about-left h2 {
@@ -403,90 +220,114 @@
     height: 60px;
     font-size: 18px;
   }
-}
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media (max-width: 480px) {
-
-  .about-left h2 {
-    font-size: 32px;
+  .about-right {
+    margin-bottom: 220px;
+    position: relative;
   }
-
-  .profile-img,
-  .about-right::after {
-    width: 240px;
-    height: 240px;
-  }
-}
-
-/* =========================
-   ARROW ONLY RESPONSIVE FIX
-========================= */
-
-@media (max-width: 1024px) {
 
   .about-arrow {
-    bottom: -140px;   
-  }
-
-  .about-arrow img {
-    width: 180px;    
-  }
-}
-
-@media (max-width: 768px) {
-
-  .about-arrow {
-    bottom: -120px;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 120px);
+    transform: translateX(-50%);
   }
 
   .about-arrow img {
     width: 140px;
   }
+  .info-item:first-child img {
+    margin-left: -10px;
+}
 }
 
 @media (max-width: 480px) {
 
+  .about-me {
+    align-items: flex-start;
+    padding: 0 10px 380px;
+    margin-top: 40px;
+  }
+
+  .about-left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .about-left h2 {
+    font-size: 32px;
+    text-align: left;
+  }
+
+  .about-left p {
+    font-size: 14px;
+    margin-top: 18px;
+  }
+
+  .info-item {
+    gap: 8px;
+  }
+
+  .info-item img {
+    width: 18px;
+    height: 18px;
+     margin-left: -20px;
+  }
+
+  .info-item:first-of-type img {
+    margin-right: -20px;
+  }
+
+  .info-item span {
+    font-size: 12px;
+  }
+
+  .info-item:first-child img {
+    position: relative !important;
+    left: -15px !important;
+}
+
+  .talk-btn {
+    width: 120px;
+    height: 42px;
+    font-size: 14px;
+    border: 3px solid black;
+    margin: 30px auto 0;
+  }
+
+  .about-right {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 300px;
+    align-items: center;
+    position: relative;
+  }
+
+  .profile-img,
+  .about-right::after {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+  }
+
+  .about-right:hover::after {
+    transform: translate(10px, 10px);
+  }
+
   .about-arrow {
-    bottom: -100px;
+    position: absolute;
+    left: 50%;
+    top: calc(100% + 220px);
+    transform: translateX(-50%);
   }
 
   .about-arrow img {
     width: 110px;
+    height: auto;
+    display: block;
   }
-}
-.about-right {
-  margin-bottom: 120px;
-}
 
-@media (max-width: 768px) {
-  .info-item:first-of-type img {
-    transform: translateX(-12px) !important;
-  }
+  .info-item:first-child img {
+    margin-left: -10px;
 }
-
-@media (max-width: 480px) {
-  .info-item:first-of-type img {
-    transform: translateX(-12px) !important;
-  }
-}
-@media (max-width: 1024px) {
-  .about-arrow {
-    margin-left: -20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .about-arrow {
-    margin-left: -30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-arrow {
-    margin-left: -40px;
-  }
 }

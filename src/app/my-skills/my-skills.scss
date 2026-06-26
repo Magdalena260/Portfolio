@@ -1,29 +1,18 @@
-/* =========================
-   CONTAINER
-========================= */
-
 .my-skills {
   width: 1240px;
   height: 687px;
-
   margin: 60px 0 0 100px;
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
-/* =========================
-   TITLE
-========================= */
 
 .my-skills .title {
   position: absolute;
   top: -35px;
   left: 50%;
   transform: translateX(-50%);
-
   z-index: 5;
   background: #FFFCF3;
   padding: 0 20px;
@@ -34,7 +23,6 @@
   font-weight: 800;
   font-size: 78px;
   margin: 0;
-
   transition: color 0.3s ease;
 }
 
@@ -42,107 +30,53 @@
   color: #00BC8F;
 }
 
-/* =========================
-   SKILLS BOX
-========================= */
-
 .skills-box {
   width: 1240px;
-  height: 680px; /* leicht größer nach unten */
-
+  min-height: 680px;
   border: 4px solid black;
-
   display: flex;
   flex-direction: column;
-
-  padding: 50px 40px;
+  padding: 50px 40px 35px;
   box-sizing: border-box;
-
   position: relative;
   margin-top: 15px;
 }
 
-/* =========================
-   GRID
-========================= */
-
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-
   row-gap: 50px;
   column-gap: 40px;
-
   justify-items: center;
   align-items: center;
   margin-top: 20px;
 }
 
-/* =========================
-   SKILL ITEM
-========================= */
-
 .skill {
   width: 100px;
   height: 110px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   gap: 8px;
-
   transition: transform 0.2s ease;
 }
-
 .skill:hover {
   transform: translateY(-4px);
 }
-
-/* =========================
-   ICONS
-========================= */
 
 .skill img {
   width: 78px;
   height: 71px;
   object-fit: contain;
   display: block;
-   cursor: pointer;
-
+  cursor: pointer;
 }
 
 .skill:hover img {
   animation: iconSwush 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
-/* =========================
-   CONTACT ICON
-========================= */
-
-.contact-box img {
-  width: 75px;
-  height: 75px;
-  cursor: pointer;
-}
-
-.contact-box img:hover {
-  animation: iconSwush 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* =========================
-   ARROW ICON
-========================= */
-
-.skills-arrow img {
-  display: block;
-  margin-left: -640px;
-}
-
-/* =========================
-   TEXT
-========================= */
 
 .skill p {
   font-family: 'Overpass', sans-serif;
@@ -150,42 +84,37 @@
   font-size: 16px;
   margin: 0;
   text-align: center;
- cursor: pointer;
-  transition
-  : color 0.3s ease;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
 .skill:hover p {
   color: #00BC8F;
 }
 
-/* =========================
-   CONTACT BOX
-========================= */
-
 .contact-box {
   margin-top: auto;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   gap: 8px;
-
   font-family: 'Overpass', sans-serif;
   font-size: 22px;
+}
 
-  margin-top: 30px; 
+.contact-box img {
+  width: 75px;
+  height: 75px;
+}
+
+.contact-box img:hover {
+  animation: iconSwush 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .contact-box p {
   margin: 0;
 }
-
-/* =========================
-   CONTACT LINK
-========================= */
 
 .contact-text {
   color: #64b992;
@@ -204,18 +133,13 @@
 .contact-text span::after {
   content: "";
   position: absolute;
-
   left: 0;
   bottom: -3px;
-
   width: 100%;
   height: 3px;
-
   background: #64b992;
-
   transform: scaleX(0);
   transform-origin: left;
-
   transition: transform 0.25s ease;
 }
 
@@ -223,17 +147,23 @@
   transform: scaleX(1);
 }
 
-/* =========================
-   SMOOTH SCROLL
-========================= */
+.skills-arrow {
+  width: 1240px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.skills-arrow img {
+  display: block;
+  width: 190px;
+  height: auto;
+  margin-left: 0;
+}
 
 html {
   scroll-behavior: smooth;
 }
-
-/* =========================
-   ANIMATION
-========================= */
 
 @keyframes iconSwush {
   0% {
@@ -248,171 +178,173 @@ html {
     transform: translateX(0);
   }
 }
+@media (max-width: 1300px) {
+  .my-skills {
+    width: calc(100% - 80px);
+    height: auto;
+    margin: 80px auto 0;
+  }
+
+  .skills-box {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .skills-arrow {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
 
   .my-skills {
-    width: 100%;
+    width: 310px;
+    margin: 70px auto 0;
     height: auto;
-    margin: 80px 0;
-    padding: 0 20px;
-    box-sizing: border-box;
   }
 
   .my-skills .title {
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 0 12px;
+    top: -24px;
+    padding: 0 10px;
   }
 
   .my-skills .title h2 {
-    font-size: 42px;
+    font-size: 28px;
     white-space: nowrap;
   }
 
   .skills-box {
-    width: 100%;
-    height: auto;
-
-    padding: 50px 20px 30px;
-
-    display: flex;
-    flex-direction: column;
-
+    width: 310px;
+    min-height: 640px;
     border: 3px solid black;
+    padding: 35px 16px 20px;
+    margin-top: 0;
   }
 
   .skills-grid {
-    grid-template-columns: repeat(4, 1fr);
-
-    row-gap: 32px;
-    column-gap: 12px;
-
-    margin-top: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 22px;
+    column-gap: 10px;
+    margin-top: 5px;
   }
 
   .skill {
-    width: auto;
-    height: auto;
-    gap: 10px;
+    width: 75px;
+    height: 72px;
+    gap: 4px;
   }
 
   .skill img {
-    width: 55px;
-    height: 55px;
+    width: 52px;
+    height: 48px;
   }
 
   .skill p {
-    font-size: 14px;
-    line-height: 1.2;
+    font-size: 10px;
+    line-height: 110%;
   }
 
   .contact-box {
-    margin-top: 40px;
-
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    gap: 16px;
-
-    text-align: left;
-    font-size: 16px;
+    margin-top: 75px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 140%;
   }
 
   .contact-box img {
-    width: 60px;
-    height: 60px;
+    width: 45px;
+    height: 45px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .contact-box p {
+    margin: 0;
+  }
+
+  .skills-arrow {
+    width: 310px;
+    margin-top: 30px;
+    justify-content: center;
+  }
+
+  .skills-arrow img {
+    width: 170px;
+    margin-left: 0;
+  }
+}
+@media (max-width: 420px) {
+
+  .my-skills {
+    width: 280px;
+    margin: 60px auto 0;
+  }
+
+  .my-skills .title h2 {
+    font-size: 26px;
+  }
+
+  .skills-box {
+    width: 280px;
+    min-height: 620px;
+    border: 3px solid black;
+    padding: 35px 12px 20px;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 18px;
+    column-gap: 6px;
+    margin-top: 0;
+  }
+
+  .skill {
+    width: 70px;
+    height: 68px;
+    gap: 4px;
+  }
+
+  .skill img {
+    width: 46px;
+    height: 42px;
+  }
+
+  .skill p {
+    font-size: 9px;
+    line-height: 115%;
+  }
+
+  .contact-box {
+    margin-top: 75px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 11px;
+    line-height: 140%;
+  }
+
+  .contact-box img {
+    width: 42px;
+    height: 42px;
+    margin-top: 2px;
     flex-shrink: 0;
   }
 
   .contact-box p {
-    font-size: 16px;
-    line-height: 1.4;
+    margin: 0;
   }
 
   .skills-arrow {
-    margin-top: 40px;
+    width: 280px;
+    margin-top: 28px;
+    justify-content: center;
   }
 
   .skills-arrow img {
-    width: 120px;
-    margin-left: 0;
-  }
-}
-@media (max-width: 768px) {
-
-  .contact-box {
-    margin-top: 40px;
-    position: static;  
-    transform: none;
-  }
-}
-@media (max-width: 768px) {
-
-  .skills-box {
-    margin-bottom: 20px;
-  }
-
-  .contact-box {
-    margin-top: 20px;
-  }
-}
-@media (max-width: 480px) {
-
-  .skills-box {
-    margin-bottom: 15px;
-  }
-
-  .contact-box {
-    margin-top: 15px;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-  }
-}
-@media (max-width: 1024px) {
-
-  .contact-box {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .contact-box p {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 6px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .contact-text {
-    margin-top: 4px;
-    display: inline-block;
-  }
-
-  .contact-box p:last-child {
-    margin-top: 20px !important;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .contact-box p:last-child {
-    margin-top: 25px !important;
-    font-size: 14px;
-  }
-
-  .contact-box p {
-    font-size: 16px;
-  }
-
-  .contact-text {
-    font-size: 16px;
+    width: 160px;
+    height: auto;
   }
 }
