@@ -8,27 +8,36 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 100px;
+  padding: 0 20px;
   box-sizing: border-box;
   background-color: #FFFCF3;
 }
 
+.left {
+  display: flex;
+  align-items: center;
+  height: 92px;
+}
+
 .left img {
-  height: 150px;
+  height: 120px;
   width: auto;
   display: block;
-  margin-left: -20px;
+  margin-left: 0;
+  transform: translateY(0);
 }
 
 .right {
   display: flex;
   align-items: center;
-  gap: 28px;
-  margin-right: -20px;
+  gap: 32px;
+  height: 92px;
+  margin-right: 0;
 }
 
 .lang {
   display: flex;
+  align-items: center;
   gap: 12px;
   font-family: 'Overpass', sans-serif;
   font-size: 14px;
@@ -43,8 +52,34 @@
   transition: 0.25s ease;
 }
 
+.lang div:hover {
+  transform: translateY(-1px);
+}
+
 .lang div.active {
   border-color: #00BC8F;
+  color: black;
+}
+
+.lang div::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: -4px;
+  height: 2px;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: 0.25s ease;
+}
+
+.lang div:hover::after {
+  transform: scaleX(1);
+}
+
+.lang div.active::after {
+  transform: scaleX(0);
 }
 
 .burger {
@@ -110,6 +145,11 @@
   padding: 12px 24px;
   line-height: 1;
   display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.04);
 }
 
 .menu-item::after {
@@ -138,6 +178,14 @@
   height: 14px;
   border-left: 2px solid black;
   border-bottom: 2px solid black;
+  transform: scale(1.35);
+  transform-origin: bottom left;
+  opacity: 1;
+  transition: opacity 0.15s ease 0.2s;
+}
+
+.menu-item:hover::before {
+  opacity: 0;
 }
 
 .menu-item span.box {
@@ -148,26 +196,38 @@
   pointer-events: none;
 }
 
+@keyframes boxShow {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.menu-item:hover span.box {
+  animation: boxShow 1.2s ease;
+  animation-delay: 0.3s;
+}
+
 .close {
   position: absolute;
   top: 40px;
   right: 40px;
   font-size: 40px;
   cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.close:hover {
+  transform: rotate(90deg);
 }
 
 @media (max-width: 1024px) {
   .header {
-    padding: 0 40px;
+    padding: 0 20px;
   }
 
   .left img {
-    height: 120px;
-    margin-left: -20px;
-  }
-
-  .right {
-    margin-right: -10px;
+    height: 115px;
   }
 
   .menu-item {
@@ -178,17 +238,22 @@
 @media (max-width: 768px) {
   .header {
     height: 80px;
-    padding: 0 18px;
+    padding: 0 14px;
+  }
+
+  .left {
+    height: 80px;
   }
 
   .left img {
-    height: 90px;
-    margin-left: -6px;
+    height: 85px;
+    margin-left: 0;
   }
 
   .right {
-    margin-right: -6px;
+    height: 80px;
     gap: 0;
+    margin-right: 0;
   }
 
   .lang {
@@ -200,8 +265,13 @@
     height: 22px;
   }
 
+  .menu-center {
+    gap: 30px;
+  }
+
   .menu-item {
     font-size: 48px;
+    padding: 10px 20px;
   }
 
   .close {
