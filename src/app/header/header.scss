@@ -255,49 +255,25 @@
 }
 
 
-/* =========================
-   MOBILE
-========================= */
-
 @media (max-width: 768px) {
 
-  .header {
-    padding: 0 16px;
-    height: 80px;
-  }
-
-  .left img {
-    height: 90px;
-    margin-left: 0;
-  }
-
-  .right {
-    gap: 20px;
-  }
-
-  .lang {
-    gap: 8px;
-    font-size: 12px;
+  .language-switch {
+    display: none !important;
   }
 
   .burger {
-    width: 30px;
-    height: 22px;
+    margin-left: auto;
+    margin-right: 0;
   }
 
-  .menu-center {
-    gap: 30px;
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  .menu-item {
-    font-size: 48px;
-    padding: 10px 20px;
-  }
-
-  .close {
-    top: 24px;
-    right: 24px;
-    font-size: 32px;
-  }
+.burger {
+  margin-left: 110px;
+}
 
 }
