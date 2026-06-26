@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 120px;
+  padding: 0 100px;
   box-sizing: border-box;
   background-color: #FFFCF3;
 }
@@ -17,16 +17,14 @@
   height: 150px;
   width: auto;
   display: block;
-  margin-left: -42px;
-  margin-left: 165px;
+  margin-left: -20px;
 }
 
 .right {
   display: flex;
   align-items: center;
-  gap: 32px;
-  margin-right: 2px;
-  margin-right: 210px;
+  gap: 28px;
+  margin-right: -20px;
 }
 
 .lang {
@@ -45,34 +43,8 @@
   transition: 0.25s ease;
 }
 
-.lang div:hover {
-  transform: translateY(-1px);
-}
-
 .lang div.active {
   border-color: #00BC8F;
-  color: black;
-}
-
-.lang div::after {
-  content: "";
-  position: absolute;
-  left: 10px;
-  right: 10px;
-  bottom: -4px;
-  height: 2px;
-  background: black;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: 0.25s ease;
-}
-
-.lang div:hover::after {
-  transform: scaleX(1);
-}
-
-.lang div.active::after {
-  transform: scaleX(0);
 }
 
 .burger {
@@ -138,14 +110,8 @@
   padding: 12px 24px;
   line-height: 1;
   display: inline-block;
-  transition: transform 0.25s ease;
 }
 
-.menu-item:hover {
-  transform: scale(1.04);
-}
-
-/* UNDERLINE */
 .menu-item::after {
   content: "";
   position: absolute;
@@ -168,24 +134,11 @@
   position: absolute;
   bottom: 6px;
   left: 6px;
-
   width: 14px;
   height: 14px;
-
   border-left: 2px solid black;
   border-bottom: 2px solid black;
-
-  transform: scale(1.35);
-  transform-origin: bottom left;
-
-  opacity: 1;
-  transition: opacity 0.15s ease 0.2s;
 }
-
-.menu-item:hover::before {
-  opacity: 0;
-}
-
 
 .menu-item span.box {
   position: absolute;
@@ -195,49 +148,15 @@
   pointer-events: none;
 }
 
-@keyframes boxShow {
-  0% {
-    opacity: 0;
-  }
-
-  20% {
-    opacity: 1;
-  }
-
-  85% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-}
-
-.menu-item:hover span.box {
-  animation: boxShow 1.2s ease;
-  animation-delay: 0.3s;
-}
-
 .close {
   position: absolute;
   top: 40px;
   right: 40px;
   font-size: 40px;
   cursor: pointer;
-  transition: 0.2s ease;
 }
-
-.close:hover {
-  transform: rotate(90deg);
-}
-
-
-/* =========================
-   TABLET
-========================= */
 
 @media (max-width: 1024px) {
-
   .header {
     padding: 0 40px;
   }
@@ -247,32 +166,47 @@
     margin-left: -20px;
   }
 
+  .right {
+    margin-right: -10px;
+  }
+
   .menu-item {
     font-size: 64px;
   }
-
 }
 
-
 @media (max-width: 768px) {
+  .header {
+    height: 80px;
+    padding: 0 18px;
+  }
 
-  .language-switch {
-    display: none !important;
+  .left img {
+    height: 90px;
+    margin-left: -6px;
+  }
+
+  .right {
+    margin-right: -6px;
+    gap: 0;
+  }
+
+  .lang {
+    display: none;
   }
 
   .burger {
-    margin-left: auto;
-    margin-right: 0;
+    width: 30px;
+    height: 22px;
   }
 
-  .header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .menu-item {
+    font-size: 48px;
   }
 
-.burger {
-  margin-left: 110px;
-}
-
+  .close {
+    top: 24px;
+    right: 24px;
+    font-size: 32px;
+  }
 }
