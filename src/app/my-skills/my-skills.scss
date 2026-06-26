@@ -372,3 +372,47 @@ html {
     gap: 10px;
   }
 }
+@media (max-width: 1024px) {
+
+  .contact-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-box p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .contact-text {
+    margin-top: 4px;
+    display: inline-block;
+  }
+
+  .contact-box p:last-child {
+    margin-top: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .contact-box p:last-child {
+    margin-top: 25px !important;
+    font-size: 14px;
+  }
+
+  .contact-box p {
+    font-size: 16px;
+  }
+
+  .contact-text {
+    font-size: 16px;
+  }
+}

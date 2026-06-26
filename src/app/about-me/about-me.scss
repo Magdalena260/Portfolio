@@ -368,6 +368,8 @@
   }
 }
 
+
+
 /* =========================
    MOBILE
 ========================= */
@@ -458,4 +460,33 @@
 }
 .about-right {
   margin-bottom: 120px;
+}
+
+@media (max-width: 768px) {
+  .info-item:first-of-type img {
+    transform: translateX(-12px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-item:first-of-type img {
+    transform: translateX(-12px) !important;
+  }
+}
+@media (max-width: 1024px) {
+  .about-arrow {
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-arrow {
+    margin-left: -30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-arrow {
+    margin-left: -40px;
+  }
 }
