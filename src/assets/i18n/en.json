@@ -1,9 +1,10 @@
 {
-  "header": {
-    "about": "About",
-    "skills": "Skills",
-    "portfolio": "Portfolio"
-  },
+"header": {
+  "about": "About me",
+  "skills": "Skills",
+  "portfolio": "Portfolio",
+  "sayHi": "Say Hi!"
+},
 
   "infos": {
     "title": "Full stack",
