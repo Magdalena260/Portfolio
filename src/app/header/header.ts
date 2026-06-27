@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -13,7 +14,10 @@ export class HeaderComponent {
   currentLang: string = 'en';
   menuOpen = false;
 
-  constructor(private translate: TranslateService) {
+  constructor(
+    private translate: TranslateService,
+    private router: Router
+  ) {
     this.translate.setDefaultLang('en');
     this.translate.use('en');
   }
@@ -27,11 +31,15 @@ export class HeaderComponent {
     this.menuOpen = !this.menuOpen;
   }
 
+  goHome() {
+    this.router.navigate(['/']);
+    this.menuOpen = false;
+  }
+
   scrollTo(id: string) {
     const element = document.getElementById(id);
 
     if (element) {
-
       const offsets: Record<string, number> = {
         about: 220,
         skills: 140,
