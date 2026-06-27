@@ -14,7 +14,7 @@ header {
 }
 
 .info {
-  margin-bottom: 0px;
+  margin-bottom: 200px;
 }
 
 .left img {
@@ -37,14 +37,13 @@ header {
 
 .info {
   width: 1240px;
-  min-height: calc(100vh - 92px);
+  height: 561px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
-  padding: 120px 80px 0;
-  box-sizing: border-box;
+  padding: 40px 80px;
 }
 
 /* LEFT */
@@ -145,10 +144,6 @@ header {
   100% { transform: translateY(140px); }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 1024px) {
 
   .info {
@@ -172,7 +167,7 @@ header {
     width: 100%;
     min-height: calc(100vh - 92px);
     margin: 0 auto;
-    padding: 90px 28px 0;
+    padding: 85px 28px 0;
     position: relative;
     display: block;
     box-sizing: border-box;
@@ -184,25 +179,25 @@ header {
   }
 
   .info .center .title {
-    font-size: 55px;
-    line-height: 100%;
+    font-size: 45px;
+    line-height: 1.08;
   }
 
   .info .center .name-row {
     display: flex;
     align-items: center;
-    gap: 10px;
-    margin-top: 18px;
+    gap: 6px;
+    margin-top: 10px;
     justify-content: flex-start;
   }
 
   .info .center .name-row .line {
-    width: 190px;
+    width: 120px;
     flex-shrink: 0;
   }
 
   .info .center .name-row .name {
-    font-size: 28px;
+    font-size: 18px;
     white-space: nowrap;
   }
 
@@ -211,87 +206,39 @@ header {
     left: 28px;
     bottom: 55px;
     height: auto;
+    order: unset;
   }
 
   .info .left a {
+    font-size: 14px;
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-size: 16px;
   }
 
   .info .right {
     position: absolute;
     right: 28px;
     bottom: 55px;
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
-  }
-
-  .scroll-mask {
-    width: 75px;
-    height: 95px;
-  }
-
-  .scroll-arrow {
-    width: 75px;
-  }
-
-  .scroll {
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 420px) {
-
-  .info {
-    padding: 90px 24px 0;
-  }
-
-  .info .center .title {
-    font-size: 45px;
-    line-height: 100%;
-  }
-
-  .info .center .name-row {
-    gap: 8px;
-    margin-top: 14px;
-  }
-
-  .info .center .name-row .line {
-    width: 150px;
-  }
-
-  .info .center .name-row .name {
-    font-size: 22px;
-  }
-
-  .info .left {
-    left: 24px;
-    bottom: 55px;
-  }
-
-  .info .left a {
-    font-size: 14px;
-  }
-
-  .info .right {
-    right: 24px;
-    bottom: 55px;
     gap: 6px;
+    order: unset;
   }
 
   .scroll-mask {
-    width: 65px;
-    height: 85px;
+    width: 60px;
+    height: 80px;
   }
 
   .scroll-arrow {
-    width: 65px;
+    width: 60px;
   }
 
   .scroll {
     font-size: 16px;
+    line-height: 1.1;
+    margin: 0;
   }
 }
