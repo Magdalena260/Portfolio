@@ -37,9 +37,13 @@ h2 {
 
 body {
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+app-root,
+app-footer {
+  width: 100%;
+  display: block;
 }
 
 html {
