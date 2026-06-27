@@ -1,14 +1,19 @@
 .header {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
   width: 100%;
+  max-width: 1440px;
   height: 92px;
   z-index: 9999;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 85px;
+
+  padding: 0 100px;
   box-sizing: border-box;
   background-color: #FFFCF3;
 }
@@ -17,14 +22,13 @@
   display: flex;
   align-items: center;
   height: 100%;
-    margin-left: -2x;
 }
 
 .left img {
   height: 150px;
   width: auto;
   display: block;
-  margin-left: -4px;
+  margin-left: -40px;
 }
 
 .right {
@@ -32,8 +36,9 @@
   align-items: center;
   gap: 32px;
   height: 100%;
-   margin-right: 40px;
+  margin-right: 0;
 }
+
 
 .lang {
   display: flex;

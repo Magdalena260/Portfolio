@@ -27,6 +27,7 @@
     </div>
 
   </div>
+
 </div>
 
 <nav class="mobile-menu" [class.open]="menuOpen">
@@ -47,6 +48,16 @@
 
     <div class="menu-item" (click)="scrollTo('portfolio')">
       {{ 'header.portfolio' | translate }}
+      <span class="box"></span>
+    </div>
+
+    <div class="menu-item" (click)="scrollTo('references')">
+      References
+      <span class="box"></span>
+    </div>
+
+    <div class="menu-item" (click)="scrollTo('contact')">
+      Contact
       <span class="box"></span>
     </div>
 

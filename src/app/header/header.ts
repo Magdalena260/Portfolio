@@ -28,9 +28,30 @@ export class HeaderComponent {
   }
 
   scrollTo(id: string) {
-    document.getElementById(id)?.scrollIntoView({
-      behavior: 'smooth'
-    });
+    const element = document.getElementById(id);
+
+    if (element) {
+
+      const offsets: Record<string, number> = {
+        about: 220,
+        skills: 140,
+        portfolio: 140,
+        references: 260,
+        contact: 140
+      };
+
+      const headerOffset = offsets[id] ?? 140;
+
+      const y =
+        element.getBoundingClientRect().top +
+        window.scrollY -
+        headerOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+    }
 
     this.menuOpen = false;
   }
