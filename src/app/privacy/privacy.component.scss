@@ -63,23 +63,15 @@
   height: 235px;
   margin-top: 80px;
   background: #000;
-  clip-path: polygon(
-    0 8%,
-    100% 26%,
-    100% 100%,
-    0 100%
-  );
   overflow: hidden;
 }
 
 .legal-bottom-content {
   position: relative;
   z-index: 2;
-
   width: 1240px;
   max-width: calc(100% - 160px);
   height: 100%;
-
   margin: 0 auto;
 
   display: flex;
@@ -170,6 +162,7 @@
     max-width: 100%;
     margin: 80px auto;
     padding: 0 40px;
+    box-sizing: border-box;
   }
 
   .main-title {
@@ -177,9 +170,15 @@
     margin-bottom: 30px;
   }
 
+  .legal-bottom {
+    height: 235px;
+    margin-top: 60px;
+  }
+
   .legal-bottom-content {
     width: 100%;
     max-width: calc(100% - 80px);
+    padding-bottom: 30px;
   }
 
   .legal-bottom-logo {
@@ -189,8 +188,63 @@
   .legal-bottom-left p {
     font-size: 20px;
   }
-}
 
+  .legal-bottom-icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .legal-bottom-link {
+    font-size: 15px;
+  }
+}
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1024px) {
+
+  .legal-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+
+  .main-title {
+    font-size: 56px;
+    margin-bottom: 30px;
+  }
+
+  .legal-bottom {
+    height: 235px;
+    margin-top: 60px;
+  }
+
+  .legal-bottom-content {
+    width: 100%;
+    max-width: calc(100% - 80px);
+    padding-bottom: 30px;
+  }
+
+  .legal-bottom-logo {
+    width: 130px;
+  }
+
+  .legal-bottom-left p {
+    font-size: 20px;
+  }
+
+  .legal-bottom-icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .legal-bottom-link {
+    font-size: 15px;
+  }
+}
 /* =========================
    MOBILE
 ========================= */
@@ -236,13 +290,6 @@
   .legal-bottom {
     height: 220px;
     margin-top: 50px;
-
-    clip-path: polygon(
-      0 6%,
-      100% 18%,
-      100% 100%,
-      0 100%
-    );
   }
 
   .legal-bottom-content {
@@ -319,13 +366,12 @@
 
   .legal-bottom {
     height: 210px;
+    margin-top: 40px;
+  }
 
-    clip-path: polygon(
-      0 5%,
-      100% 16%,
-      100% 100%,
-      0 100%
-    );
+  .legal-bottom-content {
+    padding: 0 20px 20px;
+    gap: 22px;
   }
 
   .legal-bottom-logo {

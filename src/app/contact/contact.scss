@@ -3,16 +3,19 @@
   min-height: 1285px;
   margin: 180px auto 0;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   box-sizing: border-box;
 }
 
 .background-shape {
   position: absolute;
-  inset: 0;
-  width: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
   height: 100%;
   object-fit: cover;
+  object-position: top center;
   z-index: 0;
   pointer-events: none;
 }
@@ -20,6 +23,9 @@
 .contact-inner {
   position: relative;
   z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 220px 100px 0;
@@ -55,6 +61,7 @@
   font-size: 32px;
   color: #00bc8f;
   margin: 0 0 24px;
+  text-align: center;
 }
 
 .text .description {
@@ -62,11 +69,12 @@
   font-size: 22px;
   color: #fffcf3;
   margin: 0;
+  text-align: center;
 }
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 .field {
@@ -77,14 +85,21 @@
 .field input,
 .field textarea {
   width: 100%;
-  background: #000;
-  border: 2px solid #fffcf3;
+  background: transparent;
   color: #fffcf3;
+
+  border: none;
+  border-bottom: 2px solid #fffcf3;
+
+  outline: none;
+  box-sizing: border-box;
+
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
-  padding: 16px 56px 16px 24px;
-  box-sizing: border-box;
-  outline: none;
+
+  padding: 14px 56px 14px 24px;
+
+  transition: all 0.2s ease;
 }
 
 .field input {
@@ -93,7 +108,7 @@
 
 .field textarea {
   height: 170px;
-  resize: vertical;
+  resize: none;
 }
 
 .field input::placeholder,
@@ -103,72 +118,122 @@
 }
 
 .field input:focus,
-.field textarea:focus {
-  border-color: #fffcf3;
+.field textarea:focus,
+.field input.ng-touched,
+.field textarea.ng-touched {
+  background: #000;
+  border: 2px solid #fffcf3;
 }
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #00bc8f;
+}
+
+.field input.ng-invalid.ng-touched,
+.field textarea.ng-invalid.ng-touched {
+  background: #000;
+  border: 2px solid #fffcf3;
+}
+
+.field input.ng-valid.ng-touched,
+.field textarea.ng-valid.ng-touched {
+  background: #000;
+  border: 2px solid #fffcf3;
+}
+/* =========================
+   STATUS ICONS
+========================= */
 
 .status-icon {
   position: absolute;
   right: 18px;
   top: 50%;
   transform: translateY(-50%);
+
   width: 26px;
   height: 26px;
+
   border-radius: 50%;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1;
+
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+
+  opacity: 0;
+  transition: .2s ease;
+
   pointer-events: none;
 }
 
+/* erst sichtbar wenn touched */
+
+.field input.ng-touched + .status-icon,
+.field textarea.ng-touched + .status-icon {
+  opacity: 1;
+}
+
 .status-icon.valid {
-  background: #8cf04f;
+  background: #8CF04F;
   color: #000;
 }
 
 .status-icon.invalid {
-  background: #e8485d;
+  background: #FF5C5C;
   color: #000;
 }
 
 .message-status {
-  top: 22px;
+  top: 20px;
   transform: none;
 }
 
+/* =========================
+   ERRORS
+========================= */
+
 .error {
-  color: #ff4d4d;
+  margin-top: -8px;
+  color: #ff5c5c;
   font-family: 'Overpass', sans-serif;
   font-size: 13px;
-  line-height: 1.2;
-  margin-top: -10px;
 }
 
 .privacy-error {
-  margin-top: -8px;
+  margin-top: -6px;
 }
+
+/* =========================
+   PRIVACY
+========================= */
 
 .privacy {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  margin: 10px 0 0;
+
+  margin-top: 12px;
+
+  color: #FFFCF3;
+
   font-family: 'Overpass', sans-serif;
-  font-size: 15px;
-  line-height: 1.4;
-  color: #fffcf3;
+  font-size: 14px;
+  line-height: 1.45;
 }
 
 .privacy input {
   width: 18px;
   height: 18px;
   min-width: 18px;
+
   margin-top: 2px;
-  accent-color: #00bc8f;
+
+  accent-color: #00BC8F;
+
   cursor: pointer;
 }
 
@@ -177,7 +242,7 @@
 }
 
 .privacy a {
-  color: #00bc8f;
+  color: #00BC8F;
   text-decoration: none;
 }
 
@@ -185,43 +250,56 @@
   font-weight: 700;
 }
 
+/* =========================
+   BUTTON
+========================= */
+
 .send-btn {
   width: 269px;
   height: 68px;
-  border: 2px solid #fffcf3;
+
+  margin: 18px auto 0;
+
+  border: 2px solid #FFFCF3;
   background: transparent;
-  color: #fffcf3;
+
+  color: #FFFCF3;
+
   font-family: 'Overpass', sans-serif;
   font-size: 23px;
+
   cursor: pointer;
-  margin: 10px auto 0;
-  transition: all 0.25s ease;
+
+  transition: .25s ease;
 }
 
 .send-btn:hover:not(:disabled) {
-  background: #fffcf3;
+  background: #FFFCF3;
   color: #000;
 }
 
 .send-btn:disabled {
-  opacity: 0.35;
+  opacity: .35;
   cursor: not-allowed;
 }
 
+/* =========================
+   STATUS
+========================= */
+
 .form-status {
-  margin-top: 10px;
+  margin-top: 14px;
   font-family: 'Overpass', sans-serif;
   font-size: 14px;
 }
 
 .form-status.success {
-  color: #8cf04f;
+  color: #8CF04F;
 }
 
 .form-status.error {
-  color: #ff4d4d;
+  color: #FF5C5C;
 }
-
 .top-right {
   position: absolute;
   right: 100px;
@@ -240,17 +318,12 @@
 
 @media (max-width: 900px) {
   .contact {
-    max-width: 420px;
     min-height: 1015px;
     margin: 120px auto 0;
   }
 
-  .background-shape {
-    object-fit: cover;
-    object-position: center top;
-  }
-
   .contact-inner {
+    max-width: 420px;
     padding: 120px 27px 0;
     align-items: center;
   }
@@ -271,14 +344,9 @@
     gap: 32px;
   }
 
-  .text {
-    text-align: center;
-  }
-
   .text .green-text {
     font-size: 32px;
     line-height: 120%;
-    margin-bottom: 24px;
   }
 
   .text .description {
@@ -296,8 +364,14 @@
 
   .field input,
   .field textarea {
-    padding-left: 18px;
-    padding-right: 50px;
+    padding: 14px 50px 14px 18px;
+  }
+
+  .status-icon {
+    width: 24px;
+    height: 24px;
+    right: 14px;
+    font-size: 17px;
   }
 
   .privacy {
@@ -313,5 +387,28 @@
 
   .top-right {
     display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-inner {
+    padding: 115px 22px 0;
+  }
+
+  .left h2 {
+    font-size: 42px;
+  }
+
+  .text .green-text {
+    font-size: 28px;
+  }
+
+  .text .description {
+    font-size: 18px;
+  }
+
+  .privacy {
+    gap: 12px;
+    font-size: 13px;
   }
 }
