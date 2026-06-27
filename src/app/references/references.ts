@@ -10,9 +10,22 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ReferencesComponent {
 
-  goToContact() {
-    document.getElementById('contact')?.scrollIntoView({
-      behavior: 'smooth'
-    });
+  scrollToContact() {
+    const element = document.getElementById('contact');
+
+    if (element) {
+      const headerOffset = 140;
+
+      const y =
+        element.getBoundingClientRect().top +
+        window.pageYOffset -
+        headerOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+    }
   }
+
 }

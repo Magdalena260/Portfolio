@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -10,9 +10,22 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class MySkillsComponent {
 
-  @Output() scrollToReferences = new EventEmitter<void>();
+  scrollToReferences() {
+    const element = document.getElementById('references');
 
-  goToReferences() {
-    this.scrollToReferences.emit();
+    if (element) {
+      const headerOffset = 260;
+
+      const y =
+        element.getBoundingClientRect().top +
+        window.pageYOffset -
+        headerOffset;
+
+      window.scrollTo({
+        top: y,
+        behavior: 'smooth'
+      });
+    }
   }
+
 }
