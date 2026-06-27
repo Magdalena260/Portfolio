@@ -1,8 +1,5 @@
-/* =========================
-   WRAPPER
-========================= */
-
 .legal-wrapper {
+  width: 100%;
   max-width: 900px;
   margin: 120px auto 80px;
   padding: 0 20px;
@@ -10,10 +7,6 @@
   font-family: 'Overpass', sans-serif;
   line-height: 1.5;
 }
-
-/* =========================
-   TITLE
-========================= */
 
 .main-title {
   font-family: 'Syne', sans-serif;
@@ -23,21 +16,13 @@
   margin-bottom: 40px;
 }
 
-/* =========================
-   HEADINGS
-========================= */
-
 .legal-wrapper h2,
 .green-title {
-  color: #00BC8F;
+  color: #00bc8f;
   font-size: 22px;
   margin-top: 24px;
   margin-bottom: 8px;
 }
-
-/* =========================
-   TEXT
-========================= */
 
 .legal-wrapper p {
   font-size: 16px;
@@ -45,7 +30,7 @@
 }
 
 .green-thin {
-  color: #00BC8F;
+  color: #00bc8f;
   font-weight: 400;
 }
 
@@ -53,57 +38,51 @@
   margin-top: 30px;
 }
 
-/* =========================
-   FOOTER
-========================= */
-
 .legal-bottom {
   position: relative;
-  width: 100%;
-  height: 235px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  height: 320px;
   margin-top: 80px;
   background: #000;
+  color: #fffcf3;
+  clip-path: polygon(0 14%, 100% 28%, 100% 100%, 0 100%);
   overflow: hidden;
+  display: flex;
+  justify-content: center;
 }
 
 .legal-bottom-content {
-  position: relative;
-  z-index: 2;
   width: 1240px;
-  max-width: calc(100% - 160px);
+  max-width: calc(100% - 200px);
   height: 100%;
-  margin: 0 auto;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-
-  padding-bottom: 34px;
+  padding-bottom: 44px;
   box-sizing: border-box;
 }
-
-/* ---------- LEFT ---------- */
 
 .legal-bottom-left {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  align-items: flex-start;
+  gap: 18px;
 }
 
 .legal-bottom-logo {
-  width: 150px;
+  width: 90px;
   height: auto;
+  display: block;
   filter: invert(1);
 }
 
 .legal-bottom-left p {
   margin: 0;
-  color: #FFFCF3;
+  color: #fffcf3;
   font-family: 'Overpass', sans-serif;
   font-size: 22px;
 }
-
-/* ---------- RIGHT ---------- */
 
 .legal-bottom-right {
   display: flex;
@@ -117,11 +96,15 @@
   gap: 24px;
 }
 
+.legal-bottom-icons a {
+  display: block;
+}
+
 .legal-bottom-icons img {
   width: 30px;
   height: 30px;
   display: block;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
 }
 
 .legal-bottom-icons a:hover img {
@@ -129,7 +112,7 @@
 }
 
 .legal-bottom-link {
-  color: #FFFCF3;
+  color: #fffcf3;
   text-decoration: none;
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
@@ -143,26 +126,19 @@
   bottom: -4px;
   width: 0;
   height: 2px;
-  background: #00BC8F;
-  transition: width .3s ease;
+  background: #00bc8f;
+  transition: width 0.3s ease;
 }
 
 .legal-bottom-link:hover::after {
   width: 100%;
 }
 
-/* =========================
-   TABLET
-========================= */
-
 @media (max-width: 1024px) {
-
   .legal-wrapper {
-    width: 100%;
     max-width: 100%;
     margin: 80px auto;
     padding: 0 40px;
-    box-sizing: border-box;
   }
 
   .main-title {
@@ -170,151 +146,78 @@
     margin-bottom: 30px;
   }
 
+  .legal-wrapper p {
+    font-size: 15px;
+  }
+
   .legal-bottom {
-    height: 235px;
+    height: 280px;
     margin-top: 60px;
+    clip-path: polygon(0 14%, 100% 30%, 100% 100%, 0 100%);
   }
 
   .legal-bottom-content {
-    width: 100%;
     max-width: calc(100% - 80px);
-    padding-bottom: 30px;
+    padding-bottom: 36px;
   }
 
   .legal-bottom-logo {
-    width: 130px;
+    width: 80px;
   }
 
   .legal-bottom-left p {
     font-size: 20px;
   }
-
-  .legal-bottom-icons img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .legal-bottom-link {
-    font-size: 15px;
-  }
 }
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 1024px) {
-
-  .legal-wrapper {
-    width: 100%;
-    max-width: 100%;
-    margin: 80px auto;
-    padding: 0 40px;
-    box-sizing: border-box;
-  }
-
-  .main-title {
-    font-size: 56px;
-    margin-bottom: 30px;
-  }
-
-  .legal-bottom {
-    height: 235px;
-    margin-top: 60px;
-  }
-
-  .legal-bottom-content {
-    width: 100%;
-    max-width: calc(100% - 80px);
-    padding-bottom: 30px;
-  }
-
-  .legal-bottom-logo {
-    width: 130px;
-  }
-
-  .legal-bottom-left p {
-    font-size: 20px;
-  }
-
-  .legal-bottom-icons img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .legal-bottom-link {
-    font-size: 15px;
-  }
-}
-/* =========================
-   MOBILE
-========================= */
 
 @media (max-width: 768px) {
-
   html,
   body {
     overflow-x: hidden;
   }
 
   .legal-wrapper {
-    width: 100%;
-    max-width: 100%;
     margin: 0 auto 60px;
     padding: 120px 22px 0;
-    box-sizing: border-box;
   }
 
   .main-title {
     font-size: 32px;
-    line-height: 1.1;
     text-align: left;
-    margin-bottom: 28px;
   }
 
   .legal-wrapper h2,
   .green-title {
     font-size: 22px;
-    line-height: 1.2;
-    margin: 26px 0 12px;
   }
 
   .legal-wrapper p {
     font-size: 14px;
-    line-height: 1.35;
-    margin-bottom: 14px;
     overflow-wrap: anywhere;
   }
 
-  /* ---------- FOOTER ---------- */
-
   .legal-bottom {
-    height: 220px;
+    height: 240px;
     margin-top: 50px;
+    clip-path: polygon(0 12%, 100% 28%, 100% 100%, 0 100%);
   }
 
   .legal-bottom-content {
-    width: 100%;
     max-width: 100%;
-    height: 100%;
-
     padding: 0 24px 24px;
-
-    display: flex;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
-
     gap: 28px;
   }
 
   .legal-bottom-left {
     align-items: center;
     text-align: center;
-    gap: 10px;
   }
 
   .legal-bottom-logo {
-    width: 80px;
+    width: 70px;
   }
 
   .legal-bottom-left p {
@@ -323,32 +226,12 @@
 
   .legal-bottom-right {
     align-items: center;
-    gap: 12px;
-  }
-
-  .legal-bottom-icons {
-    gap: 22px;
-  }
-
-  .legal-bottom-icons img {
-    width: 28px;
-    height: 28px;
-  }
-
-  .legal-bottom-link {
-    font-size: 14px;
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
 @media (max-width: 480px) {
-
   .legal-wrapper {
     padding: 110px 20px 0;
-    margin-bottom: 50px;
   }
 
   .main-title {
@@ -365,8 +248,8 @@
   }
 
   .legal-bottom {
-    height: 210px;
-    margin-top: 40px;
+    height: 220px;
+    clip-path: polygon(0 10%, 100% 26%, 100% 100%, 0 100%);
   }
 
   .legal-bottom-content {
@@ -375,7 +258,7 @@
   }
 
   .legal-bottom-logo {
-    width: 70px;
+    width: 64px;
   }
 
   .legal-bottom-left p {
