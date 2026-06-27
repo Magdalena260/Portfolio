@@ -65,26 +65,27 @@
     }
   },
 
-  "contact": {
-    "title": "Sag Hallo!",
-    "greenText": "Neues Projekt?",
-    "description": "Lass uns sprechen.",
+"contact": {
+  "title": "Sag hi!",
+  "greenText": "Möchtest du ein neues Projekt besprechen?",
+  "description": "Lass uns über deine Ideen sprechen und sie zum Leben erwecken.",
 
-    "namePlaceholder": "Name",
-    "emailPlaceholder": "E-Mail",
-    "messagePlaceholder": "Nachricht",
+  "namePlaceholder": "Dein Name",
+  "emailPlaceholder": "Deine E-Mail",
+  "messagePlaceholder": "Deine Nachricht",
 
-    "nameError": "Name erforderlich",
-    "emailError": "Ungültige E-Mail",
-    "messageError": "Nachricht erforderlich",
+  "nameError": "Dein Name ist erforderlich",
+  "emailError": "Bitte gib eine gültige E-Mail-Adresse ein",
+  "messageError": "Deine Nachricht ist leer",
 
-    "privacyText": "Ich stimme der Datenschutzerklärung zu.",
-    "privacyError": "Zustimmung erforderlich",
+  "privacyText": "Ich habe die",
+  "privacyAfter": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+  "privacyError": "Bitte akzeptiere die Datenschutzerklärung.",
 
-    "button": "Senden",
-    "success": "Gesendet",
-    "failure": "Fehler"
-  },
+  "button": "Nachricht senden",
+  "success": "Nachricht erfolgreich gesendet",
+  "failure": "Etwas ist schiefgelaufen"
+},
 
   "footer": {
     "copy": "© Magdalena Laurisch 2026",

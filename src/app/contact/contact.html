@@ -22,19 +22,19 @@
 
       <form class="contact-form" [formGroup]="contactForm" (ngSubmit)="sendEmail()">
 
-        <!-- NAME -->
-        <div class="input-wrapper">
+        <div class="field">
           <input
             type="text"
             formControlName="name"
             [placeholder]="'contact.namePlaceholder' | translate">
 
-          <div
-            class="input-status"
-            [class.valid]="contactForm.get('name')?.valid && contactForm.get('name')?.touched"
-            [class.invalid]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
-            {{ contactForm.get('name')?.valid ? '✓' : '✕' }}
-          </div>
+          <span
+            class="status-icon"
+            *ngIf="contactForm.get('name')?.touched"
+            [class.valid]="contactForm.get('name')?.valid"
+            [class.invalid]="contactForm.get('name')?.invalid">
+            {{ contactForm.get('name')?.valid ? '✓' : '!' }}
+          </span>
         </div>
 
         <div
@@ -43,19 +43,19 @@
           {{ 'contact.nameError' | translate }}
         </div>
 
-        <!-- EMAIL -->
-        <div class="input-wrapper">
+        <div class="field">
           <input
             type="email"
             formControlName="email"
             [placeholder]="'contact.emailPlaceholder' | translate">
 
-          <div
-            class="input-status"
-            [class.valid]="contactForm.get('email')?.valid && contactForm.get('email')?.touched"
-            [class.invalid]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
-            {{ contactForm.get('email')?.valid ? '✓' : '✕' }}
-          </div>
+          <span
+            class="status-icon"
+            *ngIf="contactForm.get('email')?.touched"
+            [class.valid]="contactForm.get('email')?.valid"
+            [class.invalid]="contactForm.get('email')?.invalid">
+            {{ contactForm.get('email')?.valid ? '✓' : '!' }}
+          </span>
         </div>
 
         <div
@@ -64,20 +64,18 @@
           {{ 'contact.emailError' | translate }}
         </div>
 
-        <!-- MESSAGE -->
-        <div class="input-wrapper message-box">
+        <div class="field message-field">
           <textarea
             formControlName="message"
             [placeholder]="'contact.messagePlaceholder' | translate"></textarea>
 
-          <div
-            class="input-status"
-            [class.valid]="contactForm.get('message')?.valid && contactForm.get('message')?.touched"
-            [class.invalid]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
-            {{ contactForm.get('message')?.valid ? '✓' : '✕' }}
-          </div>
-
-          <img class="message-icon" src="assets/arrows/group.svg" alt="">
+          <span
+            class="status-icon message-status"
+            *ngIf="contactForm.get('message')?.touched"
+            [class.valid]="contactForm.get('message')?.valid"
+            [class.invalid]="contactForm.get('message')?.invalid">
+            {{ contactForm.get('message')?.valid ? '✓' : '!' }}
+          </span>
         </div>
 
         <div
@@ -86,35 +84,38 @@
           {{ 'contact.messageError' | translate }}
         </div>
 
-        <!-- PRIVACY -->
         <div class="privacy">
           <input
             type="checkbox"
             id="privacy"
             formControlName="privacy">
 
-          <label>
+          <label for="privacy">
             {{ 'contact.privacyText' | translate }}
 
             <a
               routerLink="/privacy"
-              class="green"
               (click)="$event.stopPropagation()">
               {{ 'privacy.title' | translate }}
             </a>
+
+            {{ 'contact.privacyAfter' | translate }}
           </label>
         </div>
 
-        <small *ngIf="contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid">
+        <div
+          class="error privacy-error"
+          *ngIf="contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid">
           {{ 'contact.privacyError' | translate }}
-        </small>
+        </div>
 
-        <!-- BUTTON -->
-        <button class="send-btn" type="submit">
+        <button
+          class="send-btn"
+          type="submit"
+          [disabled]="contactForm.invalid">
           {{ 'contact.button' | translate }}
         </button>
 
-        <!-- STATUS -->
         <div class="form-status success" *ngIf="emailSent">
           {{ 'contact.success' | translate }}
         </div>
