@@ -19,7 +19,7 @@
 
 
 .my-skills {
-  margin-bottom: 120px;
+  margin-bottom: 160px;
 }
 
 
@@ -150,12 +150,44 @@
     padding: 40px 60px;
   }
 
+  .reference-cards {
+    gap: 18px;
+  }
+
   .card {
     width: 31%;
+    padding: 28px 22px;
   }
 
   .card .text {
     font-size: 16px;
+  }
+
+  .bottom-right {
+    right: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .references {
+    padding: 40px 40px;
+  }
+
+  .title h2 {
+    font-size: 64px;
+  }
+
+  .description p {
+    font-size: 20px;
+  }
+
+  .card {
+    min-height: 320px;
+    padding: 28px 18px;
+  }
+
+  .card .text {
+    font-size: 15px;
   }
 }
 
@@ -167,19 +199,13 @@
   }
 
   .title h2 {
-    font-size: 36px;
-    text-align: center;
-  }
-
-  .description {
-    justify-content: center;
+    font-size: 42px;
   }
 
   .description p {
     width: 100%;
-    max-width: 330px;
-    font-size: 20px;
-    text-align: center;
+    max-width: 430px;
+    font-size: 18px;
   }
 
   .reference-cards {
@@ -201,15 +227,27 @@
     right: auto;
     margin-top: 40px;
     align-self: center;
-    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .references {
+    padding: 40px 24px;
+  }
+
+  .title h2 {
+    font-size: 36px;
+  }
+
+  .description p {
+    max-width: 330px;
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .references {
     padding: 40px 16px;
-    align-items: center;
-    text-align: center;
   }
 
   .title {
@@ -219,19 +257,12 @@
 
   .title h2 {
     font-size: 36px;
-    text-align: center;
-  }
-
-  .description {
-    justify-content: center;
   }
 
   .description p {
     max-width: 300px;
     font-size: 14px;
     line-height: 120%;
-    text-align: center;
-    padding: 0;
   }
 
   .reference-cards {
@@ -255,23 +286,19 @@
   .card .name {
     font-size: 14px;
     margin-top: 0;
-    text-align: center;
   }
 
   .card .partner {
     font-size: 10px;
-    text-align: center;
   }
 
   .card .text {
     font-size: 14px;
     line-height: 120%;
-    text-align: center;
   }
 
   .bottom-right {
     margin-top: 30px;
-    align-self: center;
   }
 
   .bottom-right img {

@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+.contact {
+  scroll-margin-top: 150px;
+}
+
 .background-shape {
   position: absolute;
   top: 0;
@@ -316,6 +320,53 @@
   transform: translateY(-5px);
 }
 
+@media (max-width: 1200px) {
+  .contact-inner {
+    padding: 200px 80px 0;
+  }
+
+  .right {
+    width: 617px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .top-right {
+    right: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact {
+    min-height: 1120px;
+    margin: 140px auto 0;
+  }
+
+  .contact-inner {
+    padding: 170px 60px 0;
+  }
+
+  .left h2 {
+    font-size: 64px;
+  }
+
+  .right {
+    width: 560px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+
+  .text .green-text {
+    font-size: 30px;
+  }
+
+  .top-right {
+    right: 60px;
+    bottom: 240px;
+  }
+}
+
 @media (max-width: 900px) {
   .contact {
     min-height: 1015px;
@@ -354,17 +405,17 @@
     line-height: 120%;
   }
 
+  .field input,
+  .field textarea {
+    padding: 14px 50px 14px 18px;
+  }
+
   .field input {
     height: 54px;
   }
 
   .field textarea {
     height: 170px;
-  }
-
-  .field input,
-  .field textarea {
-    padding: 14px 50px 14px 18px;
   }
 
   .status-icon {
@@ -387,6 +438,17 @@
 
   .top-right {
     display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    min-height: 1015px;
+  }
+
+  .contact-inner {
+    max-width: 420px;
+    padding: 120px 27px 0;
   }
 }
 

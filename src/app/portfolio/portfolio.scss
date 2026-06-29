@@ -230,10 +230,6 @@
   font-weight: 700;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-
 @media (max-width: 1300px) {
   .portfolio {
     width: calc(100% - 80px);
@@ -241,7 +237,8 @@
 
   .project-row {
     width: 100%;
-     margin-bottom: 100px;
+    margin-bottom: 100px;
+    gap: 40px;
   }
 
   .project-box {
@@ -252,6 +249,72 @@
 
   .project-info {
     width: 42%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .portfolio {
+    width: calc(100% - 60px);
+    margin-top: 220px;
+    gap: 70px;
+  }
+
+  .title h2 {
+    font-size: 64px;
+  }
+
+  .title p {
+    font-size: 20px;
+  }
+
+  .project-info h3 {
+    font-size: 36px;
+  }
+
+  .tech {
+    font-size: 20px;
+  }
+
+  .project-number {
+    font-size: 40px;
+  }
+
+  .arrow {
+    width: 78px;
+    height: 78px;
+  }
+
+  .arrow img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio {
+    width: calc(100% - 48px);
+    margin-top: 170px;
+    gap: 60px;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
+  .title h2 {
+    font-size: 52px;
+  }
+
+  .project-info h3 {
+    font-size: 30px;
+  }
+
+  .tech {
+    font-size: 18px;
+  }
+
+  .project-info p {
+    font-size: 14px;
   }
 }
 

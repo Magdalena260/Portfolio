@@ -144,25 +144,81 @@ header {
   100% { transform: translateY(140px); }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+  .info {
+    width: calc(100% - 80px);
+    height: auto;
+    padding: 40px 40px;
+  }
 
+  .info .center .title {
+    font-size: 100px;
+  }
+
+  .info .center .name-row .line {
+    max-width: 420px;
+  }
+
+  .info .center .name-row .name {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 1024px) {
   .info {
     width: 100%;
-    height: auto;
-    padding: 30px 40px;
+    padding: 40px 40px;
   }
 
   .info .center .title {
     font-size: 80px;
   }
 
+  .info .center .name-row .line {
+    max-width: 320px;
+  }
+
   .info .center .name-row .name {
     font-size: 32px;
+  }
+
+  .scroll-mask {
+    width: 90px;
+    height: 110px;
+  }
+
+  .scroll-arrow {
+    width: 90px;
+  }
+
+  .scroll {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 900px) {
+  .info {
+    padding: 50px 32px;
+  }
+
+  .info .center .title {
+    font-size: 66px;
+  }
+
+  .info .center .name-row .line {
+    max-width: 240px;
+  }
+
+  .info .center .name-row .name {
+    font-size: 26px;
+  }
+
+  .info .left a {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
-
   .info {
     width: 100%;
     min-height: calc(100vh - 92px);
@@ -184,11 +240,8 @@ header {
   }
 
   .info .center .name-row {
-    display: flex;
-    align-items: center;
     gap: 6px;
     margin-top: 10px;
-    justify-content: flex-start;
   }
 
   .info .center .name-row .line {
@@ -206,7 +259,6 @@ header {
     left: 28px;
     bottom: 55px;
     height: auto;
-    order: unset;
   }
 
   .info .left a {
@@ -220,11 +272,7 @@ header {
     right: 28px;
     bottom: 55px;
     margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     gap: 6px;
-    order: unset;
   }
 
   .scroll-mask {
@@ -238,7 +286,31 @@ header {
 
   .scroll {
     font-size: 16px;
-    line-height: 1.1;
-    margin: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .info {
+    padding: 85px 24px 0;
+  }
+
+  .info .center .title {
+    font-size: 43px;
+  }
+
+  .info .center .name-row .line {
+    width: 105px;
+  }
+
+  .info .center .name-row .name {
+    font-size: 17px;
+  }
+
+  .info .left {
+    left: 24px;
+  }
+
+  .info .right {
+    right: 24px;
   }
 }
