@@ -46,7 +46,12 @@
   margin-top: 80px;
   background: #000;
   color: #fffcf3;
-  clip-path: polygon(0 14%, 100% 28%, 100% 100%, 0 100%);
+  clip-path: polygon(
+    0 14%,
+    100% 28%,
+    100% 100%,
+    0 100%
+  );
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -76,12 +81,13 @@
   display: block;
   filter: invert(1);
 }
-
-.legal-bottom-left p {
+.legal-bottom-left > p {
   margin: 0;
   color: #fffcf3;
   font-family: 'Overpass', sans-serif;
   font-size: 22px;
+  width: max-content;
+  transform: translateX(-55px);
 }
 
 .legal-bottom-right {
@@ -98,13 +104,14 @@
 
 .legal-bottom-icons a {
   display: block;
+  text-decoration: none;
 }
 
 .legal-bottom-icons img {
   width: 30px;
   height: 30px;
   display: block;
-  transition: transform 0.2s ease;
+  transition: transform .2s ease;
 }
 
 .legal-bottom-icons a:hover img {
@@ -127,14 +134,14 @@
   width: 0;
   height: 2px;
   background: #00bc8f;
-  transition: width 0.3s ease;
+  transition: width .3s ease;
 }
 
 .legal-bottom-link:hover::after {
   width: 100%;
 }
-
 @media (max-width: 1024px) {
+
   .legal-wrapper {
     max-width: 100%;
     margin: 80px auto;
@@ -146,14 +153,26 @@
     margin-bottom: 30px;
   }
 
+  .legal-wrapper h2,
+  .green-title {
+    font-size: 22px;
+  }
+
   .legal-wrapper p {
     font-size: 15px;
+    line-height: 1.5;
   }
 
   .legal-bottom {
     height: 280px;
     margin-top: 60px;
-    clip-path: polygon(0 14%, 100% 30%, 100% 100%, 0 100%);
+
+    clip-path: polygon(
+      0 14%,
+      100% 30%,
+      100% 100%,
+      0 100%
+    );
   }
 
   .legal-bottom-content {
@@ -165,12 +184,27 @@
     width: 80px;
   }
 
-  .legal-bottom-left p {
+  .legal-bottom-left > p {
     font-size: 20px;
+    transform: translateX(-40px);
+  }
+
+  .legal-bottom-icons {
+    gap: 22px;
+  }
+
+  .legal-bottom-icons img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .legal-bottom-link {
+    font-size: 15px;
   }
 }
 
 @media (max-width: 768px) {
+
   html,
   body {
     overflow-x: hidden;
@@ -199,15 +233,23 @@
   .legal-bottom {
     height: 240px;
     margin-top: 50px;
-    clip-path: polygon(0 12%, 100% 28%, 100% 100%, 0 100%);
+
+    clip-path: polygon(
+      0 12%,
+      100% 28%,
+      100% 100%,
+      0 100%
+    );
   }
 
   .legal-bottom-content {
     max-width: 100%;
     padding: 0 24px 24px;
+
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+
     gap: 28px;
   }
 
@@ -220,49 +262,83 @@
     width: 70px;
   }
 
-  .legal-bottom-left p {
+  .legal-bottom-left > p {
     font-size: 16px;
+    transform: translateX(0);
   }
 
   .legal-bottom-right {
     align-items: center;
   }
 }
-
 @media (max-width: 480px) {
+
   .legal-wrapper {
     padding: 110px 20px 0;
+    margin-bottom: 50px;
   }
 
   .main-title {
     font-size: 30px;
+    line-height: 1.1;
   }
 
   .legal-wrapper h2,
   .green-title {
     font-size: 20px;
+    margin: 22px 0 10px;
   }
 
   .legal-wrapper p {
     font-size: 13px;
+    line-height: 1.4;
+    margin-bottom: 12px;
   }
 
   .legal-bottom {
     height: 220px;
-    clip-path: polygon(0 10%, 100% 26%, 100% 100%, 0 100%);
+    margin-top: 40px;
+
+    clip-path: polygon(
+      0 10%,
+      100% 26%,
+      100% 100%,
+      0 100%
+    );
   }
 
   .legal-bottom-content {
+    width: 100%;
+    max-width: 100%;
+
     padding: 0 20px 20px;
+
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+
     gap: 22px;
+  }
+
+  .legal-bottom-left {
+    align-items: center;
+    text-align: center;
+    gap: 10px;
   }
 
   .legal-bottom-logo {
     width: 64px;
   }
 
-  .legal-bottom-left p {
+  .legal-bottom-left > p {
     font-size: 14px;
+    transform: translateX(0);
+  }
+
+  .legal-bottom-right {
+    align-items: center;
+    gap: 10px;
   }
 
   .legal-bottom-icons {

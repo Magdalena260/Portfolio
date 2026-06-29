@@ -12,7 +12,7 @@
   align-items: center;
   padding: 0 100px;
   box-sizing: border-box;
-  background-color: #FFFCF3;
+  background: #FFFCF3;
 }
 
 .left {
@@ -34,7 +34,6 @@
   align-items: center;
   gap: 32px;
   height: 100%;
-  margin-right: 0;
 }
 
 .lang {
@@ -48,18 +47,12 @@
   position: relative;
   cursor: pointer;
   padding: 6px 10px;
-  color: black;
   border: 2px solid transparent;
-  transition: 0.25s ease;
-}
-
-.lang div:hover {
-  transform: translateY(-1px);
+  transition: .25s ease;
 }
 
 .lang div.active {
   border-color: #00BC8F;
-  color: black;
 }
 
 .lang div::after {
@@ -72,7 +65,7 @@
   background: black;
   transform: scaleX(0);
   transform-origin: left;
-  transition: 0.25s ease;
+  transition: .25s ease;
 }
 
 .lang div:hover::after {
@@ -93,11 +86,11 @@
 }
 
 .burger span {
-  height: 3px;
   width: 100%;
+  height: 3px;
   background: black;
   border-radius: 2px;
-  transition: 0.3s ease;
+  transition: .3s ease;
 }
 
 .burger.open span:nth-child(1) {
@@ -116,15 +109,15 @@
   position: fixed;
   inset: 0;
   background: #FFFCF3;
+  z-index: 9998;
+  opacity: 0;
+  pointer-events: none;
+  transition: .3s ease;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s ease;
-  z-index: 9998;
-  overflow: hidden;
 }
 
 .mobile-menu.open {
@@ -139,79 +132,68 @@
   gap: 40px;
   transform: translateY(-55px);
 }
-
 .menu-item {
   position: relative;
   font-size: 78px;
   font-family: 'Syne', sans-serif;
+  font-weight: 800;
   cursor: pointer;
   color: black;
-  padding: 12px 24px;
+  padding: 18px 52px;
   line-height: 1;
   display: inline-block;
   transition: transform 0.25s ease;
 }
 
 .menu-item:hover {
-  transform: scale(1.04);
-}
-
-.menu-item::after {
-  content: "";
-  position: absolute;
-  left: 20px;
-  right: 20px;
-  bottom: 10px;
-  height: 2px;
-  background: black;
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.2s ease;
-}
-
-.menu-item:hover::after {
-  transform: scaleX(1);
+  transform: none;
 }
 
 .menu-item::before {
   content: "";
   position: absolute;
-  bottom: 6px;
-  left: 6px;
-  width: 14px;
-  height: 14px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  transform: scale(1.35);
-  transform-origin: bottom left;
+  left: 0;
+  bottom: 0;
+  width: 46px;
+  height: 46px;
+  border-left: 4px solid black;
+  border-bottom: 4px solid black;
   opacity: 1;
-  transition: opacity 0.15s ease 0.2s;
+  transition: opacity 0.2s ease 0.25s;
 }
 
 .menu-item:hover::before {
   opacity: 0;
 }
 
+.menu-item::after {
+  content: "";
+  position: absolute;
+  left: 52px;
+  right: 52px;
+  bottom: 0;
+  height: 4px;
+  background: black;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+
+.menu-item:hover::after {
+  transform: scaleX(1);
+}
+
 .menu-item span.box {
   position: absolute;
   inset: 0;
-  border: 2px solid black;
+  border: 4px solid black;
   opacity: 0;
   pointer-events: none;
 }
 
-@keyframes boxShow {
-  0% { opacity: 0; }
-  20% { opacity: 1; }
-  85% { opacity: 1; }
-  100% { opacity: 0; }
+.menu-item:active span.box {
+  opacity: 1;
 }
-
-.menu-item:hover span.box {
-  animation: boxShow 1.2s ease;
-  animation-delay: 0.3s;
-}
-
 .close {
   position: absolute;
   top: 40px;
@@ -234,7 +216,7 @@
   min-height: 235px;
   background: #000;
   color: #FFFCF3;
-  clip-path: polygon(0 22%, 100% 42%, 100% 100%, 0 100%);
+  clip-path: polygon(0 14%, 100% 28%, 100% 100%, 0 100%);
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -246,6 +228,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  
 }
 
 .menu-bottom-left h2 {
@@ -264,13 +247,6 @@
   color: #FFFCF3;
   text-decoration: none;
   margin: 0;
-}
-
-.menu-bottom-left a:visited,
-.menu-bottom-left a:hover,
-.menu-bottom-left a:active {
-  color: #FFFCF3;
-  text-decoration: none;
 }
 
 .menu-bottom-right {
@@ -294,27 +270,94 @@
 .menu-bottom-right a:hover img {
   transform: translateY(-10px);
 }
-
 @media (max-width: 1024px) {
   .header {
+    height: 86px;
     padding: 0 40px;
   }
 
   .left img {
-    height: 130px;
-    margin-left: -20px;
+    height: 115px;
+    margin-left: -10px;
   }
 
   .right {
-    margin-right: -10px;
+    gap: 24px;
+    margin-right: 0;
+  }
+
+  .menu-center {
+    gap: 36px;
+    transform: translateY(-65px);
   }
 
   .menu-item {
     font-size: 64px;
+    padding: 16px 44px;
+  }
+
+  .menu-item::before {
+    width: 38px;
+    height: 38px;
+  }
+
+  .menu-item::after {
+    left: 44px;
+    right: 44px;
   }
 
   .menu-bottom {
+    min-height: 220px;
     padding: 0 40px 30px;
+  }
+
+  .menu-bottom-left h2 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 900px) {
+  .header {
+    height: 86px;
+    padding: 0 28px;
+  }
+
+  .left img {
+    height: 105px;
+    margin-left: -10px;
+  }
+
+  .right {
+    gap: 20px;
+  }
+
+  .menu-center {
+    gap: 32px;
+    transform: translateY(-70px);
+  }
+
+  .menu-item {
+    font-size: 52px;
+    padding: 12px 32px;
+  }
+
+  .menu-item::before {
+    width: 32px;
+    height: 32px;
+  }
+
+  .menu-item::after {
+    left: 32px;
+    right: 32px;
+  }
+
+  .menu-bottom {
+    min-height: 190px;
+    padding: 0 32px 28px;
+  }
+
+  .menu-bottom-left h2 {
+    font-size: 38px;
   }
 }
 
@@ -350,7 +393,24 @@
 
   .menu-item {
     font-size: 48px;
-    padding: 10px 20px;
+    padding: 10px 24px;
+  }
+
+  .menu-item::before {
+    width: 28px;
+    height: 28px;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+  }
+
+  .menu-item::after {
+    left: 24px;
+    right: 24px;
+    height: 3px;
+  }
+
+  .menu-item span.box {
+    border: 3px solid black;
   }
 
   .close {
@@ -361,7 +421,7 @@
 
   .menu-bottom {
     min-height: 170px;
-    clip-path: polygon(0 18%, 100% 38%, 100% 100%, 0 100%);
+    clip-path: polygon(0 12%, 100% 28%, 100% 100%, 0 100%);
     padding: 0 24px 24px;
   }
 
@@ -382,5 +442,60 @@
   .menu-bottom-right img {
     width: 24px;
     height: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header {
+    height: 76px;
+    padding: 0 16px;
+  }
+
+  .left img {
+    height: 84px;
+  }
+
+  .burger {
+    width: 28px;
+    height: 20px;
+  }
+
+  .menu-center {
+    gap: 26px;
+    transform: translateY(-55px);
+  }
+
+  .menu-item {
+    font-size: 42px;
+    padding: 10px 20px;
+  }
+
+  .menu-item::before {
+    width: 24px;
+    height: 24px;
+  }
+
+  .menu-item::after {
+    left: 20px;
+    right: 20px;
+  }
+
+  .menu-bottom {
+    min-height: 160px;
+    padding: 0 18px 22px;
+  }
+
+  .menu-bottom-left h2 {
+    font-size: 28px;
+  }
+
+  .menu-bottom-left p,
+  .menu-bottom-left a {
+    font-size: 12px;
+  }
+
+  .menu-bottom-right img {
+    width: 22px;
+    height: 22px;
   }
 }
