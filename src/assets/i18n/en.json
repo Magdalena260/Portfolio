@@ -20,12 +20,13 @@
     "button": "Let’s talk"
   },
 
-  "skills": {
-    "title": "My skills",
-    "contactText": "Don’t see the skill you need?",
-    "contactLink": "Contact me",
-    "footer": "I’m always ready to learn!"
-  },
+"skills": {
+  "title": "My skills",
+  "contactText": "Don’t see the skill you need?",
+  "contactLinkStart": "Conta",
+  "contactLinkEnd": "ct me",
+  "footer": "I’m always ready to learn!"
+},
 
   "portfolio": {
     "title": "Portfolio",

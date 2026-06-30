@@ -20,12 +20,13 @@
     "button": "Kontakt"
   },
 
-  "skills": {
-    "title": "Kompetenzen",
-    "contactText": "Fehlt dir eine Fähigkeit?",
-    "contactLink": "Kontaktiere mich",
-    "footer": "Ich lerne immer weiter!"
-  },
+"skills": {
+  "title": "Kompetenzen",
+  "contactText": "Fehlt dir eine bestimmte Fähigkeit?",
+  "contactLinkStart": "Kontak",
+  "contactLinkEnd": "tiere mich",
+  "footer": "Ich lerne immer weiter!"
+},
 
   "portfolio": {
     "title": "Portfolio",
