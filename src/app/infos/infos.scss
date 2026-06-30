@@ -13,9 +13,6 @@ header {
   z-index: 1001;
 }
 
-.info {
-  margin-bottom: 200px;
-}
 
 .left img {
   height: 150px;
@@ -36,14 +33,17 @@ header {
 ========================= */
 
 .info {
-  width: 1240px;
-  height: 561px;
+  width: min(100% - 200px, 1240px);
+  min-height: calc(100dvh - 92px);
+
+  margin: 0 auto 200px;
 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 
-  padding: 40px 80px;
+  padding: 40px 0;
+  box-sizing: border-box;
 }
 
 /* LEFT */
@@ -147,9 +147,10 @@ header {
 @media (max-width: 1200px) {
   .info {
     width: calc(100% - 80px);
-    height: auto;
-    padding: 40px 40px;
+    min-height: calc(100dvh - 92px);
+    padding: 40px 0;
   }
+}
 
   .info .center .title {
     font-size: 100px;
@@ -162,7 +163,7 @@ header {
   .info .center .name-row .name {
     font-size: 40px;
   }
-}
+
 
 @media (max-width: 1024px) {
   .info {
