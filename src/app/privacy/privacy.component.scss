@@ -1,9 +1,19 @@
-.legal-wrapper {
+:host {
+  min-height: calc(100dvh - 92px);
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy-wrapper {
   width: 100%;
   max-width: 900px;
+  flex: 1;
+
   margin: 120px auto 80px;
   padding: 0 20px;
+
   box-sizing: border-box;
+
   font-family: 'Overpass', sans-serif;
   line-height: 1.5;
 }
@@ -16,142 +26,207 @@
   margin-bottom: 40px;
 }
 
-.legal-wrapper h2,
+.privacy-wrapper h2,
 .green-title {
-  color: #00bc8f;
+  color: #00BC8F;
   font-size: 22px;
   margin-top: 24px;
   margin-bottom: 8px;
 }
 
-.legal-wrapper p {
+.privacy-wrapper p,
+.privacy-wrapper li {
   font-size: 16px;
-  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
 .green-thin {
-  color: #00bc8f;
+  color: #00BC8F;
   font-weight: 400;
 }
 
-.legal-date {
+.privacy-date {
+  margin-top: 30px;
+}:host {
+  min-height: calc(100dvh - 92px);
+  display: flex;
+  flex-direction: column;
+}
+
+.privacy-wrapper {
+  width: 100%;
+  max-width: 900px;
+  flex: 1;
+
+  margin: 120px auto 80px;
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  font-family: 'Overpass', sans-serif;
+  line-height: 1.5;
+}
+
+.main-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 64px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.privacy-wrapper h2,
+.green-title {
+  color: #00BC8F;
+  font-size: 22px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.privacy-wrapper p,
+.privacy-wrapper li {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.green-thin {
+  color: #00BC8F;
+  font-weight: 400;
+}
+
+.privacy-date {
   margin-top: 30px;
 }
 
-.legal-bottom {
+.privacy-bottom {
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
+
   height: 320px;
   margin-top: 80px;
+
   background: #000;
-  color: #fffcf3;
+  color: #FFFCF3;
+
   clip-path: polygon(
     0 14%,
     100% 28%,
     100% 100%,
     0 100%
   );
-  overflow: hidden;
+
   display: flex;
   justify-content: center;
+
+  overflow: hidden;
 }
 
-.legal-bottom-content {
+.privacy-bottom-content {
   width: 1240px;
   max-width: calc(100% - 200px);
   height: 100%;
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
   padding-bottom: 44px;
   box-sizing: border-box;
 }
 
-.legal-bottom-left {
+.privacy-bottom-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 18px;
 }
 
-.legal-bottom-logo {
+.privacy-bottom-logo {
   width: 90px;
   height: auto;
   display: block;
   filter: invert(1);
 }
-.legal-bottom-left > p {
+
+.privacy-bottom-left > p {
   margin: 0;
-  color: #fffcf3;
+  color: #FFFCF3;
+
   font-family: 'Overpass', sans-serif;
   font-size: 22px;
+
   width: max-content;
   transform: translateX(-55px);
 }
 
-.legal-bottom-right {
+.privacy-bottom-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 12px;
 }
 
-.legal-bottom-icons {
+.privacy-bottom-icons {
   display: flex;
   gap: 24px;
 }
 
-.legal-bottom-icons a {
+.privacy-bottom-icons a {
   display: block;
   text-decoration: none;
 }
 
-.legal-bottom-icons img {
+.privacy-bottom-icons img {
   width: 30px;
   height: 30px;
   display: block;
   transition: transform .2s ease;
 }
 
-.legal-bottom-icons a:hover img {
+.privacy-bottom-icons a:hover img {
   transform: translateY(-10px);
 }
 
-.legal-bottom-link {
-  color: #fffcf3;
+.privacy-bottom-link {
+  color: #FFFCF3;
   text-decoration: none;
+
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
+
   position: relative;
 }
 
-.legal-bottom-link::after {
+.privacy-bottom-link::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
+
   width: 0;
   height: 2px;
-  background: #00bc8f;
+
+  background: #00BC8F;
   transition: width .3s ease;
 }
 
-.legal-bottom-link:hover::after {
+.privacy-bottom-link:hover::after {
   width: 100%;
 }
+
 @media (max-width: 1200px) {
-  .legal-wrapper {
+  .privacy-wrapper {
     max-width: 850px;
   }
 
-  .legal-bottom-content {
+  .privacy-bottom-content {
     max-width: calc(100% - 120px);
   }
 }
 
 @media (max-width: 1024px) {
-  .legal-wrapper {
+  .privacy-wrapper {
     max-width: 100%;
     margin: 80px auto;
     padding: 0 40px;
@@ -162,25 +237,26 @@
     margin-bottom: 30px;
   }
 
-  .legal-wrapper p {
+  .privacy-wrapper p,
+  .privacy-wrapper li {
     font-size: 15px;
   }
 
-  .legal-bottom {
+  .privacy-bottom {
     height: 280px;
     margin-top: 60px;
   }
 
-  .legal-bottom-content {
+  .privacy-bottom-content {
     max-width: calc(100% - 80px);
     padding-bottom: 36px;
   }
 
-  .legal-bottom-logo {
+  .privacy-bottom-logo {
     width: 80px;
   }
 
-  .legal-bottom-left > p {
+  .privacy-bottom-left > p {
     font-size: 20px;
     transform: translateX(-40px);
   }
@@ -191,18 +267,13 @@
     font-size: 46px;
   }
 
-  .legal-bottom-left > p {
+  .privacy-bottom-left > p {
     transform: translateX(-20px);
   }
 }
 
 @media (max-width: 768px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
-  .legal-wrapper {
+  .privacy-wrapper {
     margin: 0 auto 60px;
     padding: 120px 22px 0;
   }
@@ -212,17 +283,18 @@
     text-align: left;
   }
 
-  .legal-wrapper p {
+  .privacy-wrapper p,
+  .privacy-wrapper li {
     font-size: 14px;
     overflow-wrap: anywhere;
   }
 
-  .legal-bottom {
+  .privacy-bottom {
     height: 240px;
     margin-top: 50px;
   }
 
-  .legal-bottom-content {
+  .privacy-bottom-content {
     max-width: 100%;
     padding: 0 24px 24px;
     flex-direction: column-reverse;
@@ -231,27 +303,27 @@
     gap: 28px;
   }
 
-  .legal-bottom-left {
+  .privacy-bottom-left {
     align-items: center;
     text-align: center;
   }
 
-  .legal-bottom-logo {
+  .privacy-bottom-logo {
     width: 70px;
   }
 
-  .legal-bottom-left > p {
+  .privacy-bottom-left > p {
     font-size: 16px;
     transform: translateX(0);
   }
 
-  .legal-bottom-right {
+  .privacy-bottom-right {
     align-items: center;
   }
 }
 
 @media (max-width: 480px) {
-  .legal-wrapper {
+  .privacy-wrapper {
     padding: 110px 20px 0;
     margin-bottom: 50px;
   }
@@ -261,44 +333,45 @@
     line-height: 1.1;
   }
 
-  .legal-wrapper h2,
+  .privacy-wrapper h2,
   .green-title {
     font-size: 20px;
   }
 
-  .legal-wrapper p {
+  .privacy-wrapper p,
+  .privacy-wrapper li {
     font-size: 13px;
     line-height: 1.4;
   }
 
-  .legal-bottom {
+  .privacy-bottom {
     height: 220px;
     margin-top: 40px;
   }
 
-  .legal-bottom-content {
+  .privacy-bottom-content {
     padding: 0 20px 20px;
     gap: 22px;
   }
 
-  .legal-bottom-logo {
+  .privacy-bottom-logo {
     width: 64px;
   }
 
-  .legal-bottom-left > p {
+  .privacy-bottom-left > p {
     font-size: 14px;
   }
 
-  .legal-bottom-icons {
+  .privacy-bottom-icons {
     gap: 18px;
   }
 
-  .legal-bottom-icons img {
+  .privacy-bottom-icons img {
     width: 26px;
     height: 26px;
   }
 
-  .legal-bottom-link {
+  .privacy-bottom-link {
     font-size: 13px;
   }
 }
