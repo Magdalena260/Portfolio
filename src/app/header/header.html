@@ -1,25 +1,29 @@
 <div class="header">
 
-  <div class="left" (click)="goHome()">
-    <img src="assets/icons/logo_mlheribor.svg" alt="Logo">
-  </div>
+  <div class="header-content">
 
-  <div class="right">
-
-    <div class="lang">
-      <div [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">
-        EN
-      </div>
-
-      <div [class.active]="currentLang === 'de'" (click)="switchLanguage('de')">
-        DE
-      </div>
+    <div class="left" (click)="goHome()">
+      <img src="assets/icons/logo_mlheribor.svg" alt="Logo">
     </div>
 
-    <div class="burger" (click)="toggleMenu()" [class.open]="menuOpen">
-      <span></span>
-      <span></span>
-      <span></span>
+    <div class="right">
+
+      <div class="lang">
+        <div [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">
+          EN
+        </div>
+
+        <div [class.active]="currentLang === 'de'" (click)="switchLanguage('de')">
+          DE
+        </div>
+      </div>
+
+      <div class="burger" (click)="toggleMenu()" [class.open]="menuOpen">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
 
   </div>
@@ -52,22 +56,23 @@
   <div class="menu-bottom">
 
     <div class="menu-bottom-left">
-     <h2>{{ 'header.sayHi' | translate }}</h2>
+      <h2>{{ 'header.sayHi' | translate }}</h2>
       <p>magdalena.laurisch@outlook.de</p>
     </div>
 
     <div class="menu-bottom-right">
-   <a href="https://github.com/Magdalena260" target="_blank">
-          <img class="github" src="assets/icons/github.png" alt="GitHub">
-        </a>
 
-        <a href="mailto:magdalena.laurisch@outlook.de">
-          <img class="mail" src="assets/icons/mail.png" alt="Mail">
-        </a>
+      <a href="https://github.com/Magdalena260" target="_blank">
+        <img class="github" src="assets/icons/github.png" alt="GitHub">
+      </a>
 
-        <a href="https://www.linkedin.com/in/magdalena-laurisch-a99749231/" target="_blank">
-          <img class="linkedin" src="assets/icons/linkedin.png" alt="LinkedIn">
-        </a>
+      <a href="mailto:magdalena.laurisch@outlook.de">
+        <img class="mail" src="assets/icons/mail.png" alt="Mail">
+      </a>
+
+      <a href="https://www.linkedin.com/in/magdalena-laurisch-a99749231/" target="_blank">
+        <img class="linkedin" src="assets/icons/linkedin.png" alt="LinkedIn">
+      </a>
 
     </div>
 

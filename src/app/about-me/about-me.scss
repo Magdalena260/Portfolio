@@ -1,16 +1,21 @@
 .about-me {
   width: 100%;
-  max-width: 1259px;
+  max-width: 1240px;
   min-height: 700px;
+
   margin: 80px auto 0;
+
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
   padding-bottom: 250px;
   box-sizing: border-box;
+
   scroll-margin-top: 100px;
 }
+
 
 .about-me {
   scroll-margin-top: 150px;

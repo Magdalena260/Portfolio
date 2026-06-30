@@ -1,5 +1,5 @@
 header {
-  width: 1440px;
+  width: 100%;
   height: 92px;
 
   display: flex;
@@ -12,7 +12,6 @@ header {
   position: relative;
   z-index: 1001;
 }
-
 
 .left img {
   height: 150px;
@@ -28,10 +27,6 @@ header {
   gap: 10px;
 }
 
-/* =========================
-   INFO SECTION
-========================= */
-
 .info {
   width: min(100% - 200px, 1240px);
   min-height: calc(100dvh - 92px);
@@ -46,7 +41,8 @@ header {
   box-sizing: border-box;
 }
 
-/* LEFT */
+
+
 .info .left {
   display: flex;
   align-items: flex-end;
@@ -64,7 +60,6 @@ header {
   transform: rotate(180deg);
 }
 
-/* CENTER */
 .info .center {
   display: flex;
   flex-direction: column;
@@ -72,7 +67,7 @@ header {
 }
 
 .info .center .title {
-  font-family: 'Syne', ExtraBold;
+  font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 128px;
   line-height: 100%;
@@ -106,7 +101,6 @@ header {
   color: #00BC8F;
 }
 
-/* RIGHT */
 .scroll-mask {
   height: 140px;
   width: 130px;
@@ -134,14 +128,19 @@ header {
   margin: 0;
 }
 
-.right {
+.info .right {
   transform: translateY(10px);
   margin-top: 350px;
 }
 
 @keyframes arrowFlow {
-  0% { transform: translateY(-140px); }
-  100% { transform: translateY(140px); }
+  0% {
+    transform: translateY(-140px);
+  }
+
+  100% {
+    transform: translateY(140px);
+  }
 }
 
 @media (max-width: 1200px) {
@@ -150,7 +149,6 @@ header {
     min-height: calc(100dvh - 92px);
     padding: 40px 0;
   }
-}
 
   .info .center .title {
     font-size: 100px;
@@ -163,11 +161,12 @@ header {
   .info .center .name-row .name {
     font-size: 40px;
   }
-
+}
 
 @media (max-width: 1024px) {
   .info {
     width: 100%;
+    min-height: calc(100dvh - 92px);
     padding: 40px 40px;
   }
 
@@ -199,6 +198,7 @@ header {
 
 @media (max-width: 900px) {
   .info {
+    min-height: calc(100dvh - 92px);
     padding: 50px 32px;
   }
 
@@ -222,7 +222,7 @@ header {
 @media (max-width: 768px) {
   .info {
     width: 100%;
-    min-height: calc(100vh - 92px);
+    min-height: calc(100dvh - 80px);
     margin: 0 auto;
     padding: 85px 28px 0;
     position: relative;

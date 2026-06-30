@@ -1,15 +1,15 @@
 /* =========================
    WRAPPER
 ========================= */
-
 .portfolio {
-  width: 1239px;
+  width: min(100% - 200px, 1240px);
+
   margin: 160px auto;
+
   display: flex;
   flex-direction: column;
   gap: 80px;
 }
-
 .portfolio {
   margin-top: 300px;
 }
