@@ -4,7 +4,7 @@
   flex-direction: column;
 }
 
-.privacy-wrapper {
+.legal-wrapper {
   width: 100%;
   max-width: 900px;
   flex: 1;
@@ -26,7 +26,7 @@
   margin-bottom: 40px;
 }
 
-.privacy-wrapper h2,
+.legal-wrapper h2,
 .green-title {
   color: #00BC8F;
   font-size: 22px;
@@ -34,10 +34,9 @@
   margin-bottom: 8px;
 }
 
-.privacy-wrapper p,
-.privacy-wrapper li {
+.legal-wrapper p {
   font-size: 16px;
-  line-height: 1.5;
+  margin-bottom: 10px;
 }
 
 .green-thin {
@@ -45,64 +44,17 @@
   font-weight: 400;
 }
 
-.privacy-date {
-  margin-top: 30px;
-}:host {
-  min-height: calc(100dvh - 92px);
-  display: flex;
-  flex-direction: column;
-}
-
-.privacy-wrapper {
-  width: 100%;
-  max-width: 900px;
-  flex: 1;
-
-  margin: 120px auto 80px;
-  padding: 0 20px;
-
-  box-sizing: border-box;
-
-  font-family: 'Overpass', sans-serif;
-  line-height: 1.5;
-}
-
-.main-title {
-  font-family: 'Syne', sans-serif;
-  font-size: 64px;
-  font-weight: 800;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.privacy-wrapper h2,
-.green-title {
-  color: #00BC8F;
-  font-size: 22px;
-  margin-top: 24px;
-  margin-bottom: 8px;
-}
-
-.privacy-wrapper p,
-.privacy-wrapper li {
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.green-thin {
-  color: #00BC8F;
-  font-weight: 400;
-}
-
-.privacy-date {
+.legal-date {
   margin-top: 30px;
 }
 
-.privacy-bottom {
+/* =========================
+   FOOTER
+========================= */
+
+.legal-bottom {
   position: relative;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-
+  width: 100%;
   height: 320px;
   margin-top: 80px;
 
@@ -118,11 +70,9 @@
 
   display: flex;
   justify-content: center;
-
-  overflow: hidden;
 }
 
-.privacy-bottom-content {
+.legal-bottom-content {
   width: 1240px;
   max-width: calc(100% - 200px);
   height: 100%;
@@ -135,21 +85,21 @@
   box-sizing: border-box;
 }
 
-.privacy-bottom-left {
+.legal-bottom-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 18px;
 }
 
-.privacy-bottom-logo {
+.legal-bottom-logo {
   width: 90px;
   height: auto;
   display: block;
   filter: invert(1);
 }
 
-.privacy-bottom-left > p {
+.legal-bottom-left > p {
   margin: 0;
   color: #FFFCF3;
 
@@ -160,35 +110,35 @@
   transform: translateX(-55px);
 }
 
-.privacy-bottom-right {
+.legal-bottom-right {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 12px;
 }
 
-.privacy-bottom-icons {
+.legal-bottom-icons {
   display: flex;
   gap: 24px;
 }
 
-.privacy-bottom-icons a {
+.legal-bottom-icons a {
   display: block;
   text-decoration: none;
 }
 
-.privacy-bottom-icons img {
+.legal-bottom-icons img {
   width: 30px;
   height: 30px;
   display: block;
   transition: transform .2s ease;
 }
 
-.privacy-bottom-icons a:hover img {
+.legal-bottom-icons a:hover img {
   transform: translateY(-10px);
 }
 
-.privacy-bottom-link {
+.legal-bottom-link {
   color: #FFFCF3;
   text-decoration: none;
 
@@ -198,7 +148,7 @@
   position: relative;
 }
 
-.privacy-bottom-link::after {
+.legal-bottom-link::after {
   content: "";
   position: absolute;
   left: 0;
@@ -211,22 +161,21 @@
   transition: width .3s ease;
 }
 
-.privacy-bottom-link:hover::after {
+.legal-bottom-link:hover::after {
   width: 100%;
 }
-
 @media (max-width: 1200px) {
-  .privacy-wrapper {
+  .legal-wrapper {
     max-width: 850px;
   }
 
-  .privacy-bottom-content {
+  .legal-bottom-content {
     max-width: calc(100% - 120px);
   }
 }
 
 @media (max-width: 1024px) {
-  .privacy-wrapper {
+  .legal-wrapper {
     max-width: 100%;
     margin: 80px auto;
     padding: 0 40px;
@@ -237,26 +186,25 @@
     margin-bottom: 30px;
   }
 
-  .privacy-wrapper p,
-  .privacy-wrapper li {
+  .legal-wrapper p {
     font-size: 15px;
   }
 
-  .privacy-bottom {
+  .legal-bottom {
     height: 280px;
     margin-top: 60px;
   }
 
-  .privacy-bottom-content {
+  .legal-bottom-content {
     max-width: calc(100% - 80px);
     padding-bottom: 36px;
   }
 
-  .privacy-bottom-logo {
+  .legal-bottom-logo {
     width: 80px;
   }
 
-  .privacy-bottom-left > p {
+  .legal-bottom-left > p {
     font-size: 20px;
     transform: translateX(-40px);
   }
@@ -267,13 +215,13 @@
     font-size: 46px;
   }
 
-  .privacy-bottom-left > p {
+  .legal-bottom-left > p {
     transform: translateX(-20px);
   }
 }
 
 @media (max-width: 768px) {
-  .privacy-wrapper {
+  .legal-wrapper {
     margin: 0 auto 60px;
     padding: 120px 22px 0;
   }
@@ -283,18 +231,17 @@
     text-align: left;
   }
 
-  .privacy-wrapper p,
-  .privacy-wrapper li {
+  .legal-wrapper p {
     font-size: 14px;
     overflow-wrap: anywhere;
   }
 
-  .privacy-bottom {
+  .legal-bottom {
     height: 240px;
     margin-top: 50px;
   }
 
-  .privacy-bottom-content {
+  .legal-bottom-content {
     max-width: 100%;
     padding: 0 24px 24px;
     flex-direction: column-reverse;
@@ -303,27 +250,27 @@
     gap: 28px;
   }
 
-  .privacy-bottom-left {
+  .legal-bottom-left {
     align-items: center;
     text-align: center;
   }
 
-  .privacy-bottom-logo {
+  .legal-bottom-logo {
     width: 70px;
   }
 
-  .privacy-bottom-left > p {
+  .legal-bottom-left > p {
     font-size: 16px;
     transform: translateX(0);
   }
 
-  .privacy-bottom-right {
+  .legal-bottom-right {
     align-items: center;
   }
 }
 
 @media (max-width: 480px) {
-  .privacy-wrapper {
+  .legal-wrapper {
     padding: 110px 20px 0;
     margin-bottom: 50px;
   }
@@ -333,45 +280,44 @@
     line-height: 1.1;
   }
 
-  .privacy-wrapper h2,
+  .legal-wrapper h2,
   .green-title {
     font-size: 20px;
   }
 
-  .privacy-wrapper p,
-  .privacy-wrapper li {
+  .legal-wrapper p {
     font-size: 13px;
     line-height: 1.4;
   }
 
-  .privacy-bottom {
+  .legal-bottom {
     height: 220px;
     margin-top: 40px;
   }
 
-  .privacy-bottom-content {
+  .legal-bottom-content {
     padding: 0 20px 20px;
     gap: 22px;
   }
 
-  .privacy-bottom-logo {
+  .legal-bottom-logo {
     width: 64px;
   }
 
-  .privacy-bottom-left > p {
+  .legal-bottom-left > p {
     font-size: 14px;
   }
 
-  .privacy-bottom-icons {
+  .legal-bottom-icons {
     gap: 18px;
   }
 
-  .privacy-bottom-icons img {
+  .legal-bottom-icons img {
     width: 26px;
     height: 26px;
   }
 
-  .privacy-bottom-link {
+  .legal-bottom-link {
     font-size: 13px;
   }
 }
