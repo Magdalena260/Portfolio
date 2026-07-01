@@ -5,9 +5,6 @@
   position: relative;
   overflow: visible;
   box-sizing: border-box;
-}
-
-.contact {
   scroll-margin-top: 150px;
 }
 
@@ -27,16 +24,11 @@
 .contact-inner {
   position: relative;
   z-index: 2;
-
   width: min(100% - 200px, 1240px);
-
   margin: 0 auto;
-
   display: flex;
   flex-direction: column;
-
   padding: 220px 0 0;
-
   box-sizing: border-box;
 }
 
@@ -79,10 +71,11 @@
   margin: 0;
   text-align: center;
 }
+
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 0;
 }
 
 .field {
@@ -95,18 +88,13 @@
   width: 100%;
   background: transparent;
   color: #fffcf3;
-
   border: none;
   border-bottom: 2px solid #fffcf3;
-
   outline: none;
   box-sizing: border-box;
-
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
-
   padding: 14px 56px 14px 24px;
-
   transition: all 0.2s ease;
 }
 
@@ -149,36 +137,25 @@
   background: #000;
   border: 2px solid #fffcf3;
 }
-/* =========================
-   STATUS ICONS
-========================= */
 
 .status-icon {
   position: absolute;
   right: 18px;
   top: 50%;
   transform: translateY(-50%);
-
   width: 26px;
   height: 26px;
-
   border-radius: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-family: Arial, sans-serif;
   font-size: 18px;
   font-weight: 800;
-
   opacity: 0;
   transition: .2s ease;
-
   pointer-events: none;
 }
-
-/* erst sichtbar wenn touched */
 
 .field input.ng-touched + .status-icon,
 .field textarea.ng-touched + .status-icon {
@@ -200,34 +177,35 @@
   transform: none;
 }
 
-/* =========================
-   ERRORS
-========================= */
-
 .error {
-  margin-top: -8px;
+  min-height: 18px;
+  margin-top: 4px;
+  margin-bottom: 8px;
   color: #ff5c5c;
   font-family: 'Overpass', sans-serif;
   font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s ease;
+}
+
+.error.show {
+  opacity: 1;
+  visibility: visible;
 }
 
 .privacy-error {
-  margin-top: -6px;
+  min-height: 18px;
+  margin-top: 4px;
+  margin-bottom: 8px;
 }
-
-/* =========================
-   PRIVACY
-========================= */
 
 .privacy {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-
   margin-top: 12px;
-
   color: #FFFCF3;
-
   font-family: 'Overpass', sans-serif;
   font-size: 14px;
   line-height: 1.45;
@@ -237,11 +215,8 @@
   width: 18px;
   height: 18px;
   min-width: 18px;
-
   margin-top: 2px;
-
   accent-color: #00BC8F;
-
   cursor: pointer;
 }
 
@@ -258,26 +233,16 @@
   font-weight: 700;
 }
 
-/* =========================
-   BUTTON
-========================= */
-
 .send-btn {
   width: 269px;
   height: 68px;
-
   margin: 18px auto 0;
-
   border: 2px solid #FFFCF3;
   background: transparent;
-
   color: #FFFCF3;
-
   font-family: 'Overpass', sans-serif;
   font-size: 23px;
-
   cursor: pointer;
-
   transition: .25s ease;
 }
 
@@ -290,10 +255,6 @@
   opacity: .35;
   cursor: not-allowed;
 }
-
-/* =========================
-   STATUS
-========================= */
 
 .form-status {
   margin-top: 14px;
@@ -308,6 +269,7 @@
 .form-status.error {
   color: #FF5C5C;
 }
+
 .top-right {
   position: absolute;
   right: 100px;

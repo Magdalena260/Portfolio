@@ -39,7 +39,7 @@
 
         <div
           class="error"
-          *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
+          [class.show]="contactForm.get('name')?.invalid && contactForm.get('name')?.touched">
           {{ 'contact.nameError' | translate }}
         </div>
 
@@ -60,7 +60,7 @@
 
         <div
           class="error"
-          *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
+          [class.show]="contactForm.get('email')?.invalid && contactForm.get('email')?.touched">
           {{ 'contact.emailError' | translate }}
         </div>
 
@@ -80,7 +80,7 @@
 
         <div
           class="error"
-          *ngIf="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
+          [class.show]="contactForm.get('message')?.invalid && contactForm.get('message')?.touched">
           {{ 'contact.messageError' | translate }}
         </div>
 
@@ -105,7 +105,7 @@
 
         <div
           class="error privacy-error"
-          *ngIf="contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid">
+          [class.show]="contactForm.get('privacy')?.touched && contactForm.get('privacy')?.invalid">
           {{ 'contact.privacyError' | translate }}
         </div>
 
@@ -120,7 +120,7 @@
           {{ 'contact.success' | translate }}
         </div>
 
-        <div class="form-status error" *ngIf="emailError">
+        <div class="form-status error show" *ngIf="emailError">
           {{ 'contact.failure' | translate }}
         </div>
 
