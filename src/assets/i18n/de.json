@@ -7,8 +7,8 @@
 },
 
   "infos": {
-    "title": "Full Stack",
-    "subtitle": "Developer",
+    "title": "Full stack",
+    "subtitle": "developer",
     "scroll": "Runterscrollen"
   },
 
@@ -80,7 +80,7 @@
   "messageError": "Deine Nachricht ist leer",
 
   "privacyText": "Ich habe die",
-  "privacyAfter": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+  "privacyAfter": "gelesen und stimme der Verarbeitung der Daten zu.",
   "privacyError": "Bitte akzeptiere die Datenschutzerklärung.",
 
   "button": "Nachricht senden",

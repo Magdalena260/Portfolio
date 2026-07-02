@@ -10,19 +10,24 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
   styleUrl: './header.scss'
 })
 export class HeaderComponent {
-  currentLang: string = 'en';
+  currentLang: 'en' | 'de' = 'en';
   menuOpen = false;
 
   constructor(
     private translate: TranslateService,
     private router: Router
   ) {
+    const savedLang = localStorage.getItem('lang') as 'en' | 'de' | null;
+
+    this.currentLang = savedLang ?? 'en';
+
     this.translate.setDefaultLang('en');
-    this.translate.use('en');
+    this.translate.use(this.currentLang);
   }
 
-  switchLanguage(lang: string) {
+  switchLanguage(lang: 'en' | 'de') {
     this.currentLang = lang;
+    localStorage.setItem('lang', lang);
     this.translate.use(lang);
   }
 

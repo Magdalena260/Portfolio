@@ -242,7 +242,10 @@
   font-size: 23px;
   cursor: pointer;
   transition: .25s ease;
+  margin: 18px auto 0;
+  transform: translateY(-10px);
 }
+
 
 .send-btn:hover:not(:disabled) {
   background: #FFFCF3;

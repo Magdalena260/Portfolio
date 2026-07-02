@@ -13,10 +13,17 @@ import { routes } from './app.routes';
 
 import { provideHttpClient, HttpClient } from '@angular/common/http';
 
-import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import {
+  TranslateModule,
+  TranslateLoader
+} from '@ngx-translate/core';
+
 import { Observable } from 'rxjs';
 
-/* FIXED TRANSLATE LOADER */
+/* =========================
+   TRANSLATE LOADER
+========================= */
+
 class SimpleTranslateLoader implements TranslateLoader {
   constructor(private http: HttpClient) {}
 
@@ -24,6 +31,10 @@ class SimpleTranslateLoader implements TranslateLoader {
     return this.http.get(`assets/i18n/${lang}.json`);
   }
 }
+
+/* =========================
+   APP CONFIG
+========================= */
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -41,6 +52,7 @@ export const appConfig: ApplicationConfig = {
 
     importProvidersFrom(
       TranslateModule.forRoot({
+        defaultLanguage: 'en',
         loader: {
           provide: TranslateLoader,
           useClass: SimpleTranslateLoader,
