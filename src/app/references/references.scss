@@ -2,54 +2,52 @@
   width: 100%;
   max-width: 1440px;
   min-height: 565px;
-
   margin: 0 auto;
-
   position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: 40px 100px;
+  padding: 40px 100px 300px;
   box-sizing: border-box;
 
   scroll-margin-top: 100px;
   text-align: center;
 }
 
-
-.my-skills {
-  margin-bottom: 160px;
-}
-
-.title h2 {
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  font-size: 78px;
+.references .title h2 {
   margin: 0;
+
+  font-family: 'Syne', sans-serif;
+  font-size: 78px;
+  font-weight: 800;
+  line-height: 1;
   text-align: center;
+
   transition: color 0.3s ease;
 }
 
-.title h2:hover {
-  color: #00BC8F;
+.references .title h2:hover {
+  color: #00bc8f;
 }
 
 .description {
   width: 100%;
   margin-top: 20px;
+
   display: flex;
   justify-content: center;
 }
 
 .description p {
   width: 560px;
-  font-family: 'Overpass', sans-serif;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 120%;
   margin: 0;
+
+  font-family: 'Overpass', sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 120%;
   text-align: center;
 }
 
@@ -65,87 +63,97 @@
 .card {
   width: 397px;
   min-height: 344px;
-
-  border: 2px solid black;
+  padding: 30px;
 
   position: relative;
+  box-sizing: border-box;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 
-  padding: 30px;
-  box-sizing: border-box;
+  border: 2px solid black;
 
-  transition: border 0.3s ease;
+  transition: border-color 0.3s ease;
 }
 
 .card:hover {
-  border: 2px solid #00BC8F;
+  border-color: #00bc8f;
 }
 
 .card img {
+  width: 48px;
+  height: 40px;
+
   position: absolute;
   top: 35px;
   left: 50%;
   transform: translateX(-50%);
 
-  width: 48px;
-  height: 40px;
+  object-fit: contain;
 
   transition: filter 0.3s ease;
 }
 
 .card:hover img {
-  filter: invert(49%) sepia(90%) saturate(230%) hue-rotate(102deg);
+  filter:
+    invert(49%)
+    sepia(90%)
+    saturate(230%)
+    hue-rotate(102deg);
 }
 
 .card .name {
+  margin: 25px 0 0;
+
   font-family: 'Syne', sans-serif;
-  font-weight: 700;
   font-size: 16px;
-  margin: 25px 0 0 0;
+  font-weight: 700;
   text-align: center;
 }
 
 .card .partner {
+  margin: 5px 0 0;
+
   font-family: 'Overpass', sans-serif;
-  font-weight: 400;
   font-size: 14px;
-  margin: 5px 0 0 0;
+  font-weight: 400;
   text-align: center;
 }
 
 .card .text {
+  margin: 15px 0 0;
+
   font-family: 'Overpass', sans-serif;
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 120%;
-  margin: 15px 0 0 0;
   text-align: center;
 }
 
 .bottom-right {
   position: absolute;
-  bottom: -250px;
   right: 100px;
- 
-  cursor: pointer;
+  bottom: 30px;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  cursor: pointer;
 }
 
 .bottom-right img {
+  width: 140px;
+  height: auto;
   display: block;
+
   cursor: pointer;
 }
 
 @media (max-width: 1200px) {
   .references {
-    padding: 40px 60px;
+    padding: 40px 60px 280px;
   }
 
   .reference-cards {
@@ -168,10 +176,10 @@
 
 @media (max-width: 1024px) {
   .references {
-    padding: 40px 40px;
+    padding: 40px 40px 260px;
   }
 
-  .title h2 {
+  .references .title h2 {
     font-size: 64px;
   }
 
@@ -191,12 +199,13 @@
 
 @media (max-width: 900px) {
   .references {
+    min-height: auto;
     padding: 40px 32px;
     align-items: center;
     text-align: center;
   }
 
-  .title h2 {
+  .references .title h2 {
     font-size: 42px;
   }
 
@@ -221,10 +230,15 @@
 
   .bottom-right {
     position: relative;
-    bottom: auto;
     right: auto;
+    bottom: auto;
+
     margin-top: 40px;
-    align-self: center;
+    align-self: flex-end;
+  }
+
+  .bottom-right img {
+    width: 120px;
   }
 }
 
@@ -233,7 +247,7 @@
     padding: 40px 24px;
   }
 
-  .title h2 {
+  .references .title h2 {
     font-size: 36px;
   }
 
@@ -248,12 +262,12 @@
     padding: 40px 16px;
   }
 
-  .title {
+  .references .title {
     width: 100%;
     text-align: center;
   }
 
-  .title h2 {
+  .references .title h2 {
     font-size: 36px;
   }
 
@@ -282,8 +296,8 @@
   }
 
   .card .name {
-    font-size: 14px;
     margin-top: 0;
+    font-size: 14px;
   }
 
   .card .partner {
@@ -300,6 +314,6 @@
   }
 
   .bottom-right img {
-    width: 180px;
+    width: 110px;
   }
 }

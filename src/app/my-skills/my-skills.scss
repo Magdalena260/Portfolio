@@ -1,21 +1,13 @@
 .my-skills {
   width: min(100% - 200px, 1240px);
   height: 687px;
-
   margin: 60px auto 0;
-
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-
   scroll-margin-top: 150px;
 }
-
-.my-skills {
-  scroll-margin-top: 150px;
-}
-
 
 .my-skills .title {
   position: absolute;
@@ -23,7 +15,7 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 5;
-  background: #FFFCF3;
+  background: #fffcf3;
   padding: 0 20px;
 }
 
@@ -32,11 +24,12 @@
   font-weight: 800;
   font-size: 78px;
   margin: 0;
+  line-height: 1;
   transition: color 0.3s ease;
 }
 
 .my-skills .title h2:hover {
-  color: #00BC8F;
+  color: #00bc8f;
 }
 
 .skills-box {
@@ -71,6 +64,7 @@
   gap: 8px;
   transition: transform 0.2s ease;
 }
+
 .skill:hover {
   transform: translateY(-4px);
 }
@@ -98,7 +92,7 @@
 }
 
 .skill:hover p {
-  color: #00BC8F;
+  color: #00bc8f;
 }
 
 .contact-box {
@@ -140,7 +134,7 @@
 }
 
 .contact-text span::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: -3px;
@@ -161,17 +155,15 @@
   margin-top: 40px;
   display: flex;
   justify-content: flex-start;
+  cursor: pointer;
 }
 
 .skills-arrow img {
   display: block;
-  width: 250px;
+  width: 140px;
   height: auto;
   margin-left: 0;
-   margin-bottom: 80px; 
-}
-.skills-arrow {
-  cursor: pointer;
+  margin-bottom: 80px;
 }
 
 html {
@@ -191,6 +183,7 @@ html {
     transform: translateX(0);
   }
 }
+
 @media (max-width: 1300px) {
   .my-skills {
     width: calc(100% - 80px);
@@ -269,8 +262,8 @@ html {
 @media (max-width: 768px) {
   .my-skills {
     width: 310px;
-    margin: 70px auto 0;
     height: auto;
+    margin: 70px auto 0;
   }
 
   .my-skills .title {
@@ -346,25 +339,34 @@ html {
   }
 
   .skills-arrow {
-    width: 180px;
+    width: 100%;
     margin-top: 30px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .skills-arrow img {
-    width: 180px;
+    width: 120px;
+    height: auto;
     margin-left: 0;
+    margin-bottom: 80px;
   }
 }
 
 @media (max-width: 420px) {
   .my-skills {
-    width: 180px;
+    width: 280px;
+    height: auto;
     margin: 60px auto 0;
+  }
+
+  .my-skills .title {
+    top: -24px;
+    padding: 0 10px;
   }
 
   .my-skills .title h2 {
     font-size: 36px;
+    white-space: nowrap;
   }
 
   .skills-box {
@@ -372,6 +374,7 @@ html {
     min-height: 620px;
     border: 3px solid black;
     padding: 35px 12px 20px;
+    margin-top: 0;
   }
 
   .skills-grid {
@@ -429,97 +432,15 @@ html {
   }
 
   .skills-arrow {
-    width: 180px;
+    width: 100%;
     margin-top: 28px;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .skills-arrow img {
-    width: 180px;
+    width: 110px;
     height: auto;
-  }
-}
-
-@media (max-width: 420px) {
-
-  .my-skills {
-    width: 280px;
-    margin: 60px auto 0;
-  }
-
-  .my-skills .title h2 {
-    font-size: 36px;
-  }
-
-  .skills-box {
-    width: 280px;
-    min-height: 620px;
-    border: 3px solid black;
-    padding: 35px 12px 20px;
-  }
-
-  .skills-grid {
-    grid-template-columns: repeat(3, 1fr);
-    row-gap: 18px;
-    column-gap: 6px;
-    margin-top: 0;
-  }
-
-  .skill {
-    width: 70px;
-    height: 68px;
-    gap: 4px;
-  }
-
-  .skill img {
-    width: 46px;
-    height: 42px;
-  }
-
-  .skill p {
-    font-size: 9px;
-    line-height: 115%;
-  }
-
-  .contact-box {
-    margin-top: 65px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 11px;
-    line-height: 140%;
-  }
-
-  .contact-box img {
-    width: 42px;
-    height: 42px;
-    flex-shrink: 0;
-    margin-top: 3px;
-  }
-
-  .contact-box p {
-    margin: 0;
-  }
-
-  .contact-box p:first-of-type {
-    width: calc(100% - 52px);
-  }
-
-  .contact-box p:last-of-type {
-    width: calc(100% - 52px);
-    margin-left: 52px;
-    margin-top: -4px;
-  }
-
-  .skills-arrow {
-    width: 280px;
-    margin-top: 28px;
-    justify-content: center;
-  }
-
-  .skills-arrow img {
-    width: 180px;
-    height: auto;
+    margin-left: 0;
+    margin-bottom: 80px;
   }
 }

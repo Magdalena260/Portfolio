@@ -93,38 +93,46 @@
     "legal": "Impressum"
   },
 
-  "legal": {
-    "title": "Impressum",
+"privacy": {
+  "title": "Datenschutzerklärung",
 
-    "imprint": "Impressum",
-    "imprint_name": "Magdalena Laurisch",
-    "imprint_address": "Grünewalderstraße 92",
-    "imprint_city": "42657 Solingen",
-    "imprint_email": "E-Mail: magdalena.laurisch@outlook.de",
-    "imprint_phone": "Telefon: 01633930971",
+  "p1": "Personenbezogene Daten (nachfolgend meist nur „Daten“ genannt) werden von uns nur in dem Umfang verarbeitet, der erforderlich ist, um eine funktionsfähige und benutzerfreundliche Website einschließlich ihrer Inhalte sowie der dort angebotenen Leistungen bereitzustellen.",
 
-    "acceptTitle": "Akzeptanz der Bedingungen",
-    "acceptText": "Durch die Nutzung dieser Website akzeptierst du die folgenden Bedingungen.",
+  "p2": "Gemäß Art. 4 Nr. 1 der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (nachfolgend „DSGVO“), bezeichnet „Verarbeitung“ jeden mit oder ohne Hilfe automatisierter Verfahren ausgeführten Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten, wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.",
 
-    "scopeTitle": "Geltungsbereich und Eigentum",
-    "scopeText": "Dieses Portfolio wurde im Rahmen eines Bootcamp-Projekts erstellt.",
-    "designText": "Das Design von Portfolio gehört der Developer Akademie GmbH.",
+  "p3": "Mit der nachfolgenden Datenschutzerklärung informieren wir Sie insbesondere über Art, Umfang, Zweck, Dauer und Rechtsgrundlage der Verarbeitung personenbezogener Daten, soweit wir allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung entscheiden. Darüber hinaus informieren wir Sie über die von uns eingesetzten Drittanbieter-Komponenten zur Optimierung unserer Website und zur Verbesserung der Nutzererfahrung, soweit hierdurch Dritte Daten in eigener Verantwortung verarbeiten.",
 
-    "rightsTitle": "Urheberrechte",
-    "rightsText": "Alle Rechte bleiben bei den Studierenden.",
+  "structureTitle": "Unsere Datenschutzerklärung ist wie folgt aufgebaut:",
+  "structure1": "I. Informationen über uns als Verantwortliche",
+  "structure2": "II. Rechte der Nutzer und betroffenen Personen",
+  "structure3": "III. Informationen zur Datenverarbeitung",
 
-    "useTitle": "Nutzung",
-    "useText": "Nur für legale Zwecke erlaubt.",
+  "controllerTitle": "I. Informationen über uns als Verantwortliche",
+  "controllerText": "Verantwortlicher für diese Website ist: Magdalena Laurisch, Grünewalderstraße 92, 42657 Solingen, E-Mail: magdalena.laurisch@outlook.de, Telefon: 01633930971",
 
-    "disclaimerTitle": "Haftungsausschluss",
-    "disclaimerText": "Keine Haftung für Schäden.",
+  "dpoTitle": "Datenschutzbeauftragter:",
+  "dpoText": "[Angaben zum Datenschutzbeauftragten]",
+  "dpoExtra": "[Angaben zum externen Datenschutzbeauftragten]",
 
-    "indemnityTitle": "Freistellung",
-    "indemnityText": "Du bist für dein Handeln verantwortlich.",
+  "rightsTitle": "II. Rechte der Nutzer und betroffenen Personen",
+  "rightsText": "Nutzer und betroffene Personen haben gemäß DSGVO (Art. 15–20) Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit.",
+  "rightsText2": "Darüber hinaus besteht ein Widerspruchsrecht gemäß Art. 21 DSGVO.",
 
-    "contactText": "Kontakt: magdalena.laurisch@outlook.de",
+  "processingTitle": "III. Informationen zur Datenverarbeitung",
+  "processingText": "Die Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
 
-    "date": "Datum: 26. Juli 2025"
+  "contactTitle": "Kontakt",
+  "contactText": "Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung Ihrer Anfrage verwendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.",
+
+  "linkedinTitle": "LinkedIn",
+  "linkedinText1": "Wir unterhalten eine Onlinepräsenz auf LinkedIn, um unser Unternehmen zu präsentieren und mit Kunden sowie Interessenten zu kommunizieren.",
+  "linkedinText2": "Wir weisen darauf hin, dass dabei eine Verarbeitung personenbezogener Daten auch außerhalb der Europäischen Union erfolgen kann.",
+
+  "linkedinLinkText": "LinkedIn-Datenschutzerklärung:",
+  "linkedinLink": "https://www.linkedin.com/legal/privacy-policy",
+
+  "footerNote": "Musterdatenschutzerklärung der Anwaltskanzlei Weiß & Partner"
+
   },
 
   "privacy": {
