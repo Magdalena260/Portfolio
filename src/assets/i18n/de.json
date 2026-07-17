@@ -14,7 +14,7 @@
 
   "about": {
     "title": "Über mich",
-    "text": "Hi, ich bin Magdalena. Nach meinem Studium im Produktdesign mit Fokus auf Oberflächendesign und 13 Jahren Berufserfahnrung als Designerin habe ich mich entschieden, Full Stack Entwicklerin zu werden.",
+    "text": "Hi, ich bin Magdalena. Nach meinem Studium im Produktdesign mit Fokus auf Oberflächendesign und 13 Jahren Berufserfahrung als Designerin habe ich mich entschieden, Full Stack Entwicklerin zu werden.",
     "location": "Solingen",
     "remote": "Remote möglich",
     "button": "Kontakt"
@@ -93,14 +93,48 @@
     "legal": "Impressum"
   },
 
+"legal": {
+  "title": "Impressum",
+
+  "imprint": "Impressum",
+  "imprint_name": "Magdalena Laurisch",
+  "imprint_address": "Grünewalderstraße 92",
+  "imprint_city": "42657 Solingen",
+  "imprint_email": "E-Mail: magdalena.laurisch@outlook.de",
+  "imprint_phone": "Telefon: 01633930971",
+
+  "acceptTitle": "Annahme der Bedingungen",
+  "acceptText": "Durch den Zugriff auf und die Nutzung des Portfolios erklären Sie sich mit den folgenden Bedingungen sowie allen Richtlinien, Vorgaben oder Änderungen einverstanden, die Ihnen von Zeit zu Zeit vorgelegt werden können. Wir, die aufgeführten Studierenden, können diese Bedingungen jederzeit ohne vorherige Ankündigung aktualisieren oder ändern.",
+
+  "scopeTitle": "Umfang und Eigentum des Portfolios",
+  "scopeText": "Das Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp bei der Developer Akademie GmbH entwickelt. Es dient Bildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. Daher können wir keine dauerhafte Verfügbarkeit, Zuverlässigkeit, Richtigkeit oder sonstige Qualitätsmerkmale dieses Portfolios gewährleisten.",
+
+  "designText": "Das Design des Portfolios ist Eigentum der Developer Akademie GmbH. Eine unbefugte Nutzung, Vervielfältigung, Veränderung, Verbreitung oder Nachbildung des Designs ist strengstens untersagt.",
+
+  "rightsTitle": "Urheber- und Eigentumsrechte",
+  "rightsText": "Abgesehen von dem Design, das Eigentum der Developer Akademie GmbH ist, behalten wir, die aufgeführten Studierenden, sämtliche Rechte am Portfolio. Dies umfasst auch damit verbundene urheberrechtlich geschützte Materialien, Marken und sonstige geschützte Informationen.",
+
+  "useTitle": "Nutzung des Portfolios",
+  "useText": "Das Portfolio darf ausschließlich für rechtmäßige Zwecke und unter Einhaltung aller geltenden Gesetze und Vorschriften genutzt werden. Jede Nutzung für rechtswidrige Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Sie sind allein für Ihre Interaktionen mit anderen Nutzern des Portfolios verantwortlich.",
+
+  "disclaimerTitle": "Gewährleistungsausschluss und Haftungsbeschränkung",
+  "disclaimerText": "Das Portfolio wird in seinem gegenwärtigen Zustand und ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt. Dies umfasst insbesondere die stillschweigende Gewährleistung der Marktgängigkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter. Weder wir, die aufgeführten Studierenden, noch die Developer Akademie haften für unmittelbare, mittelbare, zufällige, besondere oder daraus folgende Schäden. Dies gilt insbesondere für entgangene Gewinne, den Verlust von Ansehen, Nutzungsmöglichkeiten, Daten oder anderen immateriellen Werten, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden und diese aus der Nutzung oder Funktionsweise des Portfolios entstehen.",
+
+  "indemnityTitle": "Freistellung",
+  "indemnityText": "Sie verpflichten sich, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, leitenden Angestellten, Geschäftsführer, Vertreter und Mitarbeiter von sämtlichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungen einschließlich angemessener Rechtskosten freizustellen und zu verteidigen, die aus Ihrer Nutzung des Portfolios und/oder einem Verstoß gegen dieses Impressum entstehen.",
+
+  "contactText": "Bei Fragen oder Hinweisen kontaktieren Sie uns bitte unter magdalena.laurisch@outlook.de.",
+
+  "date": "Stand: 26. Juli 2025"
+},
 "privacy": {
   "title": "Datenschutzerklärung",
 
   "p1": "Personenbezogene Daten (nachfolgend meist nur „Daten“ genannt) werden von uns nur in dem Umfang verarbeitet, der erforderlich ist, um eine funktionsfähige und benutzerfreundliche Website einschließlich ihrer Inhalte sowie der dort angebotenen Leistungen bereitzustellen.",
 
-  "p2": "Gemäß Art. 4 Nr. 1 der Verordnung (EU) 2016/679, also der Datenschutz-Grundverordnung (nachfolgend „DSGVO“), bezeichnet „Verarbeitung“ jeden mit oder ohne Hilfe automatisierter Verfahren ausgeführten Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten, wie das Erheben, das Erfassen, die Organisation, das Ordnen, die Speicherung, die Anpassung oder Veränderung, das Auslesen, das Abfragen, die Verwendung, die Offenlegung durch Übermittlung, Verbreitung oder eine andere Form der Bereitstellung, den Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung.",
+  "p2": "Gemäß Art. 4 Nr. 1 der Verordnung (EU) 2016/679, der Datenschutz-Grundverordnung (DSGVO), bezeichnet „Verarbeitung“ jeden mit oder ohne Hilfe automatisierter Verfahren ausgeführten Vorgang oder jede Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. Dazu gehören insbesondere das Erheben, Erfassen, Organisieren, Ordnen, Speichern, Anpassen, Verändern, Auslesen, Abfragen, Verwenden, Offenlegen durch Übermittlung, Verbreiten oder eine andere Form der Bereitstellung, der Abgleich oder die Verknüpfung, die Einschränkung, das Löschen oder die Vernichtung personenbezogener Daten.",
 
-  "p3": "Mit der nachfolgenden Datenschutzerklärung informieren wir Sie insbesondere über Art, Umfang, Zweck, Dauer und Rechtsgrundlage der Verarbeitung personenbezogener Daten, soweit wir allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung entscheiden. Darüber hinaus informieren wir Sie über die von uns eingesetzten Drittanbieter-Komponenten zur Optimierung unserer Website und zur Verbesserung der Nutzererfahrung, soweit hierdurch Dritte Daten in eigener Verantwortung verarbeiten.",
+  "p3": "Mit der nachfolgenden Datenschutzerklärung informieren wir Sie insbesondere über Art, Umfang, Zweck, Dauer und Rechtsgrundlage der Verarbeitung personenbezogener Daten, soweit wir diese allein oder gemeinsam mit anderen durchführen. Darüber hinaus informieren wir über eingesetzte Drittanbieter-Komponenten, die der Optimierung unserer Website und der Verbesserung der Nutzererfahrung dienen und dabei gegebenenfalls personenbezogene Daten verarbeiten.",
 
   "structureTitle": "Unsere Datenschutzerklärung ist wie folgt aufgebaut:",
   "structure1": "I. Informationen über uns als Verantwortliche",
@@ -108,69 +142,31 @@
   "structure3": "III. Informationen zur Datenverarbeitung",
 
   "controllerTitle": "I. Informationen über uns als Verantwortliche",
-  "controllerText": "Verantwortlicher für diese Website ist: Magdalena Laurisch, Grünewalderstraße 92, 42657 Solingen, E-Mail: magdalena.laurisch@outlook.de, Telefon: 01633930971",
+  "controllerText": "Verantwortlich für diese Website ist: Magdalena Laurisch, Grünewalderstraße 92, 42657 Solingen, E-Mail: magdalena.laurisch@outlook.de, Telefon: 01633930971",
 
   "dpoTitle": "Datenschutzbeauftragter:",
-  "dpoText": "[Angaben zum Datenschutzbeauftragten]",
-  "dpoExtra": "[Angaben zum externen Datenschutzbeauftragten]",
+  "dpoText": "Es wurde kein Datenschutzbeauftragter bestellt.",
+  "dpoExtra": "",
 
   "rightsTitle": "II. Rechte der Nutzer und betroffenen Personen",
-  "rightsText": "Nutzer und betroffene Personen haben gemäß DSGVO (Art. 15–20) Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung und Datenübertragbarkeit.",
+  "rightsText": "Nutzer und betroffene Personen haben gemäß DSGVO (Art. 15–20) unter anderem das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Datenübertragbarkeit.",
   "rightsText2": "Darüber hinaus besteht ein Widerspruchsrecht gemäß Art. 21 DSGVO.",
 
   "processingTitle": "III. Informationen zur Datenverarbeitung",
-  "processingText": "Die Daten werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+  "processingText": "Personenbezogene Daten werden gelöscht oder gesperrt, sobald der Zweck ihrer Speicherung entfällt, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
 
   "contactTitle": "Kontakt",
-  "contactText": "Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, werden Ihre Angaben zur Bearbeitung Ihrer Anfrage verwendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO.",
+  "contactText": "Wenn Sie uns per E-Mail oder Kontaktformular kontaktieren, werden Ihre Angaben ausschließlich zur Bearbeitung Ihrer Anfrage verwendet. Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. b DSGVO.",
 
   "linkedinTitle": "LinkedIn",
-  "linkedinText1": "Wir unterhalten eine Onlinepräsenz auf LinkedIn, um unser Unternehmen zu präsentieren und mit Kunden sowie Interessenten zu kommunizieren.",
-  "linkedinText2": "Wir weisen darauf hin, dass dabei eine Verarbeitung personenbezogener Daten auch außerhalb der Europäischen Union erfolgen kann.",
+  "linkedinText1": "Wir unterhalten eine Onlinepräsenz auf LinkedIn, um uns zu präsentieren und mit Interessenten sowie Geschäftspartnern zu kommunizieren.",
+  "linkedinText2": "Dabei kann es zu einer Verarbeitung personenbezogener Daten auch außerhalb der Europäischen Union kommen.",
 
   "linkedinLinkText": "LinkedIn-Datenschutzerklärung:",
   "linkedinLink": "https://www.linkedin.com/legal/privacy-policy",
 
   "footerNote": "Musterdatenschutzerklärung der Anwaltskanzlei Weiß & Partner"
-
-  },
-
-  "privacy": {
-    "title": "Datenschutzerklärung",
-
-    "p1": "Personenbezogene Daten werden nur verarbeitet, soweit dies notwendig ist, um eine funktionale Website bereitzustellen.",
-    "p2": "Verarbeitung gemäß DSGVO.",
-    "p3": "Diese Datenschutzerklärung informiert über die Verarbeitung personenbezogener Daten.",
-
-    "structureTitle": "Aufbau der Datenschutzerklärung",
-    "structure1": "I. Verantwortliche Stelle",
-    "structure2": "II. Rechte der Nutzer",
-    "structure3": "III. Datenverarbeitung",
-
-    "controllerTitle": "Verantwortliche Stelle",
-    "controllerText": "Magdalena Laurisch, Solingen, Deutschland, E-Mail: magdalena.laurisch@outlook.de, Telefon: 01633930971",
-
-    "dpoTitle": "Datenschutzbeauftragter",
-    "dpoText": "Nicht angegeben",
-    "dpoExtra": "",
-
-    "rightsTitle": "Rechte der Nutzer",
-    "rightsText": "Du hast Rechte gemäß DSGVO.",
-    "rightsText2": "Du kannst jederzeit widersprechen.",
-
-    "processingTitle": "Datenverarbeitung",
-    "processingText": "Daten werden gelöscht, sobald sie nicht mehr benötigt werden.",
-
-    "contactTitle": "Kontakt",
-    "contactText": "Daten werden nur zur Bearbeitung deiner Anfrage verwendet.",
-
-    "linkedinTitle": "LinkedIn",
-    "linkedinText1": "Wir nutzen LinkedIn.",
-    "linkedinText2": "Dabei können Daten außerhalb der EU verarbeitet werden.",
-
-    "linkedinLinkText": "LinkedIn Datenschutzerklärung:",
-    "linkedinLink": "https://www.linkedin.com/legal/privacy-policy",
-
-    "footerNote": "Musterdatenschutzerklärung"
-  }
 }
+
+  }
+
