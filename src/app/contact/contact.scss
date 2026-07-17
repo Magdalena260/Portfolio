@@ -274,6 +274,26 @@
 .top-right {
   position: absolute;
   right: 100px;
+  bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
+
+.top-right img {
+  width: 140px;
+  height: auto;
+  display: block;
+
+  cursor: pointer;
+}
+
+.top-right {
+  position: absolute;
+  right: 100px;
   bottom: 300px;
   z-index: 5;
 }

@@ -126,16 +126,17 @@
   transform: translate(20px, 20px);
 }
 
+
 .about-arrow {
   position: absolute;
   bottom: -300px;
-  left: 60%;
+  left: 90%;
   transform: translateX(-50%);
  
 }
 
 .about-arrow img {
-  width: 180px;
+  max-width: 140px;
   height: auto;
   display: block;
   transform: scaleX(-1);
