@@ -14,8 +14,8 @@ header {
 }
 
 .left img {
-  height: 150px;
   width: auto;
+  height: 150px;
   display: block;
 }
 
@@ -27,51 +27,69 @@ header {
   gap: 10px;
 }
 
-.info {
-  width: min(100% - 200px, 1240px);
-  min-height: calc(100dvh - 92px);
 
-  margin: 0 auto 200px;
+.info {
+  width: min(calc(100% - 200px), 1240px);
+
+  /* Mehr Platz nach unten */
+  min-height: calc(100dvh - 92px + 180px);
+  margin: 0 auto;
+
+  padding: 70px 0 140px;
+  box-sizing: border-box;
+
+  position: relative;
 
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
-
-  padding: 40px 0;
-  box-sizing: border-box;
 }
 
-
-
 .info .left {
+  position: absolute;
+
+  left: 0;
+  bottom: 40px;
+
+  height: auto;
+  margin: 0;
+
   display: flex;
   align-items: flex-end;
-  height: 100%;
+  justify-content: center;
 }
 
 .info .left a {
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
   font-size: 18px;
-  text-decoration: none;
+  line-height: 1;
+
   color: black;
+  text-decoration: none;
 
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
 
+
 .info .center {
+  width: fit-content;
+
+  margin-top: 40px;
+
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .info .center .title {
+  margin: 0;
+
   font-family: 'Syne', sans-serif;
   font-weight: 800;
   font-size: 128px;
-  line-height: 100%;
-  margin: 0;
+  line-height: 0.92;
 
   display: flex;
   flex-direction: column;
@@ -81,73 +99,116 @@ header {
   display: block;
 }
 
+
 .info .center .name-row {
+  width: 100%;
+
+  margin-top: 18px;
+
   display: flex;
   align-items: center;
-  gap: 16px;
-  margin-top: 10px;
+  gap: 20px;
 }
 
 .info .center .name-row .line {
   display: block;
+
+  width: 100%;
   max-width: 550px;
+  height: auto;
+
+  flex: 1;
 }
 
 .info .center .name-row .name {
+  margin: 0;
+
   font-family: 'Overpass', sans-serif;
   font-weight: 700;
   font-size: 48px;
+  line-height: 1;
+
+  color: #00bc8f;
+  white-space: nowrap;
+}
+
+
+
+.info .right {
+  position: absolute;
+
+  right: 0;
+  bottom: 40px;
+
   margin: 0;
-  color: #00BC8F;
+  transform: none;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 8px;
 }
 
 .scroll-mask {
-  height: 140px;
-  width: 130px;
+  width: 100px;
+  height: 100px;
 
-  overflow: hidden;
+  margin: 0;
+
   position: relative;
-  margin-top: 30px;
+  overflow: hidden;
 }
 
 .scroll-arrow {
-  width: 130px;
+  width: 100px;
 
   position: absolute;
   left: 0;
+  top: 0;
 
   animation: arrowFlow 1.2s linear infinite;
   will-change: transform;
 }
 
 .scroll {
+  margin: 0;
+
   font-family: 'Overpass', sans-serif;
   font-weight: 300;
   font-size: 22px;
+  line-height: 1.05;
+
   text-align: center;
-  margin: 0;
 }
 
-.info .right {
-  transform: translateY(10px);
-  margin-top: 350px;
-}
 
 @keyframes arrowFlow {
   0% {
-    transform: translateY(-140px);
+    transform: translateY(-110px);
   }
 
   100% {
-    transform: translateY(140px);
+    transform: translateY(110px);
   }
 }
 
+
 @media (max-width: 1200px) {
+  header {
+    padding: 0 40px;
+  }
+
   .info {
     width: calc(100% - 80px);
-    min-height: calc(100dvh - 92px);
-    padding: 40px 0;
+
+    min-height: calc(100dvh - 92px + 160px);
+    padding: 70px 0 130px;
+  }
+
+  .info .center {
+    margin-top: 50px;
   }
 
   .info .center .title {
@@ -161,17 +222,32 @@ header {
   .info .center .name-row .name {
     font-size: 40px;
   }
+
+  .info .left,
+  .info .right {
+    bottom: 35px;
+  }
 }
+
 
 @media (max-width: 1024px) {
   .info {
     width: 100%;
-    min-height: calc(100dvh - 92px);
-    padding: 40px 40px;
+
+    min-height: calc(100dvh - 92px + 140px);
+    padding: 70px 40px 120px;
+  }
+
+  .info .center {
+    margin-top: 55px;
   }
 
   .info .center .title {
     font-size: 80px;
+  }
+
+  .info .center .name-row {
+    gap: 14px;
   }
 
   .info .center .name-row .line {
@@ -182,9 +258,19 @@ header {
     font-size: 32px;
   }
 
+  .info .left {
+    left: 40px;
+    bottom: 30px;
+  }
+
+  .info .right {
+    right: 40px;
+    bottom: 30px;
+  }
+
   .scroll-mask {
     width: 90px;
-    height: 110px;
+    height: 90px;
   }
 
   .scroll-arrow {
@@ -196,10 +282,15 @@ header {
   }
 }
 
+
 @media (max-width: 900px) {
   .info {
-    min-height: calc(100dvh - 92px);
-    padding: 50px 32px;
+    min-height: calc(100dvh - 92px + 120px);
+    padding: 60px 32px 110px;
+  }
+
+  .info .center {
+    margin-top: 45px;
   }
 
   .info .center .title {
@@ -214,23 +305,43 @@ header {
     font-size: 26px;
   }
 
+  .info .left {
+    left: 32px;
+    bottom: 30px;
+  }
+
+  .info .right {
+    right: 32px;
+    bottom: 30px;
+  }
+
   .info .left a {
     font-size: 16px;
   }
 }
 
+
 @media (max-width: 768px) {
+  header {
+    height: 80px;
+    padding: 0 28px;
+  }
+
   .info {
     width: 100%;
     min-height: calc(100dvh - 80px);
-    margin: 0 auto;
-    padding: 85px 28px 0;
-    position: relative;
+
+    margin: 0;
+    padding: 85px 28px 70px;
+
     display: block;
-    box-sizing: border-box;
   }
 
   .info .center {
+    width: 100%;
+
+    margin-top: 0;
+
     align-items: flex-start;
     text-align: left;
   }
@@ -247,32 +358,35 @@ header {
 
   .info .center .name-row .line {
     width: 120px;
+    max-width: 120px;
+
     flex-shrink: 0;
   }
 
   .info .center .name-row .name {
     font-size: 18px;
-    white-space: nowrap;
   }
 
   .info .left {
-    position: absolute;
     left: 28px;
-    bottom: 55px;
+    bottom: 45px;
+
     height: auto;
+    margin: 0;
   }
 
   .info .left a {
     font-size: 14px;
+
     writing-mode: vertical-rl;
     transform: rotate(180deg);
   }
 
   .info .right {
-    position: absolute;
     right: 28px;
-    bottom: 55px;
-    margin-top: 0;
+    bottom: 45px;
+
+    margin: 0;
     gap: 6px;
   }
 
@@ -290,9 +404,14 @@ header {
   }
 }
 
+
 @media (max-width: 480px) {
+  header {
+    padding: 0 24px;
+  }
+
   .info {
-    padding: 85px 24px 0;
+    padding: 85px 24px 60px;
   }
 
   .info .center .title {
@@ -301,6 +420,7 @@ header {
 
   .info .center .name-row .line {
     width: 105px;
+    max-width: 105px;
   }
 
   .info .center .name-row .name {
@@ -309,9 +429,11 @@ header {
 
   .info .left {
     left: 24px;
+    bottom: 35px;
   }
 
   .info .right {
     right: 24px;
+    bottom: 35px;
   }
 }
