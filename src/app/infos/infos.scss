@@ -27,11 +27,8 @@ header {
   gap: 10px;
 }
 
-
 .info {
   width: min(calc(100% - 200px), 1240px);
-
-  /* Mehr Platz nach unten */
   min-height: calc(100dvh - 92px + 180px);
   margin: 0 auto;
 
@@ -47,7 +44,6 @@ header {
 
 .info .left {
   position: absolute;
-
   left: 0;
   bottom: 40px;
 
@@ -72,9 +68,9 @@ header {
   transform: rotate(180deg);
 }
 
-
 .info .center {
-  width: fit-content;
+  width: 100%;
+  max-width: 1050px;
 
   margin-top: 40px;
 
@@ -88,21 +84,21 @@ header {
 
   font-family: 'Syne', sans-serif;
   font-weight: 800;
-  font-size: 128px;
+  font-size: clamp(80px, 8.9vw, 128px);
   line-height: 0.92;
 
   display: flex;
   flex-direction: column;
+
+  max-width: 100%;
 }
 
 .info .center .title span {
   display: block;
 }
 
-
 .info .center .name-row {
   width: 100%;
-
   margin-top: 18px;
 
   display: flex;
@@ -118,6 +114,7 @@ header {
   height: auto;
 
   flex: 1;
+  min-width: 0;
 }
 
 .info .center .name-row .name {
@@ -132,11 +129,8 @@ header {
   white-space: nowrap;
 }
 
-
-
 .info .right {
   position: absolute;
-
   right: 0;
   bottom: 40px;
 
@@ -183,7 +177,6 @@ header {
   text-align: center;
 }
 
-
 @keyframes arrowFlow {
   0% {
     transform: translateY(-110px);
@@ -193,7 +186,6 @@ header {
     transform: translateY(110px);
   }
 }
-
 
 @media (max-width: 1200px) {
   header {
@@ -209,10 +201,11 @@ header {
 
   .info .center {
     margin-top: 50px;
+    max-width: 900px;
   }
 
   .info .center .title {
-    font-size: 100px;
+    font-size: clamp(76px, 8vw, 100px);
   }
 
   .info .center .name-row .line {
@@ -229,7 +222,6 @@ header {
   }
 }
 
-
 @media (max-width: 1024px) {
   .info {
     width: 100%;
@@ -240,10 +232,11 @@ header {
 
   .info .center {
     margin-top: 55px;
+    max-width: 760px;
   }
 
   .info .center .title {
-    font-size: 80px;
+    font-size: clamp(68px, 8vw, 80px);
   }
 
   .info .center .name-row {
@@ -282,7 +275,6 @@ header {
   }
 }
 
-
 @media (max-width: 900px) {
   .info {
     min-height: calc(100dvh - 92px + 120px);
@@ -291,10 +283,11 @@ header {
 
   .info .center {
     margin-top: 45px;
+    max-width: 100%;
   }
 
   .info .center .title {
-    font-size: 66px;
+    font-size: clamp(60px, 8vw, 72px);
   }
 
   .info .center .name-row .line {
@@ -320,7 +313,6 @@ header {
   }
 }
 
-
 @media (max-width: 768px) {
   header {
     height: 80px;
@@ -339,6 +331,7 @@ header {
 
   .info .center {
     width: 100%;
+    max-width: 100%;
 
     margin-top: 0;
 
@@ -347,7 +340,7 @@ header {
   }
 
   .info .center .title {
-    font-size: 45px;
+    font-size: clamp(44px, 8vw, 56px);
     line-height: 1.08;
   }
 
@@ -404,7 +397,6 @@ header {
   }
 }
 
-
 @media (max-width: 480px) {
   header {
     padding: 0 24px;
@@ -415,7 +407,7 @@ header {
   }
 
   .info .center .title {
-    font-size: 43px;
+    font-size: clamp(42px, 11vw, 48px);
   }
 
   .info .center .name-row .line {

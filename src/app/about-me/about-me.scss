@@ -98,6 +98,8 @@
   align-items: flex-end;
 
   margin-bottom: 120px;
+
+  transform: translateX(-30px);
 }
 
 .profile-img {
@@ -138,7 +140,7 @@
 .about-arrow {
   position: absolute;
   bottom: -300px;
-  left: 90%;
+  left: 85%;
   transform: translateX(-50%);
 }
 
@@ -179,6 +181,10 @@
     margin-left: 80px;
   }
 
+  .about-right {
+    transform: translateX(-20px);
+  }
+
   .profile-img,
   .about-right::after {
     width: 440px;
@@ -187,6 +193,7 @@
 
   .about-arrow {
     bottom: -260px;
+    left: 83%;
   }
 
   .about-arrow img {
@@ -240,6 +247,7 @@
     margin-top: 30px;
     margin-bottom: 80px;
     align-items: center;
+    transform: translateX(-20px);
   }
 
   .profile-img,
@@ -249,7 +257,7 @@
   }
 
   .about-arrow {
-    left: 50%;
+    left: 47%;
     top: calc(100% + 50px);
     bottom: auto;
     transform: translateX(-50%);
@@ -278,6 +286,10 @@
     width: 340px;
   }
 
+  .about-right {
+    transform: translateX(-15px);
+  }
+
   .profile-img,
   .about-right::after {
     width: 350px;
@@ -285,7 +297,7 @@
   }
 
   .about-arrow {
-    left: 50%;
+    left: 47%;
     top: calc(100% + 70px);
     bottom: auto;
     transform: translateX(-50%);
@@ -344,10 +356,11 @@
     margin-bottom: 80px;
     position: relative;
     align-items: center;
+    transform: translateX(-10px);
   }
 
   .about-arrow {
-    left: 50%;
+    left: 47%;
     top: calc(100% + 120px);
     bottom: auto;
     transform: translateX(-50%);
@@ -396,6 +409,10 @@
     margin-top: 70px;
   }
 
+  .about-right {
+    transform: translateX(-8px);
+  }
+
   .profile-img,
   .about-right::after {
     width: 300px;
@@ -403,7 +420,7 @@
   }
 
   .about-arrow {
-    left: 50%;
+    left: 47%;
     top: calc(100% + 120px);
     bottom: auto;
     transform: translateX(-50%);
