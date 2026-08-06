@@ -3,5 +3,6 @@
 .references,
 .portfolio {
   margin: 160px auto;
-  width: 1240px;
+  width: min(calc(100% - 80px), 1240px);
+  box-sizing: border-box;
 }

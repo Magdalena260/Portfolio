@@ -4,9 +4,6 @@
   display: flex;
   flex-direction: column;
   gap: 80px;
-}
-
-.portfolio {
   margin-top: 300px;
 }
 
@@ -35,7 +32,8 @@
 }
 
 .project-row {
-  width: 1239px;
+  width: 100%;
+  max-width: 1239px;
   min-height: 460px;
   display: flex;
   justify-content: space-between;
@@ -76,6 +74,7 @@
   width: 100%;
   height: 100%;
   border: 4px solid #000;
+  box-sizing: border-box;
   opacity: 0;
   transition: 0.3s ease;
   z-index: 2;
@@ -207,17 +206,22 @@
   .project-row {
     width: 100%;
     margin-bottom: 100px;
-    gap: 40px;
+    gap: 24px;
   }
 
   .project-box {
-    width: 50%;
+    width: 48%;
     height: auto;
     aspect-ratio: 620 / 393;
   }
 
   .project-info {
-    width: 42%;
+    width: 38%;
+  }
+
+  .project-row:not(.reverse) .project-info,
+  .project-row:hover .project-info {
+    transform: translateX(20px);
   }
 }
 
@@ -315,6 +319,7 @@
     margin-top: 18px;
   }
 
+  .project-row:not(.reverse) .project-info,
   .project-row:hover .project-info {
     transform: none;
   }
