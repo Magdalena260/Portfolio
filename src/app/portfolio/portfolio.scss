@@ -1,24 +1,14 @@
-/* =========================
-   WRAPPER
-========================= */
 .portfolio {
-  width: min(100% - 200px, 1240px);
-
+  width: min(calc(100% - 200px), 1240px);
   margin: 160px auto;
-
   display: flex;
   flex-direction: column;
   gap: 80px;
 }
+
 .portfolio {
   margin-top: 300px;
 }
-
-
-
-/* =========================
-   TITLE
-========================= */
 
 .title {
   text-align: center;
@@ -44,10 +34,6 @@
   margin: 20px 0 0;
 }
 
-/* =========================
-   ROW
-========================= */
-
 .project-row {
   width: 1239px;
   min-height: 460px;
@@ -55,16 +41,11 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  
 }
 
 .project-row.reverse {
   flex-direction: row-reverse;
 }
-
-/* =========================
-   IMAGE BOX
-========================= */
 
 .project-box {
   width: 620px;
@@ -104,10 +85,6 @@
 .project-row:hover .project-box::before {
   opacity: 1;
 }
-
-/* =========================
-   ARROW
-========================= */
 
 .arrow {
   width: 100px;
@@ -150,10 +127,6 @@
 .project-row:hover .arrow img {
   transform: rotate(-45deg) translateX(2px);
 }
-
-/* =========================
-   INFO BLOCK
-========================= */
 
 .project-info {
   width: 501px;
@@ -217,10 +190,6 @@
   background: #000;
   color: #FFFCF3;
 }
-
-/* =========================
-   NUMBER
-========================= */
 
 .project-number {
   font-family: 'Syne', sans-serif;
@@ -294,7 +263,7 @@
   .portfolio {
     width: calc(100% - 48px);
     margin-top: 170px;
-    gap: 60px;
+    gap: 90px;
   }
 
   .title {
@@ -303,6 +272,51 @@
 
   .title h2 {
     font-size: 52px;
+  }
+
+  .title p {
+    font-size: 18px;
+  }
+
+  .project-row,
+  .project-row.reverse {
+    width: 100%;
+    min-height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    margin-bottom: 80px;
+  }
+
+  .project-number {
+    order: 1;
+    font-size: 30px;
+    line-height: 120%;
+  }
+
+  .project-box {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 620 / 393;
+    order: 2;
+  }
+
+  .project-box::before {
+    top: 12px;
+    left: 12px;
+  }
+
+  .project-info {
+    width: 100%;
+    order: 3;
+    opacity: 1;
+    transform: none !important;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .project-row:hover .project-info {
+    transform: none;
   }
 
   .project-info h3 {
@@ -315,6 +329,18 @@
 
   .project-info p {
     font-size: 14px;
+  }
+
+  .talk-btn {
+    width: 160px;
+    height: 58px;
+    opacity: 1;
+    transform: none;
+    font-size: 18px;
+  }
+
+  .arrow {
+    display: none;
   }
 }
 
