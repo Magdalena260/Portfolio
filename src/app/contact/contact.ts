@@ -1,7 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angular/forms';
+import {
+  ReactiveFormsModule,
+  FormGroup,
+  FormControl,
+  Validators
+} from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { environment } from '../../environments/environment';
 import emailjs from '@emailjs/browser';
 
 import { TranslateModule } from '@ngx-translate/core';
@@ -25,7 +31,10 @@ export class ContactComponent {
 
   contactForm = new FormGroup({
     name: new FormControl('', Validators.required),
-    email: new FormControl('', [Validators.required, Validators.email]),
+    email: new FormControl('', [
+      Validators.required,
+      Validators.email
+    ]),
     message: new FormControl('', Validators.required),
     privacy: new FormControl(false, Validators.requiredTrue)
   });
@@ -43,30 +52,22 @@ export class ContactComponent {
     };
 
     emailjs.send(
-      'service_kxshdrv',
-      'template_ys0w2uv',
+      environment.emailjs.serviceId,
+      environment.emailjs.templateId,
       formData,
-      'BZdAhTXuaPejPz_t2'
+      environment.emailjs.publicKey
     )
     .then(() => {
       this.emailSent = true;
       this.emailError = false;
 
       this.contactForm.reset();
-
-      setTimeout(() => {
-        this.emailSent = false;
-      }, 3500);
     })
     .catch((error) => {
       console.error('EmailJS error:', error);
 
       this.emailError = true;
       this.emailSent = false;
-
-      setTimeout(() => {
-        this.emailError = false;
-      }, 3500);
     });
   }
 
