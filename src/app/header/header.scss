@@ -1,14 +1,16 @@
 .header {
   position: fixed;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+
   width: 100%;
-  max-width: 1440px;
   height: 92px;
+
   z-index: 9999;
+
   padding: 0 100px;
   box-sizing: border-box;
+
   background: #FFFCF3;
 }
 
@@ -26,20 +28,25 @@
 .left {
   display: flex;
   align-items: center;
+
   height: 100%;
+
   cursor: pointer;
 }
 
 .left img {
-  height: 150px;
   width: auto;
+  height: 150px;
+
   display: block;
+
   margin-left: -40px;
 }
 
 .right {
   display: flex;
   align-items: center;
+
   gap: 32px;
   height: 100%;
 }
@@ -47,16 +54,21 @@
 .lang {
   display: flex;
   gap: 12px;
+
   font-family: 'Overpass', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .lang div {
   position: relative;
-  cursor: pointer;
+
   padding: 6px 10px;
+
   border: 2px solid transparent;
-  transition: .25s ease;
+
+  cursor: pointer;
+
+  transition: 0.25s ease;
 }
 
 .lang div.active {
@@ -65,15 +77,20 @@
 
 .lang div::after {
   content: "";
+
   position: absolute;
   left: 10px;
   right: 10px;
   bottom: -4px;
+
   height: 2px;
+
   background: black;
+
   transform: scaleX(0);
   transform-origin: left;
-  transition: .25s ease;
+
+  transition: 0.25s ease;
 }
 
 .lang div:hover::after {
@@ -87,18 +104,22 @@
 .burger {
   width: 35px;
   height: 25px;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   cursor: pointer;
 }
 
 .burger span {
   width: 100%;
   height: 3px;
+
   background: black;
   border-radius: 2px;
-  transition: .3s ease;
+
+  transition: 0.3s ease;
 }
 
 .burger.open span:nth-child(1) {
@@ -112,19 +133,29 @@
 .burger.open span:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px);
 }
+
+
+/* =========================
+   MOBILE MENU
+========================= */
+
 .mobile-menu {
   position: fixed;
   inset: 0;
-  background: #FFFCF3;
+
   z-index: 9998;
-  opacity: 0;
-  pointer-events: none;
-  transition: .3s ease;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background: #FFFCF3;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.3s ease;
 }
 
 .mobile-menu.open {
@@ -136,21 +167,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
   gap: 40px;
+
   transform: translateY(-55px);
 }
 
 .menu-item {
   position: relative;
-  font-size: 78px;
-  font-family: 'Syne', sans-serif;
-  font-weight: 800;
-  cursor: pointer;
-  color: black;
-  padding: 18px 52px;
-  line-height: 1;
+
   display: inline-block;
-  transition: transform .25s ease;
+
+  padding: 18px 52px;
+
+  font-family: 'Syne', sans-serif;
+  font-size: 78px;
+  font-weight: 800;
+  line-height: 1;
+
+  color: black;
+
+  cursor: pointer;
+
+  transition: transform 0.25s ease;
 }
 
 .menu-item:hover {
@@ -159,15 +198,20 @@
 
 .menu-item::before {
   content: "";
+
   position: absolute;
   left: 0;
   bottom: 0;
+
   width: 46px;
   height: 46px;
+
   border-left: 4px solid black;
   border-bottom: 4px solid black;
+
   opacity: 1;
-  transition: opacity .2s ease .25s;
+
+  transition: opacity 0.2s ease 0.25s;
 }
 
 .menu-item:hover::before {
@@ -176,15 +220,20 @@
 
 .menu-item::after {
   content: "";
+
   position: absolute;
   left: 52px;
   right: 52px;
   bottom: 0;
+
   height: 4px;
+
   background: black;
+
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform .25s ease;
+
+  transition: transform 0.25s ease;
 }
 
 .menu-item:hover::after {
@@ -194,7 +243,9 @@
 .menu-item span.box {
   position: absolute;
   inset: 0;
+
   border: 4px solid black;
+
   opacity: 0;
   pointer-events: none;
 }
@@ -207,30 +258,49 @@
   position: absolute;
   top: 40px;
   right: 40px;
-  font-size: 40px;
-  cursor: pointer;
-  transition: .2s ease;
+
   z-index: 3;
+
+  font-size: 40px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
 }
 
 .close:hover {
   transform: rotate(90deg);
 }
 
+
+/* =========================
+   MENU BOTTOM
+========================= */
+
 .menu-bottom {
   position: absolute;
   left: 0;
   bottom: 0;
+
   width: 100%;
   min-height: 235px;
-  background: #000;
-  color: #FFFCF3;
-  clip-path: polygon(0 14%, 100% 28%, 100% 100%, 0 100%);
+
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+
   padding: 0 100px 34px;
   box-sizing: border-box;
+
+  background: #000;
+  color: #FFFCF3;
+
+  clip-path: polygon(
+    0 14%,
+    100% 28%,
+    100% 100%,
+    0 100%
+  );
 }
 
 .menu-bottom-left {
@@ -240,46 +310,60 @@
 }
 
 .menu-bottom-left h2 {
+  margin: 0 0 8px;
+
   font-family: 'Syne', sans-serif;
   font-size: 48px;
   font-weight: 800;
-  color: #FFFCF3;
-  margin: 0 0 8px;
   line-height: 1;
+
+  color: #FFFCF3;
 }
 
 .menu-bottom-left p,
 .menu-bottom-left a {
+  margin: 0;
+
   font-family: 'Overpass', sans-serif;
   font-size: 16px;
+
   color: #FFFCF3;
   text-decoration: none;
-  margin: 0;
 }
 
 .menu-bottom-right {
   display: flex;
   align-items: center;
+
   gap: 24px;
 }
 
 .menu-bottom-right a {
   display: block;
+
   text-decoration: none;
 }
 
 .menu-bottom-right img {
   width: 30px;
   height: 30px;
+
   display: block;
-  transition: transform .2s ease;
+
+  transition: transform 0.2s ease;
 }
 
 .menu-bottom-right a:hover img {
   transform: translateY(-10px);
 }
 
+
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1024px) {
+
   .header {
     height: 92px;
     padding: 0 40px;
@@ -287,6 +371,7 @@
 
   .left img {
     height: 130px;
+
     margin-left: -20px;
   }
 
@@ -295,8 +380,9 @@
   }
 
   .menu-item {
-    font-size: 64px;
     padding: 16px 44px;
+
+    font-size: 64px;
   }
 
   .menu-item::before {
@@ -314,14 +400,22 @@
   }
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
+
   .header {
-    padding: 0 16px;
     height: 80px;
+
+    padding: 0 16px;
   }
 
   .left img {
     height: 90px;
+
     margin-left: 0;
   }
 
@@ -340,17 +434,20 @@
 
   .menu-center {
     gap: 30px;
+
     transform: translateY(-60px);
   }
 
   .menu-item {
-    font-size: 48px;
     padding: 10px 24px;
+
+    font-size: 48px;
   }
 
   .menu-item::before {
     width: 28px;
     height: 28px;
+
     border-left: 3px solid black;
     border-bottom: 3px solid black;
   }
@@ -358,6 +455,7 @@
   .menu-item::after {
     left: 24px;
     right: 24px;
+
     height: 3px;
   }
 
@@ -368,139 +466,32 @@
   .close {
     top: 24px;
     right: 24px;
+
     font-size: 32px;
   }
 
   .menu-bottom {
     min-height: 170px;
-    clip-path: polygon(0 12%, 100% 28%, 100% 100%, 0 100%);
+
     padding: 0 24px 24px;
+
+    clip-path: polygon(
+      0 12%,
+      100% 28%,
+      100% 100%,
+      0 100%
+    );
   }
 
   .menu-bottom-left h2 {
-    font-size: 32px;
     margin-bottom: 6px;
+
+    font-size: 32px;
   }
 
   .menu-bottom-left p,
   .menu-bottom-left a {
     font-size: 16px;
-  }
-
-  .menu-bottom-right {
-    gap: 16px;
-  }
-
-  .menu-bottom-right img {
-    width: 24px;
-    height: 24px;
-  }
-}@media (max-width: 1024px) {
-  .header {
-    height: 92px;
-    padding: 0 40px;
-  }
-
-  .left img {
-    height: 130px;
-    margin-left: -20px;
-  }
-
-  .right {
-    gap: 32px;
-  }
-
-  .menu-item {
-    font-size: 64px;
-    padding: 16px 44px;
-  }
-
-  .menu-item::before {
-    width: 38px;
-    height: 38px;
-  }
-
-  .menu-item::after {
-    left: 44px;
-    right: 44px;
-  }
-
-  .menu-bottom {
-    padding: 0 40px 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding: 0 16px;
-    height: 80px;
-  }
-
-  .left img {
-    height: 90px;
-    margin-left: 0;
-  }
-
-  .right {
-    gap: 0;
-  }
-
-  .lang {
-    display: none;
-  }
-
-  .burger {
-    width: 30px;
-    height: 22px;
-  }
-
-  .menu-center {
-    gap: 30px;
-    transform: translateY(-60px);
-  }
-
-  .menu-item {
-    font-size: 48px;
-    padding: 10px 24px;
-  }
-
-  .menu-item::before {
-    width: 28px;
-    height: 28px;
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
-  }
-
-  .menu-item::after {
-    left: 24px;
-    right: 24px;
-    height: 3px;
-  }
-
-  .menu-item span.box {
-    border: 3px solid black;
-  }
-
-  .close {
-    top: 24px;
-    right: 24px;
-    font-size: 32px;
-  }
-
-  .menu-bottom {
-    min-height: 170px;
-    clip-path: polygon(0 12%, 100% 28%, 100% 100%, 0 100%);
-    padding: 0 24px 24px;
-  }
-
-  .menu-bottom-left h2 {
-    font-size: 32px;
-    margin-bottom: 6px;
-  }
-
-  .menu-bottom-left p,
-  .menu-bottom-left a {
-    font-size: 13px;
   }
 
   .menu-bottom-right {
