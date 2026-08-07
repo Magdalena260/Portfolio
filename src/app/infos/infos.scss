@@ -27,10 +27,10 @@ header {
   gap: 10px;
 }
 
+
 .info {
   width: min(calc(100% - 200px), 1240px);
-  min-height: calc(100dvh - 92px + 180px);
-  margin: 0 auto;
+  min-height: calc(100dvh - 92px);
 
   padding: 70px 0 140px;
   box-sizing: border-box;
@@ -195,7 +195,7 @@ header {
   .info {
     width: calc(100% - 80px);
 
-    min-height: calc(100dvh - 92px + 160px);
+  min-height: calc(100dvh - 92px);
     padding: 70px 0 130px;
   }
 
@@ -226,7 +226,7 @@ header {
   .info {
     width: 100%;
 
-    min-height: calc(100dvh - 92px + 140px);
+    min-height: calc(100dvh - 92px);
     padding: 70px 40px 120px;
   }
 
@@ -277,7 +277,7 @@ header {
 
 @media (max-width: 900px) {
   .info {
-    min-height: calc(100dvh - 92px + 120px);
+    min-height: calc(100dvh - 92px);
     padding: 60px 32px 110px;
   }
 
