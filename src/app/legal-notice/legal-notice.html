@@ -1,93 +1,44 @@
-<section class="legal-wrapper">
+<div class="legal-bottom-left">
 
-  <h1 class="main-title">{{ 'legal.title' | translate }}</h1>
+  <img
+    class="legal-bottom-logo"
+    src="assets/icons/logo_mlheribor.svg"
+    alt="Logo">
 
-  <h2>{{ 'legal.imprint' | translate }}</h2>
+  <p>{{ 'footer.copy' | translate }}</p>
 
-  <p>
-    Magdalena Laurisch<br>
-    Grünewalderstraße 92<br>
-    42657 Solingen<br>
-    Email: magdalena.laurisch@outlook.de<br>
-    Phone: 01633930971
-  </p>
+</div>
 
-  <h2>{{ 'legal.acceptTitle' | translate }}</h2>
-  <p>{{ 'legal.acceptText' | translate }}</p>
+<div class="legal-bottom-right">
 
-  <h2>{{ 'legal.scopeTitle' | translate }}</h2>
+  <div class="legal-bottom-icons">
 
-  <p>
-    {{ 'legal.scopeText' | translate }}
-  </p>
+    <a href="https://github.com/Magdalena260" target="_blank">
+      <img src="assets/icons/github.png" alt="GitHub">
+    </a>
 
-  <p>
-    Das <span class="green-thin">Portfolio</span> wurde im Rahmen eines Bootcamps erstellt.
-  </p>
+    <a href="mailto:magdalena.laurisch@outlook.de">
+      <img src="assets/icons/mail.png" alt="Mail">
+    </a>
 
-  <p>
-    Das Design gehört der <span class="green-thin">Developer Akademie GmbH</span>.
-  </p>
-
-  <h2>{{ 'legal.rightsTitle' | translate }}</h2>
-  <p>{{ 'legal.rightsText' | translate }}</p>
-
-  <h2>{{ 'legal.useTitle' | translate }}</h2>
-  <p>{{ 'legal.useText' | translate }}</p>
-
-  <h2>{{ 'legal.disclaimerTitle' | translate }}</h2>
-  <p>{{ 'legal.disclaimerText' | translate }}</p>
-
-  <h2>{{ 'legal.indemnityTitle' | translate }}</h2>
-  <p>{{ 'legal.indemnityText' | translate }}</p>
-
-  <p>{{ 'legal.contactText' | translate }}</p>
-
-  <p class="legal-date">{{ 'legal.date' | translate }}</p>
-
-</section>
-
-<section class="legal-bottom">
-
-  <div class="legal-bottom-content">
-
-    <div class="legal-bottom-left">
-
-      <img
-        class="legal-bottom-logo"
-        src="assets/icons/logo_mlheribor.svg"
-        alt="Logo">
-
-      <p>{{ 'footer.copy' | translate }}</p>
-
-    </div>
-
-    <div class="legal-bottom-right">
-
-      <div class="legal-bottom-icons">
-
-        <a href="https://github.com/Magdalena260" target="_blank">
-          <img src="assets/icons/github.png" alt="GitHub">
-        </a>
-
-        <a href="mailto:magdalena.laurisch@outlook.de">
-          <img src="assets/icons/mail.png" alt="Mail">
-        </a>
-
-        <a href="https://www.linkedin.com/in/magdalena-laurisch-a99749231/" target="_blank">
-          <img src="assets/icons/linkedin.png" alt="LinkedIn">
-        </a>
-
-      </div>
-
-      <a
-        class="legal-bottom-link"
-        routerLink="/legal-notice">
-        {{ 'footer.legal' | translate }}
-      </a>
-
-    </div>
+    <a href="https://www.linkedin.com/in/magdalena-laurisch-a99749231/" target="_blank">
+      <img src="assets/icons/linkedin.png" alt="LinkedIn">
+    </a>
 
   </div>
 
-</section>
+  <a
+    class="developer-akademie-link"
+    href="https://developerakademie.com/"
+    target="_blank"
+    rel="noopener noreferrer">
+    Developer Akademie GmbH
+  </a>
+
+  <a
+    class="legal-bottom-link"
+    routerLink="/legal-notice">
+    {{ 'footer.legal' | translate }}
+  </a>
+
+</div>
