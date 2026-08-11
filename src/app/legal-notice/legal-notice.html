@@ -1,44 +1,138 @@
-<div class="legal-bottom-left">
+<section class="legal-wrapper">
 
-  <img
-    class="legal-bottom-logo"
-    src="assets/icons/logo_mlheribor.svg"
-    alt="Logo">
+  <h1 class="main-title">
+    {{ 'legal.title' | translate }}
+  </h1>
 
-  <p>{{ 'footer.copy' | translate }}</p>
+  <h2 class="green-title">
+    {{ 'legal.imprint' | translate }}
+  </h2>
 
-</div>
+  <p>
+    {{ 'legal.imprint_name' | translate }}<br>
+    {{ 'legal.imprint_address' | translate }}<br>
+    {{ 'legal.imprint_city' | translate }}<br>
+    {{ 'legal.imprint_email' | translate }}<br>
+    {{ 'legal.imprint_phone' | translate }}
+  </p>
 
-<div class="legal-bottom-right">
+  <h2>
+    {{ 'legal.acceptTitle' | translate }}
+  </h2>
 
-  <div class="legal-bottom-icons">
+  <p>
+    {{ 'legal.acceptText' | translate }}
+  </p>
 
-    <a href="https://github.com/Magdalena260" target="_blank">
-      <img src="assets/icons/github.png" alt="GitHub">
-    </a>
+  <h2>
+    {{ 'legal.scopeTitle' | translate }}
+  </h2>
 
-    <a href="mailto:magdalena.laurisch@outlook.de">
-      <img src="assets/icons/mail.png" alt="Mail">
-    </a>
+  <p [innerHTML]="'legal.scopeText' | translate"></p>
 
-    <a href="https://www.linkedin.com/in/magdalena-laurisch-a99749231/" target="_blank">
-      <img src="assets/icons/linkedin.png" alt="LinkedIn">
-    </a>
+  <p [innerHTML]="'legal.designText' | translate"></p>
+
+  <h2>
+    {{ 'legal.rightsTitle' | translate }}
+  </h2>
+
+  <p [innerHTML]="'legal.rightsText' | translate"></p>
+
+  <h2>
+    {{ 'legal.useTitle' | translate }}
+  </h2>
+
+  <p>
+    {{ 'legal.useText' | translate }}
+  </p>
+
+  <h2>
+    {{ 'legal.disclaimerTitle' | translate }}
+  </h2>
+
+  <p [innerHTML]="'legal.disclaimerText' | translate"></p>
+
+  <h2>
+    {{ 'legal.indemnityTitle' | translate }}
+  </h2>
+
+  <p [innerHTML]="'legal.indemnityText' | translate"></p>
+
+  <p>
+    {{ 'legal.contactText' | translate }}
+  </p>
+
+  <p class="legal-date">
+    {{ 'legal.date' | translate }}
+  </p>
+
+</section>
+
+
+<footer class="legal-bottom">
+
+  <div class="legal-bottom-content">
+
+    <div class="legal-bottom-left">
+
+      <img
+        class="legal-bottom-logo"
+        src="assets/icons/logo_mlheribor.svg"
+        alt="Logo">
+
+      <p>
+        {{ 'footer.copy' | translate }}
+      </p>
+
+    </div>
+
+
+    <div class="legal-bottom-right">
+
+      <div class="legal-bottom-icons">
+
+        <a
+          href="https://github.com/Magdalena260"
+          target="_blank"
+          rel="noopener noreferrer">
+          <img
+            src="assets/icons/github.png"
+            alt="GitHub">
+        </a>
+
+        <a href="mailto:magdalena.laurisch@outlook.de">
+          <img
+            src="assets/icons/mail.png"
+            alt="Mail">
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/magdalena-laurisch-a99749231/"
+          target="_blank"
+          rel="noopener noreferrer">
+          <img
+            src="assets/icons/linkedin.png"
+            alt="LinkedIn">
+        </a>
+
+      </div>
+
+      <a
+        class="developer-akademie-link"
+        href="https://developerakademie.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+        Developer Akademie GmbH
+      </a>
+
+      <a
+        class="legal-bottom-link"
+        routerLink="/legal-notice">
+        {{ 'footer.legal' | translate }}
+      </a>
+
+    </div>
 
   </div>
 
-  <a
-    class="developer-akademie-link"
-    href="https://developerakademie.com/"
-    target="_blank"
-    rel="noopener noreferrer">
-    Developer Akademie GmbH
-  </a>
-
-  <a
-    class="legal-bottom-link"
-    routerLink="/legal-notice">
-    {{ 'footer.legal' | translate }}
-  </a>
-
-</div>
+</footer>
