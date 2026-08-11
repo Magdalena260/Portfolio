@@ -5,10 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [
-    TranslateModule,
-    RouterLink
-  ],
+  imports: [TranslateModule, RouterLink],
   templateUrl: './legal-notice.html',
   styleUrl: './legal-notice.scss'
 })
