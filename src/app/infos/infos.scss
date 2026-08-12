@@ -27,7 +27,6 @@ header {
   gap: 10px;
 }
 
-
 .info {
   width: min(calc(100% - 200px), 1240px);
   min-height: calc(100dvh - 92px);
@@ -188,6 +187,10 @@ header {
   }
 }
 
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1200px) {
   header {
     padding: 0 40px;
@@ -196,7 +199,7 @@ header {
   .info {
     width: calc(100% - 80px);
 
-  min-height: calc(100dvh - 92px);
+    min-height: calc(100dvh - 92px);
     padding: 70px 0 130px;
   }
 
@@ -314,6 +317,10 @@ header {
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
   header {
     height: 80px;
@@ -322,7 +329,9 @@ header {
 
   .info {
     width: 100%;
-    min-height: calc(100dvh - 80px);
+
+    /* geändert: vorher calc(100dvh - 80px) */
+    min-height: 680px;
 
     margin: 0;
     padding: 85px 28px 70px;
@@ -404,6 +413,9 @@ header {
   }
 
   .info {
+    /* geändert */
+    min-height: 640px;
+
     padding: 85px 24px 60px;
   }
 

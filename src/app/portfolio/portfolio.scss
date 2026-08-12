@@ -198,6 +198,10 @@
   font-weight: 700;
 }
 
+/* =========================
+   LAPTOP
+========================= */
+
 @media (max-width: 1300px) {
   .portfolio {
     width: calc(100% - 80px);
@@ -224,6 +228,10 @@
     transform: translateX(20px);
   }
 }
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1024px) {
   .portfolio {
@@ -349,6 +357,10 @@
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
   .portfolio {
     width: 100%;
@@ -458,12 +470,18 @@
   }
 }
 
+/* =========================
+   SMALL MOBILE
+========================= */
+
 @media (max-width: 480px) {
   .portfolio {
     max-width: 320px;
     padding: 0;
     margin: 60px auto;
-    gap: 150px;
+
+    /* vorher 150px */
+    gap: 70px;
   }
 
   .title h2 {
@@ -517,7 +535,9 @@
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
-    margin-bottom: 120px;
+
+    /* vorher 120px */
+    margin-bottom: 60px;
   }
 
   .project-row:last-child {
