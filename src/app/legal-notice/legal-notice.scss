@@ -1,8 +1,7 @@
 :host {
+  min-height: calc(100dvh - 92px);
   display: flex;
   flex-direction: column;
-  width: 100%;
-  min-height: calc(100dvh - 92px);
 }
 
 .legal-wrapper {
@@ -42,6 +41,7 @@
 
 .legal-wrapper p {
   font-size: 16px;
+
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -55,17 +55,38 @@
   margin-top: 30px !important;
 }
 
+
+/* =========================
+   DEVELOPER AKADEMIE LINK
+========================= */
+
+.academy-reference a {
+  color: #00bc8f;
+  text-decoration: none;
+  font-weight: 400;
+
+  transition: font-weight 0.2s ease;
+}
+
+.academy-reference a:hover {
+  font-weight: 700;
+}
+
+
 /* =========================
    TABLET
 ========================= */
 
 @media (max-width: 1200px) {
+
   .legal-wrapper {
     max-width: 850px;
   }
 }
 
+
 @media (max-width: 1024px) {
+
   .legal-wrapper {
     max-width: 100%;
 
@@ -83,17 +104,25 @@
   }
 }
 
+
 @media (max-width: 900px) {
+
   .main-title {
     font-size: 46px;
   }
 }
+
 
 /* =========================
    MOBILE
 ========================= */
 
 @media (max-width: 768px) {
+
+  :host {
+    min-height: calc(100dvh - 80px);
+  }
+
   .legal-wrapper {
     margin: 0 auto 60px;
     padding: 120px 22px 0;
@@ -112,7 +141,9 @@
   }
 }
 
+
 @media (max-width: 480px) {
+
   .legal-wrapper {
     padding: 110px 20px 0;
     margin-bottom: 50px;
