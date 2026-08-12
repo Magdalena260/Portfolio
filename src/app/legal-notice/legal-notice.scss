@@ -1,11 +1,14 @@
 :host {
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
+  min-height: calc(100dvh - 92px);
 }
 
 .legal-wrapper {
   width: 100%;
   max-width: 900px;
+  flex: 1;
 
   margin: 120px auto 80px;
   padding: 0 20px;
@@ -57,14 +60,12 @@
 ========================= */
 
 @media (max-width: 1200px) {
-
   .legal-wrapper {
     max-width: 850px;
   }
 }
 
 @media (max-width: 1024px) {
-
   .legal-wrapper {
     max-width: 100%;
 
@@ -83,7 +84,6 @@
 }
 
 @media (max-width: 900px) {
-
   .main-title {
     font-size: 46px;
   }
@@ -94,7 +94,6 @@
 ========================= */
 
 @media (max-width: 768px) {
-
   .legal-wrapper {
     margin: 0 auto 60px;
     padding: 120px 22px 0;
@@ -114,7 +113,6 @@
 }
 
 @media (max-width: 480px) {
-
   .legal-wrapper {
     padding: 110px 20px 0;
     margin-bottom: 50px;

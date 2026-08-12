@@ -155,6 +155,10 @@
   cursor: pointer;
 }
 
+/* =========================
+   TABLET
+========================= */
+
 @media (max-width: 1200px) {
   .about-me {
     width: calc(100% - 80px);
@@ -309,9 +313,14 @@
   }
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media (max-width: 768px) {
   .about-me {
-    padding: 0 20px 260px;
+    margin: 0 auto;
+    padding: 0 20px 220px;
   }
 
   .about-left h2 {
@@ -377,7 +386,8 @@
 
 @media (max-width: 480px) {
   .about-me {
-    padding: 0 20px 240px;
+    margin: 0 auto;
+    padding: 0 20px 200px;
   }
 
   .about-left p {
