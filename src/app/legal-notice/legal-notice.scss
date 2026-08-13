@@ -55,12 +55,11 @@
   margin-top: 30px !important;
 }
 
-
 /* =========================
-   DEVELOPER AKADEMIE LINK
+   DEVELOPER AKADEMIE LINKS
 ========================= */
 
-.academy-reference a {
+.legal-wrapper a {
   color: #00bc8f;
   text-decoration: none;
   font-weight: 400;
@@ -68,10 +67,9 @@
   transition: font-weight 0.2s ease;
 }
 
-.academy-reference a:hover {
+.legal-wrapper a:hover {
   font-weight: 700;
 }
-
 
 /* =========================
    TABLET
@@ -83,7 +81,6 @@
     max-width: 850px;
   }
 }
-
 
 @media (max-width: 1024px) {
 
@@ -104,14 +101,12 @@
   }
 }
 
-
 @media (max-width: 900px) {
 
   .main-title {
     font-size: 46px;
   }
 }
-
 
 /* =========================
    MOBILE
@@ -140,7 +135,6 @@
     overflow-wrap: anywhere;
   }
 }
-
 
 @media (max-width: 480px) {
 

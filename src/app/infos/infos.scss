@@ -330,7 +330,6 @@ header {
   .info {
     width: 100%;
 
-    /* geändert: vorher calc(100dvh - 80px) */
     min-height: 680px;
 
     margin: 0;
@@ -413,14 +412,14 @@ header {
   }
 
   .info {
-    /* geändert */
     min-height: 640px;
-
     padding: 85px 24px 60px;
   }
 
+  /* Smaller minimum size prevents the title
+     from overflowing on very narrow screens. */
   .info .center .title {
-    font-size: clamp(42px, 11vw, 48px);
+    font-size: clamp(36px, 11vw, 48px);
   }
 
   .info .center .name-row .line {

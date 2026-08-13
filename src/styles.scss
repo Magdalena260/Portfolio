@@ -65,6 +65,21 @@ html {
   --content-padding: 100px;
 }
 
+
+.legal-wrapper a {
+  color: #00bc8f !important;
+  text-decoration: none !important;
+  font-weight: 400 !important;
+  transition: font-weight 0.2s ease;
+}
+
+.legal-wrapper a:hover {
+  color: #00bc8f !important;
+  text-decoration: none !important;
+  font-weight: 700 !important;
+}
+
+
 @media (max-width: 768px) {
   body {
     padding-top: 80px;
