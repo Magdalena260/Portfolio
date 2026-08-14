@@ -365,11 +365,12 @@
     width: 100%;
     max-width: 100%;
 
-    font-size: 30px;
+    font-size: 26px;
     line-height: 1;
 
     text-align: center;
     white-space: normal;
+    overflow-wrap: break-word;
 
     box-sizing: border-box;
   }
