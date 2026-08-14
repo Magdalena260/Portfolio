@@ -118,7 +118,6 @@
   line-height: 110%;
 
   text-align: center;
-
   cursor: pointer;
 
   transition: color 0.3s ease;
@@ -297,7 +296,6 @@ html {
 
   .my-skills .title {
     top: -28px;
-
     padding: 0 16px;
   }
 
@@ -448,7 +446,6 @@ html {
     height: 45px;
 
     flex-shrink: 0;
-
     margin-top: 3px;
   }
 
@@ -512,19 +509,26 @@ html {
   }
 
   .my-skills .title {
-    top: -22px;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
 
     width: auto;
     max-width: calc(100% - 40px);
 
     padding: 0 8px;
 
+    background: #fffcf3;
+
     box-sizing: border-box;
   }
 
   .my-skills .title h2 {
-    font-size: 30px;
+    font-size: 24px;
+    line-height: 1;
+
     white-space: nowrap;
+    text-align: center;
   }
 
   .skills-box {
@@ -609,7 +613,6 @@ html {
     height: 42px;
 
     flex-shrink: 0;
-
     margin-top: 3px;
   }
 
