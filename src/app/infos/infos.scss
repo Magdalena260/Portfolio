@@ -416,10 +416,8 @@ header {
     padding: 85px 24px 60px;
   }
 
-  /* Smaller minimum size prevents the title
-     from overflowing on very narrow screens. */
   .info .center .title {
-    font-size: clamp(36px, 11vw, 48px);
+    font-size: clamp(26px, 10vw, 42px);
   }
 
   .info .center .name-row .line {
