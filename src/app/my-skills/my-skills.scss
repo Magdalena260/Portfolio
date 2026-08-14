@@ -31,6 +31,8 @@
   font-size: 78px;
   line-height: 1;
 
+  text-align: center;
+
   transition: color 0.3s ease;
 }
 
@@ -324,6 +326,8 @@ html {
     font-size: 48px;
     line-height: 1;
 
+    white-space: normal;
+
     text-align: center;
   }
 
@@ -370,32 +374,54 @@ html {
     max-width: 360px;
     height: auto;
 
-    margin: 70px auto 0;
+    margin: 90px auto 0;
   }
 
+  /*
+    Titel wird auf Mobile bewusst schmal.
+    Dadurch bricht "Kompetenzen" um.
+  */
   .my-skills .title {
-    top: -22px;
+    position: absolute;
+
+    top: -48px;
     left: 50%;
 
-    width: auto;
-    max-width: calc(100% - 30px);
+    width: 180px;
+    max-width: 180px;
 
-    padding: 0 10px;
+    padding: 0 8px;
+
+    background: #fffcf3;
 
     transform: translateX(-50%);
 
     box-sizing: border-box;
+
+    text-align: center;
   }
 
   .my-skills .title h2 {
+    display: block;
+
+    width: 100%;
     max-width: 100%;
 
-    font-size: 36px;
-    line-height: 1;
+    margin: 0;
+
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 0.9;
 
     white-space: normal;
 
+    overflow-wrap: anywhere;
+    word-break: break-word;
+
     text-align: center;
+
+    box-sizing: border-box;
   }
 
   .skills-box {
@@ -404,7 +430,7 @@ html {
 
     border: 3px solid black;
 
-    padding: 42px 14px 20px;
+    padding: 55px 14px 20px;
     margin-top: 0;
 
     box-sizing: border-box;
@@ -414,6 +440,7 @@ html {
     width: 100%;
     min-width: 0;
 
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
     row-gap: 26px;
@@ -518,20 +545,13 @@ html {
     max-width: 320px;
     height: auto;
 
-    margin: 75px auto 0;
+    margin: 90px auto 0;
   }
 
-  /*
-    Titel bekommt absichtlich eine feste,
-    schmale Breite.
-
-    Dadurch MUSS "Kompetenzen"
-    auf kleinen Displays umbrechen.
-  */
   .my-skills .title {
     position: absolute;
 
-    top: -48px;
+    top: -45px;
     left: 50%;
 
     width: 150px;
@@ -564,7 +584,6 @@ html {
     white-space: normal;
 
     overflow-wrap: anywhere;
-    word-wrap: break-word;
     word-break: break-word;
 
     text-align: center;
