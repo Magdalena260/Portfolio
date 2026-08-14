@@ -295,13 +295,11 @@ html {
 @media (max-width: 900px) {
   .my-skills {
     width: calc(100% - 48px);
-
     margin: 70px auto 0;
   }
 
   .my-skills .title {
     top: -28px;
-
     padding: 0 16px;
   }
 
@@ -312,7 +310,6 @@ html {
 
   .skills-box {
     width: 100%;
-
     padding: 45px 24px 30px;
   }
 
@@ -369,7 +366,6 @@ html {
 
   .my-skills .title h2 {
     font-size: 36px;
-
     white-space: nowrap;
     text-align: center;
   }
@@ -400,9 +396,9 @@ html {
   .skill {
     width: 100%;
     max-width: 80px;
-    height: 82px;
-
     min-width: 0;
+
+    height: 82px;
 
     gap: 4px;
   }
@@ -496,11 +492,8 @@ html {
     margin: 60px auto 0;
   }
 
-  /* Titel darf auf sehr kleinen Screens umbrechen.
-     "My Skills" bleibt aufgrund seiner Länge einzeilig.
-     "Kompetenzen" kann zweizeilig werden. */
   .my-skills .title {
-    top: -30px;
+    top: -31px;
     left: 50%;
 
     width: 190px;
@@ -525,9 +518,9 @@ html {
     white-space: normal;
     text-align: center;
 
-    overflow-wrap: break-word;
+    overflow-wrap: normal;
     word-break: normal;
-    hyphens: auto;
+    hyphens: manual;
   }
 
   .skills-box {
@@ -562,6 +555,7 @@ html {
     width: 100%;
     max-width: 76px;
     min-width: 0;
+
     height: 78px;
 
     gap: 4px;
@@ -578,6 +572,8 @@ html {
     width: 100%;
     max-width: 100%;
 
+    margin: 0;
+
     font-size: 13px;
     line-height: 110%;
 
@@ -585,8 +581,6 @@ html {
 
     overflow-wrap: anywhere;
     word-break: normal;
-
-    margin: 0;
   }
 
   .contact-box {
