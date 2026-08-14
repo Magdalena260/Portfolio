@@ -1,5 +1,5 @@
 .my-skills {
-  width: min(calc(100% - 200px), 1240px);
+  width: min(100% - 200px, 1240px);
   height: 687px;
   margin: 60px auto 0;
 
@@ -10,21 +10,19 @@
   align-items: center;
 
   scroll-margin-top: 150px;
-  box-sizing: border-box;
 }
 
 .my-skills .title {
   position: absolute;
   top: -35px;
   left: 50%;
-  transform: translateX(-50%);
 
   z-index: 5;
 
   background: #fffcf3;
   padding: 0 20px;
 
-  box-sizing: border-box;
+  transform: translateX(-50%);
 }
 
 .my-skills .title h2 {
@@ -79,8 +77,8 @@
 
 .skill {
   width: 100px;
-  max-width: 100%;
   height: 110px;
+
   min-width: 0;
 
   display: flex;
@@ -99,7 +97,6 @@
 
 .skill img {
   width: 78px;
-  max-width: 100%;
   height: 71px;
 
   object-fit: contain;
@@ -126,6 +123,7 @@
   text-align: center;
 
   overflow-wrap: anywhere;
+  word-break: normal;
 
   cursor: pointer;
 
@@ -327,7 +325,6 @@ html {
 
   .skill {
     width: 90px;
-    max-width: 100%;
     height: 100px;
   }
 
@@ -342,18 +339,18 @@ html {
 
   .contact-box {
     font-size: 18px;
-
     margin-top: 50px;
   }
 }
 
 /* =========================
-   MOBILE
+   768px
 ========================= */
 
 @media (max-width: 768px) {
   .my-skills {
-    width: min(310px, calc(100% - 40px));
+    width: calc(100% - 40px);
+    max-width: 420px;
     height: auto;
 
     margin: 70px auto 0;
@@ -363,14 +360,11 @@ html {
     top: -24px;
     left: 50%;
 
-    width: auto;
     max-width: calc(100% - 20px);
 
     padding: 0 10px;
 
     transform: translateX(-50%);
-
-    box-sizing: border-box;
   }
 
   .my-skills .title h2 {
@@ -386,7 +380,7 @@ html {
 
     border: 3px solid black;
 
-    padding: 35px 16px 20px;
+    padding: 45px 16px 20px;
     margin-top: 0;
 
     box-sizing: border-box;
@@ -397,18 +391,18 @@ html {
 
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    row-gap: 22px;
-    column-gap: 10px;
+    row-gap: 28px;
+    column-gap: 8px;
 
     margin-top: 5px;
-
-    box-sizing: border-box;
   }
 
   .skill {
     width: 100%;
+    max-width: 80px;
+    height: 82px;
+
     min-width: 0;
-    height: 72px;
 
     gap: 4px;
   }
@@ -416,15 +410,18 @@ html {
   .skill img {
     width: 52px;
     height: 48px;
+
+    max-width: 100%;
   }
 
   .skill p {
     width: 100%;
 
-    font-size: 16px;
+    font-size: 14px;
     line-height: 110%;
 
     overflow-wrap: anywhere;
+    word-break: normal;
   }
 
   .contact-box {
@@ -440,8 +437,6 @@ html {
 
     font-size: 16px;
     line-height: 140%;
-
-    box-sizing: border-box;
   }
 
   .contact-box img {
@@ -494,25 +489,24 @@ html {
 
 @media (max-width: 480px) {
   .my-skills {
-    width: min(280px, calc(100% - 40px));
+    width: calc(100% - 40px);
+    max-width: 320px;
     height: auto;
 
     margin: 60px auto 0;
   }
 
-  /*
-    "Kompetenzen" bleibt in EINER Zeile.
-    Auf kleinen Displays wird die Schrift
-    automatisch kleiner.
-  */
+  /* Titel darf auf sehr kleinen Screens umbrechen.
+     "My Skills" bleibt aufgrund seiner Länge einzeilig.
+     "Kompetenzen" kann zweizeilig werden. */
   .my-skills .title {
-    top: -16px;
+    top: -30px;
     left: 50%;
 
-    width: max-content;
+    width: 190px;
     max-width: calc(100% - 24px);
 
-    padding: 0 6px;
+    padding: 0 8px;
 
     background: #fffcf3;
 
@@ -522,13 +516,18 @@ html {
   }
 
   .my-skills .title h2 {
+    width: 100%;
     margin: 0;
 
-    font-size: clamp(16px, 5.5vw, 20px);
-    line-height: 1;
+    font-size: 30px;
+    line-height: 0.95;
 
-    white-space: nowrap;
+    white-space: normal;
     text-align: center;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
   }
 
   .skills-box {
@@ -537,10 +536,12 @@ html {
 
     border: 3px solid black;
 
-    padding: 35px 12px 20px;
+    padding: 45px 10px 20px;
     margin-top: 0;
 
     box-sizing: border-box;
+
+    overflow: hidden;
   }
 
   .skills-grid {
@@ -549,8 +550,8 @@ html {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    row-gap: 18px;
-    column-gap: 6px;
+    row-gap: 26px;
+    column-gap: 4px;
 
     margin-top: 0;
 
@@ -559,29 +560,33 @@ html {
 
   .skill {
     width: 100%;
+    max-width: 76px;
     min-width: 0;
-    height: 68px;
+    height: 78px;
 
     gap: 4px;
   }
 
   .skill img {
     width: 46px;
-    max-width: 100%;
     height: 42px;
+
+    max-width: 100%;
   }
 
   .skill p {
     width: 100%;
     max-width: 100%;
 
-    font-size: 14px;
+    font-size: 13px;
     line-height: 110%;
 
     text-align: center;
 
     overflow-wrap: anywhere;
     word-break: normal;
+
+    margin: 0;
   }
 
   .contact-box {
@@ -597,8 +602,6 @@ html {
 
     font-size: 16px;
     line-height: 140%;
-
-    box-sizing: border-box;
   }
 
   .contact-box img {
