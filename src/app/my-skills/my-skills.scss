@@ -1,7 +1,8 @@
 .my-skills {
-  width: min(100% - 200px, 1240px);
+  width: min(calc(100% - 200px), 1240px);
   height: 687px;
   margin: 60px auto 0;
+
   position: relative;
 
   display: flex;
@@ -9,18 +10,22 @@
   align-items: center;
 
   scroll-margin-top: 150px;
+  box-sizing: border-box;
 }
 
 .my-skills .title {
   position: absolute;
   top: -35px;
   left: 50%;
+
   transform: translateX(-50%);
 
   z-index: 5;
 
   background: #fffcf3;
   padding: 0 20px;
+
+  box-sizing: border-box;
 }
 
 .my-skills .title h2 {
@@ -30,6 +35,8 @@
   font-weight: 800;
   font-size: 78px;
   line-height: 1;
+
+  text-align: center;
 
   transition: color 0.3s ease;
 }
@@ -52,14 +59,15 @@
   flex-direction: column;
 
   padding: 50px 40px 35px;
-  box-sizing: border-box;
+  margin-top: 15px;
 
   position: relative;
-  margin-top: 15px;
+
+  box-sizing: border-box;
 }
 
 /* =========================
-   SKILLS GRID
+   GRID
 ========================= */
 
 .skills-grid {
@@ -83,14 +91,14 @@
   width: 100px;
   height: 110px;
 
+  min-width: 0;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   gap: 8px;
-
-  min-width: 0;
 
   transition: transform 0.2s ease;
 }
@@ -102,6 +110,8 @@
 .skill img {
   width: 78px;
   height: 71px;
+
+  max-width: 100%;
 
   object-fit: contain;
   display: block;
@@ -115,6 +125,7 @@
 
 .skill p {
   width: 100%;
+  max-width: 100%;
   min-width: 0;
 
   margin: 0;
@@ -126,9 +137,9 @@
 
   text-align: center;
 
-  cursor: pointer;
-
   overflow-wrap: anywhere;
+
+  cursor: pointer;
 
   transition: color 0.3s ease;
 }
@@ -142,6 +153,8 @@
 ========================= */
 
 .contact-box {
+  width: 100%;
+
   margin-top: auto;
   margin-bottom: 110px;
 
@@ -154,6 +167,8 @@
 
   font-family: 'Overpass', sans-serif;
   font-size: 22px;
+
+  box-sizing: border-box;
 }
 
 .contact-box img {
@@ -232,10 +247,6 @@
 html {
   scroll-behavior: smooth;
 }
-
-/* =========================
-   ANIMATION
-========================= */
 
 @keyframes iconSwush {
   0% {
@@ -322,7 +333,8 @@ html {
 
   .my-skills .title h2 {
     font-size: 48px;
-    white-space: nowrap;
+    line-height: 1;
+    text-align: center;
   }
 
   .skills-box {
@@ -359,7 +371,7 @@ html {
 }
 
 /* =========================
-   MOBILE 768px
+   768px
 ========================= */
 
 @media (max-width: 768px) {
@@ -372,11 +384,11 @@ html {
   }
 
   .my-skills .title {
-    top: -22px;
+    top: -34px;
     left: 50%;
 
     width: auto;
-    max-width: calc(100% - 30px);
+    max-width: calc(100% - 20px);
 
     padding: 0 10px;
 
@@ -386,12 +398,13 @@ html {
   }
 
   .my-skills .title h2 {
-    max-width: 100%;
+    margin: 0;
 
     font-size: 36px;
-    line-height: 1;
+    line-height: 0.9;
 
-    white-space: nowrap;
+    white-space: normal;
+
     text-align: center;
   }
 
@@ -401,7 +414,7 @@ html {
 
     border: 3px solid black;
 
-    padding: 42px 14px 20px;
+    padding: 48px 14px 20px;
     margin-top: 0;
 
     box-sizing: border-box;
@@ -409,11 +422,10 @@ html {
 
   .skills-grid {
     width: 100%;
-    min-width: 0;
 
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    row-gap: 26px;
+    row-gap: 28px;
     column-gap: 8px;
 
     margin-top: 5px;
@@ -426,7 +438,7 @@ html {
     max-width: 80px;
     min-width: 0;
 
-    height: 80px;
+    height: 82px;
 
     gap: 4px;
   }
@@ -434,11 +446,12 @@ html {
   .skill img {
     width: 52px;
     height: 48px;
+
+    max-width: 100%;
   }
 
   .skill p {
     width: 100%;
-    min-width: 0;
 
     font-size: 14px;
     line-height: 110%;
@@ -518,17 +531,12 @@ html {
     margin: 60px auto 0;
   }
 
-  /*
-    Wichtig:
-    Der Titel darf auf kleinen Displays
-    nicht breiter als die Skills-Box werden.
-  */
   .my-skills .title {
-    top: -20px;
+    top: -52px;
     left: 50%;
 
-    width: calc(100% - 24px);
-    max-width: 260px;
+    width: 180px;
+    max-width: calc(100% - 30px);
 
     padding: 0 8px;
 
@@ -545,12 +553,10 @@ html {
 
     margin: 0;
 
-    font-size: 25px;
-    line-height: 1;
+    font-size: 30px;
+    line-height: 0.9;
 
     white-space: normal;
-    overflow-wrap: normal;
-    word-break: normal;
 
     text-align: center;
 
@@ -563,7 +569,7 @@ html {
 
     border: 3px solid black;
 
-    padding: 42px 10px 20px;
+    padding: 52px 10px 20px;
     margin-top: 0;
 
     box-sizing: border-box;
