@@ -1,8 +1,7 @@
 .my-skills {
-  width: min(calc(100% - 200px), 1240px);
+  width: min(100% - 200px, 1240px);
   height: 687px;
   margin: 60px auto 0;
-
   position: relative;
 
   display: flex;
@@ -10,22 +9,18 @@
   align-items: center;
 
   scroll-margin-top: 150px;
-  box-sizing: border-box;
 }
 
 .my-skills .title {
   position: absolute;
   top: -35px;
   left: 50%;
-
   transform: translateX(-50%);
 
   z-index: 5;
 
   background: #fffcf3;
   padding: 0 20px;
-
-  box-sizing: border-box;
 }
 
 .my-skills .title h2 {
@@ -35,8 +30,6 @@
   font-weight: 800;
   font-size: 78px;
   line-height: 1;
-
-  text-align: center;
 
   transition: color 0.3s ease;
 }
@@ -59,15 +52,14 @@
   flex-direction: column;
 
   padding: 50px 40px 35px;
-  margin-top: 15px;
+  box-sizing: border-box;
 
   position: relative;
-
-  box-sizing: border-box;
+  margin-top: 15px;
 }
 
 /* =========================
-   GRID
+   SKILLS GRID
 ========================= */
 
 .skills-grid {
@@ -91,14 +83,14 @@
   width: 100px;
   height: 110px;
 
-  min-width: 0;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
   gap: 8px;
+
+  min-width: 0;
 
   transition: transform 0.2s ease;
 }
@@ -110,8 +102,6 @@
 .skill img {
   width: 78px;
   height: 71px;
-
-  max-width: 100%;
 
   object-fit: contain;
   display: block;
@@ -125,7 +115,6 @@
 
 .skill p {
   width: 100%;
-  max-width: 100%;
   min-width: 0;
 
   margin: 0;
@@ -137,9 +126,9 @@
 
   text-align: center;
 
-  overflow-wrap: anywhere;
-
   cursor: pointer;
+
+  overflow-wrap: anywhere;
 
   transition: color 0.3s ease;
 }
@@ -153,8 +142,6 @@
 ========================= */
 
 .contact-box {
-  width: 100%;
-
   margin-top: auto;
   margin-bottom: 110px;
 
@@ -167,8 +154,6 @@
 
   font-family: 'Overpass', sans-serif;
   font-size: 22px;
-
-  box-sizing: border-box;
 }
 
 .contact-box img {
@@ -247,6 +232,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* =========================
+   ANIMATION
+========================= */
 
 @keyframes iconSwush {
   0% {
@@ -334,6 +323,7 @@ html {
   .my-skills .title h2 {
     font-size: 48px;
     line-height: 1;
+
     text-align: center;
   }
 
@@ -371,7 +361,7 @@ html {
 }
 
 /* =========================
-   768px
+   MOBILE 768px
 ========================= */
 
 @media (max-width: 768px) {
@@ -384,11 +374,11 @@ html {
   }
 
   .my-skills .title {
-    top: -34px;
+    top: -22px;
     left: 50%;
 
     width: auto;
-    max-width: calc(100% - 20px);
+    max-width: calc(100% - 30px);
 
     padding: 0 10px;
 
@@ -398,10 +388,10 @@ html {
   }
 
   .my-skills .title h2 {
-    margin: 0;
+    max-width: 100%;
 
     font-size: 36px;
-    line-height: 0.9;
+    line-height: 1;
 
     white-space: normal;
 
@@ -414,7 +404,7 @@ html {
 
     border: 3px solid black;
 
-    padding: 48px 14px 20px;
+    padding: 42px 14px 20px;
     margin-top: 0;
 
     box-sizing: border-box;
@@ -422,10 +412,11 @@ html {
 
   .skills-grid {
     width: 100%;
+    min-width: 0;
 
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    row-gap: 28px;
+    row-gap: 26px;
     column-gap: 8px;
 
     margin-top: 5px;
@@ -438,7 +429,7 @@ html {
     max-width: 80px;
     min-width: 0;
 
-    height: 82px;
+    height: 80px;
 
     gap: 4px;
   }
@@ -446,12 +437,11 @@ html {
   .skill img {
     width: 52px;
     height: 48px;
-
-    max-width: 100%;
   }
 
   .skill p {
     width: 100%;
+    min-width: 0;
 
     font-size: 14px;
     line-height: 110%;
@@ -528,15 +518,24 @@ html {
     max-width: 320px;
     height: auto;
 
-    margin: 60px auto 0;
+    margin: 75px auto 0;
   }
 
+  /*
+    Titel bekommt absichtlich eine feste,
+    schmale Breite.
+
+    Dadurch MUSS "Kompetenzen"
+    auf kleinen Displays umbrechen.
+  */
   .my-skills .title {
-    top: -52px;
+    position: absolute;
+
+    top: -48px;
     left: 50%;
 
-    width: 180px;
-    max-width: calc(100% - 30px);
+    width: 150px;
+    max-width: 150px;
 
     padding: 0 8px;
 
@@ -545,18 +544,28 @@ html {
     transform: translateX(-50%);
 
     box-sizing: border-box;
+
+    text-align: center;
   }
 
   .my-skills .title h2 {
+    display: block;
+
     width: 100%;
     max-width: 100%;
 
     margin: 0;
 
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
     font-size: 30px;
     line-height: 0.9;
 
     white-space: normal;
+
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    word-break: break-word;
 
     text-align: center;
 
@@ -569,7 +578,7 @@ html {
 
     border: 3px solid black;
 
-    padding: 52px 10px 20px;
+    padding: 55px 10px 20px;
     margin-top: 0;
 
     box-sizing: border-box;
@@ -596,6 +605,11 @@ html {
     min-width: 0;
 
     height: 78px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
     gap: 4px;
   }
